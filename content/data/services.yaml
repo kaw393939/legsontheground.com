@@ -1,0 +1,102 @@
+# Services Configuration
+# Edit this file to update service offerings
+
+services:
+  - id: property-visits
+    title: "Property Check-Ins"
+    icon: "fa-home"
+    icon_color: "default"
+    price: "$100"
+    price_period: "per visit"
+    badge: "Most Popular"
+    image: "images/services/service-property-visit.jpg"
+    image_alt: "Professional conducting thorough property inspection with documentation in Puerto Rico"
+    cta_text: "Book Visit"
+    cta_link: "contact.html"
+    order: 1
+    description: |
+      We visit your property, take detailed photos and videos, check for any issues, 
+      and send you comprehensive reports. If we spot maintenance concerns or security 
+      issues, you'll know immediately.
+    features:
+      - "Detailed photo & video documentation"
+      - "Immediate issue alerts"
+      - "Mail collection available"
+      - "Same-day reporting"
+
+  - id: translation
+    title: "English-Spanish Translation"
+    icon: "fa-language"
+    icon_color: "teal"
+    price: "$75"
+    price_period: "per hour"
+    badge: null
+    image: "images/services/service-translation.jpg"
+    image_alt: "Bilingual translator working with English-Spanish documents for property owners"
+    cta_text: "Get Help"
+    cta_link: "contact.html"
+    order: 2
+    description: |
+      Professional bilingual translation of documents, contracts, and permits. 
+      Interpretation during meetings with contractors, officials, and service providers. 
+      We ensure nothing gets lost in translation.
+    features:
+      - "Document translation"
+      - "Meeting interpretation"
+      - "Phone call assistance"
+      - "Cultural bridge services"
+
+  - id: transportation
+    title: "Transportation & Airport Assistance"
+    icon: "fa-car"
+    icon_color: "navy"
+    price: "$75"
+    price_period: "per trip"
+    badge: null
+    image: "images/services/service-transportation.jpg"
+    image_alt: "Professional transportation service with modern vehicle at San Juan airport"
+    cta_text: "Book Ride"
+    cta_link: "contact.html"
+    order: 3
+    description: |
+      Airport pickup, property key delivery, and transportation to meetings. 
+      Whether you're arriving or need something delivered to your property, 
+      we've got you covered.
+    features:
+      - "Airport pickup/drop-off"
+      - "Property key delivery"
+      - "Meeting transportation"
+      - "Reliable & punctual"
+
+  - id: coordination
+    title: "Property Coordination & Preparation"
+    icon: "fa-clipboard-check"
+    icon_color: "default"
+    price: "$50"
+    price_period: "per hour"
+    badge: null
+    image: "images/services/service-coordination.jpg"
+    image_alt: "Property manager coordinating contractors and overseeing renovation work"
+    cta_text: "Start Project"
+    cta_link: "contact.html"
+    order: 4
+    description: |
+      Coordinate with contractors, schedule repairs, oversee work, and prepare your 
+      property for your arrival. We're your local project manager in Puerto Rico.
+    features:
+      - "Contractor coordination"
+      - "Work oversight"
+      - "Property preparation"
+      - "Arrival readiness"
+
+# Service Packages (optional custom offerings)
+packages:
+  monthly_basic:
+    name: "Monthly Basic"
+    price: "$350"
+    description: "4 property visits + unlimited WhatsApp support"
+    
+  monthly_premium:
+    name: "Monthly Premium"
+    price: "$750"
+    description: "8 property visits + translation + transportation included"

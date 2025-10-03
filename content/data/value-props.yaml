@@ -1,0 +1,24 @@
+# Value Propositions
+# Edit this file to update key benefits shown on homepage
+
+value_props:
+  - id: pricing
+    title: "Simple, Affordable Pricing"
+    icon: "fa-hand-holding-usd"
+    order: 1
+    description: |
+      Starting at $100 per visit. No hidden fees. Pay only for what you need.
+  
+  - id: personal-service
+    title: "Personal Service"
+    icon: "fa-user-check"
+    order: 2
+    description: |
+      Direct communication with someone who cares. Not a call center.
+  
+  - id: instant-updates
+    title: "Instant Updates"
+    icon: "fa-mobile-alt"
+    order: 3
+    description: |
+      Photos, videos, and detailed reports after every visit via WhatsApp or email.

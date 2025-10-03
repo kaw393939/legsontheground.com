@@ -1,0 +1,53 @@
+# Navigation Configuration
+# Edit this file to update site navigation
+
+# Main Navigation (header)
+main_nav:
+  - title: "Home"
+    url: "/"
+    id: "home"
+    
+  - title: "Services"
+    url: "services.html"
+    id: "services"
+    
+  - title: "About"
+    url: "about.html"
+    id: "about"
+    
+  - title: "FAQ"
+    url: "faq.html"
+    id: "faq"
+    
+  - title: "Contact"
+    url: "contact.html"
+    id: "contact"
+    highlight: true  # Makes this button styled differently
+
+# Footer Navigation
+footer_nav:
+  services:
+    title: "Services"
+    links:
+      - title: "Property Check-Ins"
+        url: "services.html#property-visits"
+      - title: "Translation"
+        url: "services.html#translation"
+      - title: "Transportation"
+        url: "services.html#transportation"
+      - title: "Coordination"
+        url: "services.html#coordination"
+  
+  company:
+    title: "Company"
+    links:
+      - title: "About Us"
+        url: "about.html"
+      - title: "FAQ"
+        url: "faq.html"
+      - title: "Contact"
+        url: "contact.html"
+      - title: "Privacy Policy"
+        url: "#"
+      - title: "Terms of Service"
+        url: "#"

@@ -1,0 +1,120 @@
+{
+  "total": 16,
+  "successful": 16,
+  "failed": 0,
+  "results": [
+    {
+      "filename": "icon-property-checkin.png",
+      "filepath": "/home/kwilliams/is373/legsontheground.com/src/images/icons/icon-property-checkin.png",
+      "status": "success",
+      "size": "1024x1024",
+      "quality": "medium"
+    },
+    {
+      "filename": "icon-preparation.png",
+      "filepath": "/home/kwilliams/is373/legsontheground.com/src/images/icons/icon-preparation.png",
+      "status": "success",
+      "size": "1024x1024",
+      "quality": "medium"
+    },
+    {
+      "filename": "icon-translation.png",
+      "filepath": "/home/kwilliams/is373/legsontheground.com/src/images/icons/icon-translation.png",
+      "status": "success",
+      "size": "1024x1024",
+      "quality": "medium"
+    },
+    {
+      "filename": "icon-transportation.png",
+      "filepath": "/home/kwilliams/is373/legsontheground.com/src/images/icons/icon-transportation.png",
+      "status": "success",
+      "size": "1024x1024",
+      "quality": "medium"
+    },
+    {
+      "filename": "icon-property-search.png",
+      "filepath": "/home/kwilliams/is373/legsontheground.com/src/images/icons/icon-property-search.png",
+      "status": "success",
+      "size": "1024x1024",
+      "quality": "medium"
+    },
+    {
+      "filename": "service-translation.jpg",
+      "filepath": "/home/kwilliams/is373/legsontheground.com/src/images/services/service-translation.jpg",
+      "status": "success",
+      "size": "1024x1024",
+      "quality": "high"
+    },
+    {
+      "filename": "service-transportation.jpg",
+      "filepath": "/home/kwilliams/is373/legsontheground.com/src/images/services/service-transportation.jpg",
+      "status": "success",
+      "size": "1024x1024",
+      "quality": "high"
+    },
+    {
+      "filename": "service-property-visit.jpg",
+      "filepath": "/home/kwilliams/is373/legsontheground.com/src/images/services/service-property-visit.jpg",
+      "status": "success",
+      "size": "1024x1024",
+      "quality": "high"
+    },
+    {
+      "filename": "hero-main.jpg",
+      "filepath": "/home/kwilliams/is373/legsontheground.com/src/images/hero/hero-main.jpg",
+      "status": "success",
+      "size": "1536x1024",
+      "quality": "high"
+    },
+    {
+      "filename": "service-coordination.jpg",
+      "filepath": "/home/kwilliams/is373/legsontheground.com/src/images/services/service-coordination.jpg",
+      "status": "success",
+      "size": "1024x1024",
+      "quality": "high"
+    },
+    {
+      "filename": "about-experience.jpg",
+      "filepath": "/home/kwilliams/is373/legsontheground.com/src/images/about/about-experience.jpg",
+      "status": "success",
+      "size": "1024x1024",
+      "quality": "high"
+    },
+    {
+      "filename": "about-local-knowledge.jpg",
+      "filepath": "/home/kwilliams/is373/legsontheground.com/src/images/about/about-local-knowledge.jpg",
+      "status": "success",
+      "size": "1024x1024",
+      "quality": "high"
+    },
+    {
+      "filename": "about-bilingual.jpg",
+      "filepath": "/home/kwilliams/is373/legsontheground.com/src/images/about/about-bilingual.jpg",
+      "status": "success",
+      "size": "1024x1024",
+      "quality": "high"
+    },
+    {
+      "filename": "logo-icon.png",
+      "filepath": "/home/kwilliams/is373/legsontheground.com/src/images/misc/logo-icon.png",
+      "status": "success",
+      "size": "1024x1024",
+      "quality": "high"
+    },
+    {
+      "filename": "twitter-card.jpg",
+      "filepath": "/home/kwilliams/is373/legsontheground.com/src/images/social/twitter-card.jpg",
+      "status": "success",
+      "size": "1536x1024",
+      "quality": "high"
+    },
+    {
+      "filename": "og-image.jpg",
+      "filepath": "/home/kwilliams/is373/legsontheground.com/src/images/social/og-image.jpg",
+      "status": "success",
+      "size": "1536x1024",
+      "quality": "high"
+    }
+  ],
+  "errors": []
+}

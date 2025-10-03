@@ -1,0 +1,29 @@
+<!-- Testimonials Section -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Real experiences from property owners we've helped</p>
+        </div>
+        <div class="testimonials-grid">
+            {% for testimonial in testimonials %}
+            <div class="testimonial-card">
+                {% if testimonial.rating %}
+                <div class="testimonial-rating">
+                    {% for i in range(testimonial.rating) %}
+                    <i class="fas fa-star"></i>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <blockquote class="testimonial-quote">
+                    "{{ testimonial.quote }}"
+                </blockquote>
+                <div class="testimonial-author">
+                    <p class="testimonial-name">{{ testimonial.name }}</p>
+                    <p class="testimonial-location">{{ testimonial.location }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

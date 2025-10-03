@@ -1,0 +1,32 @@
+<!-- Main Header -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="logo">
+                <img src="images/misc/logo-icon.png" 
+                     alt="{{ site.title }} Logo" 
+                     class="logo-img"
+                     width="50"
+                     height="50">
+                <span class="logo-text">{{ site.title }}</span>
+            </a>
+            <nav class="nav" id="main-nav" aria-label="Main navigation" role="navigation">
+                {% for item in navigation['main_nav'] %}
+                <a href="{{ item.url }}" 
+                   class="nav-link{% if item.id == page.page_id %} active{% endif %}{% if item.highlight %} btn btn-primary{% endif %}"
+                   {% if item.id == page.page_id %}aria-current="page"{% endif %}>
+                   {{ item.title }}
+                </a>
+                {% endfor %}
+            </nav>
+            <button class="mobile-menu-toggle" 
+                    aria-label="Toggle mobile menu" 
+                    aria-expanded="false" 
+                    aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>

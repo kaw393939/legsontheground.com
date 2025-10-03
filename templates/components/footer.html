@@ -1,0 +1,69 @@
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <!-- Company Info -->
+            <div class="footer-section">
+                <h3 class="footer-title">{{ site.title }}</h3>
+                <p class="footer-text">{{ site.tagline }}</p>
+                <div class="footer-contact">
+                    <p><strong>Phone:</strong> <a href="tel:{{ site.phone }}">{{ site.phone }}</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+                    <p><strong>Location:</strong> {{ site.location }}</p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            {% for section_name, section in navigation['footer_nav'].items() %}
+            <div class="footer-section">
+                <h4 class="footer-heading">{{ section.title }}</h4>
+                <ul class="footer-links">
+                    {% for link in section.links %}
+                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+
+            <!-- Social Media -->
+            <div class="footer-section">
+                <h4 class="footer-heading">Connect With Us</h4>
+                <div class="social-links">
+                    <a href="{{ site.social.facebook }}" 
+                       aria-label="Facebook" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="{{ site.social.twitter }}" 
+                       aria-label="Twitter" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="{{ site.social.instagram }}" 
+                       aria-label="Instagram" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="{{ site.social.linkedin }}" 
+                       aria-label="LinkedIn" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; {{ current_year }} {{ site.title }}. All rights reserved.</p>
+            <p class="footer-legal">
+                <a href="/privacy-policy.html">Privacy Policy</a> | 
+                <a href="/terms-of-service.html">Terms of Service</a>
+            </p>
+        </div>
+    </div>
+</footer>

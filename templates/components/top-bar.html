@@ -1,0 +1,20 @@
+<!-- Top Bar with Quick Contact -->
+<div class="top-bar">
+    <div class="container">
+        <div class="top-bar-content">
+            <div class="top-bar-left">
+                <a href="mailto:{{ site.email }}" class="top-bar-link">
+                    <i class="fas fa-envelope" aria-hidden="true"></i> {{ site.email }}
+                </a>
+                <a href="tel:{{ site.phone_raw }}" class="top-bar-link">
+                    <i class="fas fa-phone" aria-hidden="true"></i> {{ site.phone }}
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <a href="{{ site.social.facebook }}" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="{{ site.social.instagram }}" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="{{ site.social.linkedin }}" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build output (GitHub Pages will build from docs/)
+# Comment out if you want to commit built files
+# docs/
+
+# Generated images (optional - commit if you want)
+src/images/
+generated_images/
+scripts/src/
+
+# Reports
+scripts/report_*.json
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
