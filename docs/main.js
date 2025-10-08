@@ -70,9 +70,13 @@ document.addEventListener('DOMContentLoaded', function() {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             
-            // Ignore if href is just "#"
+            // Scroll to top if href is just "#"
             if (href === '#') {
                 e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
                 return;
             }
             

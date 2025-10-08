@@ -4,7 +4,7 @@
 # Main Navigation (header) - All scroll to sections on homepage
 main_nav:
   - title: "Home"
-    url: "#hero"
+    url: "#"
     id: "home"
     
   - title: "Services"
