@@ -775,11 +775,11 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 .top-bar {
     background: var(--navy-800);  /* Darker for better contrast */
     color: var(--white);
-    padding: 0.5rem 0 !important;  /* MINIMAL padding */
+    padding: 0.25rem 0 !important;  /* MINIMAL PADDING - Fortune 100 efficiency */
     font-size: 0.875rem;  /* 14px */
     font-weight: 500;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    line-height: 1;  /* Tight line height */
+    line-height: 1.2;  /* Tight but readable */
     }
 .top-bar-content {
     display: flex;
@@ -787,7 +787,8 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     align-items: center;
     flex-wrap: nowrap;  /* Prevent wrapping */
     gap: 1.5rem;
-    min-height: 32px;  /* Fixed minimal height */
+    min-height: 24px;  /* MINIMAL HEIGHT - Fortune 100 compact design */
+    max-height: 32px;  /* Prevent expansion */
     }
 .top-bar-left {
     display: flex;
@@ -829,8 +830,8 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.625rem 0;  /* ULTRA COMPACT - reduced from 0.875rem */
-    min-height: 54px;  /* ULTRA COMPACT - reduced from 60px */
+    padding: 0.5rem 0;  /* FORTUNE 100 COMPACT - further reduced */
+    min-height: 50px;  /* FORTUNE 100 COMPACT - reduced from 54px */
     gap: var(--space-md)  /* Even tighter gap */
     }
 .logo {
@@ -887,6 +888,28 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     transition: color var(--transition-fast);
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8); /* Subtle shadow for better contrast */
     }
+
+/* Contact button in nav - FORTUNE 100 NAVY CONTRAST FIX */
+.nav-link.btn.btn-primary {
+    padding: 0.5rem 1.25rem !important;  /* Compact but readable */
+    margin: 0;  /* Remove any margin */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;  /* Perfect vertical centering */
+    text-shadow: none;  /* Remove text shadow from nav-link */
+    /* NAVY BACKGROUND - Perfect contrast, professional */
+    background: var(--navy-700) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.nav-link.btn.btn-primary:hover {
+    background: var(--coral) !important;  /* Coral hover for visual interest */
+    color: white !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
 
 /* Focus outline only visible when keyboard navigating */
 .nav-link:focus-visible {
@@ -979,12 +1002,14 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     outline: 3px solid var(--shadow-focus-coral);
     outline-offset: 2px;
 }
-/* Primary Button - Premium Coral with Gradient */
+/* Primary Button - Premium Coral with Gradient - FORTUNE 100 CONTRAST FIX */
 .btn-primary {
     background: linear-gradient(135deg, var(--coral-500) 0%, var(--coral-600) 50%, var(--coral-700) 100%);
-    color: white;
-    box-shadow: var(--shadow-btn-primary);
+    color: white !important;  /* Force white text */
+    box-shadow: 0 2px 6px rgba(255, 107, 107, 0.3), 0 1px 3px rgba(0, 0, 0, 0.12);
     border: none;
+    font-weight: 600;  /* Stronger weight for better readability */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);  /* Subtle text shadow for extra contrast */
 }
 
 /* Subtle shine effect on hover */
@@ -1001,23 +1026,25 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 }
 
 .btn-primary:hover {
-    transform: translateY(-1px);  /* Subtle lift instead of dramatic */
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.35),
-                0 2px 8px rgba(0, 0, 0, 0.1);  /* More appealing glow */
+    transform: translateY(-1px);  /* Subtle lift */
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4),
+                0 3px 10px rgba(0, 0, 0, 0.15);  /* Stronger, more visible shadow */
     background: linear-gradient(135deg, 
-        var(--coral-600) 0%, 
-        var(--coral-700) 50%, 
-        var(--coral-800) 100%);  /* DARKER on hover for better contrast */
+        var(--navy-700) 0%, 
+        var(--navy-800) 50%, 
+        var(--navy-900) 100%);  /* NAVY on hover - EXCELLENT contrast with coral sections */
+    color: white !important;  /* Keep white text */
 }
 
 .btn-primary:hover::before {
-    opacity: 0.8;  /* Subtle shine, not overpowering */
+    opacity: 1;  /* Full shine on hover for premium feel */
 }
 
 .btn-primary:active {
     transform: translateY(0px);  /* Return to original position for "pressed" feel */
     transition-duration: 0.1s;
-    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.25);  /* Reduced shadow when pressed */
+    box-shadow: 0 2px 8px rgba(51, 78, 104, 0.35);  /* Navy shadow when pressed */
+    background: var(--navy-900);  /* Solid dark navy when pressed */
 }
 
 .btn-primary:focus-visible {
