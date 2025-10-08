@@ -1,37 +1,47 @@
-# Environment variables
-.env
-.env.*
-!.env.example
+# Build Output
+docs/
+
+# Generated Analysis Files (keep only latest, auto-cleaned)
+visual_references/screenshots/*.png
+visual_references/reports/*.md
+visual_references/reports/*.json
+
+# Keep directory structure
+!visual_references/screenshots/.gitkeep
+!visual_references/reports/.gitkeep
+
+# Temporary CSS fixes
+*_fixes.css
+*_critical_fix.css
+ai_generated_*.css
 
 # Python
-venv/
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
+*.pyc
+*.pyo
+*.pyd
 .Python
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Build output (GitHub Pages will build from docs/)
-# Comment out if you want to commit built files
-# docs/
-
-# Generated images (optional - commit if you want)
-src/images/
-generated_images/
-scripts/src/
-
-# Reports
-scripts/report_*.json
-*.log
+*.so
+*.egg-info/
+dist/
+build/
+backups
+docs_archive
+# Virtual Environment
+.venv/
+venv/
+ENV/
+venv
+# Environment Variables
+.env
+.env.local
 
 # IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
 # OS
 .DS_Store
@@ -39,4 +49,6 @@ Thumbs.db
 
 # Logs
 *.log
-npm-debug.log*
+
+# Archive (old files)
+archive/
