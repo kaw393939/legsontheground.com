@@ -29,7 +29,7 @@
             {% if site.social.facebook or site.social.twitter or site.social.instagram or site.social.linkedin %}
             <div class="footer-section">
                 <h4 class="footer-heading">Connect With Us</h4>
-                <div class="social-links">
+                <div class="social-links flex gap-md">
                     {% if site.social.facebook %}
                     <a href="{{ site.social.facebook }}" 
                        aria-label="Facebook" 
@@ -68,7 +68,7 @@
         </div>
 
         <!-- Copyright -->
-        <div class="footer-bottom">
+        <div class="footer-bottom flex flex-col items-center">
             <p>&copy; {{ current_year }} {{ site.title }}. All rights reserved.</p>
             <p class="footer-back-top">
                 <a href="#hero" class="back-to-top">Back to Top ↑</a>

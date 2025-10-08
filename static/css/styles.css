@@ -1,33 +1,8 @@
-/* ============================================================================
-   LEGS ON THE GROUND - UNIFIED STYLESHEET
-   Version: 2.0 (Unified)
-   Last Updated: October 2, 2025
-   
-   Table of Contents:
-   1. CSS Variables
-   2. Base Utility Classes (DRY Foundation)
-   3. Reset & Base Styles
-   4. Layout System
-   5. Typography
-   6. Header & Navigation
-   7. Buttons
-   8. Hero Section
-   9. Components (Cards, Badges, Icons)
-   10. FAQ / Accordion
-   11. Sections (Services, About, Why, Testimonials)
-   12. Forms
-   13. Footer
-   14. Utilities & Helpers
-   15. Animations
-   16. Media Queries
-   17. Print Styles
-   ============================================================================ */
-/* ============================================================================
-   1. CSS VARIABLES - FORTUNE 100 DESIGN SYSTEM
-   ============================================================================ */
+/* ====================== LEGS ON THE GROUND - v2.0 ====================== */
+/* ====================== 1. CSS VARIABLES ====================== */
 :root {
     /* Premium Color Palette - Refined & Sophisticated */
-    
+
     /* Primary - Refined Coral (Less aggressive, more premium) */
     --coral-50: #FFF5F5;
     --coral-100: #FFE3E3;
@@ -39,13 +14,7 @@
     --coral-700: #F03E3E;     /* Active state */
     --coral-800: #E03131;
     --coral-900: #C92A2A;
-    
-    /* Legacy coral variables for compatibility */
-    --coral: #FF6B6B;
-    --coral-dark: #FA5252;
-    --coral-text: #D84343;
-    --coral-text-dark: #B83838;
-    
+
     /* Navy - Warmer, less oppressive (60-30-10 rule primary) */
     --navy-50: #F0F4F8;
     --navy-100: #D9E2EC;
@@ -57,12 +26,7 @@
     --navy-700: #334E68;     /* Primary navy (warmer than before) */
     --navy-800: #243B53;
     --navy-900: #102A43;     /* Darkest navy */
-    
-    /* Legacy navy variables for compatibility */
-    --navy-blue: #334E68;
-    --navy-blue-dark: #243B53;
-    --navy-blue-light: #486581;
-    
+
     /* Teal - Accent color (10% of 60-30-10 rule) */
     --teal-50: #F0FCFB;
     --teal-100: #C6F6F0;
@@ -74,19 +38,13 @@
     --teal-700: #0B9A8D;     /* Text safe */
     --teal-800: #087B6F;
     --teal-900: #065D54;
-    
-    /* Legacy teal variables */
-    --teal: #4ECDC4;
-    --teal-dark: #3AB8AB;
-    --teal-text: #0B9A8D;
-    --teal-text-dark: #087B6F;
-    
+
     /* Neutrals - Warmer, more sophisticated (30% of 60-30-10 rule) */
     --warm-white: #FAFBF8;   /* Off-white with warmth */
     --white: #FFFFFF;
     --off-white: #FAFBF8;
     --black: #000000;
-    
+
     --gray-50: #F7F9FA;
     --gray-100: #F0F3F5;
     --gray-200: #E4E9ED;
@@ -112,16 +70,16 @@
     --space-6xl: 6rem;       /* 96px */
     --space-7xl: 8rem;       /* 128px */
     --space-8xl: 10rem;      /* 160px */
-    
+
     /* Premium Typography System - Dual Font Strategy */
     --font-display: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --font-mono: "JetBrains Mono", "Fira Code", "Courier New", monospace;
-    
+
     /* Legacy font variables for compatibility */
     --font-family: var(--font-body);
     --font-family-headings: var(--font-display);
-    
+
     /* Type Scale - Major Third (1.25) - Professional Hierarchy */
     --text-xs: 0.64rem;      /* 10.24px */
     --text-sm: 0.8rem;       /* 12.8px */
@@ -132,7 +90,7 @@
     --text-3xl: 2.441rem;    /* 39px */
     --text-4xl: 3.052rem;    /* 48.83px */
     --text-5xl: 3.815rem;    /* 61px */
-    
+
     /* Legacy font sizes for compatibility */
     --font-size-xs: var(--text-xs);
     --font-size-sm: var(--text-sm);
@@ -143,7 +101,7 @@
     --font-size-3xl: var(--text-3xl);
     --font-size-4xl: var(--text-4xl);
     --font-size-5xl: var(--text-5xl);
-    
+
     /* Font Weights - Full Spectrum */
     --font-weight-thin: 100;
     --font-weight-extralight: 200;
@@ -154,7 +112,7 @@
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
     --font-weight-black: 900;
-    
+
     /* Line Heights - Optimized for Premium Readability */
     --leading-none: 1;
     --leading-tight: 1.25;
@@ -162,14 +120,14 @@
     --leading-normal: 1.5;
     --leading-relaxed: 1.625;
     --leading-loose: 2;
-    
+
     /* Legacy line heights */
     --line-height-tight: var(--leading-tight);
     --line-height-snug: var(--leading-snug);
     --line-height-normal: var(--leading-normal);
     --line-height-relaxed: var(--leading-relaxed);
     --line-height-loose: var(--leading-loose);
-    
+
     /* Letter Spacing - Subtle Refinement */
     --tracking-tighter: -0.05em;
     --tracking-tight: -0.025em;
@@ -185,7 +143,7 @@
     --radius-xl: 1rem;       /* 16px - Large cards */
     --radius-2xl: 1.5rem;    /* 24px - Hero elements */
     --radius-full: 9999px;   /* Circular */
-    
+
     /* Premium 8-Level Shadow System (Material Design Inspired) */
     --shadow-none: none;
     --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -195,36 +153,36 @@
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
     --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-    
+
     /* Focus Ring Shadows - Accessibility */
     --shadow-focus: 0 0 0 3px rgba(255, 107, 107, 0.15);
     --shadow-focus-coral: 0 0 0 3px rgba(255, 107, 107, 0.15);
     --shadow-focus-navy: 0 0 0 3px rgba(51, 78, 104, 0.15);
     --shadow-focus-teal: 0 0 0 3px rgba(78, 205, 196, 0.15);
-    
+
     /* Button-Specific Shadows (Premium Feel) */
-    --shadow-btn-primary: 0 1px 2px rgba(0, 0, 0, 0.05), 
+    --shadow-btn-primary: 0 1px 2px rgba(0, 0, 0, 0.05),
                           0 4px 12px rgba(255, 107, 107, 0.15);
-    --shadow-btn-primary-hover: 0 4px 6px rgba(0, 0, 0, 0.07), 
+    --shadow-btn-primary-hover: 0 4px 6px rgba(0, 0, 0, 0.07),
                                 0 12px 24px rgba(255, 107, 107, 0.25);
     --shadow-btn-outline: 0 0 0 1px rgba(255, 255, 255, 0.1),
                           0 4px 12px rgba(0, 0, 0, 0.15);
     --shadow-btn-outline-hover: 0 0 0 1px rgba(255, 255, 255, 0.2),
                                 0 12px 24px rgba(255, 255, 255, 0.2);
-    
+
     /* Component-Specific Shadows */
     --shadow-card: var(--shadow-lg);
     --shadow-card-hover: var(--shadow-xl);
     --shadow-icon-coral: 0 4px 20px rgba(255, 107, 107, 0.4);
     --shadow-icon-teal: 0 4px 20px rgba(78, 205, 196, 0.4);
     --shadow-icon-navy: 0 4px 20px rgba(51, 78, 104, 0.4);
-    
+
     /* Legacy shadow variables for backward compatibility */
     --shadow-btn-coral: var(--shadow-btn-primary);
     --shadow-btn-coral-hover: var(--shadow-btn-primary-hover);
     --shadow-success: 0 4px 20px rgba(37, 211, 102, 0.5);
     --shadow-success-hover: 0 6px 30px rgba(37, 211, 102, 0.7);
-    
+
     /* Premium Easing Functions (Motion Design) */
     --ease-linear: cubic-bezier(0, 0, 1, 1);
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
@@ -234,7 +192,7 @@
     --ease-elastic: cubic-bezier(0.68, -0.6, 0.32, 1.6);
     --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);        /* Apple-style smooth */
     --ease-swift: cubic-bezier(0.55, 0, 0.1, 1);        /* Swift/snappy */
-    
+
     /* Transition Durations - Comprehensive Scale */
     --duration-instant: 0ms;
     --duration-fast: 100ms;
@@ -243,14 +201,14 @@
     --duration-slow: 400ms;
     --duration-slower: 500ms;
     --duration-slowest: 700ms;
-    
+
     /* Combined Transitions (Duration + Easing) */
     --transition-faster: 0.1s var(--ease-smooth);
     --transition-fast: 0.15s var(--ease-smooth);
     --transition-base: 0.2s var(--ease-smooth);
     --transition-slow: 0.3s var(--ease-smooth);
     --transition-slowest: 0.4s var(--ease-smooth);
-    
+
     /* Component-Specific Transitions */
     --transition-button: all 0.2s var(--ease-smooth);
     --transition-dropdown: opacity 0.15s var(--ease-out), transform 0.15s var(--ease-out);
@@ -265,27 +223,9 @@
     --z-popover: 1060;
     --z-tooltip: 1070
     }
-/* ============================================================================
-   2. BASE UTILITY CLASSES - DRY FOUNDATION
-   ============================================================================ */
-/* Card Base Component
-   
-   ARCHITECTURE: Utility-first pattern with modifier inheritance
-   - .card provides base styling (background, border, shadow, padding, hover)
-   - Modifiers (.card-testimonial, .card-info, etc.) EXTEND the base
-   - Use .card alone for generic cards
-   - Combine .card + modifier for specialized cards (e.g., class="card card-testimonial")
-   
-   MODIFIERS:
-   - .card-testimonial: Adds left border accent
-   - .card-faq: Adds accordion-specific overrides (different padding/border)
-   - .card-service: Layout container for service showcases (NOT a card component)
-   
-   HOVER BEHAVIOR: 
-   - Base .card:hover provides lift effect (translateY -6px)
-   - Modifiers can override for specific needs
-   - ::before pseudo-element provides gradient overlay on hover
-*/
+/* ====================== 2. UTILITY CLASSES ====================== */
+/* Card Base - Provides background, border, shadow, padding, hover lift effect
+   Modifiers: .card-testimonial (border accent), .card-faq (accordion) */
 .card {
     background: var(--white);
     border-radius: var(--radius-lg);
@@ -317,15 +257,12 @@
     opacity: 1
     }
 .card-testimonial {
-    border-left: 4px solid var(--coral-text)
+    border-left: 4px solid var(--coral-700)
     }
 /* Icon Badge Base Component */
 .icon-badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: var(--radius-full);
-    background: linear-gradient(135deg, var(--coral) 0%, var(--coral-dark) 100%);
+    background: linear-gradient(135deg, var(--coral-500) 0%, var(--coral-600) 100%);
     box-shadow: var(--shadow-icon-coral);
     position: relative;
     z-index: 1
@@ -349,11 +286,11 @@
     margin: var(--space-lg) auto
     }
 .icon-badge-teal {
-    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    background: linear-gradient(135deg, var(--teal-300) 0%, var(--teal-400) 100%);
     box-shadow: var(--shadow-icon-teal)
     }
 .icon-badge-navy {
-    background: linear-gradient(135deg, var(--navy-blue) 0%, #1a4570 100%);
+    background: linear-gradient(135deg, var(--navy-700) 0%, #1a4570 100%);
     box-shadow: var(--shadow-icon-navy)
     }
 /* Dark Context Utility */
@@ -400,7 +337,7 @@
     }
 /* Focus Ring Utility */
 .focus-ring:focus-visible {
-    outline: 2px solid var(--coral-text);
+    outline: 2px solid var(--coral-700);
     outline-offset: 2px;
     border-radius: 2px
     }
@@ -422,9 +359,356 @@
     position: relative;
     z-index: 2
     }
-/* ============================================================================
-   3. RESET & BASE STYLES
-   ============================================================================ */
+
+/* ====================== 2B. UTILITY CLASSES - DRY FOUNDATION ====================== */
+
+/* === SPACING UTILITIES === */
+/* Padding - All Sides */
+.p-0 { padding: 0; }
+.p-xs { padding: var(--space-xs); }
+.p-sm { padding: var(--space-sm); }
+.p-md { padding: var(--space-md); }
+.p-base { padding: var(--space-base); }
+.p-lg { padding: var(--space-lg); }
+.p-xl { padding: var(--space-xl); }
+.p-2xl { padding: var(--space-2xl); }
+.p-3xl { padding: var(--space-3xl); }
+
+/* Padding - Horizontal */
+.px-0 { padding-left: 0; padding-right: 0; }
+.px-xs { padding-left: var(--space-xs); padding-right: var(--space-xs); }
+.px-sm { padding-left: var(--space-sm); padding-right: var(--space-sm); }
+.px-md { padding-left: var(--space-md); padding-right: var(--space-md); }
+.px-base { padding-left: var(--space-base); padding-right: var(--space-base); }
+.px-lg { padding-left: var(--space-lg); padding-right: var(--space-lg); }
+.px-xl { padding-left: var(--space-xl); padding-right: var(--space-xl); }
+.px-2xl { padding-left: var(--space-2xl); padding-right: var(--space-2xl); }
+.px-3xl { padding-left: var(--space-3xl); padding-right: var(--space-3xl); }
+
+/* Padding - Vertical */
+.py-0 { padding-top: 0; padding-bottom: 0; }
+.py-xs { padding-top: var(--space-xs); padding-bottom: var(--space-xs); }
+.py-sm { padding-top: var(--space-sm); padding-bottom: var(--space-sm); }
+.py-md { padding-top: var(--space-md); padding-bottom: var(--space-md); }
+.py-base { padding-top: var(--space-base); padding-bottom: var(--space-base); }
+.py-lg { padding-top: var(--space-lg); padding-bottom: var(--space-lg); }
+.py-xl { padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
+.py-2xl { padding-top: var(--space-2xl); padding-bottom: var(--space-2xl); }
+.py-3xl { padding-top: var(--space-3xl); padding-bottom: var(--space-3xl); }
+.py-4xl { padding-top: var(--space-4xl); padding-bottom: var(--space-4xl); }
+.py-5xl { padding-top: var(--space-5xl); padding-bottom: var(--space-5xl); }
+
+/* Padding - Individual Sides */
+.pt-0 { padding-top: 0; }
+.pt-sm { padding-top: var(--space-sm); }
+.pt-md { padding-top: var(--space-md); }
+.pt-lg { padding-top: var(--space-lg); }
+.pt-xl { padding-top: var(--space-xl); }
+.pt-2xl { padding-top: var(--space-2xl); }
+.pt-3xl { padding-top: var(--space-3xl); }
+
+.pb-0 { padding-bottom: 0; }
+.pb-sm { padding-bottom: var(--space-sm); }
+.pb-md { padding-bottom: var(--space-md); }
+.pb-lg { padding-bottom: var(--space-lg); }
+.pb-xl { padding-bottom: var(--space-xl); }
+.pb-2xl { padding-bottom: var(--space-2xl); }
+.pb-3xl { padding-bottom: var(--space-3xl); }
+
+/* Margin */
+.m-0 { margin: 0; }
+.m-auto { margin: 0 auto; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.mt-0 { margin-top: 0; }
+.mt-xs { margin-top: var(--space-xs); }
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+.mt-xl { margin-top: var(--space-xl); }
+.mt-2xl { margin-top: var(--space-2xl); }
+.mt-3xl { margin-top: var(--space-3xl); }
+
+.mb-0 { margin-bottom: 0; }
+.mb-xs { margin-bottom: var(--space-xs); }
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+.mb-xl { margin-bottom: var(--space-xl); }
+.mb-2xl { margin-bottom: var(--space-2xl); }
+.mb-3xl { margin-bottom: var(--space-3xl); }
+
+.ml-auto { margin-left: auto; }
+.mr-auto { margin-right: auto; }
+
+/* Gap (flexbox/grid) */
+.gap-0 { gap: 0; }
+.gap-xs { gap: var(--space-xs); }
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.gap-base { gap: var(--space-base); }
+.gap-lg { gap: var(--space-lg); }
+.gap-xl { gap: var(--space-xl); }
+.gap-2xl { gap: var(--space-2xl); }
+.gap-3xl { gap: var(--space-3xl); }
+
+/* === FLEXBOX UTILITIES === */
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.flex-row { flex-direction: row; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+
+.items-start { align-items: flex-start; }
+.items-center { align-items: center; }
+.items-end { align-items: flex-end; }
+.items-stretch { align-items: stretch; }
+.items-baseline { align-items: baseline; }
+
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.justify-evenly { justify-content: space-evenly; }
+
+.self-auto { align-self: auto; }
+.self-start { align-self: flex-start; }
+.self-center { align-self: center; }
+.self-end { align-self: flex-end; }
+
+.flex-1 { flex: 1 1 0%; }
+.flex-auto { flex: 1 1 auto; }
+.flex-none { flex: none; }
+
+/* === GRID UTILITIES === */
+.grid { display: grid; }
+.inline-grid { display: inline-grid; }
+
+.grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-cols-5 { grid-template-columns: repeat(5, 1fr); }
+.grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
+
+.grid-auto-fit { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.grid-auto-fit-lg { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
+.col-span-1 { grid-column: span 1; }
+.col-span-2 { grid-column: span 2; }
+.col-span-3 { grid-column: span 3; }
+.col-span-full { grid-column: 1 / -1; }
+
+/* === TYPOGRAPHY UTILITIES === */
+.text-xs { font-size: var(--text-xs); }
+.text-sm { font-size: var(--text-sm); }
+.text-base { font-size: var(--text-base); }
+.text-lg { font-size: var(--text-lg); }
+.text-xl { font-size: var(--text-xl); }
+.text-2xl { font-size: var(--text-2xl); }
+.text-3xl { font-size: var(--text-3xl); }
+.text-4xl { font-size: var(--text-4xl); }
+.text-5xl { font-size: var(--text-5xl); }
+
+.font-thin { font-weight: var(--font-weight-thin); }
+.font-light { font-weight: var(--font-weight-light); }
+.font-normal { font-weight: var(--font-weight-normal); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+.font-extrabold { font-weight: var(--font-weight-extrabold); }
+.font-black { font-weight: var(--font-weight-black); }
+
+.font-display { font-family: var(--font-display); }
+.font-body { font-family: var(--font-body); }
+
+.leading-none { line-height: var(--leading-none); }
+.leading-tight { line-height: var(--leading-tight); }
+.leading-snug { line-height: var(--leading-snug); }
+.leading-normal { line-height: var(--leading-normal); }
+.leading-relaxed { line-height: var(--leading-relaxed); }
+.leading-loose { line-height: var(--leading-loose); }
+
+.tracking-tight { letter-spacing: var(--tracking-tight); }
+.tracking-normal { letter-spacing: var(--tracking-normal); }
+.tracking-wide { letter-spacing: var(--tracking-wide); }
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+
+.underline { text-decoration: underline; }
+.no-underline { text-decoration: none; }
+
+/* === COLOR UTILITIES === */
+/* Text Colors */
+.text-coral-500 { color: var(--coral-500); }
+.text-coral-600 { color: var(--coral-600); }
+.text-coral-700 { color: var(--coral-700); }
+
+.text-navy-500 { color: var(--navy-500); }
+.text-navy-600 { color: var(--navy-600); }
+.text-navy-700 { color: var(--navy-700); }
+.text-navy-800 { color: var(--navy-800); }
+.text-navy-900 { color: var(--navy-900); }
+
+.text-teal-300 { color: var(--teal-300); }
+.text-teal-500 { color: var(--teal-500); }
+.text-teal-700 { color: var(--teal-700); }
+
+.text-gray-500 { color: var(--gray-500); }
+.text-gray-600 { color: var(--gray-600); }
+.text-gray-700 { color: var(--gray-700); }
+.text-gray-800 { color: var(--gray-800); }
+.text-gray-900 { color: var(--gray-900); }
+
+.text-white { color: var(--white); }
+.text-black { color: var(--black); }
+
+/* Background Colors */
+.bg-coral-50 { background-color: var(--coral-50); }
+.bg-coral-500 { background-color: var(--coral-500); }
+.bg-coral-600 { background-color: var(--coral-600); }
+
+.bg-navy-50 { background-color: var(--navy-50); }
+.bg-navy-700 { background-color: var(--navy-700); }
+.bg-navy-800 { background-color: var(--navy-800); }
+.bg-navy-900 { background-color: var(--navy-900); }
+
+.bg-teal-50 { background-color: var(--teal-50); }
+.bg-teal-300 { background-color: var(--teal-300); }
+.bg-teal-500 { background-color: var(--teal-500); }
+
+.bg-gray-50 { background-color: var(--gray-50); }
+.bg-gray-100 { background-color: var(--gray-100); }
+.bg-gray-200 { background-color: var(--gray-200); }
+
+.bg-white { background-color: var(--white); }
+.bg-off-white { background-color: var(--off-white); }
+.bg-warm-white { background-color: var(--warm-white); }
+.bg-transparent { background-color: transparent; }
+
+/* === BORDER UTILITIES === */
+.border { border-width: 1px; border-style: solid; }
+.border-0 { border-width: 0; }
+.border-2 { border-width: 2px; border-style: solid; }
+
+.border-t { border-top-width: 1px; border-top-style: solid; }
+.border-b { border-bottom-width: 1px; border-bottom-style: solid; }
+.border-l { border-left-width: 1px; border-left-style: solid; }
+.border-r { border-right-width: 1px; border-right-style: solid; }
+
+.border-gray-200 { border-color: var(--gray-200); }
+.border-gray-300 { border-color: var(--gray-300); }
+.border-coral-500 { border-color: var(--coral-500); }
+.border-white { border-color: var(--white); }
+.border-transparent { border-color: transparent; }
+
+.rounded-none { border-radius: 0; }
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded { border-radius: var(--radius-md); }
+.rounded-md { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-xl { border-radius: var(--radius-xl); }
+.rounded-2xl { border-radius: var(--radius-2xl); }
+.rounded-full { border-radius: var(--radius-full); }
+
+/* === SHADOW UTILITIES === */
+.shadow-none { box-shadow: none; }
+.shadow-xs { box-shadow: var(--shadow-xs); }
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow { box-shadow: var(--shadow-md); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+.shadow-2xl { box-shadow: var(--shadow-2xl); }
+
+/* === DISPLAY UTILITIES === */
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline { display: inline; }
+.hidden { display: none; }
+
+/* === POSITION UTILITIES === */
+.static { position: static; }
+.fixed { position: fixed; }
+.absolute { position: absolute; }
+.relative { position: relative; }
+.sticky { position: sticky; }
+
+/* === WIDTH/HEIGHT UTILITIES === */
+.w-full { width: 100%; }
+.w-auto { width: auto; }
+.w-fit { width: fit-content; }
+
+.h-full { height: 100%; }
+.h-auto { height: auto; }
+.h-fit { height: fit-content; }
+
+.max-w-screen { max-width: 1200px; }
+.max-w-screen-lg { max-width: 1024px; }
+.max-w-screen-md { max-width: 768px; }
+.max-w-full { max-width: 100%; }
+
+.min-h-screen { min-height: 100vh; }
+
+/* === TRANSITION UTILITIES === */
+.transition { transition: var(--transition-base); }
+.transition-all { transition: all var(--transition-base); }
+.transition-fast { transition: all var(--transition-fast); }
+.transition-slow { transition: all var(--transition-slow); }
+.transition-colors { transition: color var(--transition-base), background-color var(--transition-base); }
+.transition-transform { transition: transform var(--transition-base); }
+.transition-shadow { transition: box-shadow var(--transition-base); }
+
+/* === TRANSFORM UTILITIES === */
+.scale-95 { transform: scale(0.95); }
+.scale-100 { transform: scale(1); }
+.scale-105 { transform: scale(1.05); }
+
+.-translate-y-1 { transform: translateY(-4px); }
+.-translate-y-2 { transform: translateY(-8px); }
+
+/* === OPACITY UTILITIES === */
+.opacity-0 { opacity: 0; }
+.opacity-50 { opacity: 0.5; }
+.opacity-75 { opacity: 0.75; }
+.opacity-100 { opacity: 1; }
+
+/* === OVERFLOW UTILITIES === */
+.overflow-hidden { overflow: hidden; }
+.overflow-auto { overflow: auto; }
+
+/* === CURSOR UTILITIES === */
+.cursor-pointer { cursor: pointer; }
+.cursor-default { cursor: default; }
+
+/* === OBJECT FIT === */
+.object-cover { object-fit: cover; }
+.object-contain { object-fit: contain; }
+
+/* === COMMON PATTERNS === */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+}
+
+.section-spacing {
+    padding-top: var(--space-5xl);
+    padding-bottom: var(--space-5xl);
+}
+
+/* ====================== 3. RESET & BASE STYLES ====================== */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -467,7 +751,7 @@ body {
     position: absolute;
     top: -100px;
     left: 0;
-    background: var(--navy-blue);
+    background: var(--navy-700);
     color: var(--white);
     padding: var(--space-md) var(--space-lg);
     text-decoration: none;
@@ -477,7 +761,7 @@ body {
     }
 .skip-link:focus {
     top: 0;
-    outline: 3px solid var(--coral);
+    outline: 3px solid var(--coral-500);
     outline-offset: 2px
     }
 /* List Styles */
@@ -524,10 +808,10 @@ a {
     transition: color var(--transition-fast), opacity var(--transition-fast)
     }
 a:hover {
-    color: var(--coral-text)
+    color: var(--coral-700)
     }
 a:focus {
-    outline: 2px solid var(--coral-text);
+    outline: 2px solid var(--coral-700);
     outline-offset: 2px;
     border-radius: 2px
     }
@@ -535,13 +819,13 @@ a:focus:not(:focus-visible) {
     outline: none
     }
 a:focus-visible {
-    outline: 2px solid var(--coral-text);
+    outline: 2px solid var(--coral-700);
     outline-offset: 2px
     }
 /* Text Emphasis */
 strong, b {
     font-weight: var(--font-weight-bold);
-    color: var(--navy-blue)
+    color: var(--navy-700)
     }
 em, i {
     font-style: italic
@@ -585,7 +869,7 @@ input, textarea, select {
     left: -9999px;
     z-index: 999;
     padding: 1em 1.5em;
-    background-color: var(--coral-text);
+    background-color: var(--coral-700);
     color: white;
     text-decoration: none;
     border-radius: var(--radius-md);
@@ -600,17 +884,15 @@ input, textarea, select {
     }
 /* Focus visible for better keyboard navigation */
 *:focus-visible {
-    outline: 2px solid var(--coral-text);
+    outline: 2px solid var(--coral-700);
     outline-offset: 2px;
     border-radius: 2px
     }
 button:focus-visible, .btn:focus-visible {
-    outline: 3px solid var(--coral-text);
+    outline: 3px solid var(--coral-700);
     outline-offset: 3px
     }
-/* ============================================================================
-   3. LAYOUT SYSTEM
-   ============================================================================ */
+/* ====================== 3. LAYOUT SYSTEM ====================== */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -622,11 +904,6 @@ button:focus-visible, .btn:focus-visible {
 .container-fluid {
     width: 100%;
     padding: 0 var(--space-xl)
-    }
-@media (max-width: 768px) {
-    .container, .container-fluid {
-        padding: 0 var(--space-lg)
-        }
     }
 .section-padding {
     padding: var(--space-5xl) 0
@@ -650,14 +927,12 @@ button:focus-visible, .btn:focus-visible {
 .text-right {
     text-align: right
     }
-/* ============================================================================
-   4. TYPOGRAPHY
-   ============================================================================ */
+/* ====================== 4. TYPOGRAPHY ====================== */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-headings);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
-    color: var(--navy-blue);
+    color: var(--navy-700);
     margin-top: var(--space-3xl);
     margin-bottom: var(--space-xl);
     letter-spacing: -0.02em
@@ -730,7 +1005,7 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 .section-title {
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-extrabold);
-    color: var(--navy-blue);
+    color: var(--navy-700);
     margin-top: 0;
     margin-bottom: var(--space-xl);
     line-height: var(--line-height-tight);
@@ -768,51 +1043,41 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     max-width: 65ch;
     margin: 0 auto
     }
-/* ============================================================================
-   5. HEADER & NAVIGATION
-   ============================================================================ */
+/* ====================== 5. HEADER & NAVIGATION ====================== */
 /* Top Bar - MAXIMUM EFFICIENCY */
 .top-bar {
     background: var(--navy-800);  /* Darker for better contrast */
     color: var(--white);
-    padding: 0.25rem 0 !important;  /* MINIMAL PADDING - Fortune 100 efficiency */
+    padding: 0.25rem 0;
     font-size: 0.875rem;  /* 14px */
     font-weight: 500;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     line-height: 1.2;  /* Tight but readable */
     }
 .top-bar-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;  /* Prevent wrapping */
+    flex-wrap: nowrap;
     gap: 1.5rem;
-    min-height: 24px;  /* MINIMAL HEIGHT - Fortune 100 compact design */
-    max-height: 32px;  /* Prevent expansion */
+    min-height: 24px;
+    max-height: 32px;
     }
 .top-bar-left {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
     flex-wrap: nowrap;
     }
 .top-bar-link {
-    color: rgba(255, 255, 255, 0.95) !important;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.375rem;  /* Tight gap between icon and text */
+    color: rgba(255, 255, 255, 0.95);
+    gap: 0.375rem;
     transition: var(--transition-fast);
     text-decoration: none;
     white-space: nowrap;
     }
 .top-bar-link i {
-    font-size: 0.875rem;  /* Match text size */
+    font-size: 0.875rem;
     }
 .top-bar-link:hover {
-    color: var(--coral) !important;
+    color: var(--coral-500);
     }
 .top-bar-text {
-    color: rgba(255, 255, 255, 0.95) !important;
+    color: rgba(255, 255, 255, 0.95);
     }
 /* Main Header */
 .header {
@@ -827,15 +1092,11 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     box-shadow: var(--shadow-md)
     }
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0;  /* FORTUNE 100 COMPACT - further reduced */
-    min-height: 50px;  /* FORTUNE 100 COMPACT - reduced from 54px */
-    gap: var(--space-md)  /* Even tighter gap */
+    padding: 0.5rem 0;
+    min-height: 50px;
+    gap: var(--space-md)
     }
 .logo {
-    display: inline-block;
     text-decoration: none;
     transition: opacity var(--transition-fast)
     }
@@ -843,77 +1104,60 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     opacity: 0.85
     }
 .logo-text {
-    display: flex;
-    align-items: center;
     gap: 0.5rem
     }
 .logo-name {
     font-size: 1.5rem;
-    /* 24px */
     font-weight: 700;
-    color: var(--navy-blue);
+    color: var(--navy-700);
     letter-spacing: -0.02em;
     line-height: 1;
     white-space: nowrap
     }
-/* Responsive logo sizing */
-@media (max-width: 768px) {
-    .logo-name {
-        font-size: 1.25rem;
-        /* 20px */
-        }
-    }
-@media (max-width: 480px) {
-    .logo-name {
-        font-size: 1.125rem;
-        /* 18px */
-        }
-    }
 /* Navigation */
 .nav {
-    display: flex;
     gap: var(--space-2xl);
-    align-items: center;
     margin-left: auto
     }
 .nav-link {
-    color: var(--navy-blue);
-    font-weight: var(--font-weight-semibold); /* Increased from medium for better visibility */
+    color: var(--navy-700);
+    font-weight: var(--font-weight-semibold);
     font-size: 1rem;
-    /* 16px - AI recommended for better readability */
     position: relative;
     padding: var(--space-sm) 0;
     padding-bottom: calc(var(--space-sm) + 3px);
-    /* AI recommended: more space above underline */
     transition: color var(--transition-fast);
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8); /* Subtle shadow for better contrast */
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
     }
 
-/* Contact button in nav - FORTUNE 100 NAVY CONTRAST FIX */
+/* Contact button in nav - Navy version */
 .nav-link.btn.btn-primary {
-    padding: 0.5rem 1.25rem !important;  /* Compact but readable */
-    margin: 0;  /* Remove any margin */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1.4;  /* Perfect vertical centering */
-    text-shadow: none;  /* Remove text shadow from nav-link */
-    /* NAVY BACKGROUND - Perfect contrast, professional */
-    background: var(--navy-700) !important;
-    color: white !important;
-    border: none !important;
+    padding: 0.5rem 1.25rem;
+    margin: 0;
+    line-height: 1.4;
+    text-shadow: none;
+    background: linear-gradient(135deg, var(--navy-700) 0%, var(--navy-800) 100%);
+    color: white;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .nav-link.btn.btn-primary:hover {
-    background: var(--coral) !important;  /* Coral hover for visual interest */
-    color: white !important;
+    background: linear-gradient(135deg, var(--coral-600) 0%, var(--coral-700) 100%);
+    color: white;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
 }
 
+.nav-link.btn.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(255, 107, 107, 0.2);
+}
+
 /* Focus outline only visible when keyboard navigating */
 .nav-link:focus-visible {
-    outline: 2px solid var(--coral);
+    outline: 2px solid var(--coral-500);
     outline-offset: 4px;
     border-radius: var(--radius-sm);
 }
@@ -924,26 +1168,22 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     left: 0;
     width: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--coral) 0%, var(--coral-text) 100%);
+    background: linear-gradient(90deg, var(--coral-500) 0%, var(--coral-700) 100%);
     transition: width var(--transition-base);
     border-radius: var(--radius-sm)
     }
 .nav-link:hover {
-    color: var(--coral-text)
+    color: var(--coral-700)
     }
 .nav-link:hover::after, .nav-link.active::after {
     width: 100%
     }
 .nav-link.active {
-    color: var(--coral-text);
+    color: var(--coral-700);
     font-weight: var(--font-weight-semibold)
     }
-/* Header Actions */
-.header-actions {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md)
-    }
+/* Header Actions - Use utility classes: flex items-center gap-md */
+
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
     display: none;
@@ -958,31 +1198,31 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     display: block;
     width: 25px;
     height: 3px;
-    background: var(--navy-blue);
+    background: var(--navy-700);
     transition: var(--transition-base);
     border-radius: var(--radius-sm)
     }
-/* ============================================================================
-   6. BUTTONS
-   ============================================================================ */
-/* ============================================================================
-   PREMIUM BUTTON SYSTEM - Fortune 100 Standard
-   ============================================================================ */
+/* Keyboard focus indicator for mobile menu toggle */
+.mobile-menu-toggle:focus-visible {
+    outline: 3px solid var(--coral-500);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+    }
+/* ====================== 6. BUTTONS ====================== */
 
 .btn {
-    /* Base button - COMPACT and efficient */
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.375rem;  /* Reduced gap */
-    padding: 0.625rem 1.25rem;  /* COMPACT padding */
+    gap: 0.375rem;
+    padding: 0.625rem 1.25rem;
     border-radius: var(--radius-lg);
     font-family: var(--font-body);
     font-weight: var(--font-weight-semibold);
     font-size: 0.9375rem;
-    line-height: 1.4;  /* Tighter line height */
+    line-height: 1.4;
     letter-spacing: 0.01em;
-    min-height: 42px;  /* REDUCED from 48px for efficiency */
+    min-height: 42px;
     text-align: center;
     text-decoration: none;
     border: none;
@@ -1002,17 +1242,16 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     outline: 3px solid var(--shadow-focus-coral);
     outline-offset: 2px;
 }
-/* Primary Button - Premium Coral with Gradient - FORTUNE 100 CONTRAST FIX */
+/* Primary Button */
 .btn-primary {
     background: linear-gradient(135deg, var(--coral-500) 0%, var(--coral-600) 50%, var(--coral-700) 100%);
-    color: white !important;  /* Force white text */
+    color: white;
     box-shadow: 0 2px 6px rgba(255, 107, 107, 0.3), 0 1px 3px rgba(0, 0, 0, 0.12);
     border: none;
-    font-weight: 600;  /* Stronger weight for better readability */
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);  /* Subtle text shadow for extra contrast */
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Subtle shine effect on hover */
 .btn-primary::before {
     content: '';
     position: absolute;
@@ -1026,18 +1265,18 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 }
 
 .btn-primary:hover {
-    transform: translateY(-1px);  /* Subtle lift */
+    transform: translateY(-1px);
     box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4),
-                0 3px 10px rgba(0, 0, 0, 0.15);  /* Stronger, more visible shadow */
-    background: linear-gradient(135deg, 
-        var(--navy-700) 0%, 
-        var(--navy-800) 50%, 
-        var(--navy-900) 100%);  /* NAVY on hover - EXCELLENT contrast with coral sections */
-    color: white !important;  /* Keep white text */
+                0 3px 10px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg,
+        var(--navy-700) 0%,
+        var(--navy-800) 50%,
+        var(--navy-900) 100%);
+    color: white;
 }
 
 .btn-primary:hover::before {
-    opacity: 1;  /* Full shine on hover for premium feel */
+    opacity: 1;
 }
 
 .btn-primary:active {
@@ -1145,7 +1384,6 @@ section.dark-context .btn-outline:hover,
 
 .btn-block,
 .btn-full {
-    display: flex;
     width: 100%;
 }
 .btn-urgent {
@@ -1160,29 +1398,20 @@ section.dark-context .btn-outline:hover,
     }
 .btn-outline-light:hover {
     background: var(--white);
-    color: var(--navy-blue)
+    color: var(--navy-700)
     }
 .btn-light {
     background: var(--white);
-    color: var(--navy-blue)
+    color: var(--navy-700)
     }
-/* ============================================================================
-   7. HERO SECTION
-   ============================================================================ */
-/* ============================================================================
-   PREMIUM HERO SECTION - Fortune 100 Treatment
-   Efficient Vertical Space Usage, Perfect Alignment
-   ============================================================================ */
+/* ====================== 7. HERO SECTION ====================== */
 
 .hero {
     position: relative;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: clamp(380px, 45vh, 480px);  /* ULTRA COMPACT - reduced further */
-    display: flex;
-    align-items: flex-start;  /* CHANGED: Position at TOP instead of center */
-    justify-content: center;
+    min-height: clamp(380px, 45vh, 480px);
     padding: clamp(2rem, 5vh, 3rem) var(--space-lg) clamp(1.5rem, 4vh, 2.5rem);  /* ULTRA COMPACT padding */
 }
 
@@ -1253,7 +1482,7 @@ section.dark-context .btn-outline:hover,
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 var(--space-xl);
-    padding-top: clamp(1rem, 3vh, 2rem);  /* Add top padding to position content nicely */
+    padding-top: clamp(1rem, 3vh, 2rem);
 }
 
 /* Premium Hero Title - Efficient & Impactful */
@@ -1263,10 +1492,10 @@ section.dark-context .btn-outline:hover,
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -0.02em;
-    margin: 0 auto 0.875rem;  /* TIGHTER - reduced from 1.25rem */
+    margin: 0 auto 0.875rem;
     max-width: 950px;
     color: white;
-    text-shadow: 
+    text-shadow:
         0 1px 2px rgba(0, 0, 0, 0.1),
         0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -1280,17 +1509,13 @@ section.dark-context .btn-outline:hover,
     letter-spacing: 0.01em;
     color: rgba(255, 255, 255, 0.95);
     max-width: 700px;
-    margin: 0 auto 1rem;  /* TIGHTER - reduced from 1.25rem */
+    margin: 0 auto 1rem;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
-/* Hero buttons - Efficient spacing with NO extra margins */
+/* Hero buttons - Use utility classes: flex gap-sm justify-center items-center flex-wrap m-0 */
 .hero-buttons {
-    display: flex;
-    gap: 0.875rem;  /* Tighter gap */
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    gap: 0.875rem;  /* Custom tight gap */
     margin: 0;  /* ZERO margins - let subtitle control spacing */
 }
 .hero-trust-badges {
@@ -1309,7 +1534,7 @@ section.dark-context .btn-outline:hover,
     }
 .trust-badge i {
     font-size: var(--font-size-lg);
-    color: var(--teal)
+    color: var(--teal-300)
     }
 .trust-badge-text {
     color: var(--white);
@@ -1321,7 +1546,7 @@ section.dark-context .btn-outline:hover,
     color: var(--white);
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--navy-blue) 0%, var(--navy-blue-light) 100%)
+    background: linear-gradient(135deg, var(--navy-700) 0%, var(--navy-600) 100%)
     }
 .page-header::before {
     content: "";
@@ -1356,9 +1581,7 @@ section.dark-context .btn-outline:hover,
     border-bottom-color: var(--white);
     color: var(--white)
     }
-/* ============================================================================
-   8. COMPONENTS - Cards, Badges, Icons
-   ============================================================================ */
+/* ====================== 8. COMPONENTS - Cards, Badges, Icons ====================== */
 /* Cards - Now using standardized .card class in HTML */
 /* Legacy selectors removed - all HTML updated to use .card + modifiers */
 /* Icon Badges - Now using standardized .icon-badge class in HTML */
@@ -1368,7 +1591,7 @@ section.dark-context .btn-outline:hover,
     position: absolute;
     top: var(--space-md);
     right: var(--space-md);
-    background: var(--coral);
+    background: var(--coral-500);
     color: var(--white);
     padding: 0.5rem 1rem;
     border-radius: var(--radius-full);
@@ -1383,7 +1606,7 @@ section.dark-context .btn-outline:hover,
     }
 /* Featured Cards */
 .package-card.featured, .pricing-option.featured {
-    border: 2px solid var(--coral);
+    border: 2px solid var(--coral-500);
     position: relative;
     transform: scale(1.05)
     }
@@ -1394,12 +1617,10 @@ section.dark-context .btn-outline:hover,
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--coral) 0%, var(--teal) 100%);
+    background: linear-gradient(90deg, var(--coral-500) 0%, var(--teal-300) 100%);
     border-radius: var(--radius-lg) var(--radius-lg) 0 0
     }
-/* ============================================================================
-   9. FAQ / ACCORDION COMPONENTS
-   ============================================================================ */
+/* ====================== 9. FAQ / ACCORDION COMPONENTS ====================== */
 /* FAQ Container */
 .faq-container, .faq-section {
     max-width: 900px;
@@ -1416,7 +1637,7 @@ section.dark-context .btn-outline:hover,
     position: relative;
     font-size: var(--font-size-2xl);
     font-weight: var(--font-weight-bold);
-    color: var(--navy-blue);
+    color: var(--navy-700);
     margin-bottom: var(--space-3xl);
     padding-bottom: var(--space-lg);
     letter-spacing: -0.02em
@@ -1428,22 +1649,20 @@ section.dark-context .btn-outline:hover,
     left: 0;
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, var(--coral-text) 0%, var(--teal-text) 100%);
+    background: linear-gradient(90deg, var(--coral-700) 0%, var(--teal-700) 100%);
     border-radius: var(--radius-full)
     }
-/* Accordion Item - Elegant Design */
-/* Properly extends .card base class - only adds/overrides specific accordion styles */
+/* Accordion Item - extends .card base class */
 .card-faq, .faq-item, .accordion-item {
-    /* Inherits from .card: background, border-radius, padding, box-shadow, transition */
     border: 1px solid var(--gray-200);
-    /* Override: more prominent border */
+  
     border-radius: var(--radius-xl);
-    /* Override: larger radius for accordion */
+  
     margin-bottom: var(--space-xl);
     overflow: hidden;
     /* Addition: needed for accordion animation */
     padding: 0;
-    /* Override: accordion handles padding internally */
+  
     background: var(--white)
     }
 .card-faq:last-child, .accordion-item:last-child {
@@ -1452,21 +1671,18 @@ section.dark-context .btn-outline:hover,
 .card-faq:hover, .accordion-item:hover {
     /* Inherits transform: translateY(-6px) from .card:hover */
     border-color: var(--gray-300);
-    /* Override: accent hover border */
+  
     box-shadow: var(--shadow-lg);
     /* Uses CSS variable */
     transform: translatey(-2px);
-    /* Override: gentler lift for accordions */
+  
     }
 .card-faq.active, .accordion-item.active {
-    border-color: var(--coral-text);
+    border-color: var(--coral-700);
     box-shadow: 0 8px 24px rgba(216, 67, 67, 0.12)
     }
 /* Accordion Question/Header - Refined */
 .faq-question, .accordion-header, .accordion-question {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
     padding: var(--space-2xl) var(--space-2xl);
     background: transparent;
@@ -1485,7 +1701,7 @@ section.dark-context .btn-outline:hover,
     transform: translatey(-50%);
     width: 0;
     height: 50%;
-    background: linear-gradient(180deg, var(--coral-text) 0%, transparent 100%);
+    background: linear-gradient(180deg, var(--coral-700) 0%, transparent 100%);
     opacity: 0;
     transition: all var(--transition-base);
     border-radius: 0 var(--radius-md) var(--radius-md) 0
@@ -1493,6 +1709,12 @@ section.dark-context .btn-outline:hover,
 .faq-question:hover::before, .accordion-header:hover::before {
     width: 4px;
     opacity: 1
+    }
+/* Keyboard focus indicator for accessibility */
+.faq-question:focus-visible, .accordion-header:focus-visible, .accordion-question:focus-visible {
+    outline: 3px solid var(--coral-500);
+    outline-offset: 2px;
+    border-radius: var(--radius-md);
     }
 .card-faq.active .faq-question, .accordion-item.active .accordion-header {
     background: linear-gradient(90deg, rgba(216, 67, 67, 0.03) 0%, transparent 100%)
@@ -1506,13 +1728,13 @@ section.dark-context .btn-outline:hover,
     margin: 0;
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-semibold);
-    color: var(--navy-blue);
+    color: var(--navy-700);
     line-height: var(--line-height-snug);
     letter-spacing: 0;
     transition: color var(--transition-fast)
     }
 .faq-question:hover h3, .faq-question:hover h4, .accordion-header:hover h3, .accordion-header:hover h4 {
-    color: var(--coral-text)
+    color: var(--coral-700)
     }
 /* Accordion Icon/Toggle - Prominent and Elegant */
 .faq-toggle, .accordion-toggle, .faq-icon {
@@ -1524,7 +1746,7 @@ section.dark-context .btn-outline:hover,
     justify-content: center;
     background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
     border-radius: var(--radius-full);
-    color: var(--navy-blue);
+    color: var(--navy-700);
     font-size: var(--font-size-2xl);
     font-weight: var(--font-weight-normal);
     transition: all var(--transition-base);
@@ -1537,7 +1759,7 @@ section.dark-context .btn-outline:hover,
     inset: -2px;
     border-radius: var(--radius-full);
     padding: 2px;
-    background: linear-gradient(135deg, var(--coral) 0%, var(--teal) 100%);
+    background: linear-gradient(135deg, var(--coral-500) 0%, var(--teal-300) 100%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -1553,7 +1775,7 @@ section.dark-context .btn-outline:hover,
     opacity: 1
     }
 .card-faq.active .faq-toggle, .accordion-item.active .accordion-toggle, .faq-question[aria-expanded="true"] .faq-toggle {
-    background: linear-gradient(135deg, var(--coral-text) 0%, var(--coral) 100%);
+    background: linear-gradient(135deg, var(--coral-700) 0%, var(--coral-500) 100%);
     color: var(--white);
     transform: rotate(135deg);
     box-shadow: 0 4px 12px rgba(216, 67, 67, 0.3)
@@ -1597,7 +1819,7 @@ section.dark-context .btn-outline:hover,
     }
 .faq-answer strong, .accordion-content strong {
     font-weight: var(--font-weight-semibold);
-    color: var(--navy-blue)
+    color: var(--navy-700)
     }
 /* FAQ Category Navigation - Professional Design */
 .faq-nav, .faq-categories-nav {
@@ -1632,7 +1854,7 @@ section.dark-context .btn-outline:hover,
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--coral) 0%, var(--coral-text) 100%);
+    background: linear-gradient(135deg, var(--coral-500) 0%, var(--coral-700) 100%);
     opacity: 0;
     transition: opacity var(--transition-base);
     z-index: -1
@@ -1647,7 +1869,7 @@ section.dark-context .btn-outline:hover,
     opacity: 1
     }
 .faq-nav-item.active, .faq-category-link.active {
-    background: linear-gradient(135deg, var(--navy-blue) 0%, var(--navy-blue-light) 100%);
+    background: linear-gradient(135deg, var(--navy-700) 0%, var(--navy-600) 100%);
     border-color: transparent;
     color: var(--white);
     box-shadow: var(--shadow-md)
@@ -1656,13 +1878,10 @@ section.dark-context .btn-outline:hover,
 .faq-nav-item .emoji, .faq-category-link .emoji, .faq-category-title .emoji {
     display: none
     }
-/* ============================================================================
-   10. SECTIONS
-   ============================================================================ */
+/* ====================== 10. SECTIONS ====================== */
 /* Value Proposition */
 .value-prop {
     background: linear-gradient(180deg, var(--white) 0%, var(--gray-50) 50%, var(--white) 100%);
-    padding: var(--space-5xl) 0;
     position: relative
     }
 .value-prop::before {
@@ -1676,15 +1895,13 @@ section.dark-context .btn-outline:hover,
     pointer-events: none
     }
 .value-prop-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--space-2xl);
     margin-top: var(--space-3xl)
     }
 .value-prop-item h3 {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
-    color: var(--navy-blue);
+    color: var(--navy-700);
     margin-top: var(--space-lg);
     margin-bottom: var(--space-lg);
     letter-spacing: -0.01em
@@ -1696,23 +1913,14 @@ section.dark-context .btn-outline:hover,
     }
 /* Services Showcase */
 .services {
-    padding: clamp(2.5rem, 6vh, 3.5rem) 0 !important;
+    padding: clamp(2.5rem, 6vh, 3.5rem) 0;
     background: var(--white)
     }
 .services-showcase {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xl) !important;
+    gap: var(--space-xl);
     }
-/* NOTE: .card-service is a LAYOUT CONTAINER, not a card component
-   - Does NOT inherit from .card base class
-   - Creates responsive grid layout for service content
-   - Used on services.html for showcase sections
-   - For actual service cards, use .card base class
-*/
+/* NOTE: .card-service is a LAYOUT CONTAINER for responsive grid, not a card */
 .card-service {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--space-2xl);
     align-items: center
     }
@@ -1751,7 +1959,7 @@ section.dark-context .btn-outline:hover,
 .service-showcase-content h3 {
     font-size: var(--font-size-3xl);
     font-weight: var(--font-weight-bold);
-    color: var(--navy-blue);
+    color: var(--navy-700);
     margin-bottom: var(--space-lg);
     letter-spacing: -0.02em
     }
@@ -1781,12 +1989,12 @@ section.dark-context .btn-outline:hover,
     }
 .service-features li::before {
     content: "✓";
-    color: var(--teal-text);
+    color: var(--teal-700);
     font-weight: var(--font-weight-bold);
     flex-shrink: 0
     }
 .service-features i {
-    color: var(--teal-text)
+    color: var(--teal-700)
     }
 .service-pricing {
     background: var(--gray-50);
@@ -1798,7 +2006,7 @@ section.dark-context .btn-outline:hover,
 .price, .pricing-amount {
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-extrabold);
-    color: var(--coral-text);
+    color: var(--coral-700);
     line-height: 1;
     letter-spacing: -0.02em
     }
@@ -1810,14 +2018,14 @@ section.dark-context .btn-outline:hover,
 .pricing-frequency {
     text-transform: uppercase;
     font-weight: 600;
-    color: var(--navy-blue);
+    color: var(--navy-700);
     font-size: var(--font-size-sm);
     letter-spacing: 0.5px;
     margin-bottom: var(--space-sm)
     }
 /* Service CTA */
 .services-cta {
-    background: linear-gradient(135deg, var(--navy-blue), #1a4570);
+    background: linear-gradient(135deg, var(--navy-700), #1a4570);
     color: var(--white);
     padding: var(--space-3xl);
     border-radius: var(--radius-lg);
@@ -1836,15 +2044,13 @@ section.dark-context .btn-outline:hover,
     }
 /* Why Choose Us */
 .why-choose {
-    padding: clamp(3rem, 8vh, 4.5rem) 0 !important;
+    padding: clamp(3rem, 8vh, 4.5rem) 0;
     background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
     position: relative
     }
 .why-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--space-xl) !important;
-    margin-top: var(--space-2xl) !important;
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
     }
 .why-image {
     position: relative;
@@ -1866,7 +2072,7 @@ section.dark-context .btn-outline:hover,
 .why-content h3 {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
-    color: var(--navy-blue);
+    color: var(--navy-700);
     margin-top: var(--space-lg);
     margin-bottom: var(--space-lg);
     letter-spacing: -0.01em
@@ -1878,27 +2084,23 @@ section.dark-context .btn-outline:hover,
     }
 /* Testimonials - Fortune 100 Design */
 .testimonials {
-    padding: clamp(3rem, 8vh, 4.5rem) 0 !important;
+    padding: clamp(3rem, 8vh, 4.5rem) 0;
     background: var(--white);
     position: relative;
     }
 .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: var(--space-xl) !important;
-    margin-top: var(--space-2xl) !important;
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
     align-items: stretch;
     }
 .testimonial-card {
     background: var(--white);
     border-radius: var(--radius-xl);
-    padding: var(--space-2xl) !important;
+    padding: var(--space-2xl);
     border: 2px solid var(--gray-200);
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-smooth);
     position: relative;
-    display: flex;
-    flex-direction: column;
     }
 .testimonial-card::before {
     content: '"';
@@ -1907,7 +2109,7 @@ section.dark-context .btn-outline:hover,
     left: var(--space-lg);
     font-size: 4rem;
     font-family: Georgia, serif;
-    color: var(--coral);
+    color: var(--coral-500);
     opacity: 0.15;
     font-weight: 700;
     line-height: 1;
@@ -1915,10 +2117,9 @@ section.dark-context .btn-outline:hover,
 .testimonial-card:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-2xl);
-    border-color: var(--coral);
+    border-color: var(--coral-500);
     }
 .testimonial-rating {
-    display: flex;
     gap: 0.25rem;
     margin-bottom: var(--space-lg);
     font-size: 1.125rem;
@@ -1962,14 +2163,14 @@ section.dark-context .btn-outline:hover,
     }
 /* Value Propositions Section */
 .value-props {
-    padding: clamp(3rem, 8vh, 4.5rem) 0 !important;
+    padding: clamp(3rem, 8vh, 4.5rem) 0;
     background: var(--white)
     }
 .value-props-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-xl) !important;
-    margin-top: var(--space-2xl) !important;
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
     }
 .value-prop-card {
     background: var(--white);
@@ -1983,13 +2184,13 @@ section.dark-context .btn-outline:hover,
 .value-prop-card:hover {
     transform: translatey(-6px);
     box-shadow: var(--shadow-xl);
-    border-color: var(--coral)
+    border-color: var(--coral-500)
     }
 .value-prop-icon {
     width: 70px;
     height: 70px;
     margin: 0 auto var(--space-lg);
-    background: linear-gradient(135deg, var(--coral) 0%, var(--coral-dark) 100%);
+    background: linear-gradient(135deg, var(--coral-500) 0%, var(--coral-600) 100%);
     border-radius: var(--radius-full);
     display: flex;
     align-items: center;
@@ -2001,7 +2202,7 @@ section.dark-context .btn-outline:hover,
 .value-prop-title {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
-    color: var(--navy-blue);
+    color: var(--navy-700);
     margin-bottom: var(--space-md);
     letter-spacing: -0.01em
     }
@@ -2012,32 +2213,27 @@ section.dark-context .btn-outline:hover,
     }
 /* Services Grid Section - Fortune 100 TIGHT Spacing */
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-lg) !important;
-    margin-top: var(--space-lg) !important;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
     }
 .service-card {
-    align-items: center;
     background: var(--white);
     border-radius: var(--radius-lg);
-    padding: var(--space-lg) !important;
+    padding: var(--space-lg);
     border: 1px solid var(--gray-200);
     transition: all var(--transition-base);
     position: relative;
-    display: flex;
-    flex-direction: column
     }
 .service-card:hover {
     transform: translatey(-4px);
     box-shadow: var(--shadow-xl);
-    border-color: var(--teal)
+    border-color: var(--teal-300)
     }
 .service-badge {
     position: absolute;
     top: var(--space-md);
     right: var(--space-md);
-    background: linear-gradient(135deg, var(--coral) 0%, var(--coral-dark) 100%);
+    background: linear-gradient(135deg, var(--coral-500) 0%, var(--coral-600) 100%);
     color: var(--white);
     padding: 0.25rem 0.625rem;
     border-radius: var(--radius-full);
@@ -2050,11 +2246,8 @@ section.dark-context .btn-outline:hover,
     width: 60px;
     height: 60px;
     margin: 0 auto var(--space-sm);
-    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    background: linear-gradient(135deg, var(--teal-300) 0%, var(--teal-400) 100%);
     border-radius: var(--radius-full);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: var(--white);
     font-size: 1.75rem;
     box-shadow: var(--shadow-icon-teal)
@@ -2062,7 +2255,7 @@ section.dark-context .btn-outline:hover,
 .service-title {
     font-size: clamp(1.125rem, 2.5vw, 1.25rem);
     font-weight: var(--font-weight-bold);
-    color: var(--navy-blue);
+    color: var(--navy-700);
     margin-bottom: var(--space-xs);
     text-align: center;
     letter-spacing: -0.01em;
@@ -2071,7 +2264,7 @@ section.dark-context .btn-outline:hover,
 .service-price {
     font-size: clamp(1.5rem, 3vw, 1.75rem);
     font-weight: var(--font-weight-extrabold);
-    color: var(--coral-text);
+    color: var(--coral-700);
     text-align: center;
     margin-bottom: var(--space-sm);
     letter-spacing: -0.02em;
@@ -2093,8 +2286,6 @@ section.dark-context .btn-outline:hover,
     }
 .service-card .service-features li {
     padding: 0.375rem 0;
-    display: flex;
-    align-items: flex-start;
     gap: var(--space-sm);
     color: var(--gray-700);
     line-height: 1.4;
@@ -2102,7 +2293,7 @@ section.dark-context .btn-outline:hover,
     }
 .service-card .service-features li::before {
     content: "✓";
-    color: var(--teal-text);
+    color: var(--teal-700);
     font-weight: var(--font-weight-bold);
     flex-shrink: 0;
     font-size: 1rem;
@@ -2118,9 +2309,8 @@ section.dark-context .btn-outline:hover,
 /* Why Choose Us Grid */
 .why-choose-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--space-xl) !important;
-    margin-top: var(--space-xl) !important;
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
     }
 .why-choose-card {
     background: var(--white);
@@ -2132,7 +2322,7 @@ section.dark-context .btn-outline:hover,
 .why-choose-card:hover {
     transform: translatey(-6px);
     box-shadow: var(--shadow-xl);
-    border-color: var(--coral)
+    border-color: var(--coral-500)
     }
 .why-choose-image {
     width: 100%;
@@ -2153,18 +2343,16 @@ section.dark-context .btn-outline:hover,
     transform: scale(1.05)
     }
 .why-choose-content {
-    padding: var(--space-lg) !important;
+    padding: var(--space-lg);
     }
 .why-choose-title {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
-    color: var(--navy-blue);
+    color: var(--navy-700);
     margin-bottom: var(--space-md);
     letter-spacing: -0.01em
     }
 .why-choose-description {
-    /* AI FIX: typography - The font size of the description text is too small... */
-    /* AI FIX: typography - The font size of the description text is too small... */
     font-size: 16px;
     color: var(--gray-600);
     line-height: var(--line-height-relaxed)
@@ -2175,11 +2363,10 @@ section.dark-context .btn-outline:hover,
     border-radius: var(--radius-lg);
     padding: var(--space-3xl);
     border: 1px solid var(--gray-200);
-    border-left: 4px solid var(--coral);
+    border-left: 4px solid var(--coral-500);
     transition: all var(--transition-base);
     position: relative;
     box-shadow: var(--shadow-sm);
-    /* AI Fix: Increased padding from 2xl to 3xl for better breathing room */
     }
 .testimonial-card::before {
     content: "“";
@@ -2187,11 +2374,10 @@ section.dark-context .btn-outline:hover,
     top: var(--space-lg);
     left: var(--space-lg);
     font-size: 4rem;
-    color: var(--coral);
+    color: var(--coral-500);
     opacity: 0.15;
     font-family: Georgia, serif;
     line-height: 1;
-    /* AI Fix: Added quote icon for visual engagement */
     }
 .testimonial-card:hover {
     transform: translatey(-4px);
@@ -2204,59 +2390,49 @@ section.dark-context .btn-outline:hover,
     letter-spacing: 0.1em
     }
 .testimonial-quote {
-    /* AI FIX: typography - Font size of the testimonial text is too small.... */
-    /* AI FIX: typography - Font size of testimonial text is too small, making... */
-    /* AI FIX: typography - Font size of the testimonial text is too small.... */
     font-size: 16px;
     line-height: var(--line-height-loose);
-    /* AI FIX: colors - Text in testimonials is hard to read due to low co... */
-    /* AI FIX: colors - Text in testimonials is too light, making it hard ... */
-    /* AI FIX: colors - Text in testimonials is too light and lacks contra... */
-    /* AI FIX: colors - Text in testimonials is hard to read due to low co... */
     color: #333;
     margin-bottom: var(--space-lg);
     font-style: italic;
-    /* AI Fix: Increased from lg (18px) to xl (20px), darker color for better contrast */
     }
 .testimonial-name {
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-lg);
-    color: var(--navy-blue);
+    color: var(--navy-700);
     margin-bottom: var(--space-xs);
-    /* AI Fix: Increased from base to lg for better readability */
     }
 .testimonial-location {
     font-size: var(--font-size-base);
     color: var(--gray-600);
-    /* AI Fix: Increased from sm to base, improved contrast from gray-500 to gray-600 */
     }
 /* CTA Sections */
-/* ============================================================================
+/* ======================
    PREMIUM CTA SECTION - Fortune 100 Treatment
    Perfect Contrast, Generous Spacing, Professional Layout
-   ============================================================================ */
+   ====================== */
 
 /* CRITICAL: Actual CTA class used in HTML */
 .cta {
     position: relative;
     background-size: cover;
     background-position: center;
-    color: white !important;
-    padding: clamp(3rem, 8vh, 4.5rem) var(--space-xl) clamp(2.5rem, 6vh, 3.5rem) !important;
+    color: white;
+    padding: clamp(3rem, 8vh, 4.5rem) var(--space-xl) clamp(2.5rem, 6vh, 3.5rem);
     text-align: center;
     overflow: hidden;
 }
 
-/* Override inline background with proper overlay */
+/* Override inline background with proper overlay - !important needed to override inline styles */
 .cta::before {
-    content: '' !important;
-    position: absolute !important;
+    content: '' !important;  /* Required: Override inline pseudo-element */
+    position: absolute !important;  /* Required: Override inline positioning */
     top: 0 !important;
     left: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
-    background: rgba(16, 42, 67, 0.85) !important;  /* DARK OVERLAY for text contrast */
-    z-index: 1 !important;
+    background: rgba(16, 42, 67, 0.85);  /* DARK OVERLAY for text contrast */
+    z-index: 1 !important;  /* Required: Ensure overlay is below content */
 }
 
 .cta .container,
@@ -2266,71 +2442,71 @@ section.dark-context .btn-outline:hover,
 }
 
 /* CTA Title - WHITE for contrast */
-.cta-title {
+.cta .cta-title {
     font-family: var(--font-display);
-    font-size: clamp(2rem, 4.5vw, 3rem) !important;
-    font-weight: 700 !important;
-    line-height: 1.15 !important;
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.15;
     letter-spacing: -0.02em;
-    margin: 0 auto 1.25rem !important;
+    margin: 0 auto 1.25rem;
     max-width: 800px;
-    color: white !important;
-    text-shadow: 
+    color: white;
+    text-shadow:
         0 2px 4px rgba(0, 0, 0, 0.3),
-        0 4px 12px rgba(0, 0, 0, 0.2) !important;
+        0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* CTA Subtitle - HIGH CONTRAST WHITE */
-.cta-subtitle {
+.cta .cta-subtitle {
     font-family: var(--font-body);
-    font-size: clamp(0.9375rem, 1.8vw, 1.125rem) !important;
-    font-weight: 400 !important;
-    line-height: 1.6 !important;
+    font-size: clamp(0.9375rem, 1.8vw, 1.125rem);
+    font-weight: 400;
+    line-height: 1.6;
     letter-spacing: 0.01em;
-    color: rgba(255, 255, 255, 0.95) !important;  /* CRITICAL: WHITE TEXT */
+    color: rgba(255, 255, 255, 0.95);
     max-width: 650px;
-    margin: 0 auto 1.75rem !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+    margin: 0 auto 1.75rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* CTA Guarantee - HIGH CONTRAST WHITE */
-.cta-guarantee {
+.cta .cta-guarantee {
     font-family: var(--font-body);
-    font-size: clamp(0.875rem, 1.4vw, 1rem) !important;
-    font-weight: 500 !important;
+    font-size: clamp(0.875rem, 1.4vw, 1rem);
+    font-weight: 500;
     line-height: 1.5;
-    color: rgba(255, 255, 255, 0.95) !important;  /* CRITICAL: WHITE TEXT */
-    margin-top: 1.5rem !important;
+    color: rgba(255, 255, 255, 0.95);
+    margin-top: 1.5rem;
     padding: 0.75rem 1.5rem;
     display: inline-block;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .cta-guarantee i {
-    color: var(--teal-300) !important;
+    color: var(--teal-300);
     margin-right: 0.5rem;
     font-size: 1.125em;
 }
 
 /* White button for CTA section */
 .btn-white {
-    background: rgba(255, 255, 255, 0.95) !important;
-    color: var(--navy-700) !important;
-    border: 2px solid white !important;
-    font-weight: 600 !important;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--navy-700);
+    border: 2px solid white;
+    font-weight: 600;
 }
 
 .btn-white:hover {
-    background: white !important;
-    color: var(--navy-800) !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3) !important;
+    background: white;
+    color: var(--navy-800);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
 }
 
 .cta-section {
     position: relative;
     background: linear-gradient(135deg, var(--navy-700) 0%, var(--navy-600) 50%, var(--navy-800) 100%);
-    color: white !important;
+    color: white;
     padding: clamp(3rem, 8vh, 4.5rem) var(--space-xl) clamp(2.5rem, 6vh, 3.5rem);  /* COMPACT - 40% reduction */
     text-align: center;
     overflow: hidden;
@@ -2364,10 +2540,10 @@ section.dark-context .btn-outline:hover,
     font-weight: 700;
     line-height: 1.15;  /* Tighter */
     letter-spacing: -0.02em;
-    margin: 0 auto 1.25rem;  /* COMPACT - reduced from 2rem */
+    margin: 0 auto 1.25rem;
     max-width: 800px;
-    color: white !important;  /* CRITICAL: White for contrast */
-    text-shadow: 
+    color: white;
+    text-shadow:
         0 2px 4px rgba(0, 0, 0, 0.2),
         0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -2377,18 +2553,18 @@ section.dark-context .btn-outline:hover,
     font-family: var(--font-body);
     font-size: clamp(0.9375rem, 1.8vw, 1.125rem);  /* Slightly smaller */
     font-weight: 400;
-    line-height: 1.6;  /* Tighter but still readable */
+    line-height: 1.6;
     letter-spacing: 0.01em;
-    color: rgba(255, 255, 255, 0.95) !important;  /* CRITICAL: High contrast */
+    color: rgba(255, 255, 255, 0.95);
     max-width: 650px;
-    margin: 0 auto 1.75rem;  /* COMPACT - reduced from 3rem */
+    margin: 0 auto 1.75rem;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* CTA Buttons - COMPACT spacing */
 .cta-buttons {
     display: flex;
-    gap: 1rem;  /* Reduced from 1.5rem */
+    gap: 1rem;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -2401,8 +2577,8 @@ section.dark-context .btn-outline:hover,
     font-size: clamp(0.875rem, 1.4vw, 1rem);  /* Slightly smaller */
     font-weight: 500;  /* Slightly bold for prominence */
     line-height: 1.5;
-    color: rgba(255, 255, 255, 0.95) !important;  /* CRITICAL: Even higher contrast */
-    margin-top: 1.5rem;  /* COMPACT - reduced from 2.5rem */
+    color: rgba(255, 255, 255, 0.95);
+    margin-top: 1.5rem;
     padding: 0.75rem 1.5rem;  /* More compact padding */
     display: inline-block;
 }
@@ -2414,9 +2590,7 @@ section.dark-context .btn-outline:hover,
     margin-right: 0.5rem;
     font-size: 1.125em;
 }
-/* ============================================================================
-   11. FORMS
-   ============================================================================ */
+/* ====================== 11. FORMS ====================== */
 .form-group {
     margin-bottom: 20px
     }
@@ -2428,7 +2602,7 @@ section.dark-context .btn-outline:hover,
     margin-bottom: var(--space-md);
     font-weight: var(--font-weight-semibold);
     font-size: var(--font-size-base);
-    color: var(--navy-blue);
+    color: var(--navy-700);
     letter-spacing: 0.01em
     }
 .form-group input, .form-group select, .form-group textarea {
@@ -2442,13 +2616,13 @@ section.dark-context .btn-outline:hover,
     }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
     outline: none;
-    border-color: var(--coral-text);
+    border-color: var(--coral-700);
     box-shadow: var(--shadow-focus)
     }
 .form-group input:focus-visible, .form-group select:focus-visible, .form-group textarea:focus-visible {
-    outline: 2px solid var(--coral-text);
+    outline: 2px solid var(--coral-700);
     outline-offset: 2px;
-    border-color: var(--coral-text)
+    border-color: var(--coral-700)
     }
 .form-group input::placeholder, .form-group textarea::placeholder {
     color: var(--gray-400)
@@ -2476,47 +2650,32 @@ section.dark-context .btn-outline:hover,
     }
 /* Trust Bar - Improved spacing and visual prominence */
 .trust-bar {
-    background: var(--navy-blue);
-    padding: 1.5rem 0;  /* Reduced from var(--space-xl) for efficiency */
-    border-top: 4px solid var(--coral);  /* THICKER border - more prominent */
+    background: var(--navy-700);
+    padding: 1.5rem 0;
+    border-top: 4px solid var(--coral-500);  /* THICKER border - more prominent */
     box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle depth */
     }
 .trust-items {
-    display: flex;
-    justify-content: space-between;  /* Changed from space-around for better distribution */
-    align-items: center;
-    flex-wrap: wrap;
     gap: 1.5rem;  /* Increased gap for breathing room */
     max-width: 1100px;  /* Constrain width */
     margin: 0 auto;  /* Center */
-    padding: 0 var(--space-lg);  /* Add horizontal padding */
+    padding: 0 var(--space-lg);
     }
 .trust-item {
-    display: flex;
-    align-items: center;
     gap: 0.625rem;  /* Slightly larger gap */
     color: var(--white);
     font-size: 0.9375rem;  /* Slightly larger for readability */
     font-weight: 600;  /* Bolder */
-    white-space: nowrap;  /* Prevent wrapping */
+    white-space: nowrap;
     }
 .trust-item i {
-    color: var(--coral);
+    color: var(--coral-500);
     font-size: 1.5rem;  /* Larger icons for visual impact */
-    flex-shrink: 0;  /* Prevent icon shrinking */
-    }
-@media (max-width: 768px) {
-    .trust-items {
-        flex-direction: column;
-        gap: var(--space-md)
-        }
-    .trust-item {
-        font-size: var(--font-size-base)
-        }
+    flex-shrink: 0;
     }
 /* FAQ Section - Fortune 100 Professional Design */
 .faq-section {
-    padding: clamp(2.5rem, 6vh, 3.5rem) 0 !important;
+    padding: clamp(2.5rem, 6vh, 3.5rem) 0;
     background: var(--gray-50);
     }
 .faq-container {
@@ -2524,7 +2683,7 @@ section.dark-context .btn-outline:hover,
     margin: 0 auto;
     }
 .faq-item {
-    margin-bottom: var(--space-md) !important;
+    margin-bottom: var(--space-md);
     background: var(--white);
     border: 1px solid var(--gray-200);
     border-radius: var(--radius-lg);
@@ -2533,12 +2692,12 @@ section.dark-context .btn-outline:hover,
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     }
 .faq-item:hover {
-    border-color: var(--coral);
+    border-color: var(--coral-500);
     box-shadow: var(--shadow-md);
     transform: translateY(-2px);
     }
 .faq-item.active {
-    border-color: var(--coral);
+    border-color: var(--coral-500);
     box-shadow: var(--shadow-lg);
     }
 .faq-question {
@@ -2560,22 +2719,22 @@ section.dark-context .btn-outline:hover,
     }
 .faq-question:hover {
     background: var(--gray-50);
-    color: var(--coral);
+    color: var(--coral-500);
     }
 .faq-question:focus {
-    outline: 2px solid var(--coral);
+    outline: 2px solid var(--coral-500);
     outline-offset: -2px;
     }
 .faq-question[aria-expanded="true"] {
     background: var(--gray-50);
-    color: var(--coral);
+    color: var(--coral-500);
     padding-bottom: 1rem;
     }
 .faq-question span {
     flex: 1;
     }
 .faq-question i {
-    color: var(--coral);
+    color: var(--coral-500);
     transition: transform var(--transition-smooth);
     font-size: 1rem;
     flex-shrink: 0;
@@ -2606,7 +2765,6 @@ section.dark-context .btn-outline:hover,
     }
 /* Contact Form Section */
 .contact-form-section {
-    padding: var(--space-5xl) 0;
     background: var(--bg-light)
     }
 .contact-form-wrapper {
@@ -2623,7 +2781,6 @@ section.dark-context .btn-outline:hover,
     box-shadow: var(--shadow-md)
     }
 .form-row {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-lg)
     }
@@ -2634,10 +2791,10 @@ section.dark-context .btn-outline:hover,
     display: block;
     font-weight: var(--font-weight-semibold);
     margin-bottom: var(--space-sm);
-    color: var(--navy-blue)
+    color: var(--navy-700)
     }
 .form-group .required {
-    color: var(--coral)
+    color: var(--coral-500)
     }
 .form-group input, .form-group select, .form-group textarea {
     width: 100%;
@@ -2650,7 +2807,7 @@ section.dark-context .btn-outline:hover,
     }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
     outline: none;
-    border-color: var(--coral)
+    border-color: var(--coral-500)
     }
 .form-group textarea {
     resize: vertical;
@@ -2684,7 +2841,7 @@ section.dark-context .btn-outline:hover,
 .contact-info-sidebar h3 {
     font-size: var(--font-size-xl);
     margin-bottom: var(--space-xl);
-    color: var(--navy-blue)
+    color: var(--navy-700)
     }
 .contact-info-item {
     display: flex;
@@ -2692,7 +2849,7 @@ section.dark-context .btn-outline:hover,
     margin-bottom: var(--space-xl)
     }
 .contact-info-item i {
-    color: var(--coral);
+    color: var(--coral-500);
     font-size: var(--font-size-xl);
     margin-top: 4px
     }
@@ -2700,14 +2857,14 @@ section.dark-context .btn-outline:hover,
     display: block;
     font-weight: var(--font-weight-semibold);
     margin-bottom: var(--space-xs);
-    color: var(--navy-blue)
+    color: var(--navy-700)
     }
 .contact-info-item a {
     color: var(--text-color);
     text-decoration: none
     }
 .contact-info-item a:hover {
-    color: var(--coral)
+    color: var(--coral-500)
     }
 .contact-info-item p {
     margin: 0;
@@ -2717,39 +2874,27 @@ section.dark-context .btn-outline:hover,
     margin-top: var(--space-2xl);
     padding-top: var(--space-xl);
     border-top: 1px solid var(--border-color);
-    display: flex;
     gap: var(--space-sm);
-    align-items: center
     }
 .response-time i {
-    color: var(--coral)
+    color: var(--coral-500)
     }
 .response-time p {
     margin: 0;
     font-size: var(--font-size-sm)
     }
-@media (max-width: 768px) {
-    .contact-form-wrapper {
-        grid-template-columns: 1fr
-        }
-    .form-row {
-        grid-template-columns: 1fr
-        }
-    }
-/* ============================================================================
-   12. FOOTER
-   ============================================================================ */
+/* ====================== 12. FOOTER ====================== */
 .footer {
-    background: linear-gradient(180deg, var(--navy-blue) 0%, var(--navy-blue-dark) 100%);
+    background: linear-gradient(180deg, var(--navy-700) 0%, var(--navy-800) 100%);
     color: var(--white);
-    padding: clamp(2rem, 5vh, 2.75rem) 0 clamp(1.25rem, 3vh, 1.75rem) !important;  /* TIGHTER - 20% more reduction */
-    border-top: 3px solid var(--coral-text);
+    padding: clamp(2rem, 5vh, 2.75rem) 0 clamp(1.25rem, 3vh, 1.75rem);  /* TIGHTER - 20% more reduction */
+    border-top: 3px solid var(--coral-700);
     }
 .footer-content, .footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--space-xl) !important;  /* TIGHTER - reduced from 2xl */
-    margin-bottom: var(--space-md) !important;  /* TIGHTER - reduced from xl */
+    gap: var(--space-xl);
+    margin-bottom: var(--space-md) !important;
     align-items: start;  /* FIX: Align all columns to top */
     }
 .footer-section, .footer-col {
@@ -2757,34 +2902,34 @@ section.dark-context .btn-outline:hover,
     }
 .footer-title {
     font-size: clamp(1.75rem, 4vw, 2.25rem) !important;  /* EVEN LARGER - 20% increase */
-    font-weight: 900 !important;  /* Maximum boldness */
+    font-weight: 900;  /* Maximum boldness */
     margin-bottom: 0.375rem !important;  /* TIGHTER - better grouping with tagline */
     letter-spacing: -0.025em;
-    color: var(--white) !important;
+    color: var(--white);
     text-transform: none;
-    line-height: 1.1;  /* Tighter for impact */
+    line-height: 1.1;
     text-shadow: 0 2px 4px rgba(0,0,0,0.25);  /* More prominent shadow */
     }
 .footer-description {
     color: rgba(255, 255, 255, 0.9);  /* Good contrast */
-    line-height: 1.6;  /* COMPACT - reduced from relaxed */
-    margin-bottom: var(--space-md);  /* COMPACT - reduced from lg */
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
     font-size: 0.9375rem;
     }
 
 /* Footer text - same as description */
 .footer-text {
-    color: rgba(255, 255, 255, 0.88) !important;  /* Slightly lighter for hierarchy */
+    color: rgba(255, 255, 255, 0.88);  /* Slightly lighter for hierarchy */
     line-height: 1.5;
-    margin-bottom: 1rem !important;  /* INCREASED - better separation from contact */
-    font-size: 0.9375rem !important;
+    margin-bottom: 1rem;
+    font-size: 0.9375rem;
 }
 
 .footer-heading {
-    font-size: 1.1875rem !important;  /* Slightly LARGER for hierarchy */
-    font-weight: 800 !important;  /* MUCH BOLDER - increased from 700 */
-    margin-bottom: var(--space-sm) !important;  /* TIGHTER - better grouping */
-    color: var(--white) !important;
+    font-size: 1.1875rem;
+    font-weight: 800;  /* MUCH BOLDER - increased from 700 */
+    margin-bottom: var(--space-sm);
+    color: var(--white);
     letter-spacing: 0.05em;  /* MORE tracking for uppercase */
     text-transform: uppercase;
     text-shadow: 0 1px 2px rgba(0,0,0,0.15);  /* Subtle depth */
@@ -2793,10 +2938,10 @@ section.dark-context .btn-outline:hover,
     list-style: none
     }
 .footer-links li, .footer-contact li {
-    margin-bottom: 0.625rem !important;  /* INCREASED for better touch targets & scannability */
+    margin-bottom: 0.625rem;
     }
 .footer-links a, .footer-contact a {
-    color: rgba(255, 255, 255, 0.92) !important;  /* BRIGHTER for better readability */
+    color: rgba(255, 255, 255, 0.92);  /* BRIGHTER for better readability */
     transition: var(--transition-fast);
     display: inline-block;
     line-height: 1.6;
@@ -2804,65 +2949,63 @@ section.dark-context .btn-outline:hover,
     font-weight: 400;  /* Regular weight for links */
     }
 .footer-links a:hover, .footer-contact a:hover {
-    color: var(--coral) !important;
+    color: var(--coral-500);
     transform: translateX(3px);  /* Subtle hover effect */
     text-decoration: underline;  /* Visual feedback */
     }
 
 /* CRITICAL: Make contact info prominent and well-spaced */
 .footer-contact li {
-    margin-bottom: 0.625rem !important;  /* Consistent spacing */
+    margin-bottom: 0.625rem;
     line-height: 1.6;
 }
 
 .footer-contact a,
 .footer-contact p {
-    font-size: 0.9375rem !important;  /* Consistent with links */
-    color: rgba(255, 255, 255, 0.92) !important;  /* Higher contrast */
-    font-weight: 400 !important;  /* Regular weight for consistency */
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.92);  /* Higher contrast */
+    font-weight: 400;  /* Regular weight for consistency */
     line-height: 1.6;
-    display: inline;  /* Ensure inline with label */
+    display: inline;
 }
 
 /* Style for contact labels - INLINE with consistent spacing */
 .footer-contact strong,
 .footer-contact b {
-    color: rgba(255, 255, 255, 0.7) !important;  /* Subtle label */
-    font-weight: 600 !important;
-    display: inline !important;  /* CRITICAL: Inline not block */
-    margin-bottom: 0 !important;
-    margin-right: 0.25rem !important;  /* Minimal gap after label */
-    font-size: 0.875rem !important;  /* Slightly smaller for hierarchy */
-    min-width: 70px;  /* Ensure labels align */
+    color: rgba(255, 255, 255, 0.7);  /* Subtle label */
+    font-weight: 600;
+    display: inline;
+    margin-bottom: 0;
+    margin-right: 0.25rem;
+    font-size: 0.875rem;
+    min-width: 70px;
     text-align: left;
 }
 
-.footer-bottom {
+.footer .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.15);
-    padding-top: var(--space-sm) !important;  /* MINIMAL - reduced from md */
-    margin-top: var(--space-sm) !important;  /* MINIMAL - reduced from md */
-    text-align: center !important;  /* CRITICAL: Force centering */
+    padding-top: var(--space-sm);
+    margin-top: var(--space-sm);
+    text-align: center;
     color: rgba(255, 255, 255, 0.85);
-    display: flex;
     flex-direction: column-reverse;  /* CRITICAL: Reverse order - Back to Top first */
-    align-items: center;
     gap: 0.5rem;
     }
-.footer-bottom p {
-    margin: 0 !important;  /* REMOVE all margins */
+.footer .footer-bottom p {
+    margin: 0;  /* REMOVE all margins */
     font-size: 0.875rem;
     line-height: 1.5;
-    text-align: center !important;  /* CRITICAL: Force centering */
-    width: 100%;  /* Ensure full width for centering */
+    text-align: center;
+    width: 100%;
     }
 
 /* Back to Top link styling */
 .footer-back-top {
-    order: -1;  /* Ensure it appears first */
+    order: -1;
 }
 
 .back-to-top {
-    color: rgba(255, 255, 255, 0.85) !important;
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
     font-size: 0.875rem;
     transition: all 0.2s ease;
@@ -2870,15 +3013,15 @@ section.dark-context .btn-outline:hover,
 }
 
 .back-to-top:hover {
-    color: var(--coral) !important;
+    color: var(--coral-500);
     transform: translateY(-2px);
 }
 .footer-legal {
     display: flex;
-    gap: var(--space-sm);  /* TIGHTER - reduced from md */
+    gap: var(--space-sm);
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 0.375rem !important;  /* MINIMAL spacing */
+    margin-top: 0.375rem;
     }
 .footer-legal a {
     color: rgba(255, 255, 255, 0.85);
@@ -2889,8 +3032,6 @@ section.dark-context .btn-outline:hover,
     }
 /* Social Links */
 .social-links {
-    display: flex;
-    gap: var(--space-md);
     flex-wrap: wrap
     }
 .social-link, .social-icon {
@@ -2899,12 +3040,10 @@ section.dark-context .btn-outline:hover,
     transition: var(--transition-fast)
     }
 .social-link:hover, .social-icon:hover {
-    color: var(--coral);
+    color: var(--coral-500);
     transform: translatey(-2px)
     }
-/* ============================================================================
-   13. UTILITIES
-   ============================================================================ */
+/* ====================== 13. UTILITIES ====================== */
 /* WhatsApp Float Button */
 .whatsapp-float {
     position: fixed;
@@ -2915,9 +3054,6 @@ section.dark-context .btn-outline:hover,
     background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
     color: var(--white);
     border-radius: var(--radius-full);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 1.8rem;
     box-shadow: var(--shadow-success);
     z-index: 9999;
@@ -2940,7 +3076,7 @@ section.dark-context .btn-outline:hover,
     right: 100px;
     width: 45px;
     height: 45px;
-    background: var(--navy-blue);
+    background: var(--navy-700);
     color: var(--white);
     border: none;
     border-radius: var(--radius-full);
@@ -2957,7 +3093,7 @@ section.dark-context .btn-outline:hover,
     visibility: visible
     }
 .scroll-top:hover {
-    background: var(--coral);
+    background: var(--coral-500);
     transform: translatey(-3px)
     }
 /* Section Background Colors */
@@ -2974,7 +3110,7 @@ section.dark-context .btn-outline:hover,
     margin: var(--space-5xl) 0
     }
 .bg-dark {
-    background: linear-gradient(135deg, var(--navy-blue) 0%, var(--navy-blue-light) 100%);
+    background: linear-gradient(135deg, var(--navy-700) 0%, var(--navy-600) 100%);
     color: var(--white)
     }
 .bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark h4, .bg-dark h5, .bg-dark h6 {
@@ -3074,9 +3210,7 @@ section.dark-context .btn-outline:hover,
 .measure-narrow {
     max-width: 45ch
     }
-/* ============================================================================
-   14. ANIMATIONS
-   ============================================================================ */
+/* ====================== 14. ANIMATIONS ====================== */
 @keyframes pulse {
     0%, 100% {
         transform: scale(1);
@@ -3105,9 +3239,7 @@ section.dark-context .btn-outline:hover,
 .fade-in-up {
     animation: fadeInUp 0.6s ease-out
     }
-/* ============================================================================
-   15. MEDIA QUERIES - RESPONSIVE DESIGN
-   ============================================================================ */
+/* ====================== 15. MEDIA QUERIES - RESPONSIVE DESIGN ====================== */
 /* Tablets and below (968px) */
 @media (max-width: 968px) {
     :root {
@@ -3158,6 +3290,12 @@ section.dark-context .btn-outline:hover,
         --space-4xl: 3rem;
         --space-3xl: 2.5rem
         }
+    .container, .container-fluid {
+        padding: 0 var(--space-lg)
+        }
+    .logo-name {
+        font-size: 1.25rem;
+        }
     .section-title {
         font-size: var(--font-size-3xl)
         }
@@ -3167,10 +3305,22 @@ section.dark-context .btn-outline:hover,
     .hero-buttons, .cta-buttons {
         flex-direction: column
         }
+    .trust-items {
+        flex-direction: column;
+        gap: var(--space-md)
+        }
+    .trust-item {
+        font-size: var(--font-size-base)
+        }
     .btn {
-        /* AI FIX: layout - The alignment of the 'Get Started' buttons is inco... */
         align-items: center;
         width: 100%
+        }
+    .contact-form-wrapper {
+        grid-template-columns: 1fr
+        }
+    .form-row {
+        grid-template-columns: 1fr
         }
     .footer-grid, .footer-content {
         grid-template-columns: 1fr;
@@ -3190,6 +3340,9 @@ section.dark-context .btn-outline:hover,
     }
 /* Small Mobile (480px) */
 @media (max-width: 480px) {
+    .logo-name {
+        font-size: 1.125rem;
+        }
     .container, .container-fluid {
         padding: 0 var(--space-base)
         }
@@ -3224,10 +3377,7 @@ section.dark-context .btn-outline:hover,
         font-size: 0.75rem
         }
     .btn {
-        /* AI FIX: layout - The alignment of the 'Get Started' buttons is inco... */
         align-items: center;
-        /* AI FIX: accessibility - The button touch targets are too small.... */
-        /* AI FIX: accessibility - The touch targets for the 'Get Started' buttons ar... */
         padding: 12px 24px;
         font-size: var(--font-size-sm)
         }
@@ -3246,9 +3396,7 @@ section.dark-context .btn-outline:hover,
         text-align: center
         }
     }
-/* ============================================================================
-   16. PRINT STYLES
-   ============================================================================ */
+/* ====================== 16. PRINT STYLES ====================== */
 @media print {
     .header, .top-bar, .whatsapp-float, .scroll-top, .mobile-menu-toggle, .btn, .footer {
         display: none !important
@@ -3266,1222 +3414,9 @@ section.dark-context .btn-outline:hover,
         }
     img {
         max-width: 100%;
-        page-break-inside: avoid
-        }
+        page-break-inside: avoid;
     }
-/* ============================================================================
+}
+
+/* ======================
    END OF STYLESHEET
-   ============================================================================ */
-/* ===========================================
-   AUTONOMOUS AI FIX - FULL SITE AUDIT
-   Generated from GPT-4 Vision Analysis
-   37 Issues Fixed Autonomously
-   =========================================== */
-/* HEADER FIXES */
-/* Issue: Low text contrast */
-/* Fix: Increase text contrast */
-.header {
-    color: var(--gray-900)
-    }
-/* Issue: No nav hover effects */
-/* Fix: Add hover effects */
-.nav-link:hover {
-    background: var(--gray-50)
-    }
-/* Issue: Inconsistent nav spacing */
-/* Fix: Standardize spacing */
-.nav {
-    gap: var(--space-xl)
-    }
-/* HERO FIXES */
-/* Issue: Low subtitle contrast */
-/* Fix: Add text shadow */
-.hero-subtitle {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5)
-    }
-/* Issue: Inconsistent button styles */
-/* Fix: Match button styles */
-.btn-secondary {
-    background: var(--coral)
-    }
-/* Issue: Weak visual hierarchy */
-/* Fix: Increase spacing */
-.hero-title {
-    margin-bottom: 16px
-    }
-/* TRUST BAR FIXES */
-/* Issue: Small header text */
-/* Fix: Increase font size */
-.trust-item strong {
-    font-size: 1.125rem
-    }
-/* Issue: Low contrast */
-/* Fix: Improve text contrast */
-.trust-bar {
-    color: var(--white)
-    }
-/* Issue: Inconsistent alignment */
-/* Fix: Center align text */
-.trust-item {
-    text-align: center
-    }
-/* VALUE PROPS FIXES */
-/* Issue: Small text */
-/* Fix: Increase font size */
-.value-prop-card p {
-    font-size: 1rem
-    }
-/* Issue: Low contrast pricing */
-/* Fix: Improve contrast */
-.value-prop-price {
-    color: var(--navy-blue);
-    font-weight: 700
-    }
-/* Issue: Cluttered spacing */
-/* Fix: Add more spacing */
-.value-props-grid {
-    gap: var(--space-2xl)
-    }
-/* Issue: No CTA */
-/* Fix: Already has CTA buttons */
-/* CTA present */
-/* SERVICES FIXES */
-/* Issue: Weak header hierarchy */
-/* Fix: Larger title */
-.services .section-title {
-    font-size: 2.5rem
-    }
-/* Issue: Inconsistent card spacing */
-/* Fix: Uniform spacing */
-.services-grid {
-    gap: var(--space-xl)
-    }
-/* Issue: Uniform buttons */
-/* Fix: Add hierarchy */
-.service-card.featured .btn {
-    /* AI FIX: layout - The alignment of the 'Get Started' buttons is inco... */
-    align-items: center;
-    background: var(--coral)
-    }
-/* WHY CHOOSE FIXES */
-/* Issue: Cramped image spacing */
-/* Fix: Add spacing */
-.why-choose-card {
-    padding: var(--space-xl)
-    }
-/* Issue: Small mobile text */
-/* Fix: Responsive sizing */
-@media (max-width: 768px) {
-    .why-choose-card p {
-        font-size: 1rem
-        }
-    }
-/* Issue: Weak CTA */
-/* Fix: Enhance CTA button */
-.why-choose .btn {
-    /* AI FIX: layout - The alignment of the 'Get Started' buttons is inco... */
-    align-items: center;
-    /* AI FIX: accessibility - The button touch targets are too small.... */
-    /* AI FIX: accessibility - The touch targets for the 'Get Started' buttons ar... */
-    padding: 12px 24px
-    }
-/* TESTIMONIALS FIXES */
-/* Issue: Empty appearance */
-/* Fix: Add visual differentiation */
-.testimonial-card {
-    background: var(--gray-50);
-    border-radius: var(--radius-lg);
-    padding: var(--space-xl)
-    }
-/* Issue: No visual elements */
-/* Fix: Add quote icon */
-.testimonial-card::before {
-    content: "“";
-    font-size: 3rem;
-    color: var(--coral)
-    }
-/* FAQ FIXES */
-/* Issue: Small font */
-/* Fix: Increase size */
-.faq-question {
-    font-size: 1.125rem
-    }
-/* Issue: Low contrast */
-/* Fix: Improve contrast */
-.faq-question {
-    color: var(--navy-blue);
-    font-weight: 600
-    }
-/* Issue: No hover cues */
-/* Fix: Add hover effect */
-.faq-item:hover {
-    background: var(--gray-50)
-    }
-/* CONTACT FIXES */
-/* Issue: No validation feedback */
-/* Fix: Add styles for errors */
-.form-field.error {
-    border-color: var(--coral)
-    }
-.form-field.error + .error-message {
-    display: block;
-    color: var(--coral)
-    }
-/* Issue: Unclear email field */
-/* Fix: Better styling */
-input[type="email"] {
-    border: 2px solid var(--gray-300)
-    }
-/* Issue: Low contrast */
-/* Fix: Darker text */
-.form-label {
-    color: var(--gray-900);
-    font-weight: 600
-    }
-/* FOOTER FIXES */
-/* Issue: Low text contrast */
-/* Fix: Lighter text */
-.footer {
-    color: var(--gray-300)
-    }
-/* Issue: Inconsistent spacing */
-/* Fix: Add padding */
-.footer-section {
-    padding: var(--space-xl)
-    }
-/* Issue: Weak hierarchy */
-/* Fix: Font weight */
-.footer-title {
-    font-weight: 700;
-    font-size: 1.125rem
-    }
-/* =========================================
-   FOCUSED VISUAL AUDIT - CSS FIXES
-   Hero + Bottom Sections (18 Issues)
-   Generated: 2025-10-03 03:40:35
-   ========================================= */
-/* ============================================
-   HERO SECTION FIXES (4 issues)
-   ============================================ */
-/* Issue 1: Headline could be larger for better emphasis */
-/* Fix: Increase font size of headline */
-.hero-title {
-    font-size: 3.5rem !important
-    }
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem !important
-        }
-    }
-/* Hero Secondary Button - Outline style with better contrast */
-.hero .btn-secondary {
-    background: transparent !important;
-    color: var(--white) !important;
-    border: 2px solid rgba(255, 255, 255, 0.9) !important;  /* Slightly transparent for elegance */
-    font-weight: 600 !important;
-    backdrop-filter: blur(8px);  /* Premium glass effect */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15),
-                0 0 0 1px rgba(255, 255, 255, 0.1);  /* Subtle depth */
-    }
-.hero .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.95) !important;  /* Nearly solid white on hover */
-    color: var(--navy-700) !important;  /* Dark navy for excellent contrast */
-    border-color: rgba(255, 255, 255, 0.95) !important;
-    transform: translateY(-1px) !important;  /* Subtle lift */
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25),
-                0 2px 8px rgba(0, 0, 0, 0.1);  /* Appealing glow */
-    }
-/* Hero Content - CENTERED alignment (FIX) */
-.hero-content {
-    gap: var(--space-xl) !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;  /* FIXED: Center instead of flex-start */
-    }
-.hero .cta-buttons {
-    gap: var(--space-lg) !important;
-    margin-top: var(--space-md) !important
-    }
-/* Issue 4: Potential mobile responsiveness - text overlapping */
-/* Fix: Ensure text elements resize appropriately on mobile */
-@media (max-width: 768px) {
-    .hero-subtitle {
-        font-size: 1.125rem !important;
-        line-height: 1.6 !important;
-        margin-bottom: var(--space-md) !important
-        }
-    .hero .cta-buttons {
-        flex-direction: column !important;
-        width: 100% !important
-        }
-    .hero .btn {
-        /* AI FIX: layout - The alignment of the 'Get Started' buttons is inco... */
-        align-items: center;
-        width: 100% !important;
-        text-align: center !important
-        }
-    }
-/* ============================================
-   TESTIMONIALS SECTION FIXES (4 issues)
-   ============================================ */
-/* Issue 5: Text readability is poor due to low contrast */
-/* Fix: Increase contrast between text and background */
-.testimonial-card {
-    background: var(--white) !important;
-    color: var(--gray-900) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important
-    }
-/* REMOVED: Bad AI-generated rule - .testimonial-text class doesn't exist in HTML */
-.testimonial-author {
-    color: var(--navy-blue) !important;
-    font-weight: 600 !important
-    }
-.testimonial-role {
-    color: var(--gray-600) !important
-    }
-/* Issue 6: Testimonial cards do not stand out visually */
-/* Fix: Add borders and background colors for distinction */
-.testimonial-card {
-    border: 1px solid var(--gray-200) !important;
-    border-radius: var(--radius-lg) !important;
-    padding: var(--space-2xl) !important;
-    transition: all 0.3s ease !important
-    }
-.testimonial-card:hover {
-    border-color: var(--coral) !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
-    transform: translatey(-4px) !important
-    }
-/* REMOVED: Bad AI rule - .testimonial-text doesn't exist, should be .testimonial-quote */
-.testimonial-card::after {
-    content: "" !important;
-    position: absolute !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    width: 0 !important;
-    height: 4px !important;
-    background: var(--coral) !important;
-    transition: width 0.3s ease !important
-    }
-.testimonial-card:hover::after {
-    width: 100% !important
-    }
-/* Issue 8: Section feels too empty */
-/* Fix: Enlarge cards and increase spacing */
-.testimonials-grid {
-    /* AI FIX: spacing - The spacing between testimonial cards is too tight... */
-    gap: 20px;
-    padding: var(--space-2xl) 0 !important
-    }
-.testimonial-card {
-    min-height: 280px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    position: relative !important
-    }
-/* ============================================
-   FAQ SECTION FIXES (3 issues)
-   ============================================ */
-/* Issue 9: Lack of clear visual indication for expandable items */
-/* Fix: Add icons and visual cues for expandable items */
-.faq-question {
-    position: relative !important;
-    padding-right: var(--space-3xl) !important;
-    cursor: pointer !important
-    }
-.faq-question::after {
-    content: "+" !important;
-    position: absolute !important;
-    right: var(--space-lg) !important;
-    top: 50% !important;
-    transform: translatey(-50%) !important;
-    font-size: 1.5rem !important;
-    color: var(--coral) !important;
-    font-weight: 700 !important;
-    transition: transform 0.3s ease !important
-    }
-.faq-item.active .faq-question::after {
-    content: "−" !important;
-    transform: translatey(-50%) rotate(180deg) !important
-    }
-/* Issue 10: Hover states not clearly visible */
-/* Fix: Enhance hover effect for better interaction feedback */
-.faq-item {
-    transition: all 0.3s ease !important;
-    border-radius: var(--radius-md) !important;
-    padding: var(--space-lg) !important;
-    /* AI FIX: spacing - Excessive white space between FAQ items makes the ... */
-    margin-bottom: 20px
-    }
-.faq-item:hover {
-    background: var(--gray-50) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
-    transform: translatex(4px) !important
-    }
-.faq-question:hover {
-    color: var(--coral) !important
-    }
-/* Issue 11: Contrast levels could be higher */
-/* Fix: Increase text contrast */
-.faq-question {
-    color: var(--navy-blue) !important;
-    font-weight: 700 !important;
-    font-size: 1.125rem !important
-    }
-.faq-answer {
-    color: var(--gray-800) !important;
-    font-size: 1rem !important;
-    line-height: 1.7 !important
-    }
-/* ============================================
-   CONTACT FORM FIXES (4 issues)
-   ============================================ */
-/* Issue 12: Lack of visual validation feedback */
-/* Fix: Implement validation error and success states */
-.form-field.error {
-    border-color: #e74c3c !important;
-    border-width: 2px !important;
-    background: #fff5f5 !important
-    }
-.form-field.success {
-    border-color: #27ae60 !important;
-    border-width: 2px !important;
-    background: #f0fff4 !important
-    }
-.error-message {
-    display: none !important;
-    color: #e74c3c !important;
-    font-size: 0.875rem !important;
-    margin-top: var(--space-xs) !important
-    }
-.form-field.error + .error-message {
-    display: block !important
-    }
-.success-message {
-    display: none !important;
-    color: #27ae60 !important;
-    font-size: 0.875rem !important;
-    margin-top: var(--space-xs) !important
-    }
-.form-field.success + .success-message {
-    display: block !important
-    }
-/* Issue 13: No focus state styling for input fields */
-/* Fix: Add visible focus states for accessibility */
-.form-field:focus {
-    border-color: var(--coral) !important;
-    border-width: 2px !important;
-    outline: none !important;
-    box-shadow: 0 0 0 3px rgba(239, 108, 89, 0.1) !important
-    }
-textarea.form-field:focus {
-    border-color: var(--coral) !important
-    }
-/* Issue 14: Accessibility concerns with placeholder contrast */
-/* Fix: Increase placeholder text contrast */
-.form-field::placeholder {
-    color: var(--gray-600) !important;
-    opacity: 1 !important
-    }
-.form-field:-ms-input-placeholder {
-    color: var(--gray-600) !important
-    }
-.form-field::-ms-input-placeholder {
-    color: var(--gray-600) !important
-    }
-/* Issue 15: Mobile layout concerns */
-/* Fix: Ensure responsive design on smaller screens */
-@media (max-width: 768px) {
-    .contact-form {
-        padding: var(--space-lg) !important
-        }
-    .form-field {
-        font-size: 16px !important;
-        /* Prevents zoom on iOS */
-        }
-    .form-group {
-        margin-bottom: var(--space-lg) !important
-        }
-    }
-/* ============================================
-   FOOTER FIXES (3 issues)
-   ============================================ */
-/* Issue 16: Text contrast against background is low */
-/* Fix: Increase brightness of text for better readability */
-.footer {
-    color: var(--gray-200) !important
-    }
-.footer-title {
-    color: var(--white) !important;
-    font-weight: 700 !important;
-    margin-bottom: var(--space-md) !important
-    }
-.footer p, .footer li {
-    color: var(--gray-300) !important
-    }
-/* Issue 17: Link visibility and hover states not clear */
-/* Fix: Distinct colors and hover effects for links */
-.footer a {
-    color: var(--gray-300) !important;
-    text-decoration: none !important;
-    transition: all 0.3s ease !important;
-    border-bottom: 1px solid transparent !important
-    }
-.footer a:hover {
-    color: var(--coral) !important;
-    border-bottom-color: var(--coral) !important;
-    transform: translatex(4px) !important
-    }
-.footer-social a {
-    display: inline-block !important;
-    padding: var(--space-sm) !important;
-    border-radius: 50% !important;
-    background: rgba(255, 255, 255, 0.1) !important;
-    transition: all 0.3s ease !important
-    }
-.footer-social a:hover {
-    background: var(--coral) !important;
-    color: var(--white) !important;
-    transform: translatey(-4px) !important
-    }
-/* Issue 18: Copyright text is small and hard to read */
-/* Fix: Increase font size for better legibility */
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-    padding-top: var(--space-lg) !important;
-    margin-top: var(--space-xl) !important
-    }
-.footer-copyright {
-    font-size: 1rem !important;
-    color: var(--gray-400) !important
-    }
-/* =========================================
-   END OF FOCUSED AUDIT FIXES
-   18 Issues Fixed Autonomously
-   ========================================= */
-/* =========================================
-   CRITICAL FIX - TESTIMONIALS SECTION
-   Addressing AI-identified contrast issues
-   Priority: CRITICAL (4/10 score)
-   ========================================= */
-/* Ensure section has proper background */
-.testimonials {
-    background: var(--white) !important;
-    padding: var(--space-4xl) 0 !important
-    }
-/* Maximum contrast for testimonial text */
-.testimonial-quote {
-    /* AI FIX: colors - Text in testimonials is hard to read due to low co... */
-    /* AI FIX: colors - Text in testimonials is too light, making it hard ... */
-    /* AI FIX: colors - Text in testimonials is too light and lacks contra... */
-    /* AI FIX: colors - Text in testimonials is hard to read due to low co... */
-    color: #333;
-    /* Darkest possible */
-    /* AI FIX: typography - Font size of the testimonial text is too small.... */
-    /* AI FIX: typography - Font size of testimonial text is too small, making... */
-    /* AI FIX: typography - Font size of the testimonial text is too small.... */
-    font-size: 16px;
-    line-height: 1.8 !important;
-    font-weight: 500 !important;
-    /* Slightly bolder */
-    font-style: normal !important;
-    /* Remove italic for better readability */
-    }
-/* Ensure cards have strong contrast */
-.testimonial-card {
-    background: var(--white) !important;
-    border: 2px solid var(--gray-300) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12) !important
-    }
-/* Make quote marks MUCH more prominent */
-.testimonial-quote::before {
-    content: "\"" !important;
-    font-size: 5rem !important;
-    /* Bigger */
-    line-height: 0 !important;
-    color: var(--coral) !important;
-    font-family: Georgia, serif !important;
-    display: block !important;
-    margin-bottom: var(--space-md) !important;
-    opacity: 0.3 !important;
-    font-weight: bold !important
-    }
-/* Author text maximum contrast */
-.testimonial-name {
-    color: var(--navy-blue) !important;
-    font-weight: 700 !important;
-    font-size: 1.125rem !important
-    }
-.testimonial-location {
-    color: var(--gray-700) !important;
-    /* Darker than gray-500 */
-    font-size: 1rem !important
-    }
-/* Rating stars - make more visible */
-.testimonial-rating {
-    color: #F59E0B !important;
-    font-size: 1.25rem !important;
-    margin-bottom: var(--space-lg) !important
-    }
-/* Add visual weight to cards */
-.testimonial-card {
-    padding: var(--space-2xl) !important;
-    min-height: 320px !important
-    }
-/* Stronger hover effect */
-.testimonial-card:hover {
-    border-color: var(--coral) !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
-    transform: translatey(-6px) !important
-    }
-/* Add colored bottom border for emphasis */
-.testimonial-card {
-    border-bottom: 4px solid var(--coral) !important
-    }
-/* Testimonials grid spacing */
-.testimonials-grid {
-    /* AI FIX: spacing - The spacing between testimonial cards is too tight... */
-    gap: 20px;
-    padding: var(--space-xl) 0 !important
-    }
-/* ============================================================================
-   VISUAL ANALYSIS IMPROVEMENTS - October 7, 2025
-   Based on intelligent discovery system analysis
-   ============================================================================ */
-
-/* Value Props - Improved Card Spacing on Mobile */
-@media (max-width: 767px) {
-    .value-prop-grid {
-        gap: var(--space-xl); /* Increased from default for better breathing room */
-    }
-    
-    .value-prop .card {
-        padding: var(--space-lg);
-    }
-}
-
-/* Services - Better Icon-to-Text Spacing */
-.service-item .icon-badge,
-.service-card .icon-badge {
-    margin-bottom: var(--space-md); /* Ensure consistent spacing */
-}
-
-.service-item h3,
-.service-card h3 {
-    margin-top: var(--space-sm);
-}
-
-/* Testimonials - Enhanced Attribution Hierarchy */
-.testimonial-card cite,
-.testimonial-card .testimonial-author {
-    font-weight: var(--font-weight-semibold);
-    font-size: 1.05em; /* Slightly larger for prominence */
-}
-
-.testimonial-card .testimonial-location,
-.testimonial-card .location {
-    opacity: 0.8;
-    font-size: 0.9em;
-    margin-top: var(--space-xs);
-}
-
-/* FAQ - Improved Accordion Visual States */
-.faq-item button[aria-expanded="true"],
-.accordion-button[aria-expanded="true"] {
-    font-weight: var(--font-weight-semibold);
-    background-color: rgba(10, 37, 64, 0.05); /* Subtle navy tint */
-}
-
-.faq-item button:hover,
-.accordion-button:hover {
-    background-color: rgba(10, 37, 64, 0.03);
-    transition: background-color 0.2s ease;
-}
-
-.faq-item button:focus,
-.accordion-button:focus {
-    outline: 3px solid var(--color-primary);
-    outline-offset: 2px;
-}
-
-/* Contact Forms - Enhanced Focus States for Accessibility */
-.contact-form input:focus,
-.contact-form textarea:focus,
-.contact-form select:focus,
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="number"]:focus,
-textarea:focus,
-select:focus {
-    outline: 3px solid var(--color-primary);
-    outline-offset: 2px;
-    border-color: var(--color-primary);
-}
-
-/* Additional Button Contrast Improvements (supplement existing fixes) */
-section.dark-context .btn-outline:focus {
-    outline: 3px solid var(--white);
-    outline-offset: 3px;
-}
-
-/* Services Grid - Improve Mobile Spacing */
-@media (max-width: 767px) {
-    .services-grid,
-    .service-grid {
-        gap: var(--space-lg);
-    }
-}
-
-/* End Visual Analysis Improvements */
-
-/* ============================================================================
-   COMPREHENSIVE FIXES - October 7, 2025 (Manual Review)
-   Fixing all visible issues from screenshot review
-   ============================================================================ */
-
-/* FIX 1: Top Bar - Improve contact info contrast */
-.top-bar-link {
-    color: rgba(255, 255, 255, 0.95) !important;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.top-bar-link:hover {
-    color: var(--white) !important;
-    text-decoration: none;
-}
-
-.top-bar-text {
-    color: rgba(255, 255, 255, 0.95) !important;
-}
-
-/* FIX 2: Primary Button - Fix broken hover contrast */
-.btn-primary {
-    background: var(--coral) !important;
-    color: var(--white) !important;
-    border: none !important;
-    font-weight: 600 !important;
-}
-
-.btn-primary:hover {
-    background: var(--coral-dark) !important;
-    color: var(--white) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4) !important;
-}
-
-.btn-primary:active {
-    transform: translateY(0);
-}
-
-/* FIX 3: Navigation - Better spacing and readability */
-.nav {
-    gap: var(--space-xl);
-}
-
-.nav-link {
-    color: var(--gray-700) !important;
-    font-weight: 600;
-    padding: var(--space-sm) var(--space-md);
-    transition: all 0.2s ease;
-}
-
-.nav-link:hover {
-    color: var(--coral) !important;
-}
-
-.nav-link.active {
-    color: var(--coral) !important;
-    border-bottom: 2px solid var(--coral);
-}
-
-/* FIX 4: Hero Section - Better button visibility on dark background */
-.hero .btn-primary {
-    background: var(--coral) !important;
-    color: var(--white) !important;
-    font-size: 1.1rem;
-    padding: 1rem 2rem;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
-}
-
-/* DUPLICATE REMOVED - Using styles from line ~3225 instead for consistency */
-
-/* FIX 5: Hero Typography - Better spacing and contrast */
-.hero-title {
-    font-size: clamp(2.25rem, 5vw, 3.5rem);
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: var(--space-xl);
-    color: var(--white) !important;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
-}
-
-.hero-subtitle {
-    font-size: clamp(1.1rem, 2vw, 1.35rem);
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.95) !important;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    max-width: 700px;
-    margin: 0 auto var(--space-2xl);
-}
-
-/* FIX 6: Button Sizing - Make CTAs more prominent */
-.btn {
-    min-height: 48px;
-    padding: 0.875rem 1.75rem;
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.btn-large {
-    min-height: 56px;
-    padding: 1.125rem 2.25rem;
-    font-size: 1.125rem;
-}
-
-.btn-sm {
-    min-height: 40px;
-    padding: 0.625rem 1.25rem;
-    font-size: 0.9375rem;
-}
-
-/* FIX 7: Header - Improve overall contrast and spacing */
-.header {
-    background: var(--white) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    padding: var(--space-md) 0;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-xl);
-}
-
-/* FIX 8: Logo - Better sizing */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: var(--navy-blue) !important;
-}
-
-.logo-img {
-    width: 40px;
-    height: 40px;
-}
-
-/* FIX 9: Dark context improvements for ALL elements */
-section.dark-context,
-.dark-context {
-    color: var(--white);
-}
-
-section.dark-context *,
-.dark-context * {
-    color: inherit;
-}
-
-section.dark-context h1,
-section.dark-context h2,
-section.dark-context h3,
-section.dark-context h4,
-.dark-context h1,
-.dark-context h2,
-.dark-context h3,
-.dark-context h4 {
-    color: var(--white) !important;
-}
-
-section.dark-context p,
-.dark-context p {
-    color: rgba(255, 255, 255, 0.95) !important;
-}
-
-/* FIX 10: Ensure proper button focus states for accessibility */
-.btn:focus-visible {
-    outline: 3px solid currentColor;
-    outline-offset: 3px;
-}
-
-.btn-primary:focus-visible {
-    outline-color: var(--coral);
-}
-
-.btn-secondary:focus-visible,
-.btn-outline:focus-visible {
-    outline-color: var(--white);
-}
-
-/* End Comprehensive Fixes */
-
-/* REMOVED: Bad AI-generated rule - .cta-text class doesn't exist in HTML */
-/* AI FIX: colors - Text in the testimonial cards is too light and lacks contrast against the background. */
-.testimonial-quote, .testimonial-name, .testimonial-location {
-    color: #333
-    }
-/* AI FIX: colors - Text contrast with the background is too low, making it hard to read. */
-.hero-title, .hero-subtitle {
-    /* AI FIX: colors - The text color does not contrast well with the bac... */
-    /* AI FIX: colors - Text contrast is too low against the background.... */
-    color: #f0f0f0
-    }
-/* AI FIX: accessibility - Touch targets are too small, especially for mobile users. */
-.button {
-    height: 44px
-    }
-/* AI FIX: colors - Poor contrast between text and background. */
-.cta-button {
-    color: #fff;
-    background-color: #c00
-    }
-.section-header {
-    margin-bottom: var(--space-lg) !important;
-    text-align: center;
-    }
-.section-title {
-    font-size: clamp(2rem, 5vw, 2.5rem) !important;
-    font-weight: var(--font-weight-extrabold) !important;
-    color: var(--navy-800) !important;
-    margin-bottom: var(--space-sm) !important;
-    line-height: 1.2 !important;
-    letter-spacing: -0.02em !important;
-    }
-.section-subtitle {
-    font-size: clamp(1rem, 2.5vw, 1.125rem) !important;
-    color: var(--gray-600) !important;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6 !important;
-    }
-h1, h2, h3 {
-    font-weight: bold
-    }
-.testimonial-quote, .testimonial-rating {
-    color: #333
-    }
-.trust-item .fas {
-    font-size: 24px
-    }
-/* REMOVED: .container a { color: #fff } - Too broad, broke navigation */
-.fa-star {
-    color: #FFD700
-    }
-
-/* ============================================================================
-   FORTUNE 100 MOBILE RESPONSIVE IMPROVEMENTS
-   Professional mobile experience with generous spacing
-   ============================================================================ */
-
-@media (max-width: 768px) {
-    
-    /* Hero Section - ULTRA COMPACT Mobile */
-    .hero {
-        min-height: clamp(350px, 45vh, 420px);  /* ULTRA EFFICIENT */
-        padding: clamp(1.75rem, 5vh, 2.5rem) var(--space-md) clamp(1.5rem, 4vh, 2rem);  /* ULTRA COMPACT */
-    }
-    
-    .hero-content {
-        padding: 0 var(--space-md);
-    }
-    
-    .hero-title {
-        font-size: clamp(1.75rem, 7.5vw, 2.125rem);  /* Smaller */
-        line-height: 1.1;  /* Tighter */
-        margin-bottom: 0.75rem;  /* TIGHTER */
-    }
-    
-    .hero-subtitle {
-        font-size: clamp(0.9375rem, 4vw, 1.0625rem);
-        line-height: 1.45;  /* Tighter */
-        margin-bottom: 0.875rem;  /* TIGHTER - reduced from 1.5rem */
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        gap: 0.625rem;  /* Tighter gap */
-        margin: 0;  /* NO margin */
-        width: 100%;
-        max-width: 350px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .hero-buttons .btn {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    /* CTA Section - COMPACT Mobile */
-    .cta-section {
-        padding: clamp(2rem, 6vh, 3rem) var(--space-md) clamp(1.75rem, 5vh, 2.5rem);  /* COMPACT */
-    }
-    
-    .cta-title {
-        font-size: clamp(1.5rem, 6.5vw, 1.875rem);  /* Smaller */
-        margin-bottom: 1rem;  /* COMPACT */
-        line-height: 1.2;
-    }
-    
-    .cta-description {
-        font-size: clamp(0.875rem, 3.8vw, 1rem);  /* Smaller */
-        line-height: 1.55;  /* Tighter */
-        margin-bottom: 1.5rem;  /* COMPACT */
-    }
-    
-    .cta-buttons {
-        flex-direction: column;
-        gap: 0.75rem;  /* COMPACT */
-        margin: 1.5rem auto 1.25rem;  /* COMPACT */
-        width: 100%;
-        max-width: 350px;
-    }
-    
-    .cta-buttons .btn {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .cta-note {
-        font-size: 0.875rem;  /* Smaller */
-        padding: 0.625rem 1rem;  /* COMPACT */
-        margin-top: 1.25rem;  /* COMPACT */
-    }
-    
-    /* Buttons - COMPACT Mobile */
-    .btn {
-        min-height: 42px;  /* COMPACT */
-        padding: 0.75rem 1.25rem;  /* Reduced padding */
-        font-size: 0.9375rem;  /* Slightly smaller */
-    }
-    
-    .btn-lg {
-        min-height: 46px;  /* COMPACT */
-        padding: 0.875rem 1.5rem;  /* Reduced padding */
-    }
-    
-    /* Navigation - Mobile Improvements */
-    .nav-links {
-        flex-direction: column;
-        gap: var(--space-sm);
-        padding: var(--space-lg) 0;
-    }
-    
-    .nav-link {
-        padding: var(--space-md);
-        width: 100%;
-        text-align: center;
-    }
-    
-    /* Sections - Generous Mobile Padding */
-    .section {
-        padding: clamp(3rem, 8vh, 5rem) var(--space-md);
-    }
-    
-    .section-title {
-        font-size: clamp(1.75rem, 7vw, 2.5rem);
-        margin-bottom: 1.25rem;
-    }
-    
-    .section-subtitle {
-        font-size: clamp(0.9375rem, 4vw, 1.0625rem);
-        margin-bottom: 2.5rem;
-    }
-    
-    /* Cards - Mobile Spacing */
-    .card {
-        padding: var(--space-xl);
-        margin-bottom: var(--space-lg);
-    }
-    
-    /* Forms - Mobile Optimized */
-    .form-group {
-        margin-bottom: var(--space-lg);
-    }
-    
-    .form-input,
-    .form-textarea,
-    .form-select {
-        font-size: 16px;  /* Prevent iOS zoom */
-        padding: 0.875rem 1rem;
-        min-height: 48px;
-    }
-    
-    /* Typography - Mobile Scale */
-    h1 {
-        font-size: clamp(1.75rem, 7vw, 2.5rem);
-        line-height: 1.25;
-        margin-bottom: 1rem;
-    }
-    
-    h2 {
-        font-size: clamp(1.5rem, 6vw, 2rem);
-        line-height: 1.3;
-        margin-bottom: 0.875rem;
-    }
-    
-    h3 {
-        font-size: clamp(1.25rem, 5vw, 1.5rem);
-        line-height: 1.35;
-        margin-bottom: 0.75rem;
-    }
-    
-    p {
-        font-size: clamp(0.9375rem, 4vw, 1.0625rem);
-        line-height: 1.65;
-        margin-bottom: 1rem;
-    }
-    
-    /* Spacing - Generous Mobile Margins */
-    .container {
-        padding-left: var(--space-md);
-        padding-right: var(--space-md);
-    }
-    
-    /* Grids - Mobile Stack */
-    .grid-2,
-    .grid-3,
-    .grid-4 {
-        grid-template-columns: 1fr;
-        gap: var(--space-lg);
-    }
-    
-    /* Services - Mobile Spacing */
-    .services-grid {
-        gap: var(--space-xl);
-    }
-    
-    .service-card {
-        padding: var(--space-xl);
-    }
-    
-    /* Testimonials - Mobile Spacing */
-    .testimonials-grid {
-        gap: var(--space-xl);
-    }
-    
-    .testimonial-card {
-        padding: var(--space-xl);
-    }
-    
-    /* FAQ - Mobile Spacing */
-    .faq-item {
-        margin-bottom: var(--space-lg);
-    }
-    
-    .faq-question {
-        padding: var(--space-lg);
-        font-size: 1rem;
-    }
-    
-    .faq-answer p {
-        padding: 0 var(--space-lg) var(--space-lg);
-        font-size: 0.9375rem;
-        line-height: 1.65;
-    }
-    
-    /* Footer - COMPACT Mobile */
-    .footer {
-        padding: clamp(2rem, 5vh, 2.5rem) var(--space-md) clamp(1.5rem, 4vh, 2rem);  /* COMPACT */
-    }
-    
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-xl);  /* COMPACT - reduced from 2xl */
-    }
-    
-    .footer-title {
-        font-size: 1.75rem !important;  /* LARGER on mobile for prominence */
-        margin-bottom: 0.375rem !important;
-        text-align: center;
-    }
-    
-    .footer-text {
-        text-align: center;
-        margin-bottom: 1rem !important;
-    }
-    
-    .footer-heading {
-        font-size: 1.0625rem;
-        margin-bottom: var(--space-sm);
-        text-align: center;
-    }
-    
-    .footer-contact,
-    .footer-links {
-        text-align: center;
-    }
-    
-    .footer-bottom {
-        padding-top: var(--space-sm) !important;
-        margin-top: var(--space-sm) !important;
-        text-align: center !important;
-    }
-    
-    .footer-bottom p {
-        text-align: center !important;
-    }
-}
-
-/* Extra Small Mobile (< 480px) - Additional Refinements */
-@media (max-width: 480px) {
-    
-    .hero {
-        min-height: clamp(500px, 80vh, 650px);
-        padding: clamp(3rem, 10vh, 4rem) var(--space-sm) clamp(2.5rem, 8vh, 3.5rem);
-    }
-    
-    .hero-title {
-        font-size: clamp(1.75rem, 10vw, 2.25rem);
-        margin-bottom: 1.25rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-    }
-    
-    .hero-buttons {
-        gap: 0.875rem;
-        margin-top: 2rem;
-    }
-    
-    .cta-section {
-        padding: clamp(3rem, 8vh, 4rem) var(--space-sm) clamp(2.5rem, 6vh, 3rem);
-    }
-    
-    .cta-title {
-        font-size: clamp(1.5rem, 8vw, 1.875rem);
-    }
-    
-    .cta-description {
-        font-size: 0.9375rem;
-    }
-    
-    .cta-buttons {
-        gap: 0.875rem;
-        margin: 2rem auto 1.5rem;
-    }
-    
-    .btn {
-        padding: 0.875rem 1.25rem;
-        font-size: 0.9375rem;
-    }
-    
-    .section {
-        padding: clamp(2.5rem, 6vh, 3.5rem) var(--space-sm);
-    }
-    
-    .card {
-        padding: var(--space-lg);
-    }
-}
-
-/* End Fortune 100 Mobile Responsive Improvements */

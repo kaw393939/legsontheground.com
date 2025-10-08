@@ -1,12 +1,12 @@
 <!-- Top Bar with Quick Contact -->
 <div class="top-bar">
     <div class="container">
-        <div class="top-bar-content">
-            <div class="top-bar-left">
-                <a href="mailto:{{ site.email }}" class="top-bar-link">
+        <div class="top-bar-content flex justify-between items-center">
+            <div class="top-bar-left flex gap-lg items-center">
+                <a href="mailto:{{ site.email }}" class="top-bar-link inline-flex items-center">
                     <i class="fas fa-envelope" aria-hidden="true"></i> {{ site.email }}
                 </a>
-                <a href="tel:{{ site.phone_raw }}" class="top-bar-link">
+                <a href="tel:{{ site.phone_raw }}" class="top-bar-link inline-flex items-center">
                     <i class="fas fa-phone" aria-hidden="true"></i> {{ site.phone }}
                 </a>
             </div>

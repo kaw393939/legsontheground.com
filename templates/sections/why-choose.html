@@ -4,7 +4,7 @@
             <h2 class="section-title">{{ why_choose.section_title if why_choose and why_choose.section_title else 'Why Choose Legs on the Ground' }}</h2>
             <p class="section-subtitle">Your trusted partner for property management in Puerto Rico</p>
         </div>
-        <div class="why-choose-grid">
+        <div class="why-choose-grid grid grid-auto-fit-lg gap-xl">
             {% for reason in why_choose.reasons if why_choose and why_choose.reasons %}
             <div class="why-choose-card">
                 <div class="why-choose-image">

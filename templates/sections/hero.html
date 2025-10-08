@@ -1,9 +1,9 @@
-<section class="hero dark-context" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ page.hero.image }}');">
+<section class="hero dark-context flex items-start justify-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ page.hero.image }}');">
     <div class="container">
         <div class="hero-content">
             <h1 class="hero-title">{{ page.hero.title }}</h1>
             <p class="hero-subtitle">{{ page.hero.subtitle }}</p>
-            <div class="hero-buttons">
+            <div class="hero-buttons flex justify-center items-center flex-wrap">
                 {% if page.hero.cta_primary %}
                 <a href="{{ page.hero.cta_primary.url }}" class="btn btn-primary">
                     {% if page.hero.cta_primary.icon %}<i class="fas {{ page.hero.cta_primary.icon }}"></i> {% endif %}{{ page.hero.cta_primary.text }}
