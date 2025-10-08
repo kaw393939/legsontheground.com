@@ -2661,6 +2661,16 @@ section.dark-context .btn-outline:hover,
     margin: 0 auto;  /* Center */
     padding: 0 var(--space-lg);
     }
+
+/* Hero Trust Bar - Above the Fold Integration */
+.hero-trust-bar {
+    margin-top: var(--space-3xl);
+    padding-top: var(--space-xl);
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
+    gap: var(--space-lg);
+    justify-content: center;
+    }
+
 .trust-item {
     gap: 0.625rem;  /* Slightly larger gap */
     color: var(--white);
