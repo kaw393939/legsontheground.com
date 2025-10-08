@@ -1,6 +1,254 @@
-# Legs on the Ground - Static Site Generator
+# Legs on the Ground - Property Concierge Services
 
-Professional property concierge website with AI-powered static site generation.
+Professional bilingual property concierge services for mainland owners in Puerto Rico.
+
+## 🚀 Quick Start
+
+```bash
+# Development (easiest)
+make dev          # Build + serve with live preview
+
+# Or using Python directly
+python site.py dev
+
+# Or manually
+python site.py build
+python site.py serve
+```
+
+Visit http://localhost:8000 to see your site!
+
+## 📦 Installation
+
+```bash
+# Install dependencies
+make install
+# or
+pip install -r requirements.txt
+
+# Setup git hooks (optional)
+python site.py init-hooks
+```
+
+## 🎯 Common Commands
+
+### Using Make (Recommended)
+```bash
+make build        # Build the site
+make serve        # Start server
+make dev          # Build + serve (most common)
+make validate     # Check for errors
+make cleanup      # Keep project tidy
+make status       # Show project info
+make help         # See all commands
+```
+
+### Using Python CLI
+```bash
+python site.py build      # Build the site
+python site.py serve      # Start development server
+python site.py dev        # Development mode
+python site.py validate   # Validate content
+python site.py backup     # Create backup
+python site.py analyze    # AI visual analysis
+python site.py optimize   # Optimize images
+python site.py cleanup    # Clean up project
+python site.py status     # Show status
+```
+
+## 📁 Project Structure
+
+```
+├── site.py              # 🎯 Unified CLI (use this!)
+├── site.config.yaml     # ⚙️  Configuration
+├── Makefile             # 🔧 Convenient shortcuts
+├── build.py             # 🏗️  Core build system
+├── validator.py         # ✅ Quality checks
+├── cleanup_project.py   # 🧹 Organization
+├── templates/           # 📄 Jinja2 templates
+├── content/             # 📝 YAML content
+├── static/              # 🎨 CSS, JS, images
+├── docs/                # 📦 Built site (auto-generated)
+├── tools/               # 🛠️  AI development tools
+├── reports/             # 📊 Analysis reports
+└── backups/             # 💾 Auto-backups
+```
+
+## 🔧 Configuration
+
+Edit `site.config.yaml` to customize:
+- Build settings
+- Validation rules
+- Backup preferences
+- Tool configurations
+- Development server options
+
+## 🎨 Development Workflow
+
+```bash
+# 1. Make changes to templates/content/static
+# 2. Build and preview
+make dev
+
+# 3. Validate before committing
+make validate
+
+# 4. Keep project clean
+make cleanup
+
+# 5. Check status
+make status
+```
+
+## 🛠️ AI Tools
+
+All tools are in the `tools/` directory:
+
+```bash
+# Visual analysis
+python tools/visual_inspector.py --full --analyze
+
+# Image optimization
+python tools/image_optimizer.py
+
+# Logo generation
+python tools/logo_generator.py
+
+# See all tools
+ls tools/
+```
+
+Or use the CLI:
+```bash
+python site.py analyze    # Visual analysis
+python site.py optimize   # Image optimization
+```
+
+## ✅ Quality Assurance
+
+```bash
+# Validate everything
+make validate
+
+# Run visual analysis
+make analyze
+
+# Optimize images
+make optimize
+```
+
+## 💾 Backups
+
+Automatic backups are created before each build (configurable in `site.config.yaml`):
+
+```bash
+# Manual backup
+make backup
+# or
+python site.py backup
+```
+
+Backups are stored in `backups/` directory (keeps last 5 by default).
+
+## 🧹 Keeping It Clean
+
+```bash
+# Regular cleanup
+make cleanup
+
+# Aggressive cleanup (removes more old files)
+python site.py cleanup --aggressive
+
+# Clean build artifacts
+make clean
+```
+
+## 📊 Project Status
+
+```bash
+make status
+# Shows:
+# - File counts
+# - Last build info
+# - Backup status
+# - Configuration
+```
+
+## 🔗 Git Integration
+
+```bash
+# Setup automatic validation before commits
+python site.py init-hooks
+
+# This will:
+# - Run validation before each commit
+# - Run cleanup before each commit
+# - Prevent commits if validation fails
+```
+
+## 📖 Documentation
+
+- **This File:** Quick start and commands
+- **Launch Checklist:** `LAUNCH-CHECKLIST.md`
+- **Tool Documentation:** `tools/README.md`
+- **Reports Index:** `reports/INDEX.md`
+- **Configuration:** `site.config.yaml`
+
+## 🚢 Deployment
+
+```bash
+# Validate and build
+make deploy
+
+# Push to GitHub (auto-deploys via Pages)
+git add .
+git commit -m "Update site"
+git push
+```
+
+## 🐛 Troubleshooting
+
+**Build fails?**
+```bash
+python site.py validate  # Check for errors
+python site.py clean     # Clean and rebuild
+```
+
+**Project messy?**
+```bash
+make cleanup             # Organize files
+```
+
+**Need to rollback?**
+```bash
+ls backups/              # Find backup
+# Restore manually from backups/
+```
+
+## 📈 Performance
+
+Build metrics are automatically tracked in `build_metrics.log`:
+- Build time
+- File sizes
+- Timestamps
+
+## 🎯 Pro Tips
+
+1. **Use `make` for common tasks** - Easier to remember
+2. **Run `make cleanup` after analysis** - Keeps project tidy
+3. **Use `make dev` for development** - Build + serve in one command
+4. **Check `make status` often** - Know your project state
+5. **Commit often** - Git hooks ensure quality
+
+## 📞 Support
+
+- **Live Site:** https://kaw393939.github.io/legsontheground.com/
+- **Build System:** Python 3.12 + Jinja2
+- **Deployment:** GitHub Pages (automatic)
+
+---
+
+**Made with ❤️ using AI-powered development tools**
 
 ## 🎯 Overview
 

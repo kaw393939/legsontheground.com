@@ -173,32 +173,83 @@ document.addEventListener('DOMContentLoaded', function() {
     // Form Submission Handling (if contact form exists)
     // ===================================
     const contactForm = document.querySelector('.contact-form');
+    const formMessage = document.getElementById('formMessage');
+    
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            // If using a third-party form service, this may not be needed
-            // But we can add validation and tracking here
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
             
-            // Track form submission
-            console.log('Contact form submitted');
-            
-            // Add your form validation here if needed
+            // Validate required fields
             const requiredFields = this.querySelectorAll('[required]');
             let isValid = true;
             
             requiredFields.forEach(field => {
                 if (!field.value.trim()) {
                     isValid = false;
-                    field.style.borderColor = '#FF6B6B';
+                    field.style.borderColor = '#dc3545';
                 } else {
                     field.style.borderColor = '';
                 }
             });
             
             if (!isValid) {
-                e.preventDefault();
-                alert('Please fill in all required fields.');
+                showFormMessage('Please fill in all required fields.', 'error');
+                return;
+            }
+            
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            
+            // Submit form to Formspree
+            try {
+                const formData = new FormData(this);
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    showFormMessage('Thank you! We\'ll respond within 24 hours.', 'success');
+                    this.reset();
+                    
+                    // Track conversion
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'form_submission', {
+                            'event_category': 'Contact',
+                            'event_label': 'Contact Form'
+                        });
+                    }
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                showFormMessage('Something went wrong. Please try again or call us directly.', 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
             }
         });
+    }
+    
+    function showFormMessage(message, type) {
+        if (formMessage) {
+            formMessage.textContent = message;
+            formMessage.className = 'form-message ' + type;
+            formMessage.style.display = 'block';
+            
+            // Auto-hide success messages after 5 seconds
+            if (type === 'success') {
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            }
+        }
     }
     
     // ===================================
@@ -304,6 +355,56 @@ document.addEventListener('DOMContentLoaded', function() {
                 mainContent.removeAttribute('tabindex');
             }
         });
+    }
+    
+    // ===================================
+    // FAQ Accordion - Fortune 100 Professional Implementation
+    // ===================================
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    if (faqQuestions.length > 0) {
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const faqItem = this.closest('.faq-item');
+                const faqAnswer = faqItem.querySelector('.faq-answer');
+                const isActive = faqItem.classList.contains('active');
+                const wasExpanded = this.getAttribute('aria-expanded') === 'true';
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    const btn = item.querySelector('.faq-question');
+                    const answer = item.querySelector('.faq-answer');
+                    btn.setAttribute('aria-expanded', 'false');
+                    if (answer) {
+                        answer.style.maxHeight = '0';
+                    }
+                });
+                
+                // Toggle current item (if it wasn't already open)
+                if (!wasExpanded) {
+                    faqItem.classList.add('active');
+                    this.setAttribute('aria-expanded', 'true');
+                    
+                    // Set max-height to the scroll height for smooth animation
+                    if (faqAnswer) {
+                        faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+                    }
+                }
+            });
+            
+            // Keyboard accessibility
+            question.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+        
+        console.log(`FAQ Accordion initialized: ${faqQuestions.length} questions`);
     }
     
     // ===================================

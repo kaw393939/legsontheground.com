@@ -182,6 +182,14 @@ class SiteBuilder:
                 shutil.rmtree(img_dest)
             shutil.copytree(img_src, img_dest)
             print(f"   ✓ Copied images/ directory")
+        
+        # Copy SEO and deployment files
+        seo_files = ['robots.txt', 'sitemap.xml', 'CNAME']
+        for seo_file in seo_files:
+            src = self.static_dir / seo_file
+            if src.exists():
+                shutil.copy2(src, self.output_dir / seo_file)
+                print(f"   ✓ Copied {seo_file}")
     
     def clean_output(self):
         """Clean the output directory"""

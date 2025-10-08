@@ -10,11 +10,13 @@
                     <i class="fas fa-phone" aria-hidden="true"></i> {{ site.phone }}
                 </a>
             </div>
+            {% if site.social.facebook or site.social.instagram or site.social.linkedin %}
             <div class="top-bar-right">
-                <a href="{{ site.social.facebook }}" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                <a href="{{ site.social.instagram }}" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                <a href="{{ site.social.linkedin }}" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                {% if site.social.facebook %}<a href="{{ site.social.facebook }}" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>{% endif %}
+                {% if site.social.instagram %}<a href="{{ site.social.instagram }}" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i></a>{% endif %}
+                {% if site.social.linkedin %}<a href="{{ site.social.linkedin }}" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>{% endif %}
             </div>
+            {% endif %}
         </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 ---
-title: "Legs on the Ground | Your Trusted Property Partner in Puerto Rico"
-description: "Professional bilingual property concierge services for mainland owners in Puerto Rico. Property check-ins, translation, transportation - trusted local support in San Juan. Book your visit today!"
+title: "Property Management Puerto Rico | Legs on the Ground"
+description: "Professional property management in Puerto Rico. Bilingual service, property check-ins, translation. Trusted by mainland owners. From $100."
 layout: "home"
 page_id: "home"
 
@@ -12,7 +12,7 @@ hero:
   image_alt: "Luxury beachfront property in Puerto Rico at golden hour sunset, showcasing professional property management services"
   cta_primary:
     text: "Book Property Visit"
-    url: "contact.html"
+    url: "#contact"
     icon: "fa-calendar-check"
   cta_secondary:
     text: "View Services"
@@ -44,7 +44,7 @@ cta:
   background_image: "images/hero/hero-main.jpg"
   buttons:
     - text: "Schedule Visit Now"
-      url: "contact.html"
+      url: "#contact"
       icon: "fa-calendar-check"
       style: "primary"
     - text: "Call Us Today"
@@ -57,7 +57,7 @@ cta:
 
 # SEO
 seo:
-  canonical: "https://legsontheground.com/"
+  canonical: "/"
   og_type: "website"
   og_image: "https://legsontheground.com/images/social/og-image.jpg"
   twitter_card: "summary_large_image"

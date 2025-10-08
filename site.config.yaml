@@ -1,0 +1,75 @@
+# site.config.yaml
+# Central configuration for Legs on the Ground website
+
+project:
+  name: "Legs on the Ground"
+  version: "1.0.0"
+  description: "Property concierge services website"
+  
+site:
+  url: "https://kaw393939.github.io/legsontheground.com/"
+  title: "Legs on the Ground - Property Concierge Services"
+  language: "en"
+  
+build:
+  source_dir: "."
+  output_dir: "docs"
+  templates_dir: "templates"
+  content_dir: "content"
+  static_dir: "static"
+  clean_before_build: true
+  
+validation:
+  check_yaml: true
+  check_images: true
+  check_links: true
+  fail_on_error: true
+  
+backup:
+  enabled: true
+  location: "backups"
+  keep_last: 5
+  auto_backup_before_build: true
+  
+tools:
+  visual_inspector:
+    enabled: true
+    api_key_env: "OPENAI_API_KEY"
+    screenshot_dir: "visual_references/screenshots"
+    report_dir: "visual_references/reports"
+    
+  image_optimizer:
+    enabled: true
+    quality: 85
+    formats: ["webp", "jpg"]
+    max_width: 2000
+    
+  cleanup:
+    auto_run: false
+    keep_screenshots: 5
+    keep_reports: 3
+    
+development:
+  server:
+    host: "localhost"
+    port: 8000
+    auto_reload: true
+    open_browser: false
+    
+  git_hooks:
+    pre_commit:
+      - validate
+      - cleanup
+    pre_push:
+      - build
+      - validate
+      
+performance:
+  track_build_time: true
+  track_file_sizes: true
+  lighthouse_checks: false  # Requires lighthouse-ci
+  
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "build.log"
+  console: true

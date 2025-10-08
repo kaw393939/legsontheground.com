@@ -1,53 +1,55 @@
 # Navigation Configuration
-# Edit this file to update site navigation
+# Single-page design with anchor links to sections
 
-# Main Navigation (header)
+# Main Navigation (header) - All scroll to sections on homepage
 main_nav:
   - title: "Home"
-    url: "/"
+    url: "#hero"
     id: "home"
     
   - title: "Services"
-    url: "services.html"
+    url: "#services"
     id: "services"
     
-  - title: "About"
-    url: "about.html"
-    id: "about"
+  - title: "Why Choose Us"
+    url: "#why-choose"
+    id: "why-choose"
     
+  - title: "Testimonials"
+    url: "#testimonials"
+    id: "testimonials"
+  
   - title: "FAQ"
-    url: "faq.html"
+    url: "#faq"
     id: "faq"
     
   - title: "Contact"
-    url: "contact.html"
+    url: "#contact"
     id: "contact"
     highlight: true  # Makes this button styled differently
 
-# Footer Navigation
+# Footer Navigation - Quick links to sections
 footer_nav:
   services:
     title: "Services"
     links:
       - title: "Property Check-Ins"
-        url: "services.html#property-visits"
-      - title: "Translation"
-        url: "services.html#translation"
+        url: "#services"
+      - title: "Translation Services"
+        url: "#services"
       - title: "Transportation"
-        url: "services.html#transportation"
-      - title: "Coordination"
-        url: "services.html#coordination"
+        url: "#services"
+      - title: "Local Coordination"
+        url: "#services"
   
   company:
-    title: "Company"
+    title: "Quick Links"
     links:
-      - title: "About Us"
-        url: "about.html"
+      - title: "Why Choose Us"
+        url: "#why-choose"
+      - title: "Testimonials"
+        url: "#testimonials"
       - title: "FAQ"
-        url: "faq.html"
-      - title: "Contact"
-        url: "contact.html"
-      - title: "Privacy Policy"
-        url: "#"
-      - title: "Terms of Service"
-        url: "#"
+        url: "#faq"
+      - title: "Contact Us"
+        url: "#contact"

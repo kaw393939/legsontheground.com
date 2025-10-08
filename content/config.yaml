@@ -23,12 +23,12 @@ site:
       latitude: 18.4655
       longitude: -66.1057
   
-  # Social Media
+  # Social Media (set real URLs or leave empty to hide)
   social:
-    facebook: "#"
-    instagram: "#"
-    linkedin: "#"
-    twitter: "#"
+    facebook: ""
+    instagram: ""
+    linkedin: ""
+    twitter: ""
   
   # SEO Keywords
   keywords:
