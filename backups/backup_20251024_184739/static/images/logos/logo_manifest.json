@@ -1,0 +1,30 @@
+{
+  "generated": "2025-10-03T02:49:15.771528",
+  "business_name": "Legs on the Ground",
+  "base_icon": "static/images/misc/logo-icon.png",
+  "variants": {
+    "horizontal_large_PNG": "static/images/logos/logo-horizontal_large.png",
+    "horizontal_large_WEBP": "static/images/logos/logo-horizontal_large.webp",
+    "horizontal_medium_PNG": "static/images/logos/logo-horizontal_medium.png",
+    "horizontal_medium_WEBP": "static/images/logos/logo-horizontal_medium.webp",
+    "horizontal_small_PNG": "static/images/logos/logo-horizontal_small.png",
+    "horizontal_small_WEBP": "static/images/logos/logo-horizontal_small.webp",
+    "square_large_PNG": "static/images/logos/logo-square_large.png",
+    "square_large_WEBP": "static/images/logos/logo-square_large.webp",
+    "square_medium_PNG": "static/images/logos/logo-square_medium.png",
+    "square_medium_WEBP": "static/images/logos/logo-square_medium.webp",
+    "square_small_PNG": "static/images/logos/logo-square_small.png",
+    "square_small_WEBP": "static/images/logos/logo-square_small.webp",
+    "favicon_large": "static/images/logos/favicon-180x180.png",
+    "favicon_medium": "static/images/logos/favicon-32x32.png",
+    "favicon_small": "static/images/logos/favicon-16x16.png",
+    "apple_touch_icon": "static/images/logos/apple-touch-icon.png"
+  },
+  "usage_guide": {
+    "header": "Use horizontal_medium or horizontal_large",
+    "mobile_header": "Use horizontal_small",
+    "favicon": "Use favicon-* files",
+    "social_media": "Use square_large",
+    "og_image": "Use square_large (512x512)"
+  }
+}

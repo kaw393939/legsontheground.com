@@ -1,0 +1,29 @@
+<!-- Main Header -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-content flex justify-between items-center">
+            <a href="/" class="logo inline-block">
+                <span class="logo-text flex items-center">
+                    <span class="logo-name">Legs on the Ground</span>
+                </span>
+            </a>
+            <nav class="nav flex items-center" id="main-nav" aria-label="Main navigation" role="navigation">
+                {% for item in navigation['main_nav'] %}
+                <a href="{{ item.url }}" 
+                   class="nav-link{% if item.id == page.page_id %} active{% endif %}{% if item.highlight %} btn btn-primary{% endif %}"
+                   {% if item.id == page.page_id %}aria-current="page"{% endif %}>
+                   {{ item.title }}
+                </a>
+                {% endfor %}
+            </nav>
+            <button class="mobile-menu-toggle" 
+                    aria-label="Toggle mobile menu" 
+                    aria-expanded="false" 
+                    aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>

@@ -3428,109 +3428,215 @@ section.dark-context .btn-outline:hover,
     }
 }
 
-/* ====================== 17. ZAPIER FORM STYLES ====================== */
-.zapier-form-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: var(--spacing-xl) 0;
+/* ====================== 17. CONTACT FORM - RISD DESIGN ====================== */
+/* Contact Form Section - RISD-level Design */
+.contact-form-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--warm-white) 0%, var(--white) 100%);
+    position: relative;
 }
 
-.zapier-form-container-full {
-    background: var(--white);
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-lg);
-    padding: var(--spacing-lg);
-    margin: 0 auto;
+.contact-form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--gray-300) 50%, transparent 100%);
 }
 
-.zapier-form-container-full zapier-interfaces-page-embed {
-    border-radius: var(--border-radius-md);
-    overflow: hidden;
-    display: block;
-}
-
-/* Contact Options Below Form */
-.contact-options {
+.contact-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-xl);
-    margin-top: var(--spacing-2xl);
-    padding: var(--spacing-xl);
-    background: var(--gray-50);
-    border-radius: var(--border-radius-lg);
+    grid-template-columns: 1fr 400px;
+    gap: 60px;
+    align-items: start;
+    margin-top: 60px;
 }
 
-.contact-option {
+.form-container {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06),
+        0 0 0 1px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--coral-500), var(--coral-600));
+}
+
+.form-wrapper {
+    position: relative;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--gray-200);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--coral-500), var(--coral-600));
     display: flex;
     align-items: center;
-    gap: var(--spacing-md);
-    text-align: left;
-}
-
-.contact-option i {
-    font-size: var(--font-size-2xl);
-    color: var(--coral-500);
+    justify-content: center;
+    color: white;
+    font-size: 20px;
     flex-shrink: 0;
 }
 
-.contact-option h4 {
-    margin: 0 0 var(--spacing-xs) 0;
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-semibold);
+.contact-details h4 {
+    font-size: 16px;
+    font-weight: 600;
     color: var(--navy-700);
+    margin: 0 0 4px 0;
+    letter-spacing: -0.025em;
 }
 
-.contact-option p,
-.contact-option a {
-    margin: 0;
+.contact-details p,
+.contact-details a {
+    font-size: 14px;
     color: var(--gray-600);
-    font-size: var(--font-size-md);
-}
-
-.contact-option a {
-    color: var(--coral-500);
+    margin: 0;
     text-decoration: none;
-    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
 }
 
-.contact-option a:hover {
-    color: var(--coral-600);
-    text-decoration: underline;
+.contact-details a:hover {
+    color: var(--coral-500);
+    transition: color 0.2s ease;
 }
 
-/* Legacy form wrapper - remove if needed */
-.contact-form-wrapper {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
+.trust-indicator {
+    background: linear-gradient(135deg, var(--teal-50) 0%, var(--teal-100) 100%);
+    border: 1px solid var(--teal-300);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.trust-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--teal-300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.trust-text h5 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy-800);
+    margin: 0 0 4px 0;
+    letter-spacing: -0.025em;
+}
+
+.trust-text p {
+    font-size: 13px;
+    color: var(--navy-600);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contact-layout {
+        grid-template-columns: 1fr 350px;
+        gap: 40px;
+    }
+    
+    .form-container {
+        padding: 30px;
+    }
 }
 
 @media (max-width: 768px) {
-    .zapier-form-main {
-        padding: var(--spacing-lg) 0;
+    .contact-form-section {
+        padding: 60px 0;
     }
     
-    .zapier-form-container-full {
-        padding: var(--spacing-md);
-        margin: 0 var(--spacing-sm);
-    }
-    
-    .zapier-form-container-full zapier-interfaces-page-embed {
-        height: 800px !important;
-        min-height: 800px !important;
-    }
-    
-    .contact-options {
+    .contact-layout {
         grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-        margin: var(--spacing-xl) var(--spacing-sm) 0;
-        padding: var(--spacing-lg);
+        gap: 40px;
+        margin-top: 40px;
     }
     
-    .contact-option {
-        flex-direction: column;
-        text-align: center;
-        gap: var(--spacing-sm);
+    .form-container {
+        padding: 24px;
     }
+    
+    .contact-card {
+        padding: 24px;
+    }
+    
+    .contact-item {
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+    
+    .trust-indicator {
+        padding: 20px;
+        gap: 12px;
+    }
+    
+    .trust-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+}
+
+/* Legacy styles cleanup */
+.zapier-form-main,
+.zapier-form-container-full,
+.contact-options {
+    display: none;
 }
 
 /* ======================
