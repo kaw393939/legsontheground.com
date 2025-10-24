@@ -11,7 +11,7 @@ Disallow: /*.json$
 Disallow: /*.log$
 
 # Sitemap location
-Sitemap: https://legsontheground.com/sitemap.xml
+Sitemap: https://www.legsontheground.com/sitemap.xml
 
 # Crawl-delay (optional, adjust if needed)
 Crawl-delay: 1

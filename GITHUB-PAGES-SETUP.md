@@ -7,7 +7,7 @@ Your site is configured for GitHub Pages deployment with a custom domain:
 - **Repository**: `kaw393939/legsontheground.com`
 - **Branch**: `main` 
 - **Source Folder**: `/docs` 
-- **Custom Domain**: `legsontheground.com`
+- **Custom Domain**: `www.legsontheground.com`
 - **CNAME**: Already configured
 
 ## GitHub Pages Configuration
@@ -17,7 +17,7 @@ Your site is configured for GitHub Pages deployment with a custom domain:
    - Source: `Deploy from a branch`
    - Branch: `main`
    - Folder: `/docs`
-   - Custom domain: `legsontheground.com` (should be pre-filled)
+   - Custom domain: `www.legsontheground.com` (should be pre-filled)
 
 2. **DNS Configuration** (if not already done):
    ```
@@ -25,7 +25,7 @@ Your site is configured for GitHub Pages deployment with a custom domain:
    Name: www
    Value: kaw393939.github.io
    
-   Type: A (for apex domain)
+   Type: A (for apex domain - redirects to www)
    Name: @
    Values: 
      185.199.108.153
@@ -83,9 +83,9 @@ Every time you push to the `main` branch, GitHub Pages will automatically serve 
 
 ## URLs and SEO
 
-- **Live Site**: https://legsontheground.com
-- **Sitemap**: https://legsontheground.com/sitemap.xml
-- **Robots**: https://legsontheground.com/robots.txt
+- **Live Site**: https://www.legsontheground.com
+- **Sitemap**: https://www.legsontheground.com/sitemap.xml
+- **Robots**: https://www.legsontheground.com/robots.txt
 
 ## Monitoring
 

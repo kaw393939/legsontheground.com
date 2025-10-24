@@ -3428,5 +3428,35 @@ section.dark-context .btn-outline:hover,
     }
 }
 
+/* ====================== 17. ZAPIER FORM STYLES ====================== */
+.zapier-form-container {
+    margin: 0 auto;
+    max-width: 100%;
+    min-height: 500px;
+}
+
+.zapier-form-container zapier-interfaces-page-embed {
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+/* Adjust contact form wrapper for Zapier */
+.contact-form-wrapper {
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+    .contact-form-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .zapier-form-container zapier-interfaces-page-embed {
+        height: 600px !important;
+    }
+}
+
 /* ======================
    END OF STYLESHEET
