@@ -1,0 +1,22 @@
+<!-- Top Bar with Quick Contact -->
+<div class="top-bar">
+    <div class="container">
+        <div class="top-bar-content flex justify-between items-center">
+            <div class="top-bar-left flex gap-lg items-center">
+                <a href="mailto:{{ site.email }}" class="top-bar-link inline-flex items-center">
+                    <i class="fas fa-envelope" aria-hidden="true"></i> {{ site.email }}
+                </a>
+                <a href="tel:{{ site.phone_raw }}" class="top-bar-link inline-flex items-center">
+                    <i class="fas fa-phone" aria-hidden="true"></i> {{ site.phone }}
+                </a>
+            </div>
+            {% if site.social.facebook or site.social.instagram or site.social.linkedin %}
+            <div class="top-bar-right">
+                {% if site.social.facebook %}<a href="{{ site.social.facebook }}" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>{% endif %}
+                {% if site.social.instagram %}<a href="{{ site.social.instagram }}" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i></a>{% endif %}
+                {% if site.social.linkedin %}<a href="{{ site.social.linkedin }}" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>{% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

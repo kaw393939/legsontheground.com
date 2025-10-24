@@ -1,0 +1,45 @@
+<section class="why-choose" id="why-choose">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">{{ why_choose.section_title if why_choose and why_choose.section_title else 'Why Choose Legs on the Ground' }}</h2>
+            <p class="section-subtitle">Your trusted partner for property management in Puerto Rico</p>
+        </div>
+        <div class="why-choose-grid grid grid-auto-fit-lg gap-xl">
+            {% for reason in why_choose.reasons if why_choose and why_choose.reasons %}
+            <div class="why-choose-card">
+                <div class="why-choose-image">
+                    <picture>
+                        {% set base_path = reason.image | replace('.jpg', '') %}
+                        <source type="image/webp" 
+                                srcset="{{ base_path }}_400w.webp 400w,
+                                        {{ base_path }}_600w.webp 600w,
+                                        {{ base_path }}.webp 800w" 
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px">
+                        <source type="image/jpeg" 
+                                srcset="{{ base_path }}_400w.jpg 400w,
+                                        {{ base_path }}_600w.jpg 600w,
+                                        {{ reason.image }} 800w" 
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px">
+                        <img src="{{ reason.image }}" 
+                             alt="{{ reason.image_alt if reason.image_alt else reason.title }}" 
+                             loading="lazy"
+                             width="400"
+                             height="300">
+                    </picture>
+                </div>
+                <div class="why-choose-content">
+                    <h3 class="why-choose-title">{{ reason.title }}</h3>
+                    <p class="why-choose-description">{{ reason.description }}</p>
+                    {% if reason.features %}
+                    <ul class="why-choose-features">
+                        {% for feature in reason.features %}
+                        <li>{{ feature }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

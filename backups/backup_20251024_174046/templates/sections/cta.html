@@ -1,0 +1,22 @@
+<section class="cta" id="contact" {% if page.cta and page.cta.background_image %}style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ page.cta.background_image }}');"{% endif %}>
+    <div class="container">
+        <div class="cta-content">
+            <h2 class="cta-title">{{ page.cta.title if page.cta else 'Get in Touch' }}</h2>
+            <p class="cta-subtitle">{{ page.cta.description if page.cta else '' }}</p>
+            <div class="cta-buttons">
+                {% if page.cta and page.cta.buttons %}
+                {% for button in page.cta.buttons %}
+                <a href="{{ button.url }}" class="btn btn-{{ button.style }}">
+                    {% if button.icon %}<i class="fas {{ button.icon }}"></i> {% endif %}{{ button.text }}
+                </a>
+                {% endfor %}
+                {% endif %}
+            </div>
+            {% if page.cta and page.cta.guarantee %}
+            <p class="cta-guarantee">
+                <i class="fas {{ page.cta.guarantee.icon }}"></i> {{ page.cta.guarantee.text }}
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</section>

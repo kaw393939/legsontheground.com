@@ -1,0 +1,29 @@
+<section class="services" id="services">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">{{ page.services.title if page.services else 'Our Services' }}</h2>
+            <p class="section-subtitle">{{ page.services.subtitle if page.services and page.services.subtitle else '' }}</p>
+        </div>
+        <div class="services-grid grid grid-auto-fit-lg">
+            {% for service in services %}
+            <div class="service-card flex flex-col items-center">
+                {% if service.badge %}
+                <span class="service-badge">{{ service.badge }}</span>
+                {% endif %}
+                <div class="service-icon flex items-center justify-center">
+                    <i class="fas {{ service.icon }}"></i>
+                </div>
+                <h3 class="service-title">{{ service.title }}</h3>
+                <p class="service-price">{{ service.price }}</p>
+                <p class="service-description">{{ service.description }}</p>
+                <ul class="service-features">
+                    {% for feature in service.features %}
+                    <li class="flex items-start">{{ feature }}</li>
+                    {% endfor %}
+                </ul>
+                <a href="#contact" class="btn btn-outline">Get Started</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

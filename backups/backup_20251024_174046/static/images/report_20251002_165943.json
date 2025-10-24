@@ -1,0 +1,93 @@
+{
+  "total": 17,
+  "successful": 0,
+  "failed": 17,
+  "results": [],
+  "errors": [
+    {
+      "filename": "icon-property-checkin.png",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "filename": "icon-translation.png",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "filename": "hero-property-check.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "filename": "hero-main.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "filename": "icon-transportation.png",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "filename": "icon-property-search.png",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "filename": "service-translation.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "filename": "service-coordination.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "filename": "service-property-visit.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "filename": "service-transportation.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "filename": "og-image.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "filename": "about-bilingual.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "filename": "about-local-knowledge.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "filename": "logo-icon.png",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "filename": "about-experience.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "filename": "twitter-card.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "filename": "icon-preparation.png",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Invalid value: 'gpt-5'. Supported values are: 'gpt-image-1', 'gpt-image-1-mini', 'gpt-image-0721-mini-alpha', 'dall-e-2', and 'dall-e-3'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"model\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    }
+  ]
+}

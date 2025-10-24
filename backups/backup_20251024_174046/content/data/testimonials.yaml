@@ -1,0 +1,33 @@
+# Testimonials
+# Edit this file to add/update customer testimonials
+
+testimonials:
+  - id: michael-r
+    name: "Michael R."
+    location: "Florida → San Juan"
+    rating: 5
+    avatar_icon: "fa-user"
+    order: 1
+    quote: |
+      Finally found someone I can trust with my property in San Juan! The detailed 
+      photo reports give me complete peace of mind while I'm in Florida.
+    
+  - id: jennifer-l
+    name: "Jennifer L."
+    location: "Texas → Dorado"
+    rating: 5
+    avatar_icon: "fa-user"
+    order: 2
+    quote: |
+      The translation service saved me thousands! I couldn't have navigated the 
+      permit process without the bilingual help and local knowledge.
+    
+  - id: david-k
+    name: "David K."
+    location: "New York → Carolina"
+    rating: 5
+    avatar_icon: "fa-user"
+    order: 3
+    quote: |
+      Professional, reliable, and truly cares about my property. The WhatsApp 
+      updates with photos after each visit are incredibly helpful.

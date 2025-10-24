@@ -7,11 +7,9 @@ project:
   description: "Property concierge services website"
   
 site:
-  url: "https://legsontheground.com"
+  url: "https://kaw393939.github.io/legsontheground.com/"
   title: "Legs on the Ground - Property Concierge Services"
   language: "en"
-  deployment: "github-pages"
-  custom_domain: "legsontheground.com"
   
 build:
   source_dir: "."
@@ -54,7 +52,7 @@ tools:
 development:
   server:
     host: "localhost"
-    port: 8080
+    port: 8000
     auto_reload: true
     open_browser: false
     

@@ -1,0 +1,55 @@
+# Navigation Configuration
+# Single-page design with anchor links to sections
+
+# Main Navigation (header) - All scroll to sections on homepage
+main_nav:
+  - title: "Home"
+    url: "#"
+    id: "home"
+    
+  - title: "Services"
+    url: "#services"
+    id: "services"
+    
+  - title: "Why Choose Us"
+    url: "#why-choose"
+    id: "why-choose"
+    
+  - title: "Testimonials"
+    url: "#testimonials"
+    id: "testimonials"
+  
+  - title: "FAQ"
+    url: "#faq"
+    id: "faq"
+    
+  - title: "Contact"
+    url: "#contact"
+    id: "contact"
+    highlight: true  # Makes this button styled differently
+
+# Footer Navigation - Quick links to sections
+footer_nav:
+  services:
+    title: "Services"
+    links:
+      - title: "Property Check-Ins"
+        url: "#services"
+      - title: "Translation Services"
+        url: "#services"
+      - title: "Transportation"
+        url: "#services"
+      - title: "Local Coordination"
+        url: "#services"
+  
+  company:
+    title: "Quick Links"
+    links:
+      - title: "Why Choose Us"
+        url: "#why-choose"
+      - title: "Testimonials"
+        url: "#testimonials"
+      - title: "FAQ"
+        url: "#faq"
+      - title: "Contact Us"
+        url: "#contact"

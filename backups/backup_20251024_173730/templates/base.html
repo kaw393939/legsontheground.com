@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>{{ page.title }}</title>
+    <meta name="title" content="{{ page.title }}">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="keywords" content="{{ site.keywords | join(', ') }}">
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="PR-SJ">
+    <meta name="geo.placename" content="{{ site.location.city }}">
+    <meta name="geo.position" content="{{ site.location.coordinates.latitude }};{{ site.location.coordinates.longitude }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="{{ page.seo.og_type | default('website') }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.seo.canonical | default('/') }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:image" content="{{ page.seo.og_image | default(site.url ~ '/images/social/og-image.jpg') }}">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_PR">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="{{ page.seo.twitter_card | default('summary_large_image') }}">
+    <meta property="twitter:url" content="{{ site.url }}{{ page.seo.canonical | default('/') }}">
+    <meta property="twitter:title" content="{{ page.title }}">
+    <meta property="twitter:description" content="{{ page.description }}">
+    <meta property="twitter:image" content="{{ page.seo.twitter_image | default(site.url ~ '/images/social/twitter-card.jpg') }}">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ site.url }}{{ page.seo.canonical | default('/') }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logos/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logos/apple-touch-icon.png">
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Resource Hints for Performance -->
+    <link rel="preload" href="styles.css" as="style">
+    {% if page.hero and page.hero.image %}
+    <link rel="preload" href="{{ page.hero.image }}" as="image">
+    {% endif %}
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Analytics (Replace G-XXXXXXXXXX with your actual tracking ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Structured Data - Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "{{ site.title }}",
+      "description": "{{ site.description }}",
+      "url": "{{ site.url }}",
+      "telephone": "{{ site.phone }}",
+      "email": "{{ site.email }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ site.location.city }}",
+        "addressRegion": "{{ site.location.region }}",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "{{ site.location.coordinates.latitude }}",
+        "longitude": "{{ site.location.coordinates.longitude }}"
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "{{ site.location.coordinates.latitude }}",
+          "longitude": "{{ site.location.coordinates.longitude }}"
+        },
+        "geoRadius": "50000"
+      },
+      "priceRange": "$100-$650",
+      "openingHours": "Mo-Fr 09:00-17:00"
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    {# TOP BAR REMOVED - Contact button in nav is sufficient #}
+    {# {% include 'components/top-bar.html' %} #}
+    {% include 'components/header.html' %}
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+    
+    {% include 'components/footer.html' %}
+    
+    {% if features.show_whatsapp_float %}
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/{{ site.whatsapp }}?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20your%20property%20services" 
+       class="whatsapp-float flex items-center justify-center" 
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+    {% endif %}
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="main.js"></script>
+</body>
+</html>
