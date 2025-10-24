@@ -3429,32 +3429,107 @@ section.dark-context .btn-outline:hover,
 }
 
 /* ====================== 17. ZAPIER FORM STYLES ====================== */
-.zapier-form-container {
+.zapier-form-main {
+    max-width: 1000px;
     margin: 0 auto;
-    max-width: 100%;
-    min-height: 500px;
+    padding: var(--spacing-xl) 0;
 }
 
-.zapier-form-container zapier-interfaces-page-embed {
+.zapier-form-container-full {
+    background: var(--white);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-lg);
-    overflow: hidden;
+    padding: var(--spacing-lg);
+    margin: 0 auto;
 }
 
-/* Adjust contact form wrapper for Zapier */
+.zapier-form-container-full zapier-interfaces-page-embed {
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    display: block;
+}
+
+/* Contact Options Below Form */
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-2xl);
+    padding: var(--spacing-xl);
+    background: var(--gray-50);
+    border-radius: var(--border-radius-lg);
+}
+
+.contact-option {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    text-align: left;
+}
+
+.contact-option i {
+    font-size: var(--font-size-2xl);
+    color: var(--coral-500);
+    flex-shrink: 0;
+}
+
+.contact-option h4 {
+    margin: 0 0 var(--spacing-xs) 0;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--navy-700);
+}
+
+.contact-option p,
+.contact-option a {
+    margin: 0;
+    color: var(--gray-600);
+    font-size: var(--font-size-md);
+}
+
+.contact-option a {
+    color: var(--coral-500);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+}
+
+.contact-option a:hover {
+    color: var(--coral-600);
+    text-decoration: underline;
+}
+
+/* Legacy form wrapper - remove if needed */
 .contact-form-wrapper {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     gap: var(--spacing-xl);
 }
 
 @media (max-width: 768px) {
-    .contact-form-wrapper {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
+    .zapier-form-main {
+        padding: var(--spacing-lg) 0;
     }
     
-    .zapier-form-container zapier-interfaces-page-embed {
-        height: 600px !important;
+    .zapier-form-container-full {
+        padding: var(--spacing-md);
+        margin: 0 var(--spacing-sm);
+    }
+    
+    .zapier-form-container-full zapier-interfaces-page-embed {
+        height: 800px !important;
+        min-height: 800px !important;
+    }
+    
+    .contact-options {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        margin: var(--spacing-xl) var(--spacing-sm) 0;
+        padding: var(--spacing-lg);
+    }
+    
+    .contact-option {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-sm);
     }
 }
 

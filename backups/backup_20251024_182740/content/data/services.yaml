@@ -1,0 +1,81 @@
+# Services Configuration
+# Edit this file to update service offerings
+
+services:
+  - id: property-management
+    title: "Property Management & Check-Ins"
+    icon: "fa-home"
+    icon_color: "default"
+    price: "Starting at $100"
+    price_period: "per visit"
+    badge: "Most Popular"
+    image: "images/services/service-property-visit.jpg"
+    image_alt: "Professional conducting thorough property inspection with documentation in Puerto Rico"
+    cta_text: "Book Visit"
+    cta_link: "contact.html"
+    order: 1
+    description: |
+      Complete property oversight with detailed documentation, maintenance coordination, 
+      and immediate issue alerts. Your eyes and hands on the ground in Puerto Rico.
+    features:
+      - "Detailed photo & video reports"
+      - "Maintenance coordination & oversight"
+      - "Contractor management"
+      - "Mail collection & property preparation"
+      - "Same-day reporting via WhatsApp"
+
+  - id: bilingual-concierge
+    title: "Bilingual Concierge Services"
+    icon: "fa-language"
+    icon_color: "teal"
+    price: "Starting at $75"
+    price_period: "per hour"
+    badge: null
+    image: "images/services/service-translation.jpg"
+    image_alt: "Bilingual translator working with English-Spanish documents for property owners"
+    cta_text: "Get Help"
+    cta_link: "contact.html"
+    order: 2
+    description: |
+      Professional English-Spanish translation, interpretation, and local coordination. 
+      Navigate permits, contractors, and government offices with confidence.
+    features:
+      - "Document translation & interpretation"
+      - "Meeting & phone call assistance"
+      - "Government & permit navigation"
+      - "Contractor communication"
+      - "Cultural bridge & local expertise"
+
+  - id: transportation-logistics
+    title: "Transportation & Logistics"
+    icon: "fa-car"
+    icon_color: "navy"
+    price: "Starting at $75"
+    price_period: "per trip"
+    badge: null
+    image: "images/services/service-transportation.jpg"
+    image_alt: "Professional transportation service with modern vehicle at San Juan airport"
+    cta_text: "Book Ride"
+    cta_link: "contact.html"
+    order: 3
+    description: |
+      Airport transfers, key delivery, meeting transportation, and property access coordination. 
+      Reliable logistics support whenever you need it.
+    features:
+      - "Airport pickup & drop-off"
+      - "Property key & supply delivery"
+      - "Meeting transportation"
+      - "Emergency property access"
+      - "Flexible scheduling & reliability"
+
+# Service Packages (optional custom offerings)
+packages:
+  monthly_basic:
+    name: "Monthly Basic"
+    price: "$350"
+    description: "4 property visits + unlimited WhatsApp support"
+    
+  monthly_premium:
+    name: "Monthly Premium"
+    price: "$750"
+    description: "8 property visits + translation + transportation included"

@@ -1,0 +1,55 @@
+# Site Configuration
+# Edit this file to update global site settings
+
+site:
+  title: "Legs on the Ground"
+  tagline: "Your Trusted Property Partner in Puerto Rico"
+  description: "Professional bilingual property concierge services for mainland owners in Puerto Rico. Property check-ins, translation, transportation - trusted local support in San Juan."
+  url: "https://www.legsontheground.com"
+  author: "Legs on the Ground"
+  language: "en"
+  
+  # Contact Information
+  email: "Legsontheground2025@gmail.com"
+  whatsapp: "18625965636"
+  
+  # Location
+  location:
+    city: "San Juan"
+    region: "Puerto Rico"
+    coordinates:
+      latitude: 18.4655
+      longitude: -66.1057
+  
+  # Social Media (set real URLs or leave empty to hide)
+  social:
+    facebook: ""
+    instagram: ""
+    linkedin: ""
+    twitter: ""
+  
+  # SEO Keywords
+  keywords:
+    - "Puerto Rico property management"
+    - "bilingual property services"
+    - "San Juan concierge"
+    - "property check-ins Puerto Rico"
+    - "mainland property owners"
+    - "Act 60 services"
+    - "Puerto Rico translation"
+    - "property monitoring"
+    - "absentee owner services"
+
+# Build Configuration
+build:
+  output_dir: "docs"
+  static_dir: "static"
+  template_dir: "templates"
+  
+# Feature Flags
+features:
+  show_blog: false
+  show_testimonials: true
+  show_whatsapp_float: true
+  show_pricing: true
+  enable_analytics: false
