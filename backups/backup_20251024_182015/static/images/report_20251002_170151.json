@@ -1,0 +1,93 @@
+{
+  "total": 17,
+  "successful": 0,
+  "failed": 17,
+  "results": [],
+  "errors": [
+    {
+      "filename": "icon-translation.png",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    },
+    {
+      "filename": "icon-property-checkin.png",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    },
+    {
+      "filename": "hero-property-check.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    },
+    {
+      "filename": "icon-property-search.png",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    },
+    {
+      "filename": "icon-preparation.png",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    },
+    {
+      "filename": "icon-transportation.png",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    },
+    {
+      "filename": "service-property-visit.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    },
+    {
+      "filename": "service-transportation.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    },
+    {
+      "filename": "service-translation.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    },
+    {
+      "filename": "about-bilingual.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    },
+    {
+      "filename": "about-local-knowledge.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    },
+    {
+      "filename": "hero-main.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    },
+    {
+      "filename": "about-experience.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    },
+    {
+      "filename": "twitter-card.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    },
+    {
+      "filename": "og-image.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    },
+    {
+      "filename": "logo-icon.png",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    },
+    {
+      "filename": "service-coordination.jpg",
+      "status": "error",
+      "error": "API Error: 400 - {\n  \"error\": {\n    \"message\": \"Unknown parameter: 'response_format'.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"response_format\",\n    \"code\": \"unknown_parameter\"\n  }\n}"
+    }
+  ]
+}

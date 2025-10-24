@@ -1,0 +1,44 @@
+<section class="hero dark-context flex items-start justify-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ page.hero.image }}');">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">{{ page.hero.title }}</h1>
+            <p class="hero-subtitle">{{ page.hero.subtitle }}</p>
+            <div class="hero-buttons flex justify-center items-center flex-wrap">
+                {% if page.hero.cta_primary %}
+                <a href="{{ page.hero.cta_primary.url }}" class="btn btn-primary">
+                    {% if page.hero.cta_primary.icon %}<i class="fas {{ page.hero.cta_primary.icon }}"></i> {% endif %}{{ page.hero.cta_primary.text }}
+                </a>
+                {% endif %}
+                {% if page.hero.cta_secondary %}
+                <a href="{{ page.hero.cta_secondary.url }}" class="btn btn-outline">
+                    {% if page.hero.cta_secondary.icon %}<i class="fas {{ page.hero.cta_secondary.icon }}"></i> {% endif %}{{ page.hero.cta_secondary.text }}
+                </a>
+                {% endif %}
+            </div>
+            
+            <!-- Trust Bar - Integrated Above the Fold -->
+            <div class="hero-trust-bar flex justify-center items-center flex-wrap">
+                <div class="trust-item flex items-center">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Fully Insured</span>
+                </div>
+                <div class="trust-item flex items-center">
+                    <i class="fas fa-award"></i>
+                    <span>30+ Years Experience</span>
+                </div>
+                <div class="trust-item flex items-center">
+                    <i class="fas fa-certificate"></i>
+                    <span>Licensed & Bonded</span>
+                </div>
+                <div class="trust-item flex items-center">
+                    <i class="fas fa-users"></i>
+                    <span>100+ Happy Clients</span>
+                </div>
+                <div class="trust-item flex items-center">
+                    <i class="fas fa-clock"></i>
+                    <span>24/7 Availability</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
