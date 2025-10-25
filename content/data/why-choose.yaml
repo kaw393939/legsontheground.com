@@ -2,35 +2,35 @@
 # Edit this file to update the reasons customers trust you
 
 why_choose:
-  section_title: "Why Mainland Owners Trust Us"
+  section_title: "Your Complete Puerto Rico Journey Partner"
   
   reasons:
-    - id: bilingual
-      title: "Truly Bilingual Service"
-      icon: "fa-language"
+    - id: before-you-move
+      title: "Before You Move: Smart Scouting"
+      icon: "fa-search-location"
       image: "images/about/about-bilingual.jpg"
-      image_alt: "Bilingual professional fluent in English and Spanish for seamless communication"
+      image_alt: "Professional property scouting with comprehensive market analysis and video documentation"
       order: 1
       description: |
-        Fluent in English and Spanish. Seamlessly communicate with local contractors, 
-        government officials, and service providers. No more communication barriers.
+        Find your perfect property from anywhere. Professional video tours, market analysis, 
+        crime research, and drone footage. Make informed decisions before setting foot on the island.
     
-    - id: local-knowledge
-      title: "Deep Local Knowledge"
-      icon: "fa-map-marked-alt"
+    - id: during-transition
+      title: "During Transition: Seamless Settlement"
+      icon: "fa-plane-arrival"
       image: "images/about/about-local-knowledge.jpg"
-      image_alt: "Local expert with deep knowledge of Puerto Rico's unique processes and culture"
+      image_alt: "Airport arrival assistance and comprehensive settling-in services in Puerto Rico"
       order: 2
       description: |
-        Born and raised in Puerto Rico. We understand the unique processes, cultural 
-        nuances, and the "right way" to get things done on the island.
+        From airport pickup to driver's license. We handle utilities, government paperwork, 
+        contractor coordination, and car shopping. Your stress-free transition is our specialty.
     
-    - id: mainland-understanding
-      title: "Mainland Understanding"
-      icon: "fa-flag-usa"
+    - id: after-settled
+      title: "After Settled: Ongoing Support"
+      icon: "fa-home"
       image: "images/about/about-experience.jpg"
-      image_alt: "Experienced professional with 30+ years understanding mainland US expectations"
+      image_alt: "Ongoing property management and daily life support services in Puerto Rico"
       order: 3
       description: |
-        30+ years of experience working with US mainland clients. We understand your 
-        expectations and translate them into local reality.
+        Property management, daily errands, government services, and emergency support. 
+        Your trusted local partner for everything life in Puerto Rico brings.

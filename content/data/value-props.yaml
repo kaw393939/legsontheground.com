@@ -2,23 +2,23 @@
 # Edit this file to update key benefits shown on homepage
 
 value_props:
-  - id: pricing
-    title: "Simple, Affordable Pricing"
-    icon: "fa-hand-holding-usd"
+  - id: complete-journey
+    title: "Complete Journey Support"
+    icon: "fa-route"
     order: 1
     description: |
-      Starting at $100 per visit. No hidden fees. Pay only for what you need.
+      From property scouting abroad to settling in seamlessly. One trusted partner for your entire Puerto Rico experience.
   
-  - id: personal-service
-    title: "Personal Service"
+  - id: local-expertise
+    title: "True Local Expertise"
     icon: "fa-user-check"
     order: 2
     description: |
-      Direct communication with someone who cares. Not a call center.
+      Born and raised knowledge of neighborhoods, culture, and systems. We know what newcomers really need.
   
-  - id: instant-updates
-    title: "Instant Updates"
+  - id: instant-communication
+    title: "Real-Time Documentation"
     icon: "fa-mobile-alt"
     order: 3
     description: |
-      Photos, videos, and detailed reports after every visit via WhatsApp or email.
+      Professional videos, detailed photos, and instant WhatsApp updates. See everything as if you were here yourself.

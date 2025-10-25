@@ -2,80 +2,133 @@
 # Edit this file to update service offerings
 
 services:
-  - id: property-management
-    title: "Property Management & Check-Ins"
-    icon: "fa-home"
+  - id: property-scouting
+    title: "Property Scouting & Market Analysis"
+    icon: "fa-search-location"
     icon_color: "default"
-    price: "Starting at $100"
-    price_period: "per visit"
-    badge: "Most Popular"
+    price: "$200"
+    price_period: "per property"
+    badge: "New Service"
     image: "images/services/service-property-visit.jpg"
-    image_alt: "Professional conducting thorough property inspection with documentation in Puerto Rico"
-    cta_text: "Book Visit"
+    image_alt: "Professional property scouting with video documentation in Puerto Rico"
+    cta_text: "Scout Property"
     cta_link: "contact.html"
     order: 1
     description: |
+      Find your perfect Puerto Rico property from abroad. We visit, document, and research 
+      everything you need to make an informed decision.
+    features:
+      - "Professional video walkthrough & photos"
+      - "Neighborhood atmosphere documentation"
+      - "Market analysis & crime statistics"
+      - "Hospital, shopping, beach proximity maps"
+      - "Flood risk & local news research"
+      - "Drone footage available (+$50)"
+
+  - id: arrival-settlement
+    title: "Arrival & Settlement Services"
+    icon: "fa-plane-arrival"
+    icon_color: "teal"
+    price: "$150"
+    price_period: "per day"
+    badge: "Most Popular"
+    image: "images/services/service-transportation.jpg"
+    image_alt: "Airport arrival assistance and settlement services in Puerto Rico"
+    cta_text: "Get Settled"
+    cta_link: "contact.html"
+    order: 2
+    description: |
+      Smooth transition from arrival to settled life. Complete step-by-step guidance 
+      and practical assistance for your first weeks in Puerto Rico.
+    features:
+      - "Airport to accommodation assistance"
+      - "Cultural orientation & safety tips"
+      - "Utilities setup (electric, water, internet)"
+      - "Motor vehicle registration help"
+      - "Contractor referrals & coordination"
+      - "Used car search & purchase assistance"
+
+  - id: government-services
+    title: "Government & Official Transactions"
+    icon: "fa-university"
+    icon_color: "navy"
+    price: "$100"
+    price_period: "per service"
+    badge: null
+    image: "images/services/service-translation.jpg"
+    image_alt: "Government office assistance and permit navigation in Puerto Rico"
+    cta_text: "Navigate Bureaucracy"
+    cta_link: "contact.html"
+    order: 3
+    description: |
+      Navigate Puerto Rico's government offices and official processes with confidence. 
+      We handle the bureaucracy so you don't have to.
+    features:
+      - "Driver's license applications"
+      - "Vehicle registration & permits"
+      - "Construction permit assistance"
+      - "Toll payments & ticket resolution"
+      - "Document translations"
+      - "Government office accompaniment"
+
+  - id: property-management
+    title: "Ongoing Property Management"
+    icon: "fa-home"
+    icon_color: "coral"
+    price: "$100"
+    price_period: "per visit"
+    badge: null
+    image: "images/services/service-property-visit.jpg"
+    image_alt: "Professional property management and maintenance coordination in Puerto Rico"
+    cta_text: "Protect Property"
+    cta_link: "contact.html"
+    order: 4
+    description: |
       Complete property oversight with detailed documentation, maintenance coordination, 
-      and immediate issue alerts. Your eyes and hands on the ground in Puerto Rico.
+      and immediate issue alerts. Your trusted eyes on the ground.
     features:
       - "Detailed photo & video reports"
       - "Maintenance coordination & oversight"
       - "Contractor management"
       - "Mail collection & property preparation"
-      - "Same-day reporting via WhatsApp"
+      - "Emergency response & repairs"
 
-  - id: bilingual-concierge
-    title: "Bilingual Concierge Services"
-    icon: "fa-language"
-    icon_color: "teal"
-    price: "Starting at $75"
+  - id: personal-errands
+    title: "Personal Errands & Daily Support"
+    icon: "fa-hands-helping"
+    icon_color: "green"
+    price: "$25"
     price_period: "per hour"
     badge: null
-    image: "images/services/service-translation.jpg"
-    image_alt: "Bilingual translator working with English-Spanish documents for property owners"
+    image: "images/services/service-coordination.jpg"
+    image_alt: "Personal errand services and daily life support in Puerto Rico"
     cta_text: "Get Help"
     cta_link: "contact.html"
-    order: 2
+    order: 5
     description: |
-      Professional English-Spanish translation, interpretation, and local coordination. 
-      Navigate permits, contractors, and government offices with confidence.
+      Daily life support for busy professionals and retirees. We handle the small tasks 
+      so you can focus on what matters most.
     features:
-      - "Document translation & interpretation"
-      - "Meeting & phone call assistance"
-      - "Government & permit navigation"
-      - "Contractor communication"
-      - "Cultural bridge & local expertise"
+      - "Prescription pickup & delivery"
+      - "Laundry service coordination"
+      - "Light grocery shopping (up to 10 items)"
+      - "Package pickup & delivery"
+      - "Appointment scheduling"
+      - "Translation for daily interactions"
 
-  - id: transportation-logistics
-    title: "Transportation & Logistics"
-    icon: "fa-car"
-    icon_color: "navy"
-    price: "Starting at $75"
-    price_period: "per trip"
-    badge: null
-    image: "images/services/service-transportation.jpg"
-    image_alt: "Professional transportation service with modern vehicle at San Juan airport"
-    cta_text: "Book Ride"
-    cta_link: "contact.html"
-    order: 3
-    description: |
-      Airport transfers, key delivery, meeting transportation, and property access coordination. 
-      Reliable logistics support whenever you need it.
-    features:
-      - "Airport pickup & drop-off"
-      - "Property key & supply delivery"
-      - "Meeting transportation"
-      - "Emergency property access"
-      - "Flexible scheduling & reliability"
-
-# Service Packages (optional custom offerings)
+# Service Packages (comprehensive offerings)
 packages:
-  monthly_basic:
-    name: "Monthly Basic"
-    price: "$350"
-    description: "4 property visits + unlimited WhatsApp support"
-    
-  monthly_premium:
-    name: "Monthly Premium"
+  relocation_complete:
+    name: "Complete Relocation Package"
     price: "$750"
-    description: "8 property visits + translation + transportation included"
+    description: "Property scouting + arrival assistance + 30 days settlement support"
+    
+  monthly_management:
+    name: "Monthly Property Care"
+    price: "$400"
+    description: "4 property visits + emergency response + contractor coordination"
+    
+  newcomer_support:
+    name: "Newcomer Essential"
+    price: "$500"
+    description: "Government services + utilities setup + 2 weeks daily support"

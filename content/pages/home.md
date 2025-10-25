@@ -1,21 +1,21 @@
 ---
-title: "Property Management Puerto Rico | Legs on the Ground"
-description: "Professional property management in Puerto Rico. Bilingual service, property check-ins, translation. Trusted by mainland owners. From $100."
+title: "Puerto Rico Relocation & Property Services | Legs on the Ground"
+description: "Complete Puerto Rico relocation services: property scouting, arrival assistance, government transactions, and ongoing property management. From finding your dream property to settling in seamlessly."
 layout: "home"
 page_id: "home"
 
 # Hero Section
 hero:
-  title: "Your Trusted Eyes, Ears & Legs in Puerto Rico"
-  subtitle: "Professional bilingual property concierge services for mainland owners. Peace of mind for your Puerto Rico investment, starting at just $100 per visit."
+  title: "Your Complete Puerto Rico Partner"
+  subtitle: "From property scouting to seamless settlement. We handle every step of your Puerto Rico journey - before, during, and after your move."
   image: "images/hero/hero-main.jpg"
-  image_alt: "Luxury beachfront property in Puerto Rico at golden hour sunset, showcasing professional property management services"
+  image_alt: "Luxury beachfront property in Puerto Rico at golden hour sunset, showcasing comprehensive relocation and property services"
   cta_primary:
-    text: "Book Property Visit"
+    text: "Start Your Journey"
     url: "#contact"
-    icon: "fa-calendar-check"
+    icon: "fa-plane-arrival"
   cta_secondary:
-    text: "View Services"
+    text: "Explore Services"
     url: "#services"
     icon: "fa-info-circle"
 
@@ -29,23 +29,23 @@ sections:
 
 # Services Section
 services:
-  title: "Professional Property Services in Puerto Rico"
+  title: "Complete Puerto Rico Relocation & Property Services"
   custom_cta:
     show: true
-    title: "Need a custom package?"
-    description: "We offer flexible monthly packages starting at $350/month"
+    title: "Planning a major move or investment?"
+    description: "Ask about our comprehensive relocation packages starting at $500"
     button_text: "View All Packages"
     button_url: "services.html"
 
 # CTA Section
 cta:
-  title: "Ready to Protect Your Puerto Rico Investment?"
-  description: "Book your first property visit today and experience the peace of mind you deserve"
+  title: "Ready to Start Your Puerto Rico Journey?"
+  description: "Whether you're scouting property from abroad or need help settling in, we're here for every step"
   background_image: "images/hero/hero-main.jpg"
   buttons:
-    - text: "Schedule Visit Now"
+    - text: "Start Planning Today"
       url: "#contact"
-      icon: "fa-calendar-check"
+      icon: "fa-plane-arrival"
       style: "primary"
     - text: "Get In Touch"
       url: "#contact"
@@ -53,7 +53,7 @@ cta:
       style: "white"
   guarantee:
     icon: "fa-shield-alt"
-    text: "100% Satisfaction Guaranteed • No Long-term Contracts Required"
+    text: "Comprehensive Support • Local Expertise • Real Results"
 
 # SEO
 seo:

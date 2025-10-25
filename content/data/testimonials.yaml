@@ -9,8 +9,9 @@ testimonials:
     avatar_icon: "fa-user"
     order: 1
     quote: |
-      Finally found someone I can trust with my property in San Juan! The detailed 
-      photo reports give me complete peace of mind while I'm in Florida.
+      "The property scouting service was incredible! Got professional video tours of 5 properties 
+      from Florida, complete with neighborhood analysis. Saved me thousands in travel costs and 
+      found the perfect home."
     
   - id: jennifer-l
     name: "Jennifer L."
@@ -19,8 +20,8 @@ testimonials:
     avatar_icon: "fa-user"
     order: 2
     quote: |
-      The translation service saved me thousands! I couldn't have navigated the 
-      permit process without the bilingual help and local knowledge.
+      "From airport pickup to getting my driver's license - they handled EVERYTHING. 
+      Moving to Puerto Rico felt impossible until I found this service. Now I'm completely settled in."
     
   - id: david-k
     name: "David K."
@@ -29,5 +30,5 @@ testimonials:
     avatar_icon: "fa-user"
     order: 3
     quote: |
-      Professional, reliable, and truly cares about my property. The WhatsApp 
-      updates with photos after each visit are incredibly helpful.
+      "Best investment I made for my Puerto Rico move. Property management, government paperwork, 
+      even helped me find a reliable used car. They know everyone and everything on the island."
