@@ -2,23 +2,23 @@
 # Edit this file to update key benefits shown on homepage
 
 value_props:
-  - id: complete-journey
-    title: "Complete Journey Support"
-    icon: "fa-route"
+  - id: zero-surprises
+    title: "Zero Surprises, Zero Regrets"
+    icon: "fa-shield-check"
     order: 1
     description: |
-      From property scouting abroad to settling in seamlessly. One trusted partner for your entire Puerto Rico experience.
+      Professional property vetting, neighborhood crime analysis, and flood zone research. Make informed decisions with insider knowledge you can't get anywhere else.
   
-  - id: local-expertise
-    title: "True Local Expertise"
-    icon: "fa-user-check"
+  - id: land-running
+    title: "Land Running, Not Stumbling"
+    icon: "fa-rocket"
     order: 2
     description: |
-      Born and raised knowledge of neighborhoods, culture, and systems. We know what newcomers really need.
+      Airport pickup to driver's license in record time. We navigate the bureaucracy, speak the language, and know every shortcut to get you settled fast.
   
-  - id: instant-communication
-    title: "Real-Time Documentation"
-    icon: "fa-mobile-alt"
+  - id: island-insider
+    title: "Your Personal Island Insider"
+    icon: "fa-handshake"
     order: 3
     description: |
-      Professional videos, detailed photos, and instant WhatsApp updates. See everything as if you were here yourself.
+      Born-and-raised local knowledge plus mainland professionalism. We're your advocate in every negotiation, your translator in every office, your friend when you need help.

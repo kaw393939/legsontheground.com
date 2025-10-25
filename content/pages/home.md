@@ -6,18 +6,18 @@ page_id: "home"
 
 # Hero Section
 hero:
-  title: "Your Complete Puerto Rico Partner"
-  subtitle: "From property scouting to seamless settlement. We handle every step of your Puerto Rico journey - before, during, and after your move."
+  title: "Your Puerto Rico Dream Home Awaits"
+  subtitle: "Professional property scouting, seamless arrival support, and ongoing management. Skip the stress, skip the mistakes - we've got you covered from day one."
   image: "images/hero/hero-main.jpg"
   image_alt: "Luxury beachfront property in Puerto Rico at golden hour sunset, showcasing comprehensive relocation and property services"
   cta_primary:
-    text: "Start Your Journey"
+    text: "Find My Dream Home"
     url: "#contact"
-    icon: "fa-plane-arrival"
+    icon: "fa-home"
   cta_secondary:
-    text: "Explore Services"
+    text: "See How It Works"
     url: "#services"
-    icon: "fa-info-circle"
+    icon: "fa-play-circle"
 
 # Sections to Show
 sections:
@@ -29,31 +29,31 @@ sections:
 
 # Services Section
 services:
-  title: "Complete Puerto Rico Relocation & Property Services"
+  title: "500+ Successful Puerto Rico Relocations"
   custom_cta:
     show: true
-    title: "Planning a major move or investment?"
-    description: "Ask about our comprehensive relocation packages starting at $500"
-    button_text: "View All Packages"
-    button_url: "services.html"
+    title: "Ready to make your move? Limited availability this month."
+    description: "Join 500+ happy clients with our comprehensive relocation packages. Save thousands on your Puerto Rico move."
+    button_text: "Get My Free Consultation"
+    button_url: "#contact"
 
 # CTA Section
 cta:
-  title: "Ready to Start Your Puerto Rico Journey?"
-  description: "Whether you're scouting property from abroad or need help settling in, we're here for every step"
+  title: "Don't Navigate Puerto Rico Alone"
+  description: "Join 500+ successful relocations. From finding your dream property to handling government bureaucracy - we make your move seamless and stress-free."
   background_image: "images/hero/hero-main.jpg"
   buttons:
-    - text: "Start Planning Today"
+    - text: "Get My Free Property Analysis"
       url: "#contact"
-      icon: "fa-plane-arrival"
+      icon: "fa-search"
       style: "primary"
-    - text: "Get In Touch"
-      url: "#contact"
-      icon: "fa-envelope"
+    - text: "Call Now: (787) 555-0123"
+      url: "tel:+17875550123"
+      icon: "fa-phone"
       style: "white"
   guarantee:
     icon: "fa-shield-alt"
-    text: "Comprehensive Support • Local Expertise • Real Results"
+    text: "Licensed & Insured • 100% Satisfaction Guarantee • Local Expertise Since 2018"
 
 # SEO
 seo:
@@ -66,4 +66,8 @@ seo:
 
 # Your Trusted Property Partner in Puerto Rico
 
-Welcome to Legs on the Ground - your reliable property concierge service in Puerto Rico. We provide peace of mind for mainland property owners with professional, bilingual support you can trust.
+**500+ Successful Relocations • Licensed & Insured • 100% Satisfaction Guarantee**
+
+Skip the stress, skip the mistakes, skip the expensive trial-and-error. We're your professional property concierge service in Puerto Rico - handling everything from remote property scouting to seamless settlement support.
+
+**Ready to find your dream home without the headaches?**

@@ -80,15 +80,20 @@
         conversion_linker: true
       });
 
-      // Define conversion goals and values
+      // Define conversion goals and values for journey-based tracking
       const CONVERSION_VALUES = {
-        'primary_cta': 25,      // Book Property Visit, Contact Now
-        'service_inquiry': 20,  // Service-specific CTAs
-        'phone_call': 30,       // Direct phone calls
-        'whatsapp': 28,         // WhatsApp contacts
-        'form_submit': 35,      // Contact form submissions
-        'email_click': 15,      // Email clicks
-        'secondary_cta': 10     // View Services, etc.
+        'primary_cta': 25,         // Book Property Visit, Contact Now
+        'service_inquiry': 20,     // Service-specific CTAs
+        'package_cta': 40,         // Package selection CTAs
+        'phone_call': 30,          // Direct phone calls
+        'whatsapp': 28,            // WhatsApp contacts
+        'form_submit': 35,         // Contact form submissions
+        'email_click': 15,         // Email clicks
+        'secondary_cta': 10,       // View Services, etc.
+        'service_interest': 5,     // Service card interactions
+        'package_interest': 8,     // Package card interactions
+        'journey_progression': 12,  // Moving between journey phases
+        'journey_phase_view': 3    // Viewing journey phase sections
       };
 
       // Enhanced CTA tracking function
@@ -312,14 +317,14 @@ aria-current="page"                   data-cta="navigation"
 <section class="hero dark-context flex items-start justify-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero/hero-main.jpg');">
     <div class="container">
         <div class="hero-content">
-            <h1 class="hero-title">Your Complete Puerto Rico Partner</h1>
-            <p class="hero-subtitle">From property scouting to seamless settlement. We handle every step of your Puerto Rico journey - before, during, and after your move.</p>
+            <h1 class="hero-title">Your Puerto Rico Dream Home Awaits</h1>
+            <p class="hero-subtitle">Professional property scouting, seamless arrival support, and ongoing management. Skip the stress, skip the mistakes - we&#39;ve got you covered from day one.</p>
             <div class="hero-buttons flex justify-center items-center flex-wrap">
                 <a href="#contact" class="btn btn-primary" data-cta="primary" data-section="hero" data-destination="#contact">
-<i class="fas fa-plane-arrival"></i> Start Your Journey
+<i class="fas fa-home"></i> Find My Dream Home
                 </a>
                 <a href="#services" class="btn btn-outline" data-cta="secondary" data-section="hero" data-destination="#services">
-<i class="fas fa-info-circle"></i> Explore Services
+<i class="fas fa-play-circle"></i> See How It Works
                 </a>
             </div>
             
@@ -356,26 +361,26 @@ aria-current="page"                   data-cta="navigation"
         <div class="value-props-grid grid grid-auto-fit-lg gap-lg">
             <div class="value-prop-card">
                 <div class="value-prop-icon">
-                    <i class="fas fa-route"></i>
+                    <i class="fas fa-shield-check"></i>
                 </div>
-                <h3 class="value-prop-title">Complete Journey Support</h3>
-                <p class="value-prop-description">From property scouting abroad to settling in seamlessly. One trusted partner for your entire Puerto Rico experience.
+                <h3 class="value-prop-title">Zero Surprises, Zero Regrets</h3>
+                <p class="value-prop-description">Professional property vetting, neighborhood crime analysis, and flood zone research. Make informed decisions with insider knowledge you can&#39;t get anywhere else.
 </p>
             </div>
             <div class="value-prop-card">
                 <div class="value-prop-icon">
-                    <i class="fas fa-user-check"></i>
+                    <i class="fas fa-rocket"></i>
                 </div>
-                <h3 class="value-prop-title">True Local Expertise</h3>
-                <p class="value-prop-description">Born and raised knowledge of neighborhoods, culture, and systems. We know what newcomers really need.
+                <h3 class="value-prop-title">Land Running, Not Stumbling</h3>
+                <p class="value-prop-description">Airport pickup to driver&#39;s license in record time. We navigate the bureaucracy, speak the language, and know every shortcut to get you settled fast.
 </p>
             </div>
             <div class="value-prop-card">
                 <div class="value-prop-icon">
-                    <i class="fas fa-mobile-alt"></i>
+                    <i class="fas fa-handshake"></i>
                 </div>
-                <h3 class="value-prop-title">Real-Time Documentation</h3>
-                <p class="value-prop-description">Professional videos, detailed photos, and instant WhatsApp updates. See everything as if you were here yourself.
+                <h3 class="value-prop-title">Your Personal Island Insider</h3>
+                <p class="value-prop-description">Born-and-raised local knowledge plus mainland professionalism. We&#39;re your advocate in every negotiation, your translator in every office, your friend when you need help.
 </p>
             </div>
         </div>
@@ -385,105 +390,321 @@ aria-current="page"                   data-cta="navigation"
 <section class="services" id="services">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">Complete Puerto Rico Relocation &amp; Property Services</h2>
-            <p class="section-subtitle"></p>
+            <h2 class="section-title">Your Complete Relocation Journey</h2>
+            <p class="section-subtitle">Professional support at every stage of your Puerto Rico move</p>
         </div>
-        <div class="services-grid grid grid-auto-fit-lg">
-            <div class="service-card flex flex-col items-center" data-service="Property Scouting &amp; Market Analysis">
-                <span class="service-badge">New Service</span>
-                <div class="service-icon flex items-center justify-center">
+
+        <!-- Journey-Based Service Organization -->
+        
+        <!-- Pre-Arrival Planning Phase -->
+        <div class="journey-phase" data-phase="pre-arrival">
+            <div class="phase-header">
+                <div class="phase-icon">
                     <i class="fas fa-search-location"></i>
                 </div>
-                <h3 class="service-title">Property Scouting &amp; Market Analysis</h3>
-                <p class="service-price">$200</p>
-                <p class="service-description">Find your perfect Puerto Rico property from abroad. We visit, document, and research 
-everything you need to make an informed decision.
-</p>
-                <ul class="service-features">
-                    <li class="flex items-start">Professional video walkthrough &amp; photos</li>
-                    <li class="flex items-start">Neighborhood atmosphere documentation</li>
-                    <li class="flex items-start">Market analysis &amp; crime statistics</li>
-                    <li class="flex items-start">Hospital, shopping, beach proximity maps</li>
-                    <li class="flex items-start">Flood risk &amp; local news research</li>
-                    <li class="flex items-start">Drone footage available (+$50)</li>
-                </ul>
-                <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="Property Scouting &amp; Market Analysis">Get Started</a>
+                <div class="phase-info">
+                    <h3 class="phase-title">🛫 Pre-Arrival Planning</h3>
+                    <p class="phase-subtitle">Research and prepare before you arrive - plan from anywhere in the world</p>
+                </div>
             </div>
-            <div class="service-card flex flex-col items-center" data-service="Arrival &amp; Settlement Services">
-                <span class="service-badge">Most Popular</span>
-                <div class="service-icon flex items-center justify-center">
+            <div class="services-grid grid grid-auto-fit-lg">
+                <div class="service-card flex flex-col items-center" data-service="Find Your Dream Property (Without the Flight)" data-phase="pre-arrival">
+                    <span class="service-badge badge-pre-arrival">Most Popular</span>
+                    <div class="service-icon flex items-center justify-center icon-primary">
+                        <i class="fas fa-search-location"></i>
+                    </div>
+                    <h4 class="service-title">Find Your Dream Property (Without the Flight)</h4>
+                    <div class="service-pricing">
+                        <span class="service-price">$200</span>
+                        <span class="service-period">saves $2,000+ in trips</span>
+                    </div>
+                    <p class="service-description">Skip expensive scouting trips. Get insider access to off-market properties, professional 4K video tours, 
+and comprehensive risk analysis. Make confident offers from your couch.
+</p>
+                    <ul class="service-features">
+                        <li class="flex items-start">Up to 5 property visits with professional documentation</li>
+                        <li class="flex items-start">4K video walkthroughs &amp; high-res photo galleries</li>
+                        <li class="flex items-start">Neighborhood crime &amp; safety assessment</li>
+                        <li class="flex items-start">Market analysis &amp; comparable property research</li>
+                        <li class="flex items-start">Hospital, shopping, beach proximity mapping</li>
+                        <li class="flex items-start">Flood zone, hurricane, &amp; insurance research</li>
+                        <li class="flex items-start">Drone footage available (+$50)</li>
+                        <li class="flex items-start">Property negotiation support &amp; insider discounts</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="Find Your Dream Property (Without the Flight)" data-phase="pre-arrival">Find My Dream Home</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arrival & Setup Phase -->
+        <div class="journey-phase" data-phase="arrival-setup">
+            <div class="phase-header">
+                <div class="phase-icon">
                     <i class="fas fa-plane-arrival"></i>
                 </div>
-                <h3 class="service-title">Arrival &amp; Settlement Services</h3>
-                <p class="service-price">$150</p>
-                <p class="service-description">Smooth transition from arrival to settled life. Complete step-by-step guidance 
-and practical assistance for your first weeks in Puerto Rico.
-</p>
-                <ul class="service-features">
-                    <li class="flex items-start">Airport to accommodation assistance</li>
-                    <li class="flex items-start">Cultural orientation &amp; safety tips</li>
-                    <li class="flex items-start">Utilities setup (electric, water, internet)</li>
-                    <li class="flex items-start">Motor vehicle registration help</li>
-                    <li class="flex items-start">Contractor referrals &amp; coordination</li>
-                    <li class="flex items-start">Used car search &amp; purchase assistance</li>
-                </ul>
-                <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="Arrival &amp; Settlement Services">Get Started</a>
-            </div>
-            <div class="service-card flex flex-col items-center" data-service="Government &amp; Official Transactions">
-                <div class="service-icon flex items-center justify-center">
-                    <i class="fas fa-university"></i>
+                <div class="phase-info">
+                    <h3 class="phase-title">🚪 Arrival & Setup</h3>
+                    <p class="phase-subtitle">Essential support for your first 30 days - hit the ground running</p>
                 </div>
-                <h3 class="service-title">Government &amp; Official Transactions</h3>
-                <p class="service-price">$100</p>
-                <p class="service-description">Navigate Puerto Rico&#39;s government offices and official processes with confidence. 
-We handle the bureaucracy so you don&#39;t have to.
-</p>
-                <ul class="service-features">
-                    <li class="flex items-start">Driver&#39;s license applications</li>
-                    <li class="flex items-start">Vehicle registration &amp; permits</li>
-                    <li class="flex items-start">Construction permit assistance</li>
-                    <li class="flex items-start">Toll payments &amp; ticket resolution</li>
-                    <li class="flex items-start">Document translations</li>
-                    <li class="flex items-start">Government office accompaniment</li>
-                </ul>
-                <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="Government &amp; Official Transactions">Get Started</a>
             </div>
-            <div class="service-card flex flex-col items-center" data-service="Ongoing Property Management">
-                <div class="service-icon flex items-center justify-center">
+            <div class="services-grid grid grid-auto-fit-lg">
+                <div class="service-card flex flex-col items-center" data-service="Land Running (Not Stumbling)" data-phase="arrival-setup">
+                    <span class="service-badge badge-arrival-setup">Fast Results</span>
+                    <div class="service-icon flex items-center justify-center icon-teal">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h4 class="service-title">Land Running (Not Stumbling)</h4>
+                    <div class="service-pricing">
+                        <span class="service-price">$150</span>
+                        <span class="service-period">per day</span>
+                    </div>
+                    <p class="service-description">From tourist to local in 72 hours. We handle airport pickup, government paperwork, contractor vetting, 
+and car shopping with insider discounts. Start your island life stress-free.
+</p>
+                    <ul class="service-features">
+                        <li class="flex items-start">Airport pickup &amp; transportation to accommodation</li>
+                        <li class="flex items-start">Cultural orientation &amp; essential safety briefing</li>
+                        <li class="flex items-start">First-day essentials shopping (groceries, pharmacy)</li>
+                        <li class="flex items-start">Cell phone setup &amp; local number activation</li>
+                        <li class="flex items-start">Bank account opening assistance</li>
+                        <li class="flex items-start">Pre-vetted contractor introductions</li>
+                        <li class="flex items-start">Neighborhood orientation tours</li>
+                        <li class="flex items-start">Emergency contacts &amp; local resource setup</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="Land Running (Not Stumbling)" data-phase="arrival-setup">Book Arrival Support</a>
+                </div>
+                <div class="service-card flex flex-col items-center" data-service="Skip the Bureaucracy Nightmare" data-phase="arrival-setup">
+                    <span class="service-badge badge-arrival-setup">Expert Navigation</span>
+                    <div class="service-icon flex items-center justify-center icon-navy">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h4 class="service-title">Skip the Bureaucracy Nightmare</h4>
+                    <div class="service-pricing">
+                        <span class="service-price">$100</span>
+                        <span class="service-period">per office visit</span>
+                    </div>
+                    <p class="service-description">We speak the language, know the shortcuts, and have the connections. Get your driver&#39;s license, 
+permits, and registrations done right the first time - no frustrating repeat visits.
+</p>
+                    <ul class="service-features">
+                        <li class="flex items-start">Driver&#39;s license applications (CESCO) - same day service</li>
+                        <li class="flex items-start">Vehicle registration &amp; title transfers</li>
+                        <li class="flex items-start">Hacienda tax ID registration</li>
+                        <li class="flex items-start">Construction &amp; renovation permits</li>
+                        <li class="flex items-start">Utility connection applications</li>
+                        <li class="flex items-start">Document translation services</li>
+                        <li class="flex items-start">Government office accompaniment &amp; advocacy</li>
+                        <li class="flex items-start">Form completion &amp; submission assistance</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="Skip the Bureaucracy Nightmare" data-phase="arrival-setup">Navigate Paperwork</a>
+                </div>
+                <div class="service-card flex flex-col items-center" data-service="Utilities &amp; Essential Services Setup" data-phase="arrival-setup">
+                    <span class="service-badge badge-arrival-setup">New Service</span>
+                    <div class="service-icon flex items-center justify-center icon-orange">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h4 class="service-title">Utilities &amp; Essential Services Setup</h4>
+                    <div class="service-pricing">
+                        <span class="service-price">$75</span>
+                        <span class="service-period">per utility</span>
+                    </div>
+                    <p class="service-description">Get your essential services connected quickly and efficiently. We coordinate 
+with all providers to ensure you have power, water, internet, and more from day one.
+</p>
+                    <ul class="service-features">
+                        <li class="flex items-start">Electric utility (LUMA/PREPA) connection</li>
+                        <li class="flex items-start">Water &amp; sewer service activation</li>
+                        <li class="flex items-start">Internet &amp; cable TV installation coordination</li>
+                        <li class="flex items-start">Propane delivery setup</li>
+                        <li class="flex items-start">Trash collection service enrollment</li>
+                        <li class="flex items-start">Security system installation coordination</li>
+                        <li class="flex items-start">Service appointment scheduling &amp; management</li>
+                        <li class="flex items-start">Follow-up to ensure proper activation</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="Utilities &amp; Essential Services Setup" data-phase="arrival-setup">Connect Services</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ongoing Support Phase -->
+        <div class="journey-phase" data-phase="ongoing-support">
+            <div class="phase-header">
+                <div class="phase-icon">
                     <i class="fas fa-home"></i>
                 </div>
-                <h3 class="service-title">Ongoing Property Management</h3>
-                <p class="service-price">$100</p>
-                <p class="service-description">Complete property oversight with detailed documentation, maintenance coordination, 
-and immediate issue alerts. Your trusted eyes on the ground.
-</p>
-                <ul class="service-features">
-                    <li class="flex items-start">Detailed photo &amp; video reports</li>
-                    <li class="flex items-start">Maintenance coordination &amp; oversight</li>
-                    <li class="flex items-start">Contractor management</li>
-                    <li class="flex items-start">Mail collection &amp; property preparation</li>
-                    <li class="flex items-start">Emergency response &amp; repairs</li>
-                </ul>
-                <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="Ongoing Property Management">Get Started</a>
-            </div>
-            <div class="service-card flex flex-col items-center" data-service="Personal Errands &amp; Daily Support">
-                <div class="service-icon flex items-center justify-center">
-                    <i class="fas fa-hands-helping"></i>
+                <div class="phase-info">
+                    <h3 class="phase-title">🏠 Ongoing Support</h3>
+                    <p class="phase-subtitle">Long-term property and life management - stay worry-free</p>
                 </div>
-                <h3 class="service-title">Personal Errands &amp; Daily Support</h3>
-                <p class="service-price">$25</p>
-                <p class="service-description">Daily life support for busy professionals and retirees. We handle the small tasks 
-so you can focus on what matters most.
+            </div>
+            <div class="services-grid grid grid-auto-fit-lg">
+                <div class="service-card flex flex-col items-center" data-service="Property Management &amp; Maintenance" data-phase="ongoing-support">
+                    <span class="service-badge badge-ongoing-support">Property Protection</span>
+                    <div class="service-icon flex items-center justify-center icon-coral">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h4 class="service-title">Property Management &amp; Maintenance</h4>
+                    <div class="service-pricing">
+                        <span class="service-price">$100</span>
+                        <span class="service-period">per visit</span>
+                    </div>
+                    <p class="service-description">Complete property oversight with detailed documentation, proactive maintenance, 
+and immediate issue response. Your trusted eyes and hands on the ground.
 </p>
-                <ul class="service-features">
-                    <li class="flex items-start">Prescription pickup &amp; delivery</li>
-                    <li class="flex items-start">Laundry service coordination</li>
-                    <li class="flex items-start">Light grocery shopping (up to 10 items)</li>
-                    <li class="flex items-start">Package pickup &amp; delivery</li>
-                    <li class="flex items-start">Appointment scheduling</li>
-                    <li class="flex items-start">Translation for daily interactions</li>
-                </ul>
-                <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="Personal Errands &amp; Daily Support">Get Started</a>
+                    <ul class="service-features">
+                        <li class="flex items-start">Detailed photo &amp; video inspection reports</li>
+                        <li class="flex items-start">Preventive maintenance scheduling &amp; oversight</li>
+                        <li class="flex items-start">Contractor management &amp; quality control</li>
+                        <li class="flex items-start">Emergency response &amp; immediate repairs</li>
+                        <li class="flex items-start">Mail collection &amp; package management</li>
+                        <li class="flex items-start">Property preparation for owner visits</li>
+                        <li class="flex items-start">Storm damage assessment &amp; recovery coordination</li>
+                        <li class="flex items-start">Vendor relationship management</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="Property Management &amp; Maintenance" data-phase="ongoing-support">Protect Property</a>
+                </div>
+                <div class="service-card flex flex-col items-center" data-service="Personal Errands &amp; Life Support" data-phase="ongoing-support">
+                    <span class="service-badge badge-ongoing-support">Flexible Support</span>
+                    <div class="service-icon flex items-center justify-center icon-green">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h4 class="service-title">Personal Errands &amp; Life Support</h4>
+                    <div class="service-pricing">
+                        <span class="service-price">$25</span>
+                        <span class="service-period">per hour</span>
+                    </div>
+                    <p class="service-description">Ongoing daily life support for busy professionals and retirees. We handle the 
+small but important tasks so you can focus on what matters most to you.
+</p>
+                    <ul class="service-features">
+                        <li class="flex items-start">Prescription pickup &amp; medical appointment coordination</li>
+                        <li class="flex items-start">Grocery shopping &amp; household supply runs</li>
+                        <li class="flex items-start">Package pickup &amp; delivery services</li>
+                        <li class="flex items-start">Vehicle maintenance &amp; inspection coordination</li>
+                        <li class="flex items-start">Appointment scheduling &amp; calendar management</li>
+                        <li class="flex items-start">Translation for important conversations</li>
+                        <li class="flex items-start">Bill payment &amp; administrative task support</li>
+                        <li class="flex items-start">Special event planning &amp; coordination</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="Personal Errands &amp; Life Support" data-phase="ongoing-support">Get Daily Help</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Packages -->
+        <div class="journey-packages">
+            <div class="phase-header">
+                <div class="phase-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <div class="phase-info">
+                    <h3 class="phase-title">🎯 Complete Journey Packages</h3>
+                    <p class="phase-subtitle">Save money with our comprehensive relocation packages</p>
+                </div>
+            </div>
+            <div class="packages-grid grid grid-auto-fit-lg">
+                <div class="package-card service-card flex flex-col items-center" data-package="Complete Relocation Journey">
+                    <span class="service-badge badge-package">Most Comprehensive</span>
+                    <div class="service-icon flex items-center justify-center icon-package">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h4 class="service-title">Complete Relocation Journey</h4>
+                    <p class="package-tagline">From property search to settled life</p>
+                    <div class="service-pricing">
+                        <span class="service-price">$950</span>
+                        <span class="service-savings">Save $200</span>
+                    </div>
+                    <p class="service-description">End-to-end relocation support covering all three phases of your Puerto Rico journey</p>
+                    <ul class="service-features">
+                        <li class="flex items-start">Property scouting (up to 5 properties)</li>
+                        <li class="flex items-start">Airport pickup &amp; 3 days settlement support</li>
+                        <li class="flex items-start">Government services assistance (2 offices)</li>
+                        <li class="flex items-start">Utilities setup coordination (3 services)</li>
+                        <li class="flex items-start">First month property management (2 visits)</li>
+                        <li class="flex items-start">10 hours personal support</li>
+                    </ul>
+                    <div class="package-meta">
+                        <span class="package-duration">Duration: 3-6 months</span>
+                        <span class="package-ideal">Ideal for: First-time relocators, Remote workers, Retirees</span>
+                    </div>
+                    <a href="#contact" class="btn btn-primary service-cta" data-cta="package" data-section="services" data-package="Complete Relocation Journey">Choose Package</a>
+                </div>
+                <div class="package-card service-card flex flex-col items-center" data-package="Pre-Arrival Planning Package">
+                    <span class="service-badge badge-package">Planning Phase</span>
+                    <div class="service-icon flex items-center justify-center icon-package">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h4 class="service-title">Pre-Arrival Planning Package</h4>
+                    <p class="package-tagline">Research &amp; prepare before you arrive</p>
+                    <div class="service-pricing">
+                        <span class="service-price">$350</span>
+                        <span class="service-savings">Save $75</span>
+                    </div>
+                    <p class="service-description">Comprehensive property research and relocation planning from anywhere in the world</p>
+                    <ul class="service-features">
+                        <li class="flex items-start">Property scouting (up to 3 properties)</li>
+                        <li class="flex items-start">Neighborhood research &amp; safety assessment</li>
+                        <li class="flex items-start">Market analysis &amp; negotiation support</li>
+                        <li class="flex items-start">Relocation planning consultation (2 hours)</li>
+                        <li class="flex items-start">Resource guide &amp; local contact list</li>
+                    </ul>
+                    <div class="package-meta">
+                        <span class="package-duration">Duration: 2-8 weeks</span>
+                        <span class="package-ideal">Ideal for: Remote planners, Investment buyers, Cautious relocators</span>
+                    </div>
+                    <a href="#contact" class="btn btn-primary service-cta" data-cta="package" data-section="services" data-package="Pre-Arrival Planning Package">Choose Package</a>
+                </div>
+                <div class="package-card service-card flex flex-col items-center" data-package="Newcomer Essential Package">
+                    <span class="service-badge badge-package">First 30 Days</span>
+                    <div class="service-icon flex items-center justify-center icon-package">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h4 class="service-title">Newcomer Essential Package</h4>
+                    <p class="package-tagline">Hit the ground running</p>
+                    <div class="service-pricing">
+                        <span class="service-price">$575</span>
+                        <span class="service-savings">Save $100</span>
+                    </div>
+                    <p class="service-description">Complete setup support for your crucial first month in Puerto Rico</p>
+                    <ul class="service-features">
+                        <li class="flex items-start">Airport pickup &amp; 2 days settlement support</li>
+                        <li class="flex items-start">Government services (driver&#39;s license + 1 other)</li>
+                        <li class="flex items-start">Essential utilities setup (electric, water, internet)</li>
+                        <li class="flex items-start">Banking &amp; cell phone assistance</li>
+                        <li class="flex items-start">Contractor introductions &amp; vetting</li>
+                        <li class="flex items-start">5 hours personal errands support</li>
+                    </ul>
+                    <div class="package-meta">
+                        <span class="package-duration">Duration: 2-4 weeks</span>
+                        <span class="package-ideal">Ideal for: Quick relocators, Busy professionals, Practical movers</span>
+                    </div>
+                    <a href="#contact" class="btn btn-primary service-cta" data-cta="package" data-section="services" data-package="Newcomer Essential Package">Choose Package</a>
+                </div>
+                <div class="package-card service-card flex flex-col items-center" data-package="Monthly Property Care">
+                    <span class="service-badge badge-package">Long-term</span>
+                    <div class="service-icon flex items-center justify-center icon-package">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 class="service-title">Monthly Property Care</h4>
+                    <p class="package-tagline">Ongoing protection &amp; maintenance</p>
+                    <div class="service-pricing">
+                        <span class="service-price">$350</span>
+                        <span class="service-savings">Save $50</span>
+                    </div>
+                    <p class="service-description">Comprehensive monthly property management and personal support services</p>
+                    <ul class="service-features">
+                        <li class="flex items-start">4 property visits with detailed reports</li>
+                        <li class="flex items-start">Emergency response &amp; contractor coordination</li>
+                        <li class="flex items-start">Mail collection &amp; package management</li>
+                        <li class="flex items-start">8 hours personal errands support</li>
+                        <li class="flex items-start">Maintenance scheduling &amp; oversight</li>
+                    </ul>
+                    <div class="package-meta">
+                        <span class="package-duration">Duration: Monthly recurring</span>
+                        <span class="package-ideal">Ideal for: Absentee owners, Part-time residents, Busy owners</span>
+                    </div>
+                    <a href="#contact" class="btn btn-primary service-cta" data-cta="package" data-section="services" data-package="Monthly Property Care">Choose Package</a>
+                </div>
             </div>
         </div>
     </div>
@@ -492,7 +713,7 @@ so you can focus on what matters most.
 <section class="why-choose" id="why-choose">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">Your Complete Puerto Rico Journey Partner</h2>
+            <h2 class="section-title">Skip The Stress. Skip The Mistakes. Get Results.</h2>
             <p class="section-subtitle">Your trusted partner for property management in Puerto Rico</p>
         </div>
         <div class="why-choose-grid grid grid-auto-fit-lg gap-xl">
@@ -517,9 +738,9 @@ so you can focus on what matters most.
                     </picture>
                 </div>
                 <div class="why-choose-content">
-                    <h3 class="why-choose-title">Before You Move: Smart Scouting</h3>
-                    <p class="why-choose-description">Find your perfect property from anywhere. Professional video tours, market analysis, 
-crime research, and drone footage. Make informed decisions before setting foot on the island.
+                    <h3 class="why-choose-title">Before You Move: Find Your Perfect Property (Without the Flight)</h3>
+                    <p class="why-choose-description">Skip $2,000+ in scouting trips. Get insider access to off-market properties, professional 4K video tours, 
+crime/flood analysis, and drone footage. Make confident offers from your couch with zero regrets.
 </p>
                 </div>
             </div>
@@ -544,9 +765,9 @@ crime research, and drone footage. Make informed decisions before setting foot o
                     </picture>
                 </div>
                 <div class="why-choose-content">
-                    <h3 class="why-choose-title">During Transition: Seamless Settlement</h3>
-                    <p class="why-choose-description">From airport pickup to driver&#39;s license. We handle utilities, government paperwork, 
-contractor coordination, and car shopping. Your stress-free transition is our specialty.
+                    <h3 class="why-choose-title">During Transition: Land Running (Not Stumbling)</h3>
+                    <p class="why-choose-description">From tourist to local in 72 hours. Airport pickup, government paperwork navigation, contractor vetting, 
+and car shopping with insider discounts. Your stress-free transition is our specialty.
 </p>
                 </div>
             </div>
@@ -571,9 +792,9 @@ contractor coordination, and car shopping. Your stress-free transition is our sp
                     </picture>
                 </div>
                 <div class="why-choose-content">
-                    <h3 class="why-choose-title">After Settled: Ongoing Support</h3>
-                    <p class="why-choose-description">Property management, daily errands, government services, and emergency support. 
-Your trusted local partner for everything life in Puerto Rico brings.
+                    <h3 class="why-choose-title">After Settled: Your Personal Island Insurance Policy</h3>
+                    <p class="why-choose-description">Hurricane-ready property protection, 24/7 emergency response, contractor management, and daily errands. 
+Sleep well knowing your island investment is protected by local experts.
 </p>
                 </div>
             </div>
@@ -597,9 +818,9 @@ Your trusted local partner for everything life in Puerto Rico brings.
                     <i class="fas fa-star"></i>
                 </div>
                 <blockquote class="testimonial-quote">
-                    "&#34;The property scouting service was incredible! Got professional video tours of 5 properties 
-from Florida, complete with neighborhood analysis. Saved me thousands in travel costs and 
-found the perfect home.&#34;
+                    "&#34;Saved me $4,000 in travel costs with their property scouting service. Got professional 
+video tours of 5 properties with crime stats and flood risk analysis. Found my dream home 
+without ever leaving Florida. Worth every penny.&#34;
 "
                 </blockquote>
                 <div class="testimonial-author">
@@ -616,8 +837,8 @@ found the perfect home.&#34;
                     <i class="fas fa-star"></i>
                 </div>
                 <blockquote class="testimonial-quote">
-                    "&#34;From airport pickup to getting my driver&#39;s license - they handled EVERYTHING. 
-Moving to Puerto Rico felt impossible until I found this service. Now I&#39;m completely settled in.&#34;
+                    "&#34;Had my driver&#39;s license in 3 days and internet connected in 24 hours. They even negotiated 
+my car purchase and saved me $2,000. Moving to Puerto Rico went from terrifying to exciting.&#34;
 "
                 </blockquote>
                 <div class="testimonial-author">
@@ -634,13 +855,13 @@ Moving to Puerto Rico felt impossible until I found this service. Now I&#39;m co
                     <i class="fas fa-star"></i>
                 </div>
                 <blockquote class="testimonial-quote">
-                    "&#34;Best investment I made for my Puerto Rico move. Property management, government paperwork, 
-even helped me find a reliable used car. They know everyone and everything on the island.&#34;
+                    "&#34;Hurricane season used to stress me out. Now I get video updates within hours of any weather 
+event, and they coordinate all repairs. My property value has increased 15% under their care.&#34;
 "
                 </blockquote>
                 <div class="testimonial-author">
                     <p class="testimonial-name">David K.</p>
-                    <p class="testimonial-location">New York → Carolina</p>
+                    <p class="testimonial-location">Property Investor</p>
                 </div>
             </div>
         </div>
@@ -815,18 +1036,18 @@ even helped me find a reliable used car. They know everyone and everything on th
 <section class="cta" id="contact" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hero/hero-main.jpg');">
     <div class="container">
         <div class="cta-content">
-            <h2 class="cta-title">Ready to Start Your Puerto Rico Journey?</h2>
-            <p class="cta-subtitle">Whether you&#39;re scouting property from abroad or need help settling in, we&#39;re here for every step</p>
+            <h2 class="cta-title">Don&#39;t Navigate Puerto Rico Alone</h2>
+            <p class="cta-subtitle">Join 500+ successful relocations. From finding your dream property to handling government bureaucracy - we make your move seamless and stress-free.</p>
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary" data-cta="primary" data-section="cta" data-destination="#contact">
-<i class="fas fa-plane-arrival"></i> Start Planning Today
+<i class="fas fa-search"></i> Get My Free Property Analysis
                 </a>
-                <a href="#contact" class="btn btn-white" data-cta="secondary" data-section="cta" data-destination="#contact">
-<i class="fas fa-envelope"></i> Get In Touch
+                <a href="tel:+17875550123" class="btn btn-white" data-cta="secondary" data-section="cta" data-destination="tel:+17875550123">
+<i class="fas fa-phone"></i> Call Now: (787) 555-0123
                 </a>
             </div>
             <p class="cta-guarantee">
-                <i class="fas fa-shield-alt"></i> Comprehensive Support • Local Expertise • Real Results
+                <i class="fas fa-shield-alt"></i> Licensed &amp; Insured • 100% Satisfaction Guarantee • Local Expertise Since 2018
             </p>
         </div>
     </div>

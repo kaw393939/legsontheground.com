@@ -82,15 +82,20 @@
         conversion_linker: true
       });
 
-      // Define conversion goals and values
+      // Define conversion goals and values for journey-based tracking
       const CONVERSION_VALUES = {
-        'primary_cta': 25,      // Book Property Visit, Contact Now
-        'service_inquiry': 20,  // Service-specific CTAs
-        'phone_call': 30,       // Direct phone calls
-        'whatsapp': 28,         // WhatsApp contacts
-        'form_submit': 35,      // Contact form submissions
-        'email_click': 15,      // Email clicks
-        'secondary_cta': 10     // View Services, etc.
+        'primary_cta': 25,         // Book Property Visit, Contact Now
+        'service_inquiry': 20,     // Service-specific CTAs
+        'package_cta': 40,         // Package selection CTAs
+        'phone_call': 30,          // Direct phone calls
+        'whatsapp': 28,            // WhatsApp contacts
+        'form_submit': 35,         // Contact form submissions
+        'email_click': 15,         // Email clicks
+        'secondary_cta': 10,       // View Services, etc.
+        'service_interest': 5,     // Service card interactions
+        'package_interest': 8,     // Package card interactions
+        'journey_progression': 12,  // Moving between journey phases
+        'journey_phase_view': 3    // Viewing journey phase sections
       };
 
       // Enhanced CTA tracking function

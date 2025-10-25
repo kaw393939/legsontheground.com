@@ -2,35 +2,35 @@
 # Edit this file to update the reasons customers trust you
 
 why_choose:
-  section_title: "Your Complete Puerto Rico Journey Partner"
+  section_title: "Skip The Stress. Skip The Mistakes. Get Results."
   
   reasons:
     - id: before-you-move
-      title: "Before You Move: Smart Scouting"
+      title: "Before You Move: Find Your Perfect Property (Without the Flight)"
       icon: "fa-search-location"
       image: "images/about/about-bilingual.jpg"
       image_alt: "Professional property scouting with comprehensive market analysis and video documentation"
       order: 1
       description: |
-        Find your perfect property from anywhere. Professional video tours, market analysis, 
-        crime research, and drone footage. Make informed decisions before setting foot on the island.
+        Skip $2,000+ in scouting trips. Get insider access to off-market properties, professional 4K video tours, 
+        crime/flood analysis, and drone footage. Make confident offers from your couch with zero regrets.
     
     - id: during-transition
-      title: "During Transition: Seamless Settlement"
-      icon: "fa-plane-arrival"
+      title: "During Transition: Land Running (Not Stumbling)"
+      icon: "fa-rocket"
       image: "images/about/about-local-knowledge.jpg"
       image_alt: "Airport arrival assistance and comprehensive settling-in services in Puerto Rico"
       order: 2
       description: |
-        From airport pickup to driver's license. We handle utilities, government paperwork, 
-        contractor coordination, and car shopping. Your stress-free transition is our specialty.
+        From tourist to local in 72 hours. Airport pickup, government paperwork navigation, contractor vetting, 
+        and car shopping with insider discounts. Your stress-free transition is our specialty.
     
     - id: after-settled
-      title: "After Settled: Ongoing Support"
-      icon: "fa-home"
+      title: "After Settled: Your Personal Island Insurance Policy"
+      icon: "fa-shield-alt"
       image: "images/about/about-experience.jpg"
       image_alt: "Ongoing property management and daily life support services in Puerto Rico"
       order: 3
       description: |
-        Property management, daily errands, government services, and emergency support. 
-        Your trusted local partner for everything life in Puerto Rico brings.
+        Hurricane-ready property protection, 24/7 emergency response, contractor management, and daily errands. 
+        Sleep well knowing your island investment is protected by local experts.

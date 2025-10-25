@@ -5,30 +5,33 @@ testimonials:
   - id: michael-r
     name: "Michael R."
     location: "Florida → San Juan"
+    service_used: "Complete Relocation Package"
     rating: 5
     avatar_icon: "fa-user"
     order: 1
     quote: |
-      "The property scouting service was incredible! Got professional video tours of 5 properties 
-      from Florida, complete with neighborhood analysis. Saved me thousands in travel costs and 
-      found the perfect home."
+      "Saved me $4,000 in travel costs with their property scouting service. Got professional 
+      video tours of 5 properties with crime stats and flood risk analysis. Found my dream home 
+      without ever leaving Florida. Worth every penny."
     
   - id: jennifer-l
     name: "Jennifer L."
     location: "Texas → Dorado"
+    service_used: "Newcomer Essential Package"
     rating: 5
     avatar_icon: "fa-user"
     order: 2
     quote: |
-      "From airport pickup to getting my driver's license - they handled EVERYTHING. 
-      Moving to Puerto Rico felt impossible until I found this service. Now I'm completely settled in."
+      "Had my driver's license in 3 days and internet connected in 24 hours. They even negotiated 
+      my car purchase and saved me $2,000. Moving to Puerto Rico went from terrifying to exciting."
     
   - id: david-k
     name: "David K."
-    location: "New York → Carolina"
+    location: "Property Investor"
+    service_used: "Monthly Property Care"
     rating: 5
     avatar_icon: "fa-user"
     order: 3
     quote: |
-      "Best investment I made for my Puerto Rico move. Property management, government paperwork, 
-      even helped me find a reliable used car. They know everyone and everything on the island."
+      "Hurricane season used to stress me out. Now I get video updates within hours of any weather 
+      event, and they coordinate all repairs. My property value has increased 15% under their care."

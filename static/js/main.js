@@ -173,23 +173,55 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Track service card interactions
+    // Track service card interactions with journey phases
     function initServiceTracking() {
         document.querySelectorAll('.service-card').forEach(card => {
-            const serviceName = card.querySelector('.service-title, h3')?.textContent.trim() || 'unknown';
+            const serviceName = card.querySelector('.service-title, h3, h4')?.textContent.trim() || 'unknown';
+            const phase = card.getAttribute('data-phase') || 'unknown';
+            const isPackage = card.hasAttribute('data-package');
             
-            // Track hover/focus interest
+            // Track hover/focus interest with phase context
             card.addEventListener('mouseenter', function() {
-                trackServiceInterest(serviceName, 'hover');
+                if (isPackage) {
+                    trackPackageInterest(serviceName, 'hover');
+                } else {
+                    trackServiceInterest(serviceName, 'hover', phase);
+                }
             });
 
-            // Track detailed view
+            // Track detailed view with phase context
             card.addEventListener('click', function(e) {
                 // Only track if not clicking a CTA button
                 if (!e.target.closest('.btn, .cta')) {
-                    trackServiceInterest(serviceName, 'card_click');
+                    if (isPackage) {
+                        trackPackageInterest(serviceName, 'card_click');
+                    } else {
+                        trackServiceInterest(serviceName, 'card_click', phase);
+                    }
                 }
             });
+        });
+
+        // Track journey phase section views
+        document.querySelectorAll('.journey-phase').forEach(phase => {
+            const phaseType = phase.getAttribute('data-phase') || 'unknown';
+            const phaseTitle = phase.querySelector('.phase-title')?.textContent.trim() || phaseType;
+            
+            // Create intersection observer for phase visibility
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        gtag('event', 'journey_phase_view', {
+                            event_category: 'Journey',
+                            event_label: phaseType,
+                            phase_title: phaseTitle,
+                            phase_type: phaseType
+                        });
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(phase);
         });
     }
 
@@ -672,4 +704,55 @@ function debounce(func, wait) {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
+}
+
+// ===================================
+// Analytics Tracking Helper Functions
+// ===================================
+
+// Track CTA button clicks with enhanced data
+function trackCTAClick(ctaType, section, ctaText, destination) {
+    gtag('event', 'cta_click', {
+        event_category: 'CTA',
+        event_label: ctaType,
+        cta_type: ctaType,
+        section: section,
+        cta_text: ctaText,
+        destination: destination,
+        value: CONVERSION_VALUES[ctaType] || 1
+    });
+}
+
+// Track service interest with journey phase context
+function trackServiceInterest(serviceName, interactionType, phase = null) {
+    gtag('event', 'service_interest', {
+        event_category: 'Services',
+        event_label: serviceName,
+        service_name: serviceName,
+        interaction_type: interactionType,
+        journey_phase: phase,
+        value: CONVERSION_VALUES.service_interest || 1
+    });
+}
+
+// Track package interest
+function trackPackageInterest(packageName, interactionType) {
+    gtag('event', 'package_interest', {
+        event_category: 'Packages',
+        event_label: packageName,
+        package_name: packageName,
+        interaction_type: interactionType,
+        value: CONVERSION_VALUES.package_interest || 3
+    });
+}
+
+// Track journey progression through phases
+function trackJourneyProgression(fromPhase, toPhase) {
+    gtag('event', 'journey_progression', {
+        event_category: 'Journey',
+        event_label: `${fromPhase}_to_${toPhase}`,
+        from_phase: fromPhase,
+        to_phase: toPhase,
+        value: CONVERSION_VALUES.journey_progression || 2
+    });
 }
