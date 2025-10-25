@@ -1,100 +1,69 @@
 <section class="faq-section" id="faq">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle">Get answers to common questions about our Puerto Rico relocation services</p>
+            <h2 class="section-title">{{ faq.page_config.title }}</h2>
+            <p class="section-subtitle">{{ faq.page_config.subtitle }}</p>
         </div>
         
-        <div class="faq-container">
-            <div class="faq-item">
-                <button class="faq-question flex items-center justify-between" aria-expanded="false">
-                    <span>How does the property scouting service work?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>Our property scouting service helps you find the perfect place before you arrive. We'll search based on your criteria (budget, location, amenities), visit potential properties, provide detailed photos/videos, and negotiate on your behalf. Service includes up to 5 properties for $200, with flexible scheduling based on your timeline.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <button class="faq-question flex items-center justify-between" aria-expanded="false">
-                    <span>What's included in the arrival and settlement assistance?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>For $150/day, we provide airport pickup, help with immediate needs (groceries, pharmacy, cell phone), guide you through essential first steps, and ensure you're comfortable in your new home. We can assist for as many days as needed during your transition period.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <button class="faq-question flex items-center justify-between" aria-expanded="false">
-                    <span>How do you help with government services and banking?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>Our $100 government services package includes accompanying you to CESCO (driver's license), Hacienda (tax ID), banking institutions, and other essential offices. We help navigate paperwork, provide translation if needed, and ensure everything is completed correctly the first time.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <button class="faq-question flex items-center justify-between" aria-expanded="false">
-                    <span>What areas of Puerto Rico do you serve?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>We primarily serve the San Juan metropolitan area, including Carolina, Dorado, Bayamón, and surrounding municipalities. For services in other parts of Puerto Rico, please contact us to discuss availability and any additional travel fees that may apply.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <button class="faq-question flex items-center justify-between" aria-expanded="false">
-                    <span>Can I combine multiple services into a package?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>Absolutely! Many clients benefit from our comprehensive relocation packages. We can create custom bundles combining property scouting, arrival assistance, government services, and ongoing property management. Contact us to discuss your specific needs and we'll create a tailored package with preferred pricing.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <button class="faq-question flex items-center justify-between" aria-expanded="false">
-                    <span>How quickly can you start helping with my relocation?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>We can typically begin property scouting within 48 hours of your request. For arrival assistance, we recommend booking at least one week in advance to ensure availability. Government services can usually be scheduled within 3-5 business days, depending on government office availability.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <button class="faq-question flex items-center justify-between" aria-expanded="false">
-                    <span>What if I need help with something not listed in your services?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>Our personal errands service at $25/hour covers most additional needs - grocery shopping, pharmacy runs, utility setup, contractor coordination, and more. If you have unique requirements, we're happy to discuss custom solutions. We're your complete Puerto Rico partner!</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <button class="faq-question flex items-center justify-between" aria-expanded="false">
-                    <span>How do I pay for services?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>We accept credit cards, debit cards, PayPal, Venmo, Zelle, and bank transfers. For one-time services, payment is due before service delivery. Package clients are billed based on agreed terms. All transactions are secure and you'll receive detailed invoices.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <button class="faq-question flex items-center justify-between" aria-expanded="false">
-                    <span>Are you insured and licensed?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>Yes! We carry full liability insurance and are properly licensed to operate in Puerto Rico. We can provide proof of insurance upon request. Your property and personal assistance needs are protected throughout our service relationship.</p>
-                </div>
+        {% if faq.component_settings.show_search %}
+        <div class="faq-search">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="faq-search" placeholder="Search FAQ..." aria-label="Search frequently asked questions">
             </div>
         </div>
+        {% endif %}
+        
+        {% if faq.component_settings.show_categories %}
+        <div class="faq-categories">
+            <button class="category-filter active" data-category="all">All Questions</button>
+            {% for category_key, category_data in faq.faqs.items() %}
+            <button class="category-filter" data-category="{{ category_key }}">
+                <i class="fas {{ category_data.icon }}"></i>
+                {{ category_data.category }}
+            </button>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+        <div class="faq-container">
+            {% for category_key, category_data in faq.faqs.items() %}
+            <div class="faq-category" data-category="{{ category_key }}">
+                <h3 class="category-title">
+                    <i class="fas {{ category_data.icon }}"></i>
+                    {{ category_data.category }}
+                </h3>
+                
+                {% for question_data in category_data.questions %}
+                <div class="faq-item" data-category="{{ category_key }}">
+                    <button class="faq-question flex items-center justify-between" 
+                            aria-expanded="false"
+                            data-question="{{ question_data.question }}">
+                        <span>{{ question_data.question }}</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        {{ question_data.answer | safe }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+        
+        {% if faq.component_settings.contact_cta.show %}
+        <div class="faq-cta">
+            <div class="cta-content">
+                <h3>{{ faq.component_settings.contact_cta.text }}</h3>
+                <p>Our Puerto Rico relocation experts are here to help with any questions not covered above.</p>
+                <a href="{{ faq.component_settings.contact_cta.button_link }}" 
+                   class="btn btn-primary" 
+                   data-cta="faq_contact" 
+                   data-section="faq">
+                   {{ faq.component_settings.contact_cta.button_text }}
+                </a>
+            </div>
+        </div>
+        {% endif %}
     </div>
 </section>

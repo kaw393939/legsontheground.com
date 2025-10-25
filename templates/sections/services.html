@@ -2,172 +2,143 @@
     <div class="container">
         <div class="section-header">
             <h2 class="section-title">Your Complete Relocation Journey</h2>
-            <p class="section-subtitle">Professional support at every stage of your Puerto Rico move</p>
+            <p class="section-subtitle">Three simple services. Three journey phases. Zero stress.</p>
         </div>
 
-        <!-- Journey-Based Service Organization -->
-        
-        <!-- Pre-Arrival Planning Phase -->
-        {% if services.pre_arrival_services %}
-        <div class="journey-phase" data-phase="pre-arrival">
+        <!-- Journey-Based 3 Core Services (Psychological Optimization) -->
+        {% if services.essential_services %}
+        <div class="journey-phase" data-phase="essential-services">
             <div class="phase-header">
                 <div class="phase-icon">
-                    <i class="fas fa-search-location"></i>
+                    <i class="fas fa-route"></i>
                 </div>
                 <div class="phase-info">
-                    <h3 class="phase-title">🛫 Pre-Arrival Planning</h3>
-                    <p class="phase-subtitle">Research and prepare before you arrive - plan from anywhere in the world</p>
+                    <h3 class="phase-title">🎯 Essential Services</h3>
+                    <p class="phase-subtitle">Everything you need for a successful Puerto Rico relocation - organized by your journey</p>
                 </div>
             </div>
-            <div class="services-grid grid grid-auto-fit-lg">
-                {% for service in services.pre_arrival_services %}
-                <div class="service-card flex flex-col items-center" data-service="{{ service.title }}" data-phase="{{ service.phase }}">
-                    {% if service.badge %}
-                    <span class="service-badge badge-{{ service.phase }}">{{ service.badge }}</span>
+            <div class="services-grid grid grid-auto-fit-lg psychological-grid">
+                {% for service in services.essential_services %}
+                <div class="service-card flex flex-col items-center {% if service.popular %}most-popular{% endif %}" 
+                     data-service="{{ service.title }}" 
+                     data-phase="{{ service.journey_phase }}"
+                     data-psychology="{{ service.psychological_appeal }}">
+                    {% if service.popular %}
+                    <span class="service-badge badge-popular">Most Popular Choice</span>
                     {% endif %}
-                    <div class="service-icon flex items-center justify-center icon-{{ service.icon_color }}">
-                        <i class="fas {{ service.icon }}"></i>
+                    {% if service.savings_highlight %}
+                    <span class="service-badge badge-savings">{{ service.savings_highlight }}</span>
+                    {% endif %}
+                    <div class="service-icon flex items-center justify-center">
+                        <span class="service-emoji">{{ service.icon }}</span>
                     </div>
                     <h4 class="service-title">{{ service.title }}</h4>
+                    <p class="psychological-appeal">{{ service.psychological_appeal }}</p>
                     <div class="service-pricing">
                         <span class="service-price">{{ service.price }}</span>
-                        <span class="service-period">{{ service.price_period }}</span>
                     </div>
                     <p class="service-description">{{ service.description }}</p>
+                    <div class="what-you-get">
+                        <strong>What You Get:</strong>
+                        <p>{{ service.what_you_get }}</p>
+                    </div>
                     <ul class="service-features">
                         {% for feature in service.features %}
                         <li class="flex items-start">{{ feature }}</li>
                         {% endfor %}
                     </ul>
-                    <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="{{ service.title }}" data-phase="{{ service.phase }}">{{ service.cta_text }}</a>
+                    <a href="#contact" class="btn {% if service.popular %}btn-primary{% else %}btn-outline{% endif %} service-cta" 
+                       data-cta="service" 
+                       data-section="services" 
+                       data-service="{{ service.title }}" 
+                       data-phase="{{ service.journey_phase }}">
+                       {% if service.popular %}Get Started Now{% else %}Learn More{% endif %}
+                    </a>
                 </div>
                 {% endfor %}
             </div>
         </div>
         {% endif %}
 
-        <!-- Arrival & Setup Phase -->
-        {% if services.arrival_setup_services %}
-        <div class="journey-phase" data-phase="arrival-setup">
-            <div class="phase-header">
-                <div class="phase-icon">
-                    <i class="fas fa-plane-arrival"></i>
-                </div>
-                <div class="phase-info">
-                    <h3 class="phase-title">🚪 Arrival & Setup</h3>
-                    <p class="phase-subtitle">Essential support for your first 30 days - hit the ground running</p>
-                </div>
-            </div>
-            <div class="services-grid grid grid-auto-fit-lg">
-                {% for service in services.arrival_setup_services %}
-                <div class="service-card flex flex-col items-center" data-service="{{ service.title }}" data-phase="{{ service.phase }}">
-                    {% if service.badge %}
-                    <span class="service-badge badge-{{ service.phase }}">{{ service.badge }}</span>
-                    {% endif %}
-                    <div class="service-icon flex items-center justify-center icon-{{ service.icon_color }}">
-                        <i class="fas {{ service.icon }}"></i>
-                    </div>
-                    <h4 class="service-title">{{ service.title }}</h4>
-                    <div class="service-pricing">
-                        <span class="service-price">{{ service.price }}</span>
-                        <span class="service-period">{{ service.price_period }}</span>
-                    </div>
-                    <p class="service-description">{{ service.description }}</p>
-                    <ul class="service-features">
-                        {% for feature in service.features %}
-                        <li class="flex items-start">{{ feature }}</li>
-                        {% endfor %}
-                    </ul>
-                    <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="{{ service.title }}" data-phase="{{ service.phase }}">{{ service.cta_text }}</a>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
-
-        <!-- Ongoing Support Phase -->
-        {% if services.ongoing_support_services %}
-        <div class="journey-phase" data-phase="ongoing-support">
-            <div class="phase-header">
-                <div class="phase-icon">
-                    <i class="fas fa-home"></i>
-                </div>
-                <div class="phase-info">
-                    <h3 class="phase-title">🏠 Ongoing Support</h3>
-                    <p class="phase-subtitle">Long-term property and life management - stay worry-free</p>
-                </div>
-            </div>
-            <div class="services-grid grid grid-auto-fit-lg">
-                {% for service in services.ongoing_support_services %}
-                <div class="service-card flex flex-col items-center" data-service="{{ service.title }}" data-phase="{{ service.phase }}">
-                    {% if service.badge %}
-                    <span class="service-badge badge-{{ service.phase }}">{{ service.badge }}</span>
-                    {% endif %}
-                    <div class="service-icon flex items-center justify-center icon-{{ service.icon_color }}">
-                        <i class="fas {{ service.icon }}"></i>
-                    </div>
-                    <h4 class="service-title">{{ service.title }}</h4>
-                    <div class="service-pricing">
-                        <span class="service-price">{{ service.price }}</span>
-                        <span class="service-period">{{ service.price_period }}</span>
-                    </div>
-                    <p class="service-description">{{ service.description }}</p>
-                    <ul class="service-features">
-                        {% for feature in service.features %}
-                        <li class="flex items-start">{{ feature }}</li>
-                        {% endfor %}
-                    </ul>
-                    <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="{{ service.title }}" data-phase="{{ service.phase }}">{{ service.cta_text }}</a>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
-
-        <!-- Service Packages -->
+        <!-- Psychological Package Structure -->
         {% if services.packages %}
         <div class="journey-packages">
             <div class="phase-header">
                 <div class="phase-icon">
-                    <i class="fas fa-gift"></i>
+                    <i class="fas fa-star"></i>
                 </div>
                 <div class="phase-info">
-                    <h3 class="phase-title">🎯 Complete Journey Packages</h3>
-                    <p class="phase-subtitle">Save money with our comprehensive relocation packages</p>
+                    <h3 class="phase-title">🎯 Smart Package Options</h3>
+                    <p class="phase-subtitle">Choose your perfect combination - designed for maximum value</p>
                 </div>
             </div>
-            <div class="packages-grid grid grid-auto-fit-lg">
-                {% for package_id, package in services.packages.items() %}
-                <div class="package-card service-card flex flex-col items-center" data-package="{{ package.name }}">
-                    {% if package.badge %}
-                    <span class="service-badge badge-package">{{ package.badge }}</span>
+            <div class="packages-grid grid grid-auto-fit-lg psychological-packages">
+                {% for package in services.packages %}
+                <div class="package-card service-card flex flex-col items-center {% if package.popular %}most-popular{% endif %}" 
+                     data-package="{{ package.title }}"
+                     data-psychology="{{ package.psychological_appeal }}">
+                    {% if package.popular %}
+                    <span class="service-badge badge-popular">Most Popular Choice</span>
                     {% endif %}
-                    <div class="service-icon flex items-center justify-center icon-package">
-                        <i class="fas {{ package.icon }}"></i>
+                    {% if package.savings != "Starting Point" %}
+                    <span class="service-badge badge-savings">{{ package.savings }}</span>
+                    {% endif %}
+                    <div class="service-icon flex items-center justify-center">
+                        <span class="service-emoji">{{ package.icon }}</span>
                     </div>
-                    <h4 class="service-title">{{ package.name }}</h4>
-                    <p class="package-tagline">{{ package.tagline }}</p>
+                    <h4 class="service-title">{{ package.title }}</h4>
+                    <p class="psychological-appeal">{{ package.psychological_appeal }}</p>
                     <div class="service-pricing">
                         <span class="service-price">{{ package.price }}</span>
-                        {% if package.savings %}
+                        {% if package.savings != "Starting Point" %}
                         <span class="service-savings">{{ package.savings }}</span>
                         {% endif %}
                     </div>
                     <p class="service-description">{{ package.description }}</p>
+                    {% if package.value_proposition %}
+                    <div class="value-proposition">
+                        <strong>{{ package.value_proposition }}</strong>
+                    </div>
+                    {% endif %}
+                    <div class="included-services">
+                        <strong>Includes:</strong>
+                        <ul>
+                            {% for service in package.included_services %}
+                            <li>{{ service }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                     <ul class="service-features">
-                        {% for include in package.includes %}
-                        <li class="flex items-start">{{ include }}</li>
+                        {% for feature in package.features %}
+                        <li class="flex items-start">{{ feature }}</li>
                         {% endfor %}
                     </ul>
-                    <div class="package-meta">
-                        <span class="package-duration">Duration: {{ package.duration }}</span>
-                        <span class="package-ideal">Ideal for: {{ package.ideal_for }}</span>
+                    <div class="journey-coverage">
+                        <strong>Coverage:</strong> {{ package.journey_coverage }}
                     </div>
-                    <a href="#contact" class="btn btn-primary service-cta" data-cta="package" data-section="services" data-package="{{ package.name }}">Choose Package</a>
+                    {% if package.upgrade_path %}
+                    <div class="upgrade-path">
+                        <em>{{ package.upgrade_path }}</em>
+                    </div>
+                    {% endif %}
+                    <a href="#contact" class="btn {% if package.popular %}btn-primary{% else %}btn-outline{% endif %} service-cta" 
+                       data-cta="package" 
+                       data-section="services" 
+                       data-package="{{ package.title }}">
+                       {% if package.popular %}Choose This Package{% else %}Select Option{% endif %}
+                    </a>
                 </div>
                 {% endfor %}
             </div>
         </div>
         {% endif %}
+
+        <!-- Psychological Elements Notice -->
+        <div class="psychology-notice">
+            <div class="notice-content">
+                <h4>Why We Designed It This Way</h4>
+                <p>Our 3-service structure follows proven psychological principles to help you make the best decision for your relocation. No overwhelm, no confusion - just clear choices that match your journey phase.</p>
+            </div>
+        </div>
     </div>
 </section>

@@ -40,9 +40,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 const serviceName = this.getAttribute('data-service') || 
                                   serviceCard?.querySelector('.service-title, h3')?.textContent.trim() || 'unknown';
                 const ctaText = this.textContent.trim();
+                const psychology = this.getAttribute('data-psychology') || 
+                                 serviceCard?.getAttribute('data-psychology') || 'none';
                 
                 trackCTAClick('service_inquiry', serviceName, ctaText, this.getAttribute('href') || '#contact');
-                trackServiceInterest(serviceName, 'cta_click');
+                trackServiceInterest(serviceName, 'cta_click', psychology);
+            });
+        });
+
+        // Package-specific CTAs with psychological tracking
+        document.querySelectorAll('.package-card .btn, [data-cta="package"]').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const packageCard = this.closest('.package-card');
+                const packageName = this.getAttribute('data-package') || 
+                                  packageCard?.querySelector('.service-title, h4')?.textContent.trim() || 'unknown';
+                const ctaText = this.textContent.trim();
+                const psychology = this.getAttribute('data-psychology') || 
+                                 packageCard?.getAttribute('data-psychology') || 'none';
+                
+                trackCTAClick('package_inquiry', packageName, ctaText, this.getAttribute('href') || '#contact');
+                trackPackageInterest(packageName, 'cta_click', psychology);
             });
         });
 
@@ -661,6 +678,140 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ===================================
+    // Enhanced FAQ Features (Search & Filtering)
+    // ===================================
+    initEnhancedFAQ();
+    
+    function initEnhancedFAQ() {
+        const searchInput = document.getElementById('faq-search');
+        const categoryFilters = document.querySelectorAll('.category-filter');
+        const faqItems = document.querySelectorAll('.faq-item[data-category]');
+        const faqCategories = document.querySelectorAll('.faq-category');
+        
+        // FAQ Search functionality
+        if (searchInput) {
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question span').textContent.toLowerCase();
+                    const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                    const matches = question.includes(searchTerm) || answer.includes(searchTerm);
+                    
+                    if (searchTerm === '' || matches) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                        // Close the item if it's open and being hidden
+                        item.classList.remove('active');
+                        const btn = item.querySelector('.faq-question');
+                        const answer = item.querySelector('.faq-answer');
+                        btn.setAttribute('aria-expanded', 'false');
+                        if (answer) {
+                            answer.style.maxHeight = '0';
+                        }
+                    }
+                });
+                
+                // Show/hide category headers based on visible items
+                faqCategories.forEach(category => {
+                    const categoryItems = category.querySelectorAll('.faq-item:not(.hidden)');
+                    if (categoryItems.length === 0) {
+                        category.style.display = 'none';
+                    } else {
+                        category.style.display = 'block';
+                    }
+                });
+                
+                // Track search usage
+                if (searchTerm.length >= 3) {
+                    gtag('event', 'faq_search', {
+                        event_category: 'FAQ',
+                        event_label: searchTerm,
+                        search_term: searchTerm
+                    });
+                }
+            });
+        }
+        
+        // FAQ Category filtering
+        if (categoryFilters.length > 0) {
+            categoryFilters.forEach(filter => {
+                filter.addEventListener('click', function() {
+                    const selectedCategory = this.getAttribute('data-category');
+                    
+                    // Update active filter
+                    categoryFilters.forEach(f => f.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Clear search when switching categories
+                    if (searchInput) {
+                        searchInput.value = '';
+                    }
+                    
+                    // Show/hide items and categories based on selection
+                    if (selectedCategory === 'all') {
+                        faqItems.forEach(item => item.classList.remove('hidden'));
+                        faqCategories.forEach(category => category.style.display = 'block');
+                    } else {
+                        faqItems.forEach(item => {
+                            if (item.getAttribute('data-category') === selectedCategory) {
+                                item.classList.remove('hidden');
+                            } else {
+                                item.classList.add('hidden');
+                                // Close the item if it's open and being hidden
+                                item.classList.remove('active');
+                                const btn = item.querySelector('.faq-question');
+                                const answer = item.querySelector('.faq-answer');
+                                btn.setAttribute('aria-expanded', 'false');
+                                if (answer) {
+                                    answer.style.maxHeight = '0';
+                                }
+                            }
+                        });
+                        
+                        faqCategories.forEach(category => {
+                            const categoryKey = category.getAttribute('data-category');
+                            if (categoryKey === selectedCategory) {
+                                category.style.display = 'block';
+                            } else {
+                                category.style.display = 'none';
+                            }
+                        });
+                    }
+                    
+                    // Track category selection
+                    gtag('event', 'faq_category_filter', {
+                        event_category: 'FAQ',
+                        event_label: selectedCategory,
+                        category_selected: selectedCategory
+                    });
+                });
+            });
+        }
+        
+        // Track FAQ engagement
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            if (question) {
+                question.addEventListener('click', function() {
+                    const questionText = this.querySelector('span').textContent;
+                    const category = item.getAttribute('data-category');
+                    
+                    gtag('event', 'faq_question_click', {
+                        event_category: 'FAQ',
+                        event_label: questionText,
+                        question_text: questionText,
+                        faq_category: category
+                    });
+                });
+            }
+        });
+        
+        console.log(`Enhanced FAQ initialized: ${faqItems.length} items with search and filtering`);
+    }
+    
+    // ===================================
     // Service Page Price Calculator (if on services page)
     // ===================================
     // This can be expanded for a pricing calculator
@@ -723,27 +874,53 @@ function trackCTAClick(ctaType, section, ctaText, destination) {
     });
 }
 
-// Track service interest with journey phase context
-function trackServiceInterest(serviceName, interactionType, phase = null) {
+// Track service interest with psychological context
+function trackServiceInterest(serviceName, interactionType, psychology = null) {
     gtag('event', 'service_interest', {
         event_category: 'Services',
         event_label: serviceName,
         service_name: serviceName,
         interaction_type: interactionType,
-        journey_phase: phase,
+        psychological_appeal: psychology,
         value: CONVERSION_VALUES.service_interest || 1
     });
+    
+    // Track psychological optimization effectiveness
+    if (psychology) {
+        gtag('event', 'psychological_element_interaction', {
+            event_category: 'Psychology',
+            event_label: psychology,
+            element_type: 'service',
+            service_name: serviceName,
+            interaction_type: interactionType
+        });
+    }
 }
 
-// Track package interest
-function trackPackageInterest(packageName, interactionType) {
+// Track package interest with psychological context
+function trackPackageInterest(packageName, interactionType, psychology = null) {
     gtag('event', 'package_interest', {
         event_category: 'Packages',
         event_label: packageName,
         package_name: packageName,
         interaction_type: interactionType,
+        psychological_appeal: psychology,
         value: CONVERSION_VALUES.package_interest || 3
     });
+    
+    // Track psychological optimization effectiveness
+    if (psychology) {
+        gtag('event', 'psychological_element_interaction', {
+            event_category: 'Psychology',
+            event_label: psychology,
+            element_type: 'package',
+            package_name: packageName,
+            interaction_type: interactionType
+        });
+    }
+    
+    // Track choice architecture effectiveness
+    trackChoiceArchitecture(packageName, psychology);
 }
 
 // Track journey progression through phases
@@ -756,3 +933,45 @@ function trackJourneyProgression(fromPhase, toPhase) {
         value: CONVERSION_VALUES.journey_progression || 2
     });
 }
+
+// Track choice architecture effectiveness (Rule of 3, Goldilocks Effect, Decoy Effect)
+function trackChoiceArchitecture(choice, psychology) {
+    const architectureType = getArchitectureType(choice, psychology);
+    
+    gtag('event', 'choice_architecture', {
+        event_category: 'Psychology',
+        event_label: architectureType,
+        choice_made: choice,
+        psychological_appeal: psychology,
+        architecture_type: architectureType
+    });
+}
+
+// Determine which psychological principle was triggered
+function getArchitectureType(choice, psychology) {
+    if (psychology && psychology.includes('Most Popular')) {
+        return 'goldilocks_effect';
+    } else if (psychology && psychology.includes('Decoy')) {
+        return 'decoy_effect';
+    } else if (psychology && psychology.includes('Entry')) {
+        return 'entry_point';
+    }
+    return 'rule_of_three';
+}
+
+// Track A/B test performance for psychological optimization
+function trackPsychologicalOptimization() {
+    gtag('event', 'ab_test_exposure', {
+        event_category: 'A/B Testing',
+        event_label: 'journey_based_3_services',
+        test_variation: 'psychological_3_services',
+        service_count: 3,
+        package_count: 3,
+        psychological_principles: 'rule_of_three,goldilocks_effect,decoy_effect'
+    });
+}
+
+// Initialize psychological optimization tracking on page load
+document.addEventListener('DOMContentLoaded', function() {
+    trackPsychologicalOptimization();
+});

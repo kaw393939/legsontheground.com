@@ -33,14 +33,16 @@ footer_nav:
   services:
     title: "Services"
     links:
-      - title: "Property Check-Ins"
+      - title: "Services Overview"
         url: "#services"
-      - title: "Translation Services"
-        url: "#services"
-      - title: "Transportation"
-        url: "#services"
-      - title: "Local Coordination"
-        url: "#services"
+      - title: "All Services"
+        url: "/services.html"
+      - title: "Property Services"
+        url: "/services.html#property"
+      - title: "Official Setup"
+        url: "/services.html#setup"
+      - title: "Ongoing Support"
+        url: "/services.html#support"
   
   company:
     title: "Quick Links"

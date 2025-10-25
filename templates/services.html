@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | {{ site.name }}{% endblock %}
+{% block description %}{{ page.description }}{% endblock %}
+{% block keywords %}{{ page.keywords }}{% endblock %}
+
+{% block content %}
+<main class="services-page">
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">{{ page.title }}</h1>
+                <p class="hero-description">{{ page.description }}</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Successful Relocations</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Satisfaction Rate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section with Full Psychological Optimization -->
+    {% include "sections/services.html" %}
+
+    <!-- FAQ Section -->
+    {% include "sections/faq.html" %}
+
+    <!-- CTA Section -->
+    {% include "sections/cta.html" %}
+</main>
+{% endblock %}

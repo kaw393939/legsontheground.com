@@ -1,0 +1,125 @@
+# FAQ Configuration - Puerto Rico Relocation Questions
+# Organized by common concern categories
+
+faqs:
+  # Property & Housing Questions
+  property_housing:
+    category: "Property & Housing"
+    icon: "fa-home"
+    questions:
+      - question: "How do you find properties that aren't listed online?"
+        answer: |
+          We have established relationships with local real estate agents, property owners, and community networks across Puerto Rico. Many of the best properties never make it to online listings - they're sold through word-of-mouth or local connections. Our team actively scouts neighborhoods, maintains relationships with property owners, and gets first access to off-market opportunities. We also work with local developers who give us early access to new developments before they're publicly marketed.
+        
+      - question: "What's the real cost of buying property in Puerto Rico?"
+        answer: |
+          Beyond the purchase price, expect 3-7% in closing costs including legal fees ($1,500-3,000), property inspection ($400-800), title insurance, and transfer taxes. Property taxes are generally lower than mainland US (0.25-1.03% annually). However, factor in potential renovation costs - many properties need electrical, plumbing, or structural updates to meet your standards. We provide detailed cost breakdowns for each property we show you.
+        
+      - question: "Is it safe to buy property in flood zones?"
+        answer: |
+          Puerto Rico has detailed flood zone maps, and we thoroughly research each property's flood history and risk level. Some flood-prone areas can be mitigated with proper elevation, drainage, and insurance. We provide comprehensive flood risk assessments including historical data, elevation certificates, and insurance cost estimates. Many coastal properties worth buying are in flood zones - the key is understanding and planning for the risks.
+        
+      - question: "Can I get a mortgage as a non-resident?"
+        answer: |
+          Yes, but it's more complex than mainland mortgages. US citizens can qualify for conventional loans, but local Puerto Rican banks often have better rates and programs. We work with mortgage brokers who specialize in Puerto Rico real estate and can help you navigate options including local banks, credit unions, and mainland lenders who work in Puerto Rico. Typically expect 20-25% down payments and slightly higher interest rates.
+
+  # Legal & Government Questions  
+  legal_government:
+    category: "Legal & Government"
+    icon: "fa-gavel"
+    questions:
+      - question: "Do I need to register with Hacienda (Puerto Rico Treasury)?"
+        answer: |
+          Yes, if you're establishing residency, buying property, or conducting business in Puerto Rico, you need a Hacienda tax ID (SURI). This is separate from your federal tax ID and is required for property purchases, utility connections, and many other services. We handle the entire registration process, including gathering required documents, completing forms in Spanish, and accompanying you to Hacienda offices. The process typically takes 2-3 weeks.
+        
+      - question: "How long does it take to get a Puerto Rico driver's license?"
+        answer: |
+          With our service, same-day processing is possible if you have all required documents. Without help, expect multiple trips and 2-4 weeks. You'll need your current license, certified birth certificate, Social Security card, and two proofs of Puerto Rico address. We ensure all your documents meet CESCO requirements before your appointment and can expedite the process through our established relationships with licensing offices.
+        
+      - question: "What permits do I need for home renovations?"
+        answer: |
+          It depends on the scope of work. Minor cosmetic changes typically don't require permits, but electrical, plumbing, structural changes, and additions over $5,000 usually do. Each municipality has different requirements and timelines (2-8 weeks). We help you navigate the permit process, including determining what's required, preparing applications, and following up with municipal offices. We also connect you with licensed contractors who pull permits properly.
+        
+      - question: "Are there tax benefits for new Puerto Rico residents?"
+        answer: |
+          Yes, potentially significant ones under Acts 20, 22, and 60 (now consolidated). These can provide 4% corporate tax rates and 0% capital gains tax for qualifying individuals and businesses. However, requirements are strict including minimum days in Puerto Rico, local sourcing requirements, and detailed documentation. We work with tax specialists who can evaluate your eligibility and help with compliance requirements.
+
+  # Practical Living Questions
+  practical_living:
+    category: "Daily Life & Utilities"
+    icon: "fa-tools"
+    questions:
+      - question: "How reliable is internet and cell service?"
+        answer: |
+          Internet reliability varies significantly by location. Urban areas and newer developments typically have good fiber connections (100+ Mbps), while rural areas may be limited to slower DSL or satellite. Cell service is generally good with major carriers (Claro, AT&T, T-Mobile). We test internet speeds and cell coverage at every property we show you and can recommend the best providers for your specific location and needs.
+        
+      - question: "What about power outages and electrical service?"
+        answer: |
+          Power reliability has improved significantly since Hurricane María but still varies by location. Urban areas experience fewer outages than rural/mountainous regions. Many residents invest in generators or solar backup systems. We assess the electrical infrastructure for each property and can connect you with solar installers and generator specialists. Budget $3,000-15,000 for a quality backup power system.
+        
+      - question: "How do I set up utilities quickly?"
+        answer: |
+          Without help, connecting utilities can take 2-6 weeks and multiple office visits. We coordinate with LUMA Energy (electric), AAA (water), and internet providers to expedite connections. Our relationships with utility companies allow us to often get same-week service activation. We handle the paperwork, scheduling, and follow-up so you don't have to deal with long wait times or language barriers.
+        
+      - question: "Is it easy to find good contractors and services?"
+        answer: |
+          Finding reliable, properly licensed contractors is one of the biggest challenges for newcomers. We maintain a vetted network of contractors, electricians, plumbers, roofers, and other service providers who we've worked with repeatedly. All our recommended contractors are licensed, insured, and have proven track records. We also help negotiate fair pricing and oversee work quality.
+
+  # Lifestyle & Integration Questions
+  lifestyle_integration:
+    category: "Lifestyle & Integration"
+    icon: "fa-heart"
+    questions:
+      - question: "How important is speaking Spanish?"
+        answer: |
+          While many Puerto Ricans speak English, Spanish fluency greatly enhances your experience and integration. Most government offices, local businesses, and service providers primarily operate in Spanish. We provide translation services for important meetings and can connect you with Spanish tutors and conversation groups. Many successful relocators start with basic Spanish and improve over time through immersion.
+        
+      - question: "What's the cost of living compared to the mainland US?"
+        answer: |
+          Housing and property taxes are generally lower, but many goods cost 15-30% more due to shipping. Groceries, gas, and utilities tend to be more expensive. Local services (restaurants, domestic help, local contractors) are typically less expensive. Overall, most people find their total cost of living similar to or slightly higher than their previous location, but with significant tax savings potential.
+        
+      - question: "How do I integrate into the local community?"
+        answer: |
+          Puerto Ricans are generally welcoming, especially if you show genuine interest in the culture and community. Learn basic Spanish, shop at local businesses, attend community events, and be respectful of local customs. We can introduce you to expat communities and local groups based on your interests. Volunteering, joining local clubs, or taking salsa classes are great ways to meet people and integrate.
+        
+      - question: "What should I know about hurricane season?"
+        answer: |
+          Hurricane season runs June-November, with peak activity August-October. Modern building codes and preparation make hurricanes manageable for most residents. Key preparations include generator backup, water storage, non-perishable food, and understanding your evacuation zone. We help you assess hurricane risks for specific properties and connect you with emergency preparedness resources.
+
+  # Moving & Logistics Questions  
+  moving_logistics:
+    category: "Moving & Logistics"
+    icon: "fa-truck"
+    questions:
+      - question: "How much does it cost to ship my belongings?"
+        answer: |
+          Shipping costs vary widely based on volume and service level. A typical 3-bedroom home costs $8,000-15,000 for full-service moving. Shared container services cost $3,000-6,000 but take longer. Car shipping adds $1,200-2,000. We work with moving companies that specialize in Puerto Rico relocations and can help you choose the most cost-effective option for your situation.
+        
+      - question: "Should I ship my car or buy one in Puerto Rico?"
+        answer: |
+          It depends on your car's value and condition. Shipping costs $1,200-2,000 plus potential modification costs for emissions compliance. Cars in Puerto Rico are typically more expensive due to shipping costs and limited inventory. If your car is worth more than $15,000 and in good condition, shipping usually makes sense. We can help you evaluate the best option and handle the logistics either way.
+        
+      - question: "What can't I bring to Puerto Rico?"
+        answer: |
+          Puerto Rico follows US customs regulations. You generally cannot bring plants, fresh foods, some medications, or certain electronics without proper documentation. Firearms require special permits and procedures. We provide a comprehensive packing guide and can help you understand restrictions for your specific items. Our moving partners are experienced with Puerto Rico regulations.
+        
+      - question: "How long does the moving process take?"
+        answer: |
+          Container shipping typically takes 2-4 weeks from pickup to delivery. Add 1-2 weeks for customs clearance and local delivery. Air freight is faster (3-7 days) but significantly more expensive. We coordinate timing so your belongings arrive when you're ready to receive them, and we can arrange temporary housing if needed during the transition.
+
+# FAQ Page Configuration
+page_config:
+  title: "Frequently Asked Questions"
+  subtitle: "Everything you need to know about relocating to Puerto Rico"
+  description: "Get answers to the most common questions about moving to, buying property in, and living in Puerto Rico. Our comprehensive FAQ covers legal requirements, practical considerations, and insider tips."
+  
+# FAQ Component Settings
+component_settings:
+  show_search: true
+  show_categories: true
+  expandable_answers: true
+  contact_cta: 
+    show: true
+    text: "Still have questions?"
+    button_text: "Ask Our Experts"
+    button_link: "#contact"
