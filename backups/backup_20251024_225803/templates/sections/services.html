@@ -1,0 +1,87 @@
+<section class="risd-services" id="services">
+    <div class="services-container">
+        <!-- Sophisticated Section Header -->
+        <div class="section-intro">
+            <div class="intro-content">
+                <h2 class="section-display-title">
+                    <span class="title-line">{{ page.services.title.split(' ')[0] if page.services else 'Our' }}</span>
+                    <span class="title-line title-accent">{{ page.services.title.split(' ')[1:] | join(' ') if page.services else 'Services' }}</span>
+                </h2>
+                <p class="section-description">{{ page.services.subtitle if page.services and page.services.subtitle else 'Comprehensive property management solutions tailored to your unique needs in Puerto Rico.' }}</p>
+            </div>
+        </div>
+
+        <!-- Premium Services Grid -->
+        <div class="services-showcase">
+            {% for service in services %}
+            <article class="service-mastercard" data-service="{{ loop.index }}">
+                <!-- Service Badge -->
+                {% if service.badge %}
+                <div class="service-badge-wrapper">
+                    <span class="service-badge">{{ service.badge }}</span>
+                </div>
+                {% endif %}
+
+                <!-- Visual Header -->
+                <div class="service-visual">
+                    <div class="service-icon-container">
+                        <div class="icon-backdrop"></div>
+                        <i class="fas {{ service.icon }} service-icon"></i>
+                    </div>
+                    <div class="service-number">{{ '%02d' % loop.index }}</div>
+                </div>
+
+                <!-- Content Area -->
+                <div class="service-content">
+                    <header class="service-header">
+                        <h3 class="service-title">{{ service.title }}</h3>
+                        <div class="price-display">
+                            <span class="price-label">Starting at</span>
+                            <span class="service-price">{{ service.price }}</span>
+                        </div>
+                    </header>
+
+                    <p class="service-description">{{ service.description }}</p>
+
+                    <!-- Feature List -->
+                    <div class="features-section">
+                        <h4 class="features-title">What's Included</h4>
+                        <ul class="service-features">
+                            {% for feature in service.features %}
+                            <li class="feature-item">
+                                <i class="fas fa-check-circle feature-check"></i>
+                                <span>{{ feature }}</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="service-action">
+                        <a href="#contact-form" class="btn-service">
+                            <span>Get Started</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hover Effect Elements -->
+                <div class="card-glow"></div>
+                <div class="card-border"></div>
+            </article>
+            {% endfor %}
+        </div>
+
+        <!-- Call to Action Footer -->
+        <div class="services-cta">
+            <div class="cta-content">
+                <h3 class="cta-title">Need a Custom Solution?</h3>
+                <p class="cta-description">Every property is unique. Let's discuss a personalized approach that fits your specific needs and budget.</p>
+                <a href="#contact-form" class="btn-risd btn-primary">
+                    <span>Discuss Your Needs</span>
+                    <i class="fas fa-comments"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -65,7 +65,143 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-KE98KY192J');
+      gtag('config', 'G-KE98KY192J', {
+        // Enhanced tracking for single-page application
+        page_title: 'Property Management Puerto Rico | Legs on the Ground',
+        custom_map: {
+          'custom_parameter_1': 'cta_type',
+          'custom_parameter_2': 'section_name'
+        },
+        // Enhanced ecommerce for service tracking
+        enhanced_conversions: true,
+        // Track scroll depth
+        send_page_view: true,
+        // Custom conversions configuration
+        conversion_linker: true
+      });
+
+      // Define conversion goals and values
+      const CONVERSION_VALUES = {
+        'primary_cta': 25,      // Book Property Visit, Contact Now
+        'service_inquiry': 20,  // Service-specific CTAs
+        'phone_call': 30,       // Direct phone calls
+        'whatsapp': 28,         // WhatsApp contacts
+        'form_submit': 35,      // Contact form submissions
+        'email_click': 15,      // Email clicks
+        'secondary_cta': 10     // View Services, etc.
+      };
+
+      // Enhanced CTA tracking function
+      function trackCTAClick(ctaType, section, ctaText, destination) {
+        const conversionValue = CONVERSION_VALUES[ctaType] || 5;
+        
+        gtag('event', 'cta_click', {
+          event_category: 'CTA',
+          event_label: ctaText,
+          cta_type: ctaType,
+          section_name: section,
+          destination: destination,
+          value: conversionValue
+        });
+
+        // Track as conversion for high-value CTAs
+        if (['primary_cta', 'service_inquiry', 'phone_call', 'whatsapp', 'form_submit'].includes(ctaType)) {
+          gtag('event', 'conversion', {
+            event_category: 'Conversions',
+            event_label: ctaType,
+            value: conversionValue,
+            currency: 'USD'
+          });
+        }
+      }
+
+      // Track section views for single-page navigation
+      function trackSectionView(sectionName) {
+        gtag('event', 'page_view', {
+          page_title: sectionName + ' - Property Management Puerto Rico',
+          page_location: window.location.href + '#' + sectionName,
+          event_category: 'Navigation',
+          event_label: sectionName,
+          section_name: sectionName
+        });
+      }
+
+      // Track scroll depth milestones
+      function trackScrollDepth(percentage) {
+        gtag('event', 'scroll', {
+          event_category: 'Engagement',
+          event_label: percentage + '%',
+          value: percentage
+        });
+      }
+
+      // Track service interest
+      function trackServiceInterest(serviceName, action) {
+        gtag('event', 'select_content', {
+          content_type: 'service',
+          content_id: serviceName.toLowerCase().replace(/\s+/g, '_'),
+          event_category: 'Services',
+          event_label: serviceName,
+          action: action,
+          value: 8
+        });
+      }
+
+      // Track form interactions
+      function trackFormInteraction(formType, action, field) {
+        gtag('event', 'form_' + action, {
+          event_category: 'Forms',
+          event_label: formType,
+          action: action,
+          field: field,
+          value: action === 'submit' ? CONVERSION_VALUES['form_submit'] : 2
+        });
+      }
+
+      // Track phone/WhatsApp clicks
+      function trackContactMethod(method, source) {
+        const conversionType = method.toLowerCase() === 'whatsapp' ? 'whatsapp' : 'phone_call';
+        const conversionValue = CONVERSION_VALUES[conversionType];
+        
+        gtag('event', 'contact_method', {
+          event_category: 'Contact',
+          event_label: method,
+          source: source,
+          value: conversionValue
+        });
+
+        // Track as high-value conversion
+        gtag('event', 'conversion', {
+          event_category: 'Conversions',
+          event_label: conversionType,
+          value: conversionValue,
+          currency: 'USD'
+        });
+      }
+
+      // Track outbound links
+      function trackOutboundLink(url, linkText) {
+        gtag('event', 'click', {
+          event_category: 'Outbound Links',
+          event_label: url,
+          transport_type: 'beacon',
+          value: 3
+        });
+      }
+
+      // Track time spent on page milestones
+      let timeOnPageMarkers = [30, 60, 120, 300]; // 30s, 1m, 2m, 5m
+      let startTime = Date.now();
+      
+      timeOnPageMarkers.forEach(seconds => {
+        setTimeout(() => {
+          gtag('event', 'time_on_page', {
+            event_category: 'Engagement',
+            event_label: seconds + 's',
+            value: seconds
+          });
+        }, seconds * 1000);
+      });
     </script>
     
     <!-- Structured Data - Local Business -->
@@ -118,32 +254,44 @@
             <nav class="nav flex items-center" id="main-nav" aria-label="Main navigation" role="navigation">
                 <a href="#" 
                    class="nav-link active"
-aria-current="page">
+aria-current="page"                   data-cta="navigation" 
+                   data-section="header" 
+                   data-destination="#">
                    Home
                 </a>
                 <a href="#services" 
                    class="nav-link"
->
+                   data-cta="navigation" 
+                   data-section="header" 
+                   data-destination="#services">
                    Services
                 </a>
                 <a href="#why-choose" 
                    class="nav-link"
->
+                   data-cta="navigation" 
+                   data-section="header" 
+                   data-destination="#why-choose">
                    Why Choose Us
                 </a>
                 <a href="#testimonials" 
                    class="nav-link"
->
+                   data-cta="navigation" 
+                   data-section="header" 
+                   data-destination="#testimonials">
                    Testimonials
                 </a>
                 <a href="#faq" 
                    class="nav-link"
->
+                   data-cta="navigation" 
+                   data-section="header" 
+                   data-destination="#faq">
                    FAQ
                 </a>
                 <a href="#contact" 
                    class="nav-link btn btn-primary"
->
+                   data-cta="primary" 
+                   data-section="header" 
+                   data-destination="#contact">
                    Contact
                 </a>
             </nav>
@@ -167,10 +315,10 @@ aria-current="page">
             <h1 class="hero-title">Your Trusted Eyes, Ears &amp; Legs in Puerto Rico</h1>
             <p class="hero-subtitle">Professional bilingual property concierge services for mainland owners. Peace of mind for your Puerto Rico investment, starting at just $100 per visit.</p>
             <div class="hero-buttons flex justify-center items-center flex-wrap">
-                <a href="#contact" class="btn btn-primary">
+                <a href="#contact" class="btn btn-primary" data-cta="primary" data-section="hero" data-destination="#contact">
 <i class="fas fa-calendar-check"></i> Book Property Visit
                 </a>
-                <a href="#services" class="btn btn-outline">
+                <a href="#services" class="btn btn-outline" data-cta="secondary" data-section="hero" data-destination="#services">
 <i class="fas fa-info-circle"></i> View Services
                 </a>
             </div>
@@ -241,7 +389,7 @@ aria-current="page">
             <p class="section-subtitle"></p>
         </div>
         <div class="services-grid grid grid-auto-fit-lg">
-            <div class="service-card flex flex-col items-center">
+            <div class="service-card flex flex-col items-center" data-service="Property Management &amp; Check-Ins">
                 <span class="service-badge">Most Popular</span>
                 <div class="service-icon flex items-center justify-center">
                     <i class="fas fa-home"></i>
@@ -258,9 +406,9 @@ and immediate issue alerts. Your eyes and hands on the ground in Puerto Rico.
                     <li class="flex items-start">Mail collection &amp; property preparation</li>
                     <li class="flex items-start">Same-day reporting via WhatsApp</li>
                 </ul>
-                <a href="#contact" class="btn btn-outline">Get Started</a>
+                <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="Property Management &amp; Check-Ins">Get Started</a>
             </div>
-            <div class="service-card flex flex-col items-center">
+            <div class="service-card flex flex-col items-center" data-service="Bilingual Concierge Services">
                 <div class="service-icon flex items-center justify-center">
                     <i class="fas fa-language"></i>
                 </div>
@@ -276,9 +424,9 @@ Navigate permits, contractors, and government offices with confidence.
                     <li class="flex items-start">Contractor communication</li>
                     <li class="flex items-start">Cultural bridge &amp; local expertise</li>
                 </ul>
-                <a href="#contact" class="btn btn-outline">Get Started</a>
+                <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="Bilingual Concierge Services">Get Started</a>
             </div>
-            <div class="service-card flex flex-col items-center">
+            <div class="service-card flex flex-col items-center" data-service="Transportation &amp; Logistics">
                 <div class="service-icon flex items-center justify-center">
                     <i class="fas fa-car"></i>
                 </div>
@@ -294,7 +442,7 @@ Reliable logistics support whenever you need it.
                     <li class="flex items-start">Emergency property access</li>
                     <li class="flex items-start">Flexible scheduling &amp; reliability</li>
                 </ul>
-                <a href="#contact" class="btn btn-outline">Get Started</a>
+                <a href="#contact" class="btn btn-outline service-cta" data-cta="service" data-section="services" data-service="Transportation &amp; Logistics">Get Started</a>
             </div>
         </div>
     </div>
@@ -618,10 +766,10 @@ updates with photos after each visit are incredibly helpful.
             <h2 class="cta-title">Ready to Protect Your Puerto Rico Investment?</h2>
             <p class="cta-subtitle">Book your first property visit today and experience the peace of mind you deserve</p>
             <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">
+                <a href="#contact" class="btn btn-primary" data-cta="primary" data-section="cta" data-destination="#contact">
 <i class="fas fa-calendar-check"></i> Schedule Visit Now
                 </a>
-                <a href="#contact" class="btn btn-white">
+                <a href="#contact" class="btn btn-white" data-cta="secondary" data-section="cta" data-destination="#contact">
 <i class="fas fa-envelope"></i> Get In Touch
                 </a>
             </div>

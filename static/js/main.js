@@ -6,6 +6,217 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===================================
+    // Enhanced Analytics Setup
+    // ===================================
+    
+    // Track all CTA buttons
+    function initCTATracking() {
+        // Primary CTAs (Book Property Visit, Contact buttons)
+        document.querySelectorAll('[data-cta="primary"], .cta-primary, .btn-primary').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const section = this.getAttribute('data-section') || this.closest('section')?.className.split(' ')[0] || 'unknown';
+                const ctaText = this.textContent.trim();
+                const destination = this.getAttribute('href') || this.getAttribute('data-destination') || 'unknown';
+                
+                trackCTAClick('primary_cta', section, ctaText, destination);
+            });
+        });
+
+        // Secondary CTAs (View Services, Get Quote)
+        document.querySelectorAll('[data-cta="secondary"], .cta-secondary, .btn-secondary, .btn-outline').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const section = this.getAttribute('data-section') || this.closest('section')?.className.split(' ')[0] || 'unknown';
+                const ctaText = this.textContent.trim();
+                const destination = this.getAttribute('href') || this.getAttribute('data-destination') || 'unknown';
+                
+                trackCTAClick('secondary_cta', section, ctaText, destination);
+            });
+        });
+
+        // Service-specific CTAs
+        document.querySelectorAll('.service-card .btn, .service-cta, [data-cta="service"]').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const serviceCard = this.closest('.service-card');
+                const serviceName = this.getAttribute('data-service') || 
+                                  serviceCard?.querySelector('.service-title, h3')?.textContent.trim() || 'unknown';
+                const ctaText = this.textContent.trim();
+                
+                trackCTAClick('service_inquiry', serviceName, ctaText, this.getAttribute('href') || '#contact');
+                trackServiceInterest(serviceName, 'cta_click');
+            });
+        });
+
+        // WhatsApp and phone links
+        document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"], a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const method = this.href.includes('wa.me') || this.href.includes('whatsapp') ? 'WhatsApp' : 'Phone';
+                const source = this.getAttribute('data-section') || 
+                              this.closest('section')?.className.split(' ')[0] || 'navigation';
+                
+                trackContactMethod(method, source);
+            });
+        });
+
+        // Email links
+        document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const source = this.getAttribute('data-section') || 
+                              this.closest('section')?.className.split(' ')[0] || 'navigation';
+                
+                gtag('event', 'email_click', {
+                    event_category: 'Contact',
+                    event_label: 'Email',
+                    source: source,
+                    value: 15
+                });
+            });
+        });
+
+        // Social media links
+        document.querySelectorAll('[data-cta="social"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const platform = this.getAttribute('data-platform') || 'unknown';
+                const source = this.getAttribute('data-section') || 'unknown';
+                
+                gtag('event', 'social_click', {
+                    event_category: 'Social Media',
+                    event_label: platform,
+                    source: source,
+                    value: 3
+                });
+            });
+        });
+
+        // Navigation links
+        document.querySelectorAll('[data-cta="navigation"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const destination = this.getAttribute('data-destination') || this.getAttribute('href');
+                
+                gtag('event', 'navigation_click', {
+                    event_category: 'Navigation',
+                    event_label: this.textContent.trim(),
+                    destination: destination,
+                    value: 2
+                });
+            });
+        });
+    }
+
+    // Track section visibility (for single-page navigation)
+    function initSectionTracking() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const sectionName = entry.target.id || entry.target.className.split(' ')[0] || 'unknown';
+                    trackSectionView(sectionName);
+                }
+            });
+        }, {
+            threshold: 0.5, // Track when 50% of section is visible
+            rootMargin: '0px 0px -10% 0px'
+        });
+
+        document.querySelectorAll('section, .hero, .services, .testimonials').forEach(section => {
+            observer.observe(section);
+        });
+    }
+
+    // Track scroll depth
+    function initScrollTracking() {
+        let scrollDepthMarkers = [25, 50, 75, 90, 100];
+        let trackedMarkers = new Set();
+
+        window.addEventListener('scroll', function() {
+            const scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+            
+            scrollDepthMarkers.forEach(marker => {
+                if (scrollPercent >= marker && !trackedMarkers.has(marker)) {
+                    trackedMarkers.add(marker);
+                    trackScrollDepth(marker);
+                }
+            });
+        });
+    }
+
+    // Track form interactions
+    function initFormTracking() {
+        document.querySelectorAll('form').forEach(form => {
+            const formType = form.id || form.className || 'contact-form';
+            
+            // Track form start
+            form.addEventListener('focusin', function(e) {
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+                    trackFormInteraction(formType, 'start', e.target.name || e.target.type);
+                }
+            }, { once: true });
+
+            // Track form submission
+            form.addEventListener('submit', function(e) {
+                trackFormInteraction(formType, 'submit', 'complete');
+                
+                // Track as conversion
+                gtag('event', 'conversion', {
+                    event_category: 'Forms',
+                    event_label: formType,
+                    value: 20
+                });
+            });
+
+            // Track field completions
+            form.querySelectorAll('input, textarea, select').forEach(field => {
+                field.addEventListener('blur', function() {
+                    if (this.value.trim() !== '') {
+                        trackFormInteraction(formType, 'field_complete', this.name || this.type);
+                    }
+                });
+            });
+        });
+    }
+
+    // Track service card interactions
+    function initServiceTracking() {
+        document.querySelectorAll('.service-card').forEach(card => {
+            const serviceName = card.querySelector('.service-title, h3')?.textContent.trim() || 'unknown';
+            
+            // Track hover/focus interest
+            card.addEventListener('mouseenter', function() {
+                trackServiceInterest(serviceName, 'hover');
+            });
+
+            // Track detailed view
+            card.addEventListener('click', function(e) {
+                // Only track if not clicking a CTA button
+                if (!e.target.closest('.btn, .cta')) {
+                    trackServiceInterest(serviceName, 'card_click');
+                }
+            });
+        });
+    }
+
+    // Enhanced navigation tracking
+    function initNavigationTracking() {
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const targetSection = this.getAttribute('href').replace('#', '');
+                
+                gtag('event', 'internal_navigation', {
+                    event_category: 'Navigation',
+                    event_label: targetSection,
+                    destination: targetSection
+                });
+            });
+        });
+    }
+
+    // Initialize all tracking
+    initCTATracking();
+    initSectionTracking();
+    initScrollTracking();
+    initFormTracking();
+    initServiceTracking();
+    initNavigationTracking();
+
+    // ===================================
     // Mobile Menu Toggle
     // ===================================
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
@@ -16,6 +227,12 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenuToggle.addEventListener('click', function() {
             nav.classList.toggle('active');
             this.classList.toggle('active');
+            
+            // Track mobile menu usage
+            gtag('event', 'mobile_menu_toggle', {
+                event_category: 'Navigation',
+                event_label: this.classList.contains('active') ? 'open' : 'close'
+            });
             
             // Animate hamburger icon
             const spans = this.querySelectorAll('span');
