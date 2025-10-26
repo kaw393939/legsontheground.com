@@ -256,46 +256,46 @@
                 </span>
             </a>
             <nav class="nav flex items-center" id="main-nav" aria-label="Main navigation" role="navigation">
-                <a href="#" 
+                <a href="/" 
                    class="nav-link"
                    data-cta="navigation" 
                    data-section="header" 
-                   data-destination="#">
+                   data-destination="/">
                    Home
                 </a>
-                <a href="#services" 
+                <a href="/#services" 
                    class="nav-link"
                    data-cta="navigation" 
                    data-section="header" 
-                   data-destination="#services">
+                   data-destination="/#services">
                    Services
                 </a>
-                <a href="#why-choose" 
+                <a href="/#why-choose" 
                    class="nav-link"
                    data-cta="navigation" 
                    data-section="header" 
-                   data-destination="#why-choose">
+                   data-destination="/#why-choose">
                    Why Choose Us
                 </a>
-                <a href="#testimonials" 
+                <a href="/#testimonials" 
                    class="nav-link"
                    data-cta="navigation" 
                    data-section="header" 
-                   data-destination="#testimonials">
+                   data-destination="/#testimonials">
                    Testimonials
                 </a>
-                <a href="#faq" 
+                <a href="/#faq" 
                    class="nav-link"
                    data-cta="navigation" 
                    data-section="header" 
-                   data-destination="#faq">
+                   data-destination="/#faq">
                    FAQ
                 </a>
-                <a href="#contact" 
+                <a href="/#contact" 
                    class="nav-link btn btn-primary"
                    data-cta="primary" 
                    data-section="header" 
-                   data-destination="#contact">
+                   data-destination="/#contact">
                    Contact
                 </a>
             </nav>
@@ -345,15 +345,15 @@
             <p class="section-subtitle">Three simple services. Three journey phases. Zero stress.</p>
         </div>
 
-        <!-- Journey-Based 3 Core Services (Psychological Optimization) -->
-        <div class="journey-phase" data-phase="essential-services">
+        <!-- Pre-Arrival Phase -->
+        <div class="journey-phase" id="pre-arrival" data-phase="pre-arrival">
             <div class="phase-header">
                 <div class="phase-icon">
-                    <i class="fas fa-route"></i>
+                    <i class="fas fa-search"></i>
                 </div>
                 <div class="phase-info">
-                    <h3 class="phase-title">🎯 Essential Services</h3>
-                    <p class="phase-subtitle">Everything you need for a successful Puerto Rico relocation - organized by your journey</p>
+                    <h3 class="phase-title">🏠 Pre-Arrival Services</h3>
+                    <p class="phase-subtitle">Find your perfect home and plan your move before you arrive</p>
                 </div>
             </div>
             <div class="services-grid grid grid-auto-fit-lg psychological-grid">
@@ -382,13 +382,28 @@
                         <li class="flex items-start">Airport pickup &amp; temporary housing</li>
                         <li class="flex items-start">Local orientation &amp; essential introductions</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline service-cta" 
+                    <a href="/#contact" class="btn btn-outline service-cta" 
                        data-cta="service" 
                        data-section="services" 
                        data-service="Dream Home Discovery" 
                        data-phase="pre_arrival">
 Learn More                    </a>
                 </div>
+            </div>
+        </div>
+
+        <!-- Arrival Setup Phase -->
+        <div class="journey-phase" id="arrival-setup" data-phase="arrival-setup">
+            <div class="phase-header">
+                <div class="phase-icon">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <div class="phase-info">
+                    <h3 class="phase-title">🏛️ Arrival & Setup Services</h3>
+                    <p class="phase-subtitle">Handle all official paperwork and setup upon arrival</p>
+                </div>
+            </div>
+            <div class="services-grid grid grid-auto-fit-lg psychological-grid">
                 <div class="service-card flex flex-col items-center most-popular" 
                      data-service="Effortless Official Setup" 
                      data-phase="arrival_setup"
@@ -416,13 +431,28 @@ Learn More                    </a>
                         <li class="flex items-start">Government liaison for complex issues</li>
                         <li class="flex items-start">Priority processing &amp; expedited services</li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary service-cta" 
+                    <a href="/#contact" class="btn btn-primary service-cta" 
                        data-cta="service" 
                        data-section="services" 
                        data-service="Effortless Official Setup" 
                        data-phase="arrival_setup">
 Get Started Now                    </a>
                 </div>
+            </div>
+        </div>
+
+        <!-- Ongoing Support Phase -->
+        <div class="journey-phase" id="ongoing-support" data-phase="ongoing-support">
+            <div class="phase-header">
+                <div class="phase-icon">
+                    <i class="fas fa-life-ring"></i>
+                </div>
+                <div class="phase-info">
+                    <h3 class="phase-title">🌴 Ongoing Support Services</h3>
+                    <p class="phase-subtitle">Enjoy worry-free island living with continuous support</p>
+                </div>
+            </div>
+            <div class="services-grid grid grid-auto-fit-lg psychological-grid">
                 <div class="service-card flex flex-col items-center " 
                      data-service="Island Life Mastery" 
                      data-phase="ongoing_support"
@@ -448,7 +478,7 @@ Get Started Now                    </a>
                         <li class="flex items-start">Cultural integration &amp; island insider access</li>
                         <li class="flex items-start">Property value optimization strategies</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline service-cta" 
+                    <a href="/#contact" class="btn btn-outline service-cta" 
                        data-cta="service" 
                        data-section="services" 
                        data-service="Island Life Mastery" 
@@ -458,8 +488,8 @@ Learn More                    </a>
             </div>
         </div>
 
-        <!-- Psychological Package Structure -->
-        <div class="journey-packages">
+        <!-- Smart Package Options -->
+        <div class="journey-packages" id="packages">
             <div class="phase-header">
                 <div class="phase-icon">
                     <i class="fas fa-star"></i>
@@ -481,16 +511,11 @@ Learn More                    </a>
                     <p class="psychological-appeal">Luxury Decoy - Premium Option</p>
                     <div class="service-pricing">
                         <span class="service-price">$1,299</span>
-                        <span class="service-savings">$436</span>
                     </div>
                     <p class="service-description">White-glove service for the ultimate stress-free relocation</p>
-                    <div class="included-services">
-                        <strong>Includes:</strong>
-                        <ul>
-                            <li>Dream Home Discovery</li>
-                            <li>Effortless Official Setup</li>
-                            <li>Island Life Mastery (3 months)</li>
-                        </ul>
+                    <div class="what-you-get">
+                        <strong>What You Get:</strong>
+                        <p></p>
                     </div>
                     <ul class="service-features">
                         <li class="flex items-start">Dedicated relocation concierge</li>
@@ -500,14 +525,12 @@ Learn More                    </a>
                         <li class="flex items-start">Property investment consultation</li>
                         <li class="flex items-start">First-year success guarantee</li>
                     </ul>
-                    <div class="journey-coverage">
-                        <strong>Coverage:</strong> Complete end-to-end relocation experience
-                    </div>
-                    <a href="#contact" class="btn btn-outline service-cta" 
+                    <a href="/#contact" class="btn btn-outline service-cta" 
                        data-cta="package" 
-                       data-section="services" 
-                       data-package="Complete Island Transition">
-Select Option                    </a>
+                       data-section="packages" 
+                       data-package="Complete Island Transition" 
+                       data-psychology="Luxury Decoy - Premium Option">
+Learn More                    </a>
                 </div>
                 <div class="package-card service-card flex flex-col items-center most-popular" 
                      data-package="Seamless Start Package"
@@ -521,18 +544,11 @@ Select Option                    </a>
                     <p class="psychological-appeal">Best Value - Most Popular Choice</p>
                     <div class="service-pricing">
                         <span class="service-price">$549</span>
-                        <span class="service-savings">$111</span>
                     </div>
                     <p class="service-description">The smart choice - everything essential for successful relocation</p>
-                    <div class="value-proposition">
-                        <strong>Everything you need, nothing you don&#39;t</strong>
-                    </div>
-                    <div class="included-services">
-                        <strong>Includes:</strong>
-                        <ul>
-                            <li>Dream Home Discovery</li>
-                            <li>Effortless Official Setup</li>
-                        </ul>
+                    <div class="what-you-get">
+                        <strong>What You Get:</strong>
+                        <p></p>
                     </div>
                     <ul class="service-features">
                         <li class="flex items-start">Priority scheduling &amp; support</li>
@@ -542,13 +558,11 @@ Select Option                    </a>
                         <li class="flex items-start">Local insider resources guide</li>
                         <li class="flex items-start">Emergency support line</li>
                     </ul>
-                    <div class="journey-coverage">
-                        <strong>Coverage:</strong> Complete setup from property to paperwork
-                    </div>
-                    <a href="#contact" class="btn btn-primary service-cta" 
+                    <a href="/#contact" class="btn btn-primary service-cta" 
                        data-cta="package" 
-                       data-section="services" 
-                       data-package="Seamless Start Package">
+                       data-section="packages" 
+                       data-package="Seamless Start Package" 
+                       data-psychology="Best Value - Most Popular Choice">
 Choose This Package                    </a>
                 </div>
                 <div class="package-card service-card flex flex-col items-center " 
@@ -563,11 +577,9 @@ Choose This Package                    </a>
                         <span class="service-price">$275</span>
                     </div>
                     <p class="service-description">Perfect first step to test our premium service quality</p>
-                    <div class="included-services">
-                        <strong>Includes:</strong>
-                        <ul>
-                            <li>Dream Home Discovery</li>
-                        </ul>
+                    <div class="what-you-get">
+                        <strong>What You Get:</strong>
+                        <p></p>
                     </div>
                     <ul class="service-features">
                         <li class="flex items-start">Property identification &amp; evaluation</li>
@@ -576,26 +588,13 @@ Choose This Package                    </a>
                         <li class="flex items-start">Upgrade path to full services</li>
                         <li class="flex items-start">Satisfaction guarantee</li>
                     </ul>
-                    <div class="journey-coverage">
-                        <strong>Coverage:</strong> Secure your perfect property with professional support
-                    </div>
-                    <div class="upgrade-path">
-                        <em>Easily add official setup when ready</em>
-                    </div>
-                    <a href="#contact" class="btn btn-outline service-cta" 
+                    <a href="/#contact" class="btn btn-outline service-cta" 
                        data-cta="package" 
-                       data-section="services" 
-                       data-package="Essential Foundation">
-Select Option                    </a>
+                       data-section="packages" 
+                       data-package="Essential Foundation" 
+                       data-psychology="Smart Start - Risk-Free Entry">
+Learn More                    </a>
                 </div>
-            </div>
-        </div>
-
-        <!-- Psychological Elements Notice -->
-        <div class="psychology-notice">
-            <div class="notice-content">
-                <h4>Why We Designed It This Way</h4>
-                <p>Our 3-service structure follows proven psychological principles to help you make the best decision for your relocation. No overwhelm, no confusion - just clear choices that match your journey phase.</p>
             </div>
         </div>
     </div>
@@ -962,7 +961,7 @@ Select Option                    </a>
             <div class="footer-section">
                 <h4 class="footer-heading">Services</h4>
                 <ul class="footer-links">
-                    <li><a href="#services">Services Overview</a></li>
+                    <li><a href="/#services">Services Overview</a></li>
                     <li><a href="/services.html">All Services</a></li>
                     <li><a href="/services.html#property">Property Services</a></li>
                     <li><a href="/services.html#setup">Official Setup</a></li>
@@ -972,10 +971,10 @@ Select Option                    </a>
             <div class="footer-section">
                 <h4 class="footer-heading">Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="#why-choose">Why Choose Us</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="/#why-choose">Why Choose Us</a></li>
+                    <li><a href="/#testimonials">Testimonials</a></li>
+                    <li><a href="/#faq">FAQ</a></li>
+                    <li><a href="/#contact">Contact Us</a></li>
                 </ul>
             </div>
 
@@ -986,7 +985,7 @@ Select Option                    </a>
         <div class="footer-bottom flex flex-col items-center">
             <p>&copy; 2025 Legs on the Ground. All rights reserved.</p>
             <p class="footer-back-top">
-                <a href="#hero" class="back-to-top">Back to Top ↑</a>
+                <a href="#header" class="back-to-top">Back to Top ↑</a>
             </p>
         </div>
     </div>

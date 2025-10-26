@@ -1,30 +1,30 @@
 # Navigation Configuration
 # Single-page design with anchor links to sections
 
-# Main Navigation (header) - All scroll to sections on homepage
+# Main Navigation (header) - Works from any page
 main_nav:
   - title: "Home"
-    url: "#"
+    url: "/"
     id: "home"
     
   - title: "Services"
-    url: "#services"
+    url: "/#services"
     id: "services"
     
   - title: "Why Choose Us"
-    url: "#why-choose"
+    url: "/#why-choose"
     id: "why-choose"
     
   - title: "Testimonials"
-    url: "#testimonials"
+    url: "/#testimonials"
     id: "testimonials"
   
   - title: "FAQ"
-    url: "#faq"
+    url: "/#faq"
     id: "faq"
     
   - title: "Contact"
-    url: "#contact"
+    url: "/#contact"
     id: "contact"
     highlight: true  # Makes this button styled differently
 
@@ -34,7 +34,7 @@ footer_nav:
     title: "Services"
     links:
       - title: "Services Overview"
-        url: "#services"
+        url: "/#services"
       - title: "All Services"
         url: "/services.html"
       - title: "Property Services"
@@ -48,10 +48,10 @@ footer_nav:
     title: "Quick Links"
     links:
       - title: "Why Choose Us"
-        url: "#why-choose"
+        url: "/#why-choose"
       - title: "Testimonials"
-        url: "#testimonials"
+        url: "/#testimonials"
       - title: "FAQ"
-        url: "#faq"
+        url: "/#faq"
       - title: "Contact Us"
-        url: "#contact"
+        url: "/#contact"
