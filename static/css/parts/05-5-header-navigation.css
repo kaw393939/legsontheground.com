@@ -1,0 +1,183 @@
+/* ====================== 5. HEADER & NAVIGATION ====================== */
+/* Top Bar - MAXIMUM EFFICIENCY */
+.top-bar {
+    background: var(--navy-800);  /* Darker for better contrast */
+    color: var(--white);
+    padding: 0.25rem 0;
+    font-size: 0.875rem;  /* 14px */
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    line-height: 1.2;  /* Tight but readable */
+    }
+.top-bar-content {
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    min-height: 24px;
+    max-height: 32px;
+    }
+.top-bar-left {
+    flex-wrap: nowrap;
+    }
+.top-bar-link {
+    color: rgba(255, 255, 255, 0.95);
+    gap: 0.375rem;
+    transition: var(--transition-fast);
+    text-decoration: none;
+    white-space: nowrap;
+    }
+.top-bar-link i {
+    font-size: 0.875rem;
+    }
+.top-bar-link:hover {
+    color: var(--coral-500);
+    }
+.top-bar-text {
+    color: rgba(255, 255, 255, 0.95);
+    }
+/* Main Header */
+.header {
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky);
+    transition: var(--transition-base)
+    }
+.header.scrolled {
+    box-shadow: var(--shadow-md)
+    }
+.header-content {
+    padding: 0.5rem 0;
+    min-height: 50px;
+    gap: var(--space-md)
+    }
+.logo {
+    text-decoration: none;
+    transition: opacity var(--transition-fast)
+    }
+.logo:hover {
+    opacity: 0.85
+    }
+.logo-text {
+    gap: 0.5rem
+    }
+.logo-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--navy-700);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    white-space: nowrap
+    }
+/* Navigation */
+.nav {
+    gap: var(--space-2xl);
+    margin-left: auto
+    }
+.nav-link {
+    color: var(--navy-700);
+    font-weight: var(--font-weight-semibold);
+    font-size: 1rem;
+    position: relative;
+    padding: var(--space-sm) 0;
+    padding-bottom: calc(var(--space-sm) + 3px);
+    transition: color var(--transition-fast);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    }
+
+/* Contact button in nav - Navy version */
+.nav-link.btn.btn-primary {
+    padding: 0.5rem 1.25rem;
+    margin: 0;
+    line-height: 1.4;
+    text-shadow: none;
+    background: linear-gradient(135deg, var(--navy-700) 0%, var(--navy-800) 100%);
+    color: white;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-link.btn.btn-primary:hover {
+    background: linear-gradient(135deg, var(--coral-600) 0%, var(--coral-700) 100%);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.nav-link.btn.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(255, 107, 107, 0.2);
+}
+
+/* Focus outline only visible when keyboard navigating */
+.nav-link:focus-visible {
+    outline: 2px solid var(--coral-500);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+}
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--coral-500) 0%, var(--coral-700) 100%);
+    transition: width var(--transition-base);
+    border-radius: var(--radius-sm)
+    }
+.nav-link:hover {
+    color: var(--coral-700)
+    }
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%
+    }
+.nav-link.active {
+    color: var(--coral-700);
+    font-weight: var(--font-weight-semibold)
+    }
+/* Header Actions - Use utility classes: flex items-center gap-md */
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: var(--space-sm);
+    cursor: pointer;
+    background: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation
+    }
+.mobile-menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--navy-700);
+    transition: var(--transition-base);
+    border-radius: var(--radius-sm)
+    }
+
+/* Animated hamburger -> X (mobile) */
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px)
+    }
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0
+    }
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px)
+    }
+
+/* Prevent background scroll when mobile nav is open */
+body.nav-open {
+    overflow: hidden
+    }
+/* Keyboard focus indicator for mobile menu toggle */
+.mobile-menu-toggle:focus-visible {
+    outline: 3px solid var(--coral-500);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+    }

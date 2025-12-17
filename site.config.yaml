@@ -25,6 +25,7 @@ validation:
   check_yaml: true
   check_images: true
   check_links: true
+  validate_output: true
   fail_on_error: true
   
 backup:
@@ -54,7 +55,7 @@ tools:
 development:
   server:
     host: "localhost"
-    port: 8080
+    port: 8000
     auto_reload: true
     open_browser: false
     
@@ -69,6 +70,7 @@ development:
 performance:
   track_build_time: true
   track_file_sizes: true
+  minify_css: false
   lighthouse_checks: false  # Requires lighthouse-ci
   
 logging:

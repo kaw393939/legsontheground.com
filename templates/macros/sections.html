@@ -1,0 +1,42 @@
+{#
+  Section-level macros for repeated section wrappers.
+  Goal: keep HTML structure equivalent while reducing repetition.
+#}
+
+{% from "macros/cards.html" import service_card, package_card %}
+
+{% macro phase_header(icon_class, title, subtitle) -%}
+<div class="phase-header">
+    <div class="phase-icon">
+        <i class="fas {{ icon_class }}"></i>
+    </div>
+    <div class="phase-info">
+        <h3 class="phase-title">{{ title }}</h3>
+        <p class="phase-subtitle">{{ subtitle }}</p>
+    </div>
+</div>
+{%- endmacro %}
+
+{% macro journey_phase(dom_id, data_phase, icon_class, title, subtitle, services_list, match_journey_phase, grid_classes="services-grid grid grid-auto-fit-lg psychological-grid") -%}
+<div class="journey-phase" id="{{ dom_id }}" data-phase="{{ data_phase }}">
+    {{ phase_header(icon_class, title, subtitle) }}
+    <div class="{{ grid_classes }}">
+        {% for service in services_list %}
+        {% if service.journey_phase == match_journey_phase %}
+        {{ service_card(service) }}
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{%- endmacro %}
+
+{% macro packages_section(packages, dom_id="packages") -%}
+<div class="journey-packages" id="{{ dom_id }}">
+    {{ phase_header('fa-star', '🎯 Smart Package Options', 'Choose your perfect combination - designed for maximum value') }}
+    <div class="packages-grid grid grid-auto-fit-lg psychological-packages">
+        {% for package in packages %}
+        {{ package_card(package) }}
+        {% endfor %}
+    </div>
+</div>
+{%- endmacro %}

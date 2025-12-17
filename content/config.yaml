@@ -3,8 +3,8 @@
 
 site:
   title: "Legs on the Ground"
-  tagline: "Your Trusted Property Partner in Puerto Rico"
-  description: "Professional bilingual property concierge services for mainland owners in Puerto Rico. Property check-ins, translation, transportation - trusted local support in San Juan."
+  tagline: "Your Eyes, Ears, and Legs in Puerto Rico"
+  description: "Puerto Rico home scouting for mainland buyers: video tours, neighborhood intel, and offer-ready due diligence so you can buy with confidence remotely."
   url: "https://www.legsontheground.com"
   author: "Legs on the Ground"
   language: "en"
@@ -30,15 +30,15 @@ site:
   
   # SEO Keywords
   keywords:
-    - "Puerto Rico property management"
-    - "bilingual property services"
-    - "San Juan concierge"
-    - "property check-ins Puerto Rico"
-    - "mainland property owners"
-    - "Act 60 services"
-    - "Puerto Rico translation"
-    - "property monitoring"
-    - "absentee owner services"
+    - "Puerto Rico home scouting"
+    - "Puerto Rico real estate scouting"
+    - "Puerto Rico video home tours"
+    - "San Juan neighborhood intel"
+    - "Puerto Rico due diligence"
+    - "remote home buying Puerto Rico"
+    - "Puerto Rico property walkthrough"
+    - "flood zone research Puerto Rico"
+    - "crime stats neighborhood Puerto Rico"
 
 # Build Configuration
 build:

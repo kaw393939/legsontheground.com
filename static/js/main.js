@@ -272,40 +272,98 @@ document.addEventListener('DOMContentLoaded', function() {
     const nav = document.querySelector('.nav');
     const navLinks = document.querySelectorAll('.nav-link');
     
-    if (mobileMenuToggle) {
+    if (mobileMenuToggle && nav) {
+        let lastFocus = null;
+
+        const setMenuOpen = (open) => {
+            nav.classList.toggle('active', open);
+            mobileMenuToggle.classList.toggle('active', open);
+            document.body.classList.toggle('nav-open', open);
+
+            mobileMenuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            mobileMenuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+
+            if (open) {
+                lastFocus = document.activeElement;
+            }
+
+            if (open) {
+                // Focus the first link for accessibility
+                const firstLink = nav.querySelector('a.nav-link');
+                if (firstLink) firstLink.focus();
+            } else if (lastFocus && typeof lastFocus.focus === 'function') {
+                // Restore focus (especially important for keyboard users)
+                lastFocus.focus();
+                lastFocus = null;
+            }
+        };
+
         mobileMenuToggle.addEventListener('click', function() {
-            nav.classList.toggle('active');
-            this.classList.toggle('active');
+            const isOpen = nav.classList.contains('active');
+            setMenuOpen(!isOpen);
             
             // Track mobile menu usage
-            gtag('event', 'mobile_menu_toggle', {
-                event_category: 'Navigation',
-                event_label: this.classList.contains('active') ? 'open' : 'close'
-            });
-            
-            // Animate hamburger icon
-            const spans = this.querySelectorAll('span');
-            if (this.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translateY(10px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translateY(-10px)';
-            } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'mobile_menu_toggle', {
+                    event_category: 'Navigation',
+                    event_label: nav.classList.contains('active') ? 'open' : 'close'
+                });
             }
         });
         
         // Close mobile menu when clicking on a link
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
-                nav.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
-                const spans = mobileMenuToggle.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                setMenuOpen(false);
             });
+        });
+
+        // Close when clicking outside nav
+        document.addEventListener('click', function(e) {
+            if (!nav.classList.contains('active')) return;
+            if (e.target.closest('.nav')) return;
+            if (e.target.closest('.mobile-menu-toggle')) return;
+            setMenuOpen(false);
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key !== 'Escape') return;
+            if (!nav.classList.contains('active')) return;
+            setMenuOpen(false);
+        });
+
+        // Trap focus inside the open mobile nav
+        document.addEventListener('keydown', function(e) {
+            if (!nav.classList.contains('active')) return;
+            if (e.key !== 'Tab') return;
+
+            const focusable = nav.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])');
+            if (!focusable.length) return;
+
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            const active = document.activeElement;
+
+            if (e.shiftKey) {
+                if (active === first || active === nav) {
+                    e.preventDefault();
+                    last.focus();
+                }
+            } else {
+                if (active === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+        });
+
+        // If user rotates / resizes back to desktop, ensure menu is closed
+        window.addEventListener('resize', function() {
+            if (!nav.classList.contains('active')) return;
+            if (window.innerWidth > 968) {
+                setMenuOpen(false);
+            }
         });
     }
     

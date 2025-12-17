@@ -1,9 +1,8 @@
+{% from "macros/ui.html" import section_header, cta_content %}
+
 <section class="faq-section" id="faq">
     <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">{{ faq.page_config.title }}</h2>
-            <p class="section-subtitle">{{ faq.page_config.subtitle }}</p>
-        </div>
+        {{ section_header(faq.page_config.title, faq.page_config.subtitle) }}
         
         {% if faq.component_settings.show_search %}
         <div class="faq-search">
@@ -53,16 +52,15 @@
         
         {% if faq.component_settings.contact_cta.show %}
         <div class="faq-cta">
-            <div class="cta-content">
-                <h3>{{ faq.component_settings.contact_cta.text }}</h3>
-                <p>Our Puerto Rico relocation experts are here to help with any questions not covered above.</p>
-                <a href="{{ faq.component_settings.contact_cta.button_link }}" 
-                   class="btn btn-primary" 
-                   data-cta="faq_contact" 
-                   data-section="faq">
-                   {{ faq.component_settings.contact_cta.button_text }}
-                </a>
-            </div>
+            {{ cta_content(
+                faq.component_settings.contact_cta.text,
+                "Our on-the-ground home scouting team is here to help with any questions not covered above.",
+                faq.component_settings.contact_cta.button_link,
+                faq.component_settings.contact_cta.button_text,
+                "btn btn-primary",
+                data_cta="faq_contact",
+                data_section="faq"
+            ) }}
         </div>
         {% endif %}
     </div>

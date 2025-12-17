@@ -1,0 +1,116 @@
+/* ====================== 4. TYPOGRAPHY ====================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-headings);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    color: var(--navy-700);
+    margin-top: var(--space-3xl);
+    margin-bottom: var(--space-xl);
+    letter-spacing: -0.02em
+    }
+/* First heading has no top margin */
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+    margin-top: 0
+    }
+h1 {
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: -0.03em;
+    margin-bottom: var(--space-2xl)
+    }
+h2 {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: -0.025em;
+    margin-top: var(--space-4xl);
+    margin-bottom: var(--space-xl)
+    }
+h3 {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    margin-top: var(--space-3xl);
+    margin-bottom: var(--space-lg)
+    }
+h4 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-lg)
+    }
+h5 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-base)
+    }
+h6 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-base)
+    }
+p {
+    margin-top: 0;
+    margin-bottom: var(--space-xl);
+    line-height: var(--line-height-loose);
+    max-width: 70ch
+    }
+p:last-child {
+    margin-bottom: 0
+    }
+/* Adjacent paragraphs need proper spacing */
+p + p {
+    margin-top: var(--space-xl)
+    }
+/* Paragraph after heading needs less space */
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+    margin-top: 0
+    }
+.lead {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-loose);
+    color: var(--gray-600);
+    max-width: 65ch
+    }
+.section-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--navy-700);
+    margin-top: 0;
+    margin-bottom: var(--space-xl);
+    line-height: var(--line-height-tight);
+    letter-spacing: -0.025em
+    }
+.section-title.text-center {
+    margin-bottom: var(--space-lg)
+    }
+.section-description, .section-subtitle {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-normal);
+    color: var(--gray-600);
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: var(--space-3xl);
+    line-height: var(--line-height-loose)
+    }
+.text-center + .section-description, .section-title + .section-description {
+    margin-top: calc(var(--space-lg) * -0.5)
+    }
+.page-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-extrabold);
+    margin-bottom: var(--space-lg);
+    line-height: var(--line-height-tight);
+    letter-spacing: -0.02em
+    }
+.page-subtitle {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-normal);
+    opacity: 0.95;
+    line-height: var(--line-height-relaxed);
+    max-width: 65ch;
+    margin: 0 auto
+    }

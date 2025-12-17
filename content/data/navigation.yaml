@@ -37,12 +37,8 @@ footer_nav:
         url: "/#services"
       - title: "All Services"
         url: "/services.html"
-      - title: "Property Services"
-        url: "/services.html#property"
-      - title: "Official Setup"
-        url: "/services.html#setup"
-      - title: "Ongoing Support"
-        url: "/services.html#support"
+      - title: "Home Scouting"
+        url: "/services.html#home-scouting"
   
   company:
     title: "Quick Links"

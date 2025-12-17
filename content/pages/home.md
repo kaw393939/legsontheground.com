@@ -1,15 +1,15 @@
 ---
-title: "Puerto Rico Relocation & Property Services | Legs on the Ground"
-description: "Complete Puerto Rico relocation services: property scouting, arrival assistance, government transactions, and ongoing property management. From finding your dream property to settling in seamlessly."
+title: "Puerto Rico Home Scouting & Real Estate Support | Legs on the Ground"
+description: "Puerto Rico home scouting for buyers: detailed video tours, neighborhood intel, and offer-ready due diligence so you can buy with confidence from the mainland."
 layout: "home"
 page_id: "home"
 
 # Hero Section
 hero:
-  title: "Your Puerto Rico Dream Home Awaits"
-  subtitle: "Professional property scouting, seamless arrival support, and ongoing management. Skip the stress, skip the mistakes - we've got you covered from day one."
+  title: "Your Eyes, Ears, and Legs in Puerto Rico"
+  subtitle: "Buying a home or investing from the mainland? We provide on-the-ground video tours, neighborhood insights, and buyer-focused analysis so you can make confident decisions remotely."
   image: "images/hero/hero-main.jpg"
-  image_alt: "Luxury beachfront property in Puerto Rico at golden hour sunset, showcasing comprehensive relocation and property services"
+  image_alt: "Puerto Rico home scouting with detailed video walkthrough tours and neighborhood insights"
   cta_primary:
     text: "Find My Dream Home"
     url: "#contact"
@@ -29,18 +29,18 @@ sections:
 
 # Services Section
 services:
-  title: "500+ Successful Puerto Rico Relocations"
+  title: "Home Scouting Services"
   custom_cta:
     show: true
-    title: "Ready to make your move? Limited availability this month."
-    description: "Join 500+ happy clients with our comprehensive relocation packages. Save thousands on your Puerto Rico move."
+    title: "Ready to scout a property before you fly in?"
+    description: "Get a clear picture of the home, the street, and the neighborhood—plus comps and risk screening—so you can shortlist confidently."
     button_text: "Get My Free Consultation"
     button_url: "#contact"
 
 # CTA Section
 cta:
-  title: "Don't Navigate Puerto Rico Alone"
-  description: "Join 500+ successful relocations. From finding your dream property to handling government bureaucracy - we make your move seamless and stress-free."
+  title: "Don’t Buy Blind"
+  description: "From video walkthroughs to neighborhood intel and buyer-focused analysis, we help you decide with clarity before you commit."
   background_image: "images/hero/hero-main.jpg"
   buttons:
     - text: "Get My Free Property Analysis"
@@ -53,7 +53,7 @@ cta:
       style: "white"
   guarantee:
     icon: "fa-shield-alt"
-    text: "Licensed & Insured • 100% Satisfaction Guarantee • Local Expertise Since 2018"
+    text: "Local, trustworthy boots on the ground • Transparent reporting • Bilingual (English & Spanish)"
 
 # SEO
 seo:
@@ -64,10 +64,8 @@ seo:
   twitter_image: "https://legsontheground.com/images/social/twitter-card.jpg"
 ---
 
-# Your Trusted Property Partner in Puerto Rico
+# Your Eyes, Ears, and Legs in Puerto Rico
 
-**500+ Successful Relocations • Licensed & Insured • 100% Satisfaction Guarantee**
-
-Skip the stress, skip the mistakes, skip the expensive trial-and-error. We're your professional property concierge service in Puerto Rico - handling everything from remote property scouting to seamless settlement support.
+Skip the stress, skip the mistakes, skip the expensive trial-and-error. We’re your local eyes-on-the-ground for Puerto Rico home scouting—so you can evaluate homes remotely and buy with confidence.
 
 **Ready to find your dream home without the headaches?**

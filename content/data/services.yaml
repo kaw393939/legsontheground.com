@@ -1,172 +1,19 @@
-# Services Configuration - Journey-Based 3 Services (Psychological Optimization)
-# Applying Rule of 3, Goldilocks Effect, and Decoy Effect for optimal conversion
+# Services Configuration - Home Scouting Only
 
-# ========================================
-# 🎯 JOURNEY-BASED 3 CORE SERVICES
-# ========================================
 essential_services:
-  - id: "dream-home-discovery"
-    title: "Dream Home Discovery"
+  - id: "home-scouting-due-diligence"
+    title: "Home Scouting & Due Diligence"
     price: "$275"
     icon: "🏠"
-    popular: false
-    psychological_appeal: "Foundation Service"
-    description: "Find and secure your perfect Puerto Rico property with confidence"
-    journey_phase: "pre_arrival"
-    what_you_get: "Your perfect property identified and arrival seamlessly coordinated"
-    features:
-      - "Virtual property tours & market analysis"
-      - "Neighborhood safety & lifestyle assessments"
-      - "Investment potential evaluation"
-      - "Arrival coordination & first-week setup"
-      - "Airport pickup & temporary housing"
-      - "Local orientation & essential introductions"
-    
-  - id: "effortless-official-setup"
-    title: "Effortless Official Setup"
-    price: "$385"
-    icon: "🏛️"
     popular: true
-    psychological_appeal: "Premium Choice - Most Popular"
-    description: "Handle all government paperwork and utilities so you don't have to"
-    journey_phase: "arrival_setup"
-    what_you_get: "Officially established with all services running smoothly"
-    savings_highlight: "Save $90 vs individual services"
+    psychological_appeal: "Buyer Focus"
+    description: "Evaluate homes remotely with local, buyer-focused intel"
+    journey_phase: "home_scouting"
+    what_you_get: "A clear shortlist of homes worth buying (and which to avoid)"
     features:
-      - "Complete Hacienda registration & permits"
-      - "Document translation & legal compliance"
-      - "All utilities connected (electric, water, internet)"
-      - "Waste management & security systems"
-      - "Government liaison for complex issues"
-      - "Priority processing & expedited services"
-    
-  - id: "island-life-mastery"
-    title: "Island Life Mastery"
-    price: "$275/month"
-    icon: "🌴"
-    popular: false
-    psychological_appeal: "Lifestyle Service"
-    description: "Enjoy worry-free island living with complete support"
-    journey_phase: "ongoing_support"
-    what_you_get: "Complete peace of mind and maximized island enjoyment"
-    features:
-      - "Property maintenance & emergency repairs"
-      - "Vendor management & quality assurance"
-      - "Personal errands & lifestyle support (8 hours)"
-      - "Local service connections & appointments"
-      - "Cultural integration & island insider access"
-      - "Property value optimization strategies"
-
-# ========================================
-# 🎯 PSYCHOLOGICAL PACKAGE STRUCTURE
-# ========================================
-packages:
-  # Decoy Effect - Premium positioned to make middle option attractive
-  - id: "complete-island-transition"
-    title: "Complete Island Transition"
-    price: "$1,299"
-    savings: "$436"
-    icon: "🌟"
-    popular: false
-    psychological_appeal: "Luxury Decoy - Premium Option"
-    description: "White-glove service for the ultimate stress-free relocation"
-    included_services:
-      - "Dream Home Discovery"
-      - "Effortless Official Setup" 
-      - "Island Life Mastery (3 months)"
-    features:
-      - "Dedicated relocation concierge"
-      - "24/7 VIP emergency support"
-      - "Private island orientation tour"
-      - "Exclusive local network access"
-      - "Property investment consultation"
-      - "First-year success guarantee"
-    journey_coverage: "Complete end-to-end relocation experience"
-  
-  # Golden Middle - Positioned as best value (Goldilocks Effect)
-  - id: "seamless-start-package"
-    title: "Seamless Start Package"
-    price: "$549"
-    savings: "$111"
-    icon: "🎯"
-    popular: true
-    psychological_appeal: "Best Value - Most Popular Choice"
-    description: "The smart choice - everything essential for successful relocation"
-    included_services:
-      - "Dream Home Discovery"
-      - "Effortless Official Setup"
-    features:
-      - "Priority scheduling & support"
-      - "Comprehensive arrival coordination"
-      - "All paperwork handled professionally"
-      - "First-month success guarantee"
-      - "Local insider resources guide"
-      - "Emergency support line"
-    journey_coverage: "Complete setup from property to paperwork"
-    value_proposition: "Everything you need, nothing you don't"
-  
-  # Entry Point - Accessible starting option
-  - id: "essential-foundation"
-    title: "Essential Foundation"
-    price: "$275"
-    savings: "Starting Point"
-    icon: "🏡"
-    popular: false
-    psychological_appeal: "Smart Start - Risk-Free Entry"
-    description: "Perfect first step to test our premium service quality"
-    included_services:
-      - "Dream Home Discovery"
-    features:
-      - "Property identification & evaluation"
-      - "Arrival coordination & orientation"
-      - "First-week settling support"
-      - "Upgrade path to full services"
-      - "Satisfaction guarantee"
-    journey_coverage: "Secure your perfect property with professional support"
-    upgrade_path: "Easily add official setup when ready"
-
-# ========================================
-# 🧠 PSYCHOLOGICAL CONVERSION ELEMENTS
-# ========================================
-conversion_psychology:
-  rule_of_three:
-    enabled: true
-    structure: "Foundation → Premium → Lifestyle"
-    visual_emphasis: "Middle option highlighted with 'Most Popular' badge"
-  
-  goldilocks_effect:
-    enabled: true
-    positioning: "Entry point → Sweet spot → Premium decoy"
-    sweet_spot: "seamless-start-package"
-  
-  decoy_effect:
-    enabled: true
-    decoy_service: "complete-island-transition"
-    target_service: "seamless-start-package"
-    price_anchor: "Premium option makes middle choice seem reasonable"
-  
-  social_proof:
-    enabled: true
-    elements: ["Most Popular badges", "Success guarantees", "Insider access"]
-  
-  loss_aversion:
-    enabled: true
-    triggers: ["Skip the stress", "Avoid mistakes", "Zero regrets guarantee"]
-
-# ========================================
-# 📊 A/B TESTING CONFIGURATION
-# ========================================
-ab_testing:
-  enabled: true
-  test_name: "journey_based_3_services_vs_original"
-  variations:
-    - name: "original_10_options"
-      description: "Original 6 services + 4 packages structure"
-    - name: "psychological_3_services"
-      description: "Journey-based 3 services + 3 packages structure"
-  metrics_to_track:
-    - "conversion_rate"
-    - "decision_time"
-    - "package_vs_individual_choice"
-    - "customer_satisfaction"
-    - "price_anchor_effectiveness"
+      - "Detailed video walkthrough tour of the home"
+      - "Street + neighborhood tour (vibe, noise, access)"
+      - "Nearby landmarks & amenities overview"
+      - "Comparable sales (comps) + pricing reality check"
+      - "Flood-risk screening + crime-risk lookups"
+      - "Offer-ready due diligence summary"

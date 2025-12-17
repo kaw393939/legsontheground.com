@@ -13,24 +13,23 @@ why_choose:
       order: 1
       description: |
         Skip $2,000+ in scouting trips. Get insider access to off-market properties, professional 4K video tours, 
-        crime/flood analysis, and drone footage. Make confident offers from your couch with zero regrets.
+        crime/flood screening, and clear, buyer-focused reporting. Bilingual service (English & Spanish) so nothing gets lost in translation.
     
-    - id: during-transition
-      title: "During Transition: Land Running (Not Stumbling)"
-      icon: "fa-rocket"
+    - id: neighborhood-intel
+      title: "Neighborhood Intel You Can’t Get Online"
+      icon: "fa-map-marked-alt"
       image: "images/about/about-local-knowledge.jpg"
-      image_alt: "Airport arrival assistance and comprehensive settling-in services in Puerto Rico"
+      image_alt: "Local neighborhood scouting and buyer-focused property evaluation in Puerto Rico"
       order: 2
       description: |
-        From tourist to local in 72 hours. Airport pickup, government paperwork navigation, contractor vetting, 
-        and car shopping with insider discounts. Your stress-free transition is our specialty.
+        Listings don’t tell you about noise, traffic, street-by-street vibe, or what it feels like at night.
+        We scout the area like a local buyer—so you don’t buy blind.
     
-    - id: after-settled
-      title: "After Settled: Your Personal Island Insurance Policy"
-      icon: "fa-shield-alt"
+    - id: offer-ready
+      title: "Offer-Ready Due Diligence"
+      icon: "fa-clipboard-check"
       image: "images/about/about-experience.jpg"
-      image_alt: "Ongoing property management and daily life support services in Puerto Rico"
+      image_alt: "Offer-ready home scouting package with video tours and due diligence summary"
       order: 3
       description: |
-        Hurricane-ready property protection, 24/7 emergency response, contractor management, and daily errands. 
-        Sleep well knowing your island investment is protected by local experts.
+        Comparable pricing, flood-risk screening, condition red flags, and the right questions to ask—packaged into a clear summary so you can move quickly and confidently.

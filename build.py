@@ -4,7 +4,6 @@ Legs on the Ground - Static Site Generator
 A simple, elegant build system for content-driven sites
 """
 
-import os
 import sys
 import shutil
 import yaml
@@ -13,6 +12,28 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from datetime import datetime
 import argparse
+
+
+def _minify_css_conservative(css: str) -> str:
+    """Conservative CSS minification.
+
+    Avoids aggressive transformations (no comment stripping, no token rewriting)
+    to keep risk low. Primarily removes trailing whitespace and excessive
+    blank lines.
+    """
+
+    lines = [ln.rstrip() for ln in css.replace('\r\n', '\n').replace('\r', '\n').split('\n')]
+    out: list[str] = []
+    blank_run = 0
+    for ln in lines:
+        if not ln.strip():
+            blank_run += 1
+            if blank_run <= 1:
+                out.append('')
+            continue
+        blank_run = 0
+        out.append(ln)
+    return '\n'.join(out).strip() + '\n'
 
 class SiteBuilder:
     """Main site builder class"""
@@ -150,7 +171,7 @@ class SiteBuilder:
         
         print(f"      ✓ Generated {output_file}")
     
-    def copy_static_files(self):
+    def copy_static_files(self, minify_css: bool = False):
         """Copy static assets to output"""
         print("\n📁 Copying static assets...")
         
@@ -158,13 +179,32 @@ class SiteBuilder:
             print(f"   ⚠️  Static directory not found: {self.static_dir}")
             return
         
-        # Copy CSS
+        # Copy / bundle CSS
         css_src = self.static_dir / 'css'
         css_dest = self.output_dir
         if css_src.exists():
-            for css_file in css_src.glob('*.css'):
-                shutil.copy2(css_file, css_dest / css_file.name)
-                print(f"   ✓ Copied {css_file.name}")
+            parts_dir = css_src / 'parts'
+            part_files = sorted(parts_dir.glob('*.css')) if parts_dir.exists() else []
+
+            if part_files:
+                bundled = "\n".join(
+                    p.read_text(encoding='utf-8').rstrip() for p in part_files
+                ).rstrip() + "\n"
+                if minify_css:
+                    bundled = _minify_css_conservative(bundled)
+                (css_dest / 'styles.css').write_text(bundled, encoding='utf-8')
+                print(f"   ✓ Bundled styles.css ({len(part_files)} parts)")
+
+                # Copy any additional standalone CSS files except styles.css
+                for css_file in css_src.glob('*.css'):
+                    if css_file.name == 'styles.css':
+                        continue
+                    shutil.copy2(css_file, css_dest / css_file.name)
+                    print(f"   ✓ Copied {css_file.name}")
+            else:
+                for css_file in css_src.glob('*.css'):
+                    shutil.copy2(css_file, css_dest / css_file.name)
+                    print(f"   ✓ Copied {css_file.name}")
         
         # Copy JS
         js_src = self.static_dir / 'js'
@@ -181,7 +221,7 @@ class SiteBuilder:
             if img_dest.exists():
                 shutil.rmtree(img_dest)
             shutil.copytree(img_src, img_dest)
-            print(f"   ✓ Copied images/ directory")
+            print("   ✓ Copied images/ directory")
         
         # Copy SEO and deployment files
         seo_files = ['robots.txt', 'sitemap.xml', 'CNAME']
@@ -198,7 +238,7 @@ class SiteBuilder:
             shutil.rmtree(self.output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
     
-    def build(self, clean=True):
+    def build(self, clean=True, minify_css: bool = False):
         """Build the entire site"""
         start_time = datetime.now()
         
@@ -217,7 +257,7 @@ class SiteBuilder:
             self.build_page(page_file.name, data)
         
         # Copy static files
-        self.copy_static_files()
+        self.copy_static_files(minify_css=minify_css)
         
         # Build complete
         elapsed = (datetime.now() - start_time).total_seconds()
@@ -228,74 +268,63 @@ class SiteBuilder:
         print("=" * 50)
     
     def validate(self):
-        """Run basic validation on output"""
+        """Validate output HTML/CSS."""
         print("\n🔍 Validating output...")
-        
+
         html_files = list(self.output_dir.glob('*.html'))
-        
         if not html_files:
             print("   ❌ No HTML files generated!")
             return False
-        
+
         print(f"   ✓ Generated {len(html_files)} HTML files")
-        
+
         # Check for critical files
         critical = ['index.html', 'styles.css']
         for file in critical:
             if not (self.output_dir / file).exists():
                 print(f"   ❌ Missing critical file: {file}")
                 return False
-        
         print("   ✓ All critical files present")
-        return True
-    
-    def validate(self):
-        """Run quality validation"""
+
+        # Deeper validation (best-effort)
         try:
             from validator import SiteValidator
-            
+
             print("\n" + "="*60)
             print("🔍 QUALITY VALIDATION")
             print("="*60)
-            
+
             validator = SiteValidator(self.output_dir)
             results = validator.validate_all()
-            
-            # Generate report
+
             report = validator.generate_report()
             print(report)
-            
-            # Save detailed report
+
             report_path = self.project_root / 'validation-report.json'
             validator.save_report(report_path)
-            
-            # Check if passed
+
             total_errors = sum(len(r.errors) for r in results)
-            
             if total_errors > 0:
                 print(f"\n⚠️  Validation failed with {total_errors} errors")
                 return False
-            
+
             print("\n✅ Validation passed!")
             return True
-            
-        except ImportError:
-            print("⚠️  Validation module not found. Install: pip install html5lib beautifulsoup4 cssutils")
-            return True  # Don't fail build if validator not installed
         except Exception as e:
-            print(f"⚠️  Validation error: {e}")
-            return True  # Don't fail build on validation errors
+            print(f"⚠️  Validation error (skipping quality checks): {e}")
+            return True
 
 def main():
     """Main entry point"""
     parser = argparse.ArgumentParser(description='Build the Legs on the Ground website')
     parser.add_argument('--no-clean', action='store_true', help='Do not clean output directory')
     parser.add_argument('--validate', action='store_true', help='Run validation after build')
+    parser.add_argument('--minify-css', action='store_true', help='Conservatively minify bundled CSS output')
     args = parser.parse_args()
     
     try:
         builder = SiteBuilder()
-        builder.build(clean=not args.no_clean)
+        builder.build(clean=not args.no_clean, minify_css=args.minify_css)
         
         if args.validate:
             if not builder.validate():

@@ -1,0 +1,227 @@
+/* ====================== 1. CSS VARIABLES ====================== */
+:root {
+    /* Premium Color Palette - Refined & Sophisticated */
+
+    /* Primary - Refined Coral (Less aggressive, more premium) */
+    --coral-50: #FFF5F5;
+    --coral-100: #FFE3E3;
+    --coral-200: #FFC9C9;
+    --coral-300: #FFA8A8;
+    --coral-400: #FF8787;
+    --coral-500: #FF6B6B;     /* Primary coral */
+    --coral-600: #FA5252;     /* Hover state */
+    --coral-700: #F03E3E;     /* Active state */
+    --coral-800: #E03131;
+    --coral-900: #C92A2A;
+
+    /* Navy - Warmer, less oppressive (60-30-10 rule primary) */
+    --navy-50: #F0F4F8;
+    --navy-100: #D9E2EC;
+    --navy-200: #BCCCDC;
+    --navy-300: #9FB3C8;
+    --navy-400: #829AB1;
+    --navy-500: #627D98;
+    --navy-600: #486581;
+    --navy-700: #334E68;     /* Primary navy (warmer than before) */
+    --navy-800: #243B53;
+    --navy-900: #102A43;     /* Darkest navy */
+
+    /* Teal - Accent color (10% of 60-30-10 rule) */
+    --teal-50: #F0FCFB;
+    --teal-100: #C6F6F0;
+    --teal-200: #8EEEE4;
+    --teal-300: #4ECDC4;     /* Primary teal */
+    --teal-400: #3AB8AB;
+    --teal-500: #2BA599;
+    --teal-600: #1D8B82;
+    --teal-700: #0B9A8D;     /* Text safe */
+    --teal-800: #087B6F;
+    --teal-900: #065D54;
+
+    /* Neutrals - Warmer, more sophisticated (30% of 60-30-10 rule) */
+    --warm-white: #FAFBF8;   /* Off-white with warmth */
+    --white: #FFFFFF;
+    --off-white: #FAFBF8;
+    --black: #000000;
+
+    --gray-50: #F7F9FA;
+    --gray-100: #F0F3F5;
+    --gray-200: #E4E9ED;
+    --gray-300: #CBD2D9;
+    --gray-400: #9AA5B1;
+    --gray-500: #7B8794;     /* Body text */
+    --gray-600: #616E7C;
+    --gray-700: #52606D;     /* Headings */
+    --gray-800: #3E4C59;
+    --gray-900: #323F4B;     /* Darkest text */
+    /* Spacing Scale - 8pt Grid System (Fortune 100 Standard) */
+    --space-0: 0;
+    --space-xs: 0.25rem;     /* 4px */
+    --space-sm: 0.5rem;      /* 8px */
+    --space-md: 0.75rem;     /* 12px */
+    --space-base: 1rem;      /* 16px - base unit */
+    --space-lg: 1.5rem;      /* 24px */
+    --space-xl: 2rem;        /* 32px */
+    --space-2xl: 2.5rem;     /* 40px */
+    --space-3xl: 3rem;       /* 48px */
+    --space-4xl: 4rem;       /* 64px */
+    --space-5xl: 5rem;       /* 80px */
+    --space-6xl: 6rem;       /* 96px */
+    --space-7xl: 8rem;       /* 128px */
+    --space-8xl: 10rem;      /* 160px */
+
+    /* Premium Typography System - Dual Font Strategy */
+    --font-display: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "JetBrains Mono", "Fira Code", "Courier New", monospace;
+
+    /* Legacy font variables for compatibility */
+    --font-family: var(--font-body);
+    --font-family-headings: var(--font-display);
+
+    /* Type Scale - Major Third (1.25) - Professional Hierarchy */
+    --text-xs: 0.64rem;      /* 10.24px */
+    --text-sm: 0.8rem;       /* 12.8px */
+    --text-base: 1rem;       /* 16px - body */
+    --text-lg: 1.25rem;      /* 20px */
+    --text-xl: 1.563rem;     /* 25px */
+    --text-2xl: 1.953rem;    /* 31.25px */
+    --text-3xl: 2.441rem;    /* 39px */
+    --text-4xl: 3.052rem;    /* 48.83px */
+    --text-5xl: 3.815rem;    /* 61px */
+
+    /* Legacy font sizes for compatibility */
+    --font-size-xs: var(--text-xs);
+    --font-size-sm: var(--text-sm);
+    --font-size-base: var(--text-base);
+    --font-size-lg: var(--text-lg);
+    --font-size-xl: var(--text-xl);
+    --font-size-2xl: var(--text-2xl);
+    --font-size-3xl: var(--text-3xl);
+    --font-size-4xl: var(--text-4xl);
+    --font-size-5xl: var(--text-5xl);
+
+    /* Font Weights - Full Spectrum */
+    --font-weight-thin: 100;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+
+    /* Line Heights - Optimized for Premium Readability */
+    --leading-none: 1;
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 2;
+
+    /* Legacy line heights */
+    --line-height-tight: var(--leading-tight);
+    --line-height-snug: var(--leading-snug);
+    --line-height-normal: var(--leading-normal);
+    --line-height-relaxed: var(--leading-relaxed);
+    --line-height-loose: var(--leading-loose);
+
+    /* Letter Spacing - Subtle Refinement */
+    --tracking-tighter: -0.05em;
+    --tracking-tight: -0.025em;
+    --tracking-normal: 0;
+    --tracking-wide: 0.025em;
+    --tracking-wider: 0.05em;
+    --tracking-widest: 0.1em;
+    /* Border Radius - Consistent Strategy (8pt based) */
+    --radius-none: 0;
+    --radius-sm: 0.25rem;    /* 4px - Small elements */
+    --radius-md: 0.5rem;     /* 8px - Inputs, tags */
+    --radius-lg: 0.75rem;    /* 12px - Buttons, cards */
+    --radius-xl: 1rem;       /* 16px - Large cards */
+    --radius-2xl: 1.5rem;    /* 24px - Hero elements */
+    --radius-full: 9999px;   /* Circular */
+
+    /* Premium 8-Level Shadow System (Material Design Inspired) */
+    --shadow-none: none;
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+
+    /* Focus Ring Shadows - Accessibility */
+    --shadow-focus: 0 0 0 3px rgba(255, 107, 107, 0.15);
+    --shadow-focus-coral: 0 0 0 3px rgba(255, 107, 107, 0.15);
+    --shadow-focus-navy: 0 0 0 3px rgba(51, 78, 104, 0.15);
+    --shadow-focus-teal: 0 0 0 3px rgba(78, 205, 196, 0.15);
+
+    /* Button-Specific Shadows (Premium Feel) */
+    --shadow-btn-primary: 0 1px 2px rgba(0, 0, 0, 0.05),
+                          0 4px 12px rgba(255, 107, 107, 0.15);
+    --shadow-btn-primary-hover: 0 4px 6px rgba(0, 0, 0, 0.07),
+                                0 12px 24px rgba(255, 107, 107, 0.25);
+    --shadow-btn-outline: 0 0 0 1px rgba(255, 255, 255, 0.1),
+                          0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-btn-outline-hover: 0 0 0 1px rgba(255, 255, 255, 0.2),
+                                0 12px 24px rgba(255, 255, 255, 0.2);
+
+    /* Component-Specific Shadows */
+    --shadow-card: var(--shadow-lg);
+    --shadow-card-hover: var(--shadow-xl);
+    --shadow-icon-coral: 0 4px 20px rgba(255, 107, 107, 0.4);
+    --shadow-icon-teal: 0 4px 20px rgba(78, 205, 196, 0.4);
+    --shadow-icon-navy: 0 4px 20px rgba(51, 78, 104, 0.4);
+
+    /* Legacy shadow variables for backward compatibility */
+    --shadow-btn-coral: var(--shadow-btn-primary);
+    --shadow-btn-coral-hover: var(--shadow-btn-primary-hover);
+    --shadow-success: 0 4px 20px rgba(37, 211, 102, 0.5);
+    --shadow-success-hover: 0 6px 30px rgba(37, 211, 102, 0.7);
+
+    /* Premium Easing Functions (Motion Design) */
+    --ease-linear: cubic-bezier(0, 0, 1, 1);
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ease-elastic: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);        /* Apple-style smooth */
+    --ease-swift: cubic-bezier(0.55, 0, 0.1, 1);        /* Swift/snappy */
+
+    /* Transition Durations - Comprehensive Scale */
+    --duration-instant: 0ms;
+    --duration-fast: 100ms;
+    --duration-normal: 200ms;
+    --duration-moderate: 300ms;
+    --duration-slow: 400ms;
+    --duration-slower: 500ms;
+    --duration-slowest: 700ms;
+
+    /* Combined Transitions (Duration + Easing) */
+    --transition-faster: 0.1s var(--ease-smooth);
+    --transition-fast: 0.15s var(--ease-smooth);
+    --transition-base: 0.2s var(--ease-smooth);
+    --transition-slow: 0.3s var(--ease-smooth);
+    --transition-slowest: 0.4s var(--ease-smooth);
+
+    /* Component-Specific Transitions */
+    --transition-button: all 0.2s var(--ease-smooth);
+    --transition-dropdown: opacity 0.15s var(--ease-out), transform 0.15s var(--ease-out);
+    --transition-modal: opacity 0.25s var(--ease-out);
+    --transition-tooltip: opacity 0.15s var(--ease-smooth);
+    /* Z-Index Scale */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+
+    /* Layout offsets */
+    --scroll-offset: 88px;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070
+    }

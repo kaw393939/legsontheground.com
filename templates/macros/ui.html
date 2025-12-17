@@ -1,0 +1,38 @@
+{#
+  Shared UI macros for templates.
+  Keep output HTML identical to inlined markup.
+#}
+
+{% macro section_header(title, subtitle) -%}
+<div class="section-header">
+    <h2 class="section-title">{{ title }}</h2>
+    <p class="section-subtitle">{{ subtitle }}</p>
+</div>
+{%- endmacro %}
+
+{% macro cta_content(title, body, href, button_text, button_class, data_cta=None, data_section=None, extra_attrs="") -%}
+<div class="cta-content">
+    <h3>{{ title }}</h3>
+    <p>{{ body }}</p>
+    <a href="{{ href }}" 
+       class="{{ button_class }}" 
+     {% if data_cta %} data-cta="{{ data_cta }}"{% endif %}
+     {% if data_section %} data-section="{{ data_section }}"{% endif %}
+       {{ extra_attrs | safe }}>
+       {{ button_text }}
+    </a>
+</div>
+{%- endmacro %}
+
+{% macro cta_link(href, classes, text, data_cta=None, data_section=None, data_service=None, data_phase=None, data_package=None, data_psychology=None, extra_attrs="") -%}
+<a href="{{ href }}" class="{{ classes }}" 
+  {% if data_cta %} data-cta="{{ data_cta }}"{% endif %}
+  {% if data_section %} data-section="{{ data_section }}"{% endif %}
+  {% if data_service %} data-service="{{ data_service }}"{% endif %}
+  {% if data_phase %} data-phase="{{ data_phase }}"{% endif %}
+  {% if data_package %} data-package="{{ data_package }}"{% endif %}
+  {% if data_psychology %} data-psychology="{{ data_psychology }}"{% endif %}
+  {{ extra_attrs | safe }}>
+  {{ text }}
+</a>
+{%- endmacro %}

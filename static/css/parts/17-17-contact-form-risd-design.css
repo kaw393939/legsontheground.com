@@ -1,0 +1,282 @@
+/* ====================== 17. CONTACT FORM - RISD DESIGN ====================== */
+/* Contact Form Section - RISD-level Design */
+.contact-form-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--warm-white) 0%, var(--white) 100%);
+    position: relative;
+    overflow: hidden;
+    /* Prefer tall embeds so the submit button is visible without scrolling */
+    --zapier-embed-height: clamp(860px, 92vh, 1120px);
+}
+
+.contact-form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--gray-300) 50%, transparent 100%);
+}
+
+/* Memphis-style backdrop (subtle, airy) */
+.contact-form-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle, var(--teal-100) 0 2px, transparent 2px),
+        radial-gradient(circle, var(--coral-100) 0 2px, transparent 2px),
+        repeating-linear-gradient(-45deg, var(--navy-50) 0 2px, transparent 2px 22px);
+    background-size: 88px 88px, 64px 64px, auto;
+    background-position: 0 0, 24px 18px, 0 0;
+    opacity: 0.22;
+    pointer-events: none;
+}
+
+.contact-form-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 48px;
+    align-items: start;
+    margin-top: 48px;
+}
+
+.form-container {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: 40px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--gray-200);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--coral-500) 0 18px,
+        var(--teal-300) 18px 36px,
+        var(--navy-200) 36px 54px
+    );
+}
+
+.form-wrapper {
+    position: relative;
+}
+
+.zapier-embed-shell {
+    border-radius: calc(var(--radius-xl) - 2px);
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+    max-width: 100%;
+}
+
+.zapier-embed-shell zapier-interfaces-page-embed {
+    display: block;
+    width: 100%;
+    height: var(--zapier-embed-height) !important;
+    border: none !important;
+}
+
+/* Mid-width devices often need stacking earlier than 768px */
+@media (max-width: 900px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        margin-top: 40px;
+    }
+
+    .form-container,
+    .contact-info {
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--coral-500), var(--coral-600));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.contact-details h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy-700);
+    margin: 0 0 4px 0;
+    letter-spacing: -0.025em;
+}
+
+.contact-details p,
+.contact-details a {
+    font-size: 14px;
+    color: var(--gray-600);
+    margin: 0;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.contact-details a:hover {
+    color: var(--coral-500);
+    transition: color 0.2s ease;
+}
+
+.trust-indicator {
+    background: linear-gradient(135deg, var(--teal-50) 0%, var(--teal-100) 100%);
+    border: 1px solid var(--teal-300);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.trust-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--teal-300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.trust-text h5 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy-800);
+    margin: 0 0 4px 0;
+    letter-spacing: -0.025em;
+}
+
+.trust-text p {
+    font-size: 13px;
+    color: var(--navy-600);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contact-layout {
+        grid-template-columns: minmax(0, 1fr) 340px;
+        gap: 36px;
+    }
+    
+    .form-container {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-form-section {
+        padding: 60px 0;
+        --zapier-embed-height: clamp(920px, 120vh, 1200px);
+    }
+    
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 40px;
+    }
+    
+    .form-container {
+        padding: 24px;
+    }
+    
+    .contact-card {
+        padding: 24px;
+    }
+    
+    .contact-item {
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+    
+    .trust-indicator {
+        padding: 20px;
+        gap: 12px;
+    }
+    
+    .trust-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form-section {
+        padding: 52px 0;
+        --zapier-embed-height: clamp(980px, 135vh, 1320px);
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+}
+
+/* Legacy styles cleanup */
+.zapier-form-main,
+.zapier-form-container-full,
+.contact-options {
+    display: none;
+}
+
+/* ====================== END OF STYLESHEET ====================== */

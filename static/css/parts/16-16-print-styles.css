@@ -1,0 +1,21 @@
+/* ====================== 16. PRINT STYLES ====================== */
+@media print {
+    .header, .top-bar, .whatsapp-float, .scroll-top, .mobile-menu-toggle, .btn, .footer {
+        display: none !important
+        }
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000
+        }
+    .section-padding {
+        padding: 1rem 0
+        }
+    a {
+        text-decoration: underline
+        }
+    img {
+        max-width: 100%;
+        page-break-inside: avoid;
+    }
+}

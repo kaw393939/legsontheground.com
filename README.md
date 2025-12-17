@@ -74,6 +74,12 @@ python site.py status     # Show status
 └── backups/             # 💾 Auto-backups
 ```
 
+## 🎨 CSS (DRY Workflow)
+
+- Source CSS is split into ordered parts in `static/css/parts/`.
+- Builds automatically bundle these into `docs/styles.css`.
+- If you edit `static/css/styles.css` directly, your changes may not be picked up when `static/css/parts/` exists.
+
 ## 🔧 Configuration
 
 Edit `site.config.yaml` to customize:

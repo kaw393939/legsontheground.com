@@ -1,0 +1,170 @@
+/* ====================== 3. RESET & BASE STYLES ====================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+    }
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-offset)
+    }
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto
+        }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important
+        }
+    }
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--line-height-relaxed);
+    color: var(--gray-700);
+    background-color: var(--white);
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    /* Establish baseline grid */
+    --baseline: 8px
+    }
+/* Skip to Content Link - Accessibility */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--navy-700);
+    color: var(--white);
+    padding: var(--space-md) var(--space-lg);
+    text-decoration: none;
+    font-weight: var(--font-weight-semibold);
+    z-index: 9999;
+    transition: top var(--transition-fast)
+    }
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid var(--coral-500);
+    outline-offset: 2px
+    }
+/* List Styles */
+ul, ol {
+    margin-top: 0;
+    margin-bottom: var(--space-xl);
+    padding-left: 0;
+    list-style: none
+    }
+ul:last-child, ol:last-child {
+    margin-bottom: 0
+    }
+/* List items need breathing room */
+li {
+    margin-bottom: var(--space-base);
+    line-height: var(--line-height-relaxed)
+    }
+
+/* Anchor targets should not hide under sticky header */
+section[id] {
+    scroll-margin-top: var(--scroll-offset)
+    }
+li:last-child {
+    margin-bottom: 0
+    }
+/* Nested lists */
+ul ul, ul ol, ol ul, ol ol {
+    margin-top: var(--space-base);
+    margin-bottom: var(--space-base);
+    padding-left: var(--space-xl)
+    }
+/* Content lists (with actual bullets/numbers) */
+.content ul, .content ol, article ul, article ol {
+    padding-left: var(--space-xl)
+    }
+.content ul {
+    list-style-type: disc
+    }
+.content ol {
+    list-style-type: decimal
+    }
+.content li {
+    padding-left: var(--space-sm)
+    }
+/* Links - Accessible and Elegant */
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast), opacity var(--transition-fast)
+    }
+a:hover {
+    color: var(--coral-700)
+    }
+a:focus {
+    outline: 2px solid var(--coral-700);
+    outline-offset: 2px;
+    border-radius: 2px
+    }
+a:focus:not(:focus-visible) {
+    outline: none
+    }
+a:focus-visible {
+    outline: 2px solid var(--coral-700);
+    outline-offset: 2px
+    }
+/* Text Emphasis */
+strong, b {
+    font-weight: var(--font-weight-bold);
+    color: var(--navy-700)
+    }
+em, i {
+    font-style: italic
+    }
+small {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal)
+    }
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block
+    }
+figure {
+    margin: var(--space-3xl) 0
+    }
+figcaption {
+    margin-top: var(--space-md);
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+    font-style: italic;
+    text-align: center
+    }
+/* Buttons */
+button {
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    border: none;
+    background: none
+    }
+/* Form elements */
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit
+    }
+/* Focus visible for better keyboard navigation */
+*:focus-visible {
+    outline: 2px solid var(--coral-700);
+    outline-offset: 2px;
+    border-radius: 2px
+    }
+button:focus-visible, .btn:focus-visible {
+    outline: 3px solid var(--coral-700);
+    outline-offset: 3px
+    }

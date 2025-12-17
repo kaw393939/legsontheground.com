@@ -1,0 +1,167 @@
+/* ====================== 13. UTILITIES ====================== */
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: var(--white);
+    border-radius: var(--radius-full);
+    font-size: 1.8rem;
+    box-shadow: var(--shadow-success);
+    z-index: 9999;
+    text-decoration: none;
+    transition: all var(--transition-base);
+    animation: pulse-whatsapp 2s infinite
+    }
+.whatsapp-float:hover {
+    transform: scale(1.15);
+    box-shadow: var(--shadow-success-hover);
+    color: var(--white)
+    }
+.whatsapp-icon {
+    font-size: inherit
+    }
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 25px;
+    right: 100px;
+    width: 45px;
+    height: 45px;
+    background: var(--navy-700);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+    box-shadow: 0 4px 15px rgba(10, 37, 64, 0.3);
+    font-size: var(--font-size-xl);
+    z-index: 9998
+    }
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible
+    }
+.scroll-top:hover {
+    background: var(--coral-500);
+    transform: translatey(-3px)
+    }
+/* Section Background Colors */
+.bg-gray {
+    background: linear-gradient(180deg, var(--white) 0%, var(--gray-50) 50%, var(--white) 100%)
+    }
+.bg-white {
+    background-color: var(--white)
+    }
+/* Section Divider */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--gray-200) 50%, transparent 100%);
+    margin: var(--space-5xl) 0
+    }
+.bg-dark {
+    background: linear-gradient(135deg, var(--navy-700) 0%, var(--navy-600) 100%);
+    color: var(--white)
+    }
+.bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark h4, .bg-dark h5, .bg-dark h6 {
+    color: var(--white) !important
+    }
+.bg-dark p, .bg-dark li {
+    color: rgba(255, 255, 255, 0.9)
+    }
+/* Spacing Utilities */
+.mb-0 {
+    margin-bottom: 0 !important
+    }
+.mb-xs {
+    margin-bottom: var(--space-xs) !important
+    }
+.mb-sm {
+    margin-bottom: var(--space-sm) !important
+    }
+.mb-md {
+    margin-bottom: var(--space-md) !important
+    }
+.mb-base {
+    margin-bottom: var(--space-base) !important
+    }
+.mb-lg {
+    margin-bottom: var(--space-lg) !important
+    }
+.mb-xl {
+    margin-bottom: var(--space-xl) !important
+    }
+.mb-2xl {
+    margin-bottom: var(--space-2xl) !important
+    }
+.mb-3xl {
+    margin-bottom: var(--space-3xl) !important
+    }
+.mt-0 {
+    margin-top: 0 !important
+    }
+.mt-xs {
+    margin-top: var(--space-xs) !important
+    }
+.mt-sm {
+    margin-top: var(--space-sm) !important
+    }
+.mt-md {
+    margin-top: var(--space-md) !important
+    }
+.mt-base {
+    margin-top: var(--space-base) !important
+    }
+.mt-lg {
+    margin-top: var(--space-lg) !important
+    }
+.mt-xl {
+    margin-top: var(--space-xl) !important
+    }
+.mt-2xl {
+    margin-top: var(--space-2xl) !important
+    }
+.mt-3xl {
+    margin-top: var(--space-3xl) !important
+    }
+.py-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important
+    }
+.py-sm {
+    padding-top: var(--space-sm) !important;
+    padding-bottom: var(--space-sm) !important
+    }
+.py-md {
+    padding-top: var(--space-md) !important;
+    padding-bottom: var(--space-md) !important
+    }
+.py-lg {
+    padding-top: var(--space-lg) !important;
+    padding-bottom: var(--space-lg) !important
+    }
+.py-xl {
+    padding-top: var(--space-xl) !important;
+    padding-bottom: var(--space-xl) !important
+    }
+/* Typography Utilities */
+.text-balance {
+    text-wrap: balance
+    }
+.text-pretty {
+    text-wrap: pretty
+    }
+.measure {
+    max-width: 65ch
+    }
+.measure-wide {
+    max-width: 80ch
+    }
+.measure-narrow {
+    max-width: 45ch
+    }

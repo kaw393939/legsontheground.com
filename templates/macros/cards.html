@@ -1,0 +1,121 @@
+{#
+  Card macros for service/package grids.
+  Goal: keep rendered markup equivalent while reducing repetition.
+#}
+
+{% from "macros/ui.html" import cta_link %}
+
+{% macro service_card(service) -%}
+<div class="service-card flex flex-col items-center {% if service.popular %}most-popular{% endif %}" 
+     data-service="{{ service.title }}" 
+     data-phase="{{ service.journey_phase }}"
+     data-psychology="{{ service.psychological_appeal }}">
+    {% if service.popular %}
+    <span class="service-badge badge-popular">Most Popular Choice</span>
+    {% endif %}
+    {% if service.savings_highlight %}
+    <span class="service-badge badge-savings">{{ service.savings_highlight }}</span>
+    {% endif %}
+    <div class="service-icon flex items-center justify-center">
+        <span class="service-emoji">{{ service.icon }}</span>
+    </div>
+    <h4 class="service-title">{{ service.title }}</h4>
+    <p class="psychological-appeal">{{ service.psychological_appeal }}</p>
+    <div class="service-pricing">
+        <span class="service-price">{{ service.price }}</span>
+    </div>
+    <p class="service-description">{{ service.description }}</p>
+    <div class="what-you-get">
+        <strong>What You Get:</strong>
+        <p>{{ service.what_you_get }}</p>
+    </div>
+    <ul class="service-features">
+        {% for feature in service.features %}
+        <li class="flex items-start">{{ feature }}</li>
+        {% endfor %}
+    </ul>
+    {{ cta_link(
+        '/#contact',
+        ('btn btn-primary service-cta' if service.popular else 'btn btn-outline service-cta'),
+        ('Get Started Now' if service.popular else 'Learn More'),
+        data_cta='service',
+        data_section='services',
+        data_service=service.title,
+        data_phase=service.journey_phase
+    ) }}
+</div>
+{%- endmacro %}
+
+{% macro package_card(package) -%}
+<div class="package-card service-card flex flex-col items-center {% if package.popular %}most-popular{% endif %}" 
+     data-package="{{ package.title }}"
+     data-psychology="{{ package.psychological_appeal }}">
+    {% if package.popular %}
+    <span class="service-badge badge-popular">Most Popular Choice</span>
+    {% endif %}
+    {% if package.savings != "Starting Point" %}
+    <span class="service-badge badge-savings">{{ package.savings }}</span>
+    {% endif %}
+    <div class="service-icon flex items-center justify-center">
+        <span class="service-emoji">{{ package.icon }}</span>
+    </div>
+    <h4 class="service-title">{{ package.title }}</h4>
+    <p class="psychological-appeal">{{ package.psychological_appeal }}</p>
+    <div class="service-pricing">
+        <span class="service-price">{{ package.price }}</span>
+    </div>
+    <p class="service-description">{{ package.description }}</p>
+    <div class="what-you-get">
+        <strong>What You Get:</strong>
+        <p>{{ package.what_you_get }}</p>
+    </div>
+    <ul class="service-features">
+        {% for feature in package.features %}
+        <li class="flex items-start">{{ feature }}</li>
+        {% endfor %}
+    </ul>
+    {{ cta_link(
+        '/#contact',
+        ('btn btn-primary service-cta' if package.popular else 'btn btn-outline service-cta'),
+        ('Choose This Package' if package.popular else 'Learn More'),
+        data_cta='package',
+        data_section='packages',
+        data_package=package.title,
+        data_psychology=package.psychological_appeal
+    ) }}
+</div>
+{%- endmacro %}
+
+{% macro service_preview_card(phase, number, label, emoji, title, description, highlights, price_amount, href, button_classes, popular=False) -%}
+<div class="service-preview-card flex flex-col items-center{% if popular %} most-popular{% endif %}" data-phase="{{ phase }}">
+    {% if popular %}
+    <span class="popular-badge">Most Popular</span>
+    {% endif %}
+    <div class="phase-badge">
+        <span class="phase-number">{{ number }}</span>
+        <span class="phase-label">{{ label }}</span>
+    </div>
+    <div class="service-icon flex items-center justify-center">
+        <span class="service-emoji">{{ emoji }}</span>
+    </div>
+    <h3 class="service-title">{{ title }}</h3>
+    <p class="service-description">{{ description }}</p>
+    <ul class="service-highlights">
+        {% for item in highlights %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+    <div class="service-pricing">
+        <span class="price-label">Starting at</span>
+        <span class="price-amount">{{ price_amount }}</span>
+    </div>
+    {{ cta_link(
+        href,
+        button_classes,
+        'Learn More',
+        data_cta='learn_more',
+        data_section='services-preview',
+        data_service=title
+    ) }}
+</div>
+{%- endmacro %}

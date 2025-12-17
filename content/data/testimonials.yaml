@@ -5,7 +5,7 @@ testimonials:
   - id: michael-r
     name: "Michael R."
     location: "Florida → San Juan"
-    service_used: "Complete Relocation Package"
+    service_used: "Home Scouting & Due Diligence"
     rating: 5
     avatar_icon: "fa-user"
     order: 1
@@ -17,21 +17,22 @@ testimonials:
   - id: jennifer-l
     name: "Jennifer L."
     location: "Texas → Dorado"
-    service_used: "Newcomer Essential Package"
+    service_used: "Home Scouting & Due Diligence"
     rating: 5
     avatar_icon: "fa-user"
     order: 2
     quote: |
-      "Had my driver's license in 3 days and internet connected in 24 hours. They even negotiated 
-      my car purchase and saved me $2,000. Moving to Puerto Rico went from terrifying to exciting."
+      "I couldn't fly down to tour homes, but I also didn't want to buy blind. They walked each property 
+      on video, called out red flags, and gave me neighborhood notes I never would've found online. 
+      I felt confident making an offer from Texas."
     
   - id: david-k
     name: "David K."
     location: "Property Investor"
-    service_used: "Monthly Property Care"
+    service_used: "Investor Due Diligence"
     rating: 5
     avatar_icon: "fa-user"
     order: 3
     quote: |
-      "Hurricane season used to stress me out. Now I get video updates within hours of any weather 
-      event, and they coordinate all repairs. My property value has increased 15% under their care."
+      "Their due diligence saved me from a bad deal. The video tour showed condition issues the listing 
+      photos hid, and the pricing reality check helped me negotiate. Best money I spent before closing."

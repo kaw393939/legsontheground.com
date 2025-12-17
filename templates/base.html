@@ -44,7 +44,7 @@
     <meta name="googlebot" content="index, follow">
     
     <!-- Resource Hints for Performance -->
-    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="styles.css?v={{ build_time }}" as="style">
     {% if page.hero and page.hero.image %}
     <link rel="preload" href="{{ page.hero.image }}" as="image">
     {% endif %}
@@ -52,10 +52,10 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v={{ build_time }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -69,7 +69,7 @@
 
       gtag('config', 'G-KE98KY192J', {
         // Enhanced tracking for single-page application
-        page_title: 'Property Management Puerto Rico | Legs on the Ground',
+        page_title: 'Puerto Rico Home Scouting & Real Estate Support | Legs on the Ground',
         custom_map: {
           'custom_parameter_1': 'cta_type',
           'custom_parameter_2': 'section_name'
@@ -125,7 +125,7 @@
       // Track section views for single-page navigation
       function trackSectionView(sectionName) {
         gtag('event', 'page_view', {
-          page_title: sectionName + ' - Property Management Puerto Rico',
+          page_title: sectionName + ' - Puerto Rico Home Scouting',
           page_location: window.location.href + '#' + sectionName,
           event_category: 'Navigation',
           event_label: sectionName,
@@ -262,7 +262,7 @@
     
     {% if features.show_whatsapp_float %}
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/{{ site.whatsapp }}?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20your%20property%20services" 
+    <a href="https://wa.me/{{ site.whatsapp }}?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20your%20home%20scouting%20service" 
        class="whatsapp-float flex items-center justify-center" 
        target="_blank"
        rel="noopener noreferrer"
@@ -276,6 +276,6 @@
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <script src="main.js"></script>
+    <script src="main.js?v={{ build_time }}"></script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+/* ====================== 3. LAYOUT SYSTEM ====================== */
+.container-fluid {
+    width: 100%;
+    padding: 0 var(--space-xl)
+    }
+.section-padding {
+    padding: var(--space-5xl) 0
+    }
+.section-padding-sm {
+    padding: var(--space-3xl) 0
+    }
+.section-padding-lg {
+    padding: var(--space-6xl) 0
+    }
+.section-padding-xl {
+    padding: calc(var(--space-6xl) * 1.5) 0
+    }
+/* Text Alignment */
+.text-center {
+    text-align: center
+    }
+.text-left {
+    text-align: left
+    }
+.text-right {
+    text-align: right
+    }

@@ -1,0 +1,39 @@
+/* ====================== 8. COMPONENTS - Cards, Badges, Icons ====================== */
+/* Cards - Now using standardized .card class in HTML */
+/* Legacy selectors removed - all HTML updated to use .card + modifiers */
+/* Icon Badges - Now using standardized .icon-badge class in HTML */
+/* Legacy icon selectors removed - all HTML updated to use .icon-badge + modifiers */
+/* Badges */
+.service-badge, .service-showcase-badge, .package-badge, .pricing-badge {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    background: var(--coral-500);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(255, 107, 107, 0.3);
+    z-index: 2
+    }
+.service-badge.urgent {
+    background: #dc3545;
+    animation: pulse 2s infinite
+    }
+/* Featured Cards */
+.package-card.featured, .pricing-option.featured {
+    border: 2px solid var(--coral-500);
+    position: relative;
+    transform: scale(1.05)
+    }
+.package-card.featured::before, .pricing-option.featured::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--coral-500) 0%, var(--teal-300) 100%);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0
+    }

@@ -155,8 +155,18 @@ class SiteManager:
         start_time = datetime.now()
         
         try:
+            cmd = ['python', 'build.py']
+
+            # Output validation (HTML/CSS) via build.py
+            if self.config.get('validation', {}).get('validate_output', True):
+                cmd.append('--validate')
+
+            # Optional CSS minification (bundled output only)
+            if self.config.get('performance', {}).get('minify_css', False):
+                cmd.append('--minify-css')
+
             result = subprocess.run(
-                ['python', 'build.py'],
+                cmd,
                 cwd=self.root,
                 capture_output=True,
                 text=True,
@@ -174,7 +184,10 @@ class SiteManager:
             return True
             
         except subprocess.CalledProcessError as e:
-            self.logger.error(f"❌ Build failed: {e.stderr}")
+            details = (e.stderr or '').strip()
+            if e.stdout:
+                details = (details + "\n" + e.stdout.strip()).strip()
+            self.logger.error(f"❌ Build failed: {details}")
             return False
     
     def _track_build_metrics(self, build_time):

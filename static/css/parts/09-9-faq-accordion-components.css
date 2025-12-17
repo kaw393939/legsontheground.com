@@ -1,0 +1,258 @@
+/* ====================== 9. FAQ / ACCORDION COMPONENTS ====================== */
+/* FAQ Container */
+.faq-container, .faq-section {
+    max-width: 900px;
+    margin: 0 auto
+    }
+/* FAQ Category Sections */
+.faq-category {
+    margin-bottom: var(--space-4xl)
+    }
+.faq-category:last-child {
+    margin-bottom: 0
+    }
+.faq-category-title {
+    position: relative;
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--navy-700);
+    margin-bottom: var(--space-3xl);
+    padding-bottom: var(--space-lg);
+    letter-spacing: -0.02em
+    }
+.faq-category-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--coral-700) 0%, var(--teal-700) 100%);
+    border-radius: var(--radius-full)
+    }
+/* Accordion Item - extends .card base class */
+.card-faq, .faq-item, .accordion-item {
+    border: 1px solid var(--gray-200);
+  
+    border-radius: var(--radius-xl);
+  
+    margin-bottom: var(--space-xl);
+    overflow: hidden;
+    /* Addition: needed for accordion animation */
+    padding: 0;
+  
+    background: var(--white)
+    }
+.card-faq:last-child, .accordion-item:last-child {
+    margin-bottom: 0
+    }
+.card-faq:hover, .accordion-item:hover {
+    /* Inherits transform: translateY(-6px) from .card:hover */
+    border-color: var(--gray-300);
+  
+    box-shadow: var(--shadow-lg);
+    /* Uses CSS variable */
+    transform: translatey(-2px);
+  
+    }
+.card-faq.active, .accordion-item.active {
+    border-color: var(--coral-700);
+    box-shadow: 0 8px 24px rgba(216, 67, 67, 0.12)
+    }
+/* Accordion Question/Header - Refined */
+.faq-question, .accordion-header, .accordion-question {
+    width: 100%;
+    padding: var(--space-2xl) var(--space-2xl);
+    background: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    gap: var(--space-xl);
+    transition: all var(--transition-base);
+    position: relative
+    }
+.faq-question::before, .accordion-header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translatey(-50%);
+    width: 0;
+    height: 50%;
+    background: linear-gradient(180deg, var(--coral-700) 0%, transparent 100%);
+    opacity: 0;
+    transition: all var(--transition-base);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0
+    }
+.faq-question:hover::before, .accordion-header:hover::before {
+    width: 4px;
+    opacity: 1
+    }
+/* Keyboard focus indicator for accessibility */
+.faq-question:focus-visible, .accordion-header:focus-visible, .accordion-question:focus-visible {
+    outline: 3px solid var(--coral-500);
+    outline-offset: 2px;
+    border-radius: var(--radius-md);
+    }
+.card-faq.active .faq-question, .accordion-item.active .accordion-header {
+    background: linear-gradient(90deg, rgba(216, 67, 67, 0.03) 0%, transparent 100%)
+    }
+.card-faq.active .faq-question::before, .accordion-item.active .accordion-header::before {
+    width: 4px;
+    opacity: 1
+    }
+.faq-question h3, .faq-question h4, .accordion-header h3, .accordion-header h4 {
+    flex: 1;
+    margin: 0;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--navy-700);
+    line-height: var(--line-height-snug);
+    letter-spacing: 0;
+    transition: color var(--transition-fast)
+    }
+.faq-question:hover h3, .faq-question:hover h4, .accordion-header:hover h3, .accordion-header:hover h4 {
+    color: var(--coral-700)
+    }
+/* Accordion Icon/Toggle - Prominent and Elegant */
+.faq-toggle, .accordion-toggle, .faq-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
+    border-radius: var(--radius-full);
+    color: var(--navy-700);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-normal);
+    transition: all var(--transition-base);
+    box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.05);
+    position: relative
+    }
+.faq-toggle::after, .accordion-toggle::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: var(--radius-full);
+    padding: 2px;
+    background: linear-gradient(135deg, var(--coral-500) 0%, var(--teal-300) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity var(--transition-base)
+    }
+.faq-question:hover .faq-toggle, .accordion-header:hover .accordion-toggle {
+    background: linear-gradient(135deg, var(--gray-200) 0%, var(--gray-300) 100%);
+    transform: scale(1.05)
+    }
+.faq-question:hover .faq-toggle::after, .accordion-header:hover .accordion-toggle::after {
+    opacity: 1
+    }
+.card-faq.active .faq-toggle, .accordion-item.active .accordion-toggle, .faq-question[aria-expanded="true"] .faq-toggle {
+    background: linear-gradient(135deg, var(--coral-700) 0%, var(--coral-500) 100%);
+    color: var(--white);
+    transform: rotate(135deg);
+    box-shadow: 0 4px 12px rgba(216, 67, 67, 0.3)
+    }
+.card-faq.active .faq-toggle::after, .accordion-item.active .accordion-toggle::after {
+    opacity: 0
+    }
+/* Accordion Answer/Content - Smooth Reveal */
+.faq-answer, .accordion-content, .accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-slowest), padding var(--transition-slowest), opacity var(--transition-slow);
+    opacity: 0
+    }
+.card-faq.active .faq-answer, .accordion-item.active .accordion-content, .faq-answer.active {
+    max-height: 3000px;
+    padding: 0 var(--space-2xl) var(--space-2xl) var(--space-2xl);
+    padding-top: var(--space-xl);
+    opacity: 1
+    }
+.faq-answer-content, .accordion-content-inner {
+    color: var(--gray-700);
+    line-height: var(--line-height-loose)
+    }
+/* Content inside accordion */
+.faq-answer p, .accordion-content p {
+    margin-bottom: var(--space-lg);
+    line-height: var(--line-height-loose)
+    }
+.faq-answer p:last-child, .accordion-content p:last-child {
+    margin-bottom: 0
+    }
+.faq-answer ul, .accordion-content ul {
+    margin: var(--space-lg) 0;
+    padding-left: var(--space-xl)
+    }
+.faq-answer li, .accordion-content li {
+    margin-bottom: var(--space-md);
+    line-height: var(--line-height-loose);
+    padding-left: var(--space-sm)
+    }
+.faq-answer strong, .accordion-content strong {
+    font-weight: var(--font-weight-semibold);
+    color: var(--navy-700)
+    }
+/* FAQ Category Navigation - Professional Design */
+.faq-nav, .faq-categories-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    justify-content: center;
+    margin-bottom: var(--space-5xl);
+    padding: var(--space-lg);
+    background: transparent
+    }
+.faq-nav-item, .faq-category-link {
+    position: relative;
+    padding: var(--space-md) var(--space-2xl);
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-full);
+    color: var(--gray-700);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all var(--transition-base);
+    overflow: hidden;
+    box-shadow: var(--shadow-xs)
+    }
+.faq-nav-item::before, .faq-category-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--coral-500) 0%, var(--coral-700) 100%);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    z-index: -1
+    }
+.faq-nav-item:hover, .faq-category-link:hover {
+    color: var(--white);
+    border-color: transparent;
+    transform: translatey(-2px);
+    box-shadow: var(--shadow-lg)
+    }
+.faq-nav-item:hover::before, .faq-category-link:hover::before {
+    opacity: 1
+    }
+.faq-nav-item.active, .faq-category-link.active {
+    background: linear-gradient(135deg, var(--navy-700) 0%, var(--navy-600) 100%);
+    border-color: transparent;
+    color: var(--white);
+    box-shadow: var(--shadow-md)
+    }
+/* Remove emoji styling - professional design doesn't need emojis */
+.faq-nav-item .emoji, .faq-category-link .emoji, .faq-category-title .emoji {
+    display: none
+    }
