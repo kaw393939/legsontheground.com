@@ -1802,29 +1802,6 @@ section.dark-context .btn-outline:hover,
     color: var(--coral-600);
     }
 
-.services-cta {
-    background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
-    border-radius: var(--radius-lg);
-    padding: var(--space-2xl);
-    text-align: center;
-    }
-
-.services-cta .cta-content h3 {
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-bold);
-    color: var(--navy-700);
-    margin-bottom: var(--space-sm);
-    }
-
-.services-cta .cta-content p {
-    font-size: var(--font-size-base);
-    color: var(--gray-700);
-    margin-bottom: var(--space-lg);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    }
-
 /* Mobile responsive for services preview */
 @media (max-width: 768px) {
     .service-preview-card {
@@ -2265,6 +2242,34 @@ section.dark-context .btn-outline:hover,
     position: relative;
     z-index: 1;
 }
+
+/* Services notes / callouts */
+.services-notes {
+    margin-top: var(--space-2xl);
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services-callout {
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    background: var(--navy-50);
+    border: 1px solid var(--navy-100);
+    color: var(--navy-700);
+    text-align: left;
+    margin: var(--space-lg) 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.services-callout strong {
+    font-weight: var(--font-weight-extrabold);
+}
+
+.services-callout-warning {
+    background: rgba(255, 107, 107, 0.10);
+    border-color: rgba(255, 107, 107, 0.35);
+}
 .services-showcase {
     gap: var(--space-xl);
     }
@@ -2381,11 +2386,14 @@ section.dark-context .btn-outline:hover,
     text-align: center;
     margin-top: var(--space-3xl)
     }
-.services-cta h3 {
+.services-cta .cta-content {
+    color: inherit
+    }
+.services-cta .cta-content h3 {
     font-weight: var(--font-weight-extrabold);
     margin-bottom: var(--space-lg);
     letter-spacing: -0.02em;
-    /* Color handled by .dark-context on .services-cta */
+    color: var(--white)
     }
 .services-cta p {
     color: rgba(255, 255, 255, 0.9);

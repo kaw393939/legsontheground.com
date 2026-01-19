@@ -3,16 +3,50 @@
 
 <section class="services" id="services">
     <div class="container">
-        {{ section_header('Puerto Rico Home Scouting', 'One focused service: scout the right home to buy, without flying back and forth.') }}
+        {{ section_header('Services', 'Choose the support you need — from home scouting to settling in.') }}
 
         {{ journey_phase(
             'home-scouting',
             'home-scouting',
             'fa-home',
             '🏠 Home Scouting',
-            'Video tours + due diligence so you can make a confident offer.',
-            services.essential_services,
+            'Video tours + market intel so you can decide remotely.',
+            services.home_scouting_services,
             'home_scouting'
         ) }}
+
+        {{ journey_phase(
+            'settling-up',
+            'settling-up',
+            'fa-rocket',
+            '🧳 Settling UP in PR',
+            'Utilities, documentation, and practical support to get set up faster.',
+            services.settling_up_services,
+            'settling_up'
+        ) }}
+
+        {{ journey_phase(
+            'support',
+            'support',
+            'fa-hands-helping',
+            '📞 Referrals & Chat Time',
+            'Local help when you need calls, referrals, and quick guidance.',
+            services.support_services,
+            'support'
+        ) }}
+
+        <div class="services-notes" aria-label="Service coverage notes">
+            <h3 class="section-subtitle">Coverage & Notes</h3>
+
+            <div class="services-callout services-callout-warning" role="note" aria-label="West Coast availability note">
+                <strong>West Coast:</strong> Must call to confirm availability and accurate pricing.
+            </div>
+
+            <ul class="service-features">
+                <li class="flex items-start">Additional home video tours ($150) apply only to the same search in the same metropolitan area: Canóvanas, Luquillo, Río Grande — anything up to 25 miles from the airport in Carolina.</li>
+                <li class="flex items-start">Same service provided on the West Coast (Rincón, Aguadilla, Aguada, Isabela, Arecibo, Mayagüez, Cabo Rojo).</li>
+                <li class="flex items-start">Utilities setup ($300 each) includes a utilities deposit of up to $150. Customer will be informed if there’s higher deposits.</li>
+            </ul>
+        </div>
     </div>
 </section>

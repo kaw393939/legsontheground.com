@@ -90,6 +90,34 @@
     position: relative;
     z-index: 1;
 }
+
+/* Services notes / callouts */
+.services-notes {
+    margin-top: var(--space-2xl);
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services-callout {
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    background: var(--navy-50);
+    border: 1px solid var(--navy-100);
+    color: var(--navy-700);
+    text-align: left;
+    margin: var(--space-lg) 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.services-callout strong {
+    font-weight: var(--font-weight-extrabold);
+}
+
+.services-callout-warning {
+    background: rgba(255, 107, 107, 0.10);
+    border-color: rgba(255, 107, 107, 0.35);
+}
 .services-showcase {
     gap: var(--space-xl);
     }
