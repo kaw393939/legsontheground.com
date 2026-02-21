@@ -1,94 +1,128 @@
-# FAQ Configuration - Puerto Rico Relocation Questions
+# FAQ Configuration - Puerto Rico Home Scouting & Property Questions
 # Organized by common concern categories
 
 faqs:
-  # Property & Housing Questions
-  property_housing:
-    category: "Property & Housing"
-    icon: "fa-home"
+  service_booking:
+    category: Service & Booking
+    icon: fa-calendar-check
     questions:
-      - question: "How do you find properties that aren't listed online?"
-        answer: |
-          <p>In Puerto Rico, a lot of deals never hit Zillow, Realtor, or even MLS. If you want off-market properties, you have to work the ground. Here’s how investors actually find them—and which methods work best:</p>
-          <ol>
-            <li><strong>Walk the neighborhoods.</strong> Look for abandoned/overgrown homes, disconnected utilities, or mail piling up. Write down the address and parcel number (catastro), then pull owner info in CRIM and reach out.</li>
-            <li><strong>CRIM + Registro de la Propiedad.</strong> CRIM helps identify owners and tax status; the Registry confirms ownership, liens, and successions. Delinquent taxes and multiple heirs can be opportunities.</li>
-            <li><strong>Drive-for-dollars + local contacts.</strong> Neighbors often know the story: who owns it, whether the owner moved off-island, or if there’s a family dispute.</li>
-            <li><strong>Network with local pros.</strong> Attorneys (successions/divorce), notarios, property managers, contractors, electricians, plumbers—these people hear about deals first.</li>
-            <li><strong>Banks & cooperativas (in person).</strong> Many REO/foreclosure opportunities aren’t posted online. Ask for “Propiedades reposeídas.”</li>
-            <li><strong>Local auctions.</strong> Judicial auctions and bank postings can be great deals, but require title research and certified funds.</li>
-            <li><strong>Facebook Marketplace & WhatsApp groups.</strong> Search in Spanish (e.g., “casa abandonada,” “propiedad heredada,” “se vende por dueño”).</li>
-            <li><strong>Door knocking.</strong> Face-to-face often works better than cold calls in PR.</li>
-            <li><strong>Inherited properties (succession).</strong> Very common in PR—often discounted but can take longer to close.</li>
-          </ol>
-          <p><strong>Bottom line:</strong> Off-market in Puerto Rico = boots on the ground + local relationships.</p>
-        
-      - question: "What's the real cost of buying property in Puerto Rico?"
-        answer: |
-          <p>Here’s a clear breakdown of the real costs so you can budget accurately (not just the purchase price):</p>
-          <h4>1) Closing costs (buyer)</h4>
-          <ul>
-            <li><strong>Notary fees:</strong> often ~1%–2% of purchase price (sales are notarized by attorney-notary).</li>
-            <li><strong>Registry & government fees:</strong> filing + stamps/transfer fees vary by deal.</li>
-            <li><strong>Title insurance (recommended):</strong> optional but wise for dispute protection.</li>
-            <li><strong>Extra legal fees (if needed):</strong> depends on complexity.</li>
-            <li><strong>Appraisal & inspection:</strong> typical add-ons that vary by property size/condition.</li>
-            <li><strong>Lender fees (if financing):</strong> origination/underwriting/escrow, etc.</li>
-          </ul>
-          <p><strong>Typical total closing-cost budget:</strong> many buyers plan for ~3%–6% of purchase price (sometimes higher for complex transactions).</p>
-          <h4>2) Ongoing costs after purchase</h4>
-          <ul>
-            <li><strong>Property taxes (CRIM):</strong> often lower than mainland, but depends on classification and exemptions.</li>
-            <li><strong>Insurance:</strong> hurricane exposure matters; flood insurance may be required in certain zones.</li>
-            <li><strong>HOA/condo fees:</strong> if applicable.</li>
-          </ul>
-          <p><strong>Tip:</strong> Ask for a detailed closing-cost worksheet (“good faith estimate”) early so you’re not surprised at closing.</p>
-        
-      - question: "Is it safe to buy property in flood zones?"
-        answer: |
-          <p><strong>Short answer:</strong> yes, it can be safe — but only if you understand the zone and price the risk correctly.</p>
-          <p><strong>Not all flood zones are the same.</strong> Common FEMA zones you’ll see:</p>
-          <ul>
-            <li><strong>Zone X:</strong> low to moderate risk (insurance often optional).</li>
-            <li><strong>Zone A / AE:</strong> higher risk (flood insurance required if financing).</li>
-            <li><strong>Zone VE:</strong> very high risk (storm surge/waves) — usually not worth it unless you’re experienced and the numbers are strong.</li>
-          </ul>
-          <p><strong>When it can make sense:</strong> elevated property, no history of interior flooding (verify), reasonable insurance cost, and the price reflects the risk.</p>
-          <p><strong>When to walk away:</strong> VE zones on the coast, visible water lines/mold patterns, neighbors say it floods often, or insurance kills the cash flow.</p>
-          <p><strong>Due diligence checklist:</strong> confirm FEMA map, get insurance quotes before closing, ask neighbors about history, and verify drainage conditions and elevation when possible.</p>
-        
-      - question: "Can I get a mortgage as a non-resident?"
-        answer: |
-          <p>Yes — you can get a mortgage in Puerto Rico as a non-resident, but it’s more paperwork and varies by bank.</p>
-          <h4>What lenders typically require</h4>
-          <ul>
-            <li>Valid ID (passport/driver’s license)</li>
-            <li>Proof of income and employment (tax returns, pay stubs, contracts)</li>
-            <li>Credit history (U.S. credit helps; some accept alternatives)</li>
-            <li>Proof of assets (bank/investment statements)</li>
-            <li><strong>Higher down payment:</strong> commonly ~20–25%+ for non-residents</li>
-          </ul>
-          <h4>What to expect</h4>
-          <ul>
-            <li>Bank-by-bank variation (local lenders are often easier than mainland)</li>
-            <li>Stricter documentation and verification</li>
-            <li>Sometimes higher rates depending on profile</li>
-          </ul>
-          <p><strong>Tip:</strong> Get pre-approval early and work with a local mortgage broker and an attorney-notary familiar with PR closings.</p>
+    - question: How quickly can you visit the property?
+      answer: '<p>It depends on the availability of the realtor or seller. But we can safely say <strong>within 24–48 hours</strong> or as soon as they are available — we are available as well.</p>
 
-# FAQ Page Configuration
+        '
+    - question: What areas of Puerto Rico do you cover?
+      answer: '<p>We cover the <strong>San Juan metropolitan area</strong>, the <strong>East Coast</strong>, and the <strong>West Coast</strong>.</p>
+
+        <p>We can cover the South as well, but additional charges may apply.</p>
+
+        '
+    - question: Do I receive video, photos, and reports after the house visit?
+      answer: "<p>Yes! You receive:</p>\n<ul>\n  <li>An <strong>edited video</strong> of the house exteriors and interiors</li>\n  <li>Video from the road approaching the house</li>\n  <li>Video of the\
+        \ neighbors’ houses and surrounding area</li>\n  <li>A <strong>market analysis report</strong> including nearby commercial places, hospitals, restaurants, malls, and local online news stories about\
+        \ crime or floods</li>\n</ul>\n<p>We can also do a <strong>LIVE session</strong> so you view the house with us in real time instead of receiving an edited video.</p>\n<p><strong>Drone video</strong>\
+        \ is available at additional rates.</p>\n"
+    - question: Do you offer same day services?
+      answer: '<p>Not normally — but if we are available, we will make it happen.</p>
+
+        <p>We typically ask for <strong>24 hours advance notice</strong> to schedule a visit.</p>
+
+        '
+    - question: Can I cancel services anytime?
+      answer: '<p>We kindly ask for a <strong>24-hour notice</strong> for cancellation. Otherwise, a <strong>50% charge</strong> of the total service fee will apply.</p>
+
+        '
+    - question: How do I pay for services?
+      answer: '<p>We accept <strong>Zelle</strong> or <strong>PayPal</strong>.</p>
+
+        <p>Payment must be made <strong>24 hours prior to the filming</strong>.</p>
+
+        '
+    - question: What if the videographer finds a problem during a visit?
+      answer: '<p>You will be <strong>immediately notified</strong> of any situation impeding our work or anything you would need to know as soon as possible. We keep you fully informed throughout the entire
+        process — if anything important comes up, you’ll be the first to know.</p>
+
+        '
+  property_housing:
+    category: Property & Housing
+    icon: fa-home
+    questions:
+    - question: How do you find properties that aren’t listed online?
+      answer: "<p>In Puerto Rico, a lot of deals never hit Zillow, Realtor, or even MLS. Off-market here is <strong>relationship-driven, not tech-driven</strong>. Here’s how properties actually get found\
+        \ — and which methods work best:</p>\n\n<h4>1. Drive for Dollars (Still #1 in PR)</h4>\n<p>This works extremely well in Puerto Rico because many heirs live on the mainland, probate takes time, vacant\
+        \ properties sit for years, and storm damage is never fully repaired.</p>\n<p><strong>What to look for:</strong> overgrown yards, broken windows, water meter removed, mail piled up, hurricane tarps\
+        \ still on the roof.</p>\n<p>Take photos, write down the address, build your own list — then skip trace the owner and call or send a letter. This is sweat equity, but this is where your margin is.</p>\n\
+        \n<h4>2. Go Direct to the Registry (CRIM + Registro)</h4>\n<p>Ownership data in PR is public but not always digital.</p>\n<ul>\n  <li><strong>Centro de Recaudación de Ingresos Municipales (CRIM):</strong>\
+        \ look for delinquent property taxes.</li>\n  <li><strong>Registro de la Propiedad de Puerto Rico:</strong> search owners, liens, inheritance situations.</li>\n</ul>\n<p>Tax delinquency = motivation.\
+        \ You’d be surprised how many owners owe 5–10 years of CRIM taxes and just want out.</p>\n\n<h4>3. Network with Local Attorneys</h4>\n<p>Estate attorneys, probate lawyers, and divorce attorneys\
+        \ often know about properties <strong>before they ever hit the market</strong>. Call 20 attorneys and tell them: “I buy as-is properties, inherited homes, properties with title issues.” Be consistent\
+        \ — most investors don’t do this, and that’s why it works.</p>\n\n<h4>4. Talk to Contractors & Electricians</h4>\n<p>Contractors know who ran out of money, who is mid-renovation and stuck, and who\
+        \ inherited and doesn’t want to fix. Buy them lunch, ask for referrals, pay a small finder’s fee. In PR, <strong>relationships move deals more than MLS</strong>.</p>\n\n<h4>5. Facebook Marketplace\
+        \ (Manual Search Strategy)</h4>\n<p>Search for: “se vende por dueño,” “casa herencia,” “venta urgente,” “necesita reparación,” “no realtor.” Also check local Facebook groups in Carolina, San Juan,\
+        \ Bayamón — many older owners list there first before calling an agent.</p>\n\n<h4>6. Bandit Signs</h4>\n<p>A simple sign: <em>“COMPRO CASA EN EFECTIVO – CIERRE RÁPIDO”</em> — Puerto Rico sellers\
+        \ respond to direct Spanish messaging. Place signs near colmados, busy intersections, and older neighborhoods. Check municipal sign rules first.</p>\n\n<h4>7. Property Managers</h4>\n<p>Call property\
+        \ managers and ask: “Do you have landlords tired of tenants?” or “Anyone selling before they list?” — especially in short-term rental zones.</p>\n\n<h4>8. Build a Small Bird Dog Army</h4>\n<p>Tell\
+        \ Uber drivers, barbers, colmado owners, neighbors, and church members — offer $1,000–$3,000 referral fee at closing. Make it real money and they’ll start looking for you.</p>\n\n<p><strong>Bottom\
+        \ line:</strong> Puerto Rico rewards showing up, speaking Spanish, being patient, and following up. Off-market here = boots on the ground + local relationships.</p>\n"
+    - question: What’s the real cost of buying property in Puerto Rico?
+      answer: "<p>Here’s a clear look at the real costs of buying residential real estate in Puerto Rico — whether it’s a single-family home, a multifamily building, or a 4–5 unit property.</p>\n\n<h4>1.\
+        \ Down Payment</h4>\n<ul>\n  <li><strong>Conventional loan:</strong> typically 20–30% of purchase price (higher for investment properties like 4–5 units).</li>\n  <li>Some local lenders may allow\
+        \ 15–20% if owner-occupied (subject to lender terms).</li>\n  <li><strong>All-cash purchase:</strong> no financing requirement, but you pay all closing costs in cash.</li>\n</ul>\n<p>Many investors\
+        \ and buyers in PR pay 20–30% down on multifamily or investment property deals.</p>\n\n<h4>2. Closing Costs (Buyer’s Side) — Typically 3% to 6–7%</h4>\n<ul>\n  <li><strong>Transfer Tax + Stamp Tax:</strong>\
+        \ ~0.5%–1.5% of purchase price</li>\n  <li><strong>Notary + Drafting Fees (required by law):</strong> ~$3,000–$8,000 or ~0.5–1%</li>\n  <li><strong>Attorney Fees:</strong> 0.5–1% of purchase price</li>\n\
+        \  <li><strong>Title Search & Title Insurance:</strong> ~0.5–1.5%</li>\n  <li><strong>Recording / Registry Fees:</strong> $500–$2,000+</li>\n  <li><strong>Survey (if required):</strong> $500–$3,000</li>\n\
+        \  <li><strong>Inspections:</strong> $400–$3,000+</li>\n  <li><strong>Appraisal (if financing):</strong> ~$500–$1,000+</li>\n  <li><strong>Loan Origination & Lender Fees (if financing):</strong>\
+        \ ~1–2% of loan amount</li>\n</ul>\n<p>On a <strong>$500,000 property</strong>, total closing costs can easily be <strong>$15,000–$30,000 or more</strong>, depending on financing and inspections.</p>\n\
+        \n<h4>3. Property Transfer Taxes & Government Fees</h4>\n<ul>\n  <li><strong>Documentary Stamps / Transfer Tax:</strong> ~0.5–1.5% of purchase price</li>\n  <li><strong>Registry & Recording Fees:</strong>\
+        \ ~$500–$2,000 for deed and mortgage recordings</li>\n</ul>\n\n<h4>4. Mortgage & Financing Costs (if applicable)</h4>\n<ul>\n  <li><strong>Loan origination / lender fees:</strong> ~0.5–1.5% of loan\
+        \ amount</li>\n  <li><strong>Appraisal & processing fees:</strong> $500–$1,500+</li>\n  <li><strong>Mortgage recording fees:</strong> ~$300–$800</li>\n</ul>\n\n<h4>5. Annual Property Taxes (CRIM)</h4>\n\
+        <p>Puerto Rico’s annual property tax is typically <strong>lower than mainland</strong> because assessments are based on older valuation schedules — often well below market value. However, if rented\
+        \ out, the property is taxed as income property. Tax bills vary by municipality.</p>\n\n<h4>6. Ongoing & HOA Costs</h4>\n<ul>\n  <li><strong>HOA / Condo fees:</strong> monthly or quarterly dues\
+        \ (can be significant in multifamily buildings with shared amenities).</li>\n  <li><strong>Capital contribution at closing:</strong> some associations require an initial payment of several months\
+        \ of dues up front.</li>\n</ul>\n\n<h4>7. Maintenance, Repairs & Reserves</h4>\n<p>Budget <strong>1%–3% of property value per year</strong> for maintenance. Older PR homes often have deferred maintenance\
+        \ (hurricane repairs, corrosion issues), so initial rehab costs can be higher.</p>\n\n<h4>Quick Cost Estimates by Price Range</h4>\n<ul>\n  <li><strong>$250,000 purchase:</strong> ~$7,500–$15,000+\
+        \ in closing costs (cash purchase)</li>\n  <li><strong>$500,000 purchase:</strong> ~$15,000–$30,000+ (financing adds lender costs)</li>\n  <li><strong>$1,000,000 purchase:</strong> ~$30,000–$70,000+\
+        \ (luxury/complex title increases fees)</li>\n</ul>\n\n<p><strong>Key takeaways:</strong> Closing costs in PR are higher than many U.S. states (often 3–7% of price). Attorney + Notary involvement\
+        \ is required by law, not optional. Annual property tax (CRIM) is usually low, but other ongoing costs must be budgeted.</p>\n"
+    - question: Is it safe to buy property in flood zones?
+      answer: "<p>Yes — you can buy property in Puerto Rico that lies in a flood zone, but it comes with important financial and safety implications. Puerto Rico uses the same FEMA flood zone designations\
+        \ as the U.S. mainland.</p>\n\n<h4>FEMA Flood Zones — Least Risk to Most Risk</h4>\n\n<p><strong>Lower Flood Risk:</strong></p>\n<ul>\n  <li><strong>Zone X (Unshaded):</strong> Minimal flood hazard\
+        \ (outside the 500-year flood area). Flood insurance not federally required but risks still exist.</li>\n  <li><strong>Zone X (Shaded) / Zone B / Zone C:</strong> Moderate flood hazard (between\
+        \ 100- and 500-year flood level). Insurance not mandatory for federally backed mortgages but recommended.</li>\n</ul>\n\n<p><strong>Uncertain or Partial Analysis:</strong></p>\n<ul>\n  <li><strong>Zone\
+        \ D:</strong> Possible flood hazard but not thoroughly analyzed. Insurance optional.</li>\n</ul>\n\n<p><strong>High Flood Risk (Special Flood Hazard Areas):</strong></p>\n<ul>\n  <li><strong>Zone\
+        \ A / AE:</strong> 1% chance of flooding in any year (“100-year flood”). Federally backed mortgages typically require flood insurance. AE zones include base flood elevations.</li>\n  <li><strong>Zone\
+        \ AO / AH:</strong> Special high-risk areas with shallow flooding or ponding.</li>\n  <li><strong>Zone A99:</strong> Areas expected to be protected by a federal flood control system but still show\
+        \ risk.</li>\n  <li><strong>Zone V / VE:</strong> Coastal high-risk zones subject to storm surge and wave action — strictest construction standards, flood insurance required.</li>\n</ul>\n\n<h4>What\
+        \ to Consider</h4>\n<ul>\n  <li><strong>Insurance & Cost:</strong> High-risk zones (A and V categories) often require flood insurance — premiums can be thousands per year. Even lower-risk zones\
+        \ are strongly encouraged to carry insurance since many flooding events occur outside high-risk areas.</li>\n  <li><strong>Resale & Financing:</strong> Properties in high-risk zones may be harder\
+        \ to resell or finance.</li>\n  <li><strong>Local Conditions:</strong> Puerto Rico’s mountainous terrain, tropical rainfall, hurricane exposure, and coastal areas make flood risk especially dynamic\
+        \ — zones can change with updated FEMA maps.</li>\n</ul>\n\n<h4>Practical Steps Before Buying</h4>\n<ol>\n  <li>Check the <strong>FEMA Flood Map</strong> for the exact property address (FEMA Flood\
+        \ Map Service Center).</li>\n  <li>Ask for an <strong>Elevation Certificate</strong> — shows how high the building sits relative to predicted flood levels.</li>\n  <li>Get a <strong>Flood Insurance\
+        \ Quote early</strong> — costs can dramatically affect your budget.</li>\n  <li>Consult a <strong>local planner or floodplain manager</strong> — Puerto Rico may have additional rules or local flood\
+        \ maps.</li>\n</ol>\n\n<p><strong>Bottom line:</strong> Buying in a flood zone is possible but needs careful planning. Understand the specific designation, prepare for higher insurance costs when\
+        \ required, and evaluate long-term resale and risk tolerance. If flood risk is a deal breaker, properties in Zone X are typically easiest to own and insure.</p>\n"
+    - question: Can I buy property in Puerto Rico as a non-resident?
+      answer: "<p>Yes — both U.S. citizens living outside Puerto Rico and non-U.S. citizens (foreign nationals) can buy property in Puerto Rico. There are <strong>no ownership restrictions based on citizenship</strong>.</p>\n\
+        \n<h4>Option 1: Puerto Rico Local Bank Mortgage</h4>\n<p>Many Puerto Rico banks offer mortgages to non-residents. Local lenders are more familiar with the island’s legal/real-estate system and typically\
+        \ easier to work with than mainland banks.</p>\n<ul>\n  <li><strong>Down payment:</strong> ~20% to 35% (sometimes more for non-U.S. buyers)</li>\n  <li><strong>Documentation:</strong> income verification,\
+        \ bank statements, credit history (U.S. or foreign)</li>\n  <li><strong>Interest rates:</strong> often slightly higher than mainland U.S.</li>\n  <li><strong>Loan-to-Value (LTV):</strong> usually\
+        \ 65%–80% for non-residents</li>\n  <li><strong>Main lenders:</strong> Banco Popular de Puerto Rico, FirstBank, Oriental Bank, and others</li>\n</ul>\n\n<h4>Option 2: U.S. Mainland Bank Mortgage</h4>\n\
+        <p>Some U.S. banks offer specialty home loans, but in practice <strong>many large lenders don’t finance Puerto Rico properties directly</strong> because they aren’t licensed or comfortable with\
+        \ local law. Those that do may still require a local affiliate or special approval.</p>\n<p>Some buyers use a <strong>home equity loan / HELOC</strong> on existing mainland property to get cash\
+        \ and close fast, then refinance locally in Puerto Rico later.</p>\n\n<h4>Option 3: Cash Purchase + Refinance Later</h4>\n<p>This is a popular strategy, especially for foreign buyers and investors:</p>\n\
+        <ul>\n  <li>Pay cash at closing to move quickly</li>\n  <li>Refinance later with a local bank once the title is clear</li>\n  <li>Cash gives you negotiating power — sellers prefer certainty</li>\n\
+        </ul>\n\n<h4>Which Path Is Best?</h4>\n<ul>\n  <li><strong>If your U.S. bank can’t finance a PR property:</strong> Line up a mortgage with a Puerto Rico bank before you start shopping. It speeds\
+        \ up closing and shows sellers you’re ready.</li>\n  <li><strong>If your U.S. bank can lend for PR real estate:</strong> Worth considering if you have a relationship, good credit, and favorable\
+        \ rates.</li>\n  <li><strong>For the simplest closing:</strong> Cash or a combination (cash + future refinance) is the most competitive approach in the market.</li>\n</ul>\n"
 page_config:
-  title: "Frequently Asked Questions"
-  subtitle: "Everything you need to know about buying property in Puerto Rico"
-  description: "Get answers to common buyer questions about neighborhoods, pricing, inspections, flood risk, and how remote home scouting works."
-  
-# FAQ Component Settings
+  title: Frequently Asked Questions
+  subtitle: Everything you need to know about buying property in Puerto Rico
+  description: Get answers to common buyer questions about our services, neighborhoods, pricing, inspections, flood risk, and how remote home scouting works.
 component_settings:
   show_search: true
   show_categories: true
   expandable_answers: true
-  contact_cta: 
+  contact_cta:
     show: true
-    text: "Still have questions?"
-    button_text: "Ask Our Experts"
-    button_link: "#contact"
+    text: Still have questions?
+    button_text: Ask Our Experts
+    button_link: '#contact'

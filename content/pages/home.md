@@ -47,8 +47,8 @@ cta:
       url: "#contact"
       icon: "fa-search"
       style: "primary"
-    - text: "Call Now: (787) 555-0123"
-      url: "tel:+17875550123"
+    - text: "Call Now: (732) 231-3095"
+      url: "tel:+17322313095"
       icon: "fa-phone"
       style: "white"
   guarantee:
