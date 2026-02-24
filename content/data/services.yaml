@@ -1,178 +1,178 @@
-## Services Configuration - Journey-Based (Owner Pricing)
-## Source: owner email (Dec 17, 2025)
-
 home_scouting_services:
-  - id: "home-scouting-bundle-first"
-    title: "Home Scouting (First Home) + Market Analysis"
-    price: "$350"
-    icon: "🏠"
-    popular: true
-    psychological_appeal: "Buy With Confidence"
-    description: "Video tour + buyer-focused analysis so you can decide remotely"
-    journey_phase: "home_scouting"
-    what_you_get: "A clear, offer-ready snapshot of the home, street, and real market value"
-    features:
-      - "Edited video tour (up to 10 minutes) + driving up to the house"
-      - "Street + neighborhood feel (noise, access, vibe)"
-      - "Market analysis: comps when available + pricing reality check"
-      - "Flood zone check + flood-risk screening"
-      - "Crime stats for the area (public-source lookup)"
-      - "Summary of red flags + next-step recommendations"
-
-  - id: "video-tour-first"
-    title: "Professional Property Walkthrough Video"
-    price: "$250"
-    icon: "🎥"
-    popular: false
-    psychological_appeal: "See It Before You Fly"
-    description: "A clean, edited walkthrough so you can shortlist confidently"
-    journey_phase: "home_scouting"
-    what_you_get: "An edited video tour you can rewatch and share"
-    features:
-      - "Edited video tour (up to 10 minutes)"
-      - "Driving approach to the property"
-      - "Full interior walkthrough with key condition callouts"
-      - "Exterior views + immediate surroundings"
-      - "Delivered via private Google Drive link (easy to view, download, and share)"
-
-  - id: "video-tour-additional"
-    title: "Video Tour (Edited) — Additional Homes"
-    price: "$150"
-    icon: "📍"
-    popular: false
-    psychological_appeal: "Compare Options Fast"
-    description: "Additional tours for the same search area (availability-based)"
-    journey_phase: "home_scouting"
-    what_you_get: "Extra tours to compare homes without extra flights"
-    features:
-      - "Edited video tour only (no market analysis)"
-      - "Same search + same metro area (see coverage notes below)"
-      - "Availability-based scheduling"
-      - "Delivered via private Google Drive link (easy to view, download, and share)"
-
-  - id: "market-analysis"
-    title: "Market Analysis (Standalone)"
-    price: "$100"
-    icon: "📊"
-    popular: false
-    psychological_appeal: "Know The Real Value"
-    description: "Comps when available + flood zone + crime stats for the area"
-    journey_phase: "home_scouting"
-    what_you_get: "A quick, buyer-focused reality check before you commit"
-    features:
-      - "Comparable sales (when available)"
-      - "Flood zone check"
-      - "Crime stats for the area"
-      - "High-level notes on pricing + risks"
-
-
+- id: home-scouting-bundle-first
+  title: Home Scouting (First Home) + Market Analysis
+  price: $350
+  icon: 🏠
+  popular: true
+  psychological_appeal: Buy With Confidence
+  description: Video tour + buyer-focused analysis so you can decide remotely
+  journey_phase: home_scouting
+  what_you_get: A clear, offer-ready snapshot of the home, street, and real market
+    value
+  features:
+  - Edited video tour (up to 10 minutes) + driving up to the house
+  - Street + neighborhood feel (noise, access, vibe)
+  - 'Market analysis: comps when available + pricing reality check'
+  - Flood zone check + flood-risk screening
+  - Crime stats for the area (public-source lookup)
+  - Summary of red flags + next-step recommendations
+- id: video-tour-first
+  title: Professional Property Walkthrough Video
+  price: $250
+  icon: 🎥
+  popular: false
+  psychological_appeal: See It Before You Fly
+  description: A clean, edited walkthrough so you can shortlist confidently
+  journey_phase: home_scouting
+  what_you_get: An edited video tour you can rewatch and share
+  features:
+  - Edited video tour (up to 10 minutes)
+  - Driving approach to the property
+  - Full interior walkthrough with key condition callouts
+  - Exterior views + immediate surroundings
+  - Delivered via private Google Drive link (easy to view, download, and share)
+- id: video-tour-additional
+  title: Video Tour (Edited) — Additional Homes
+  price: $150
+  icon: 📍
+  popular: false
+  psychological_appeal: Compare Options Fast
+  description: Additional tours for the same search area.
+  journey_phase: home_scouting
+  what_you_get: Extra tours to compare homes without extra flights
+  features:
+  - Edited video tour only (no market analysis)
+  - Same search + same metro area (see coverage notes below)
+  - Delivered via private Google Drive link (easy to view, download, and share)
+- id: market-analysis
+  title: Market Analysis (Standalone)
+  price: $100
+  icon: 📊
+  popular: false
+  psychological_appeal: Know The Real Value
+  description: Comps when available + flood zone + crime stats for the area
+  journey_phase: home_scouting
+  what_you_get: A quick, buyer-focused reality check before you commit
+  features:
+  - Comparable sales (when available)
+  - Flood zone check
+  - Crime stats for the area
+  - High-level notes on pricing + risks
 settling_up_services:
-  - id: "utilities-setup"
-    title: "Utilities Setup"
-    price: "$300 each"
-    icon: "🔌"
-    popular: true
-    psychological_appeal: "Get Set Up Faster"
-    description: "Help setting up utilities and essential services"
-    journey_phase: "settling_up"
-    what_you_get: "A smoother first week with fewer phone calls, forms, and delays"
-    features:
-      - "Electricity (LUMA)"
-      - "Water service"
-      - "Internet/TV/Phone providers"
-      - "Gas (if needed)"
-      - "Trash collection and municipal services"
-      - "Includes utilities deposit of up to $150. Customer will be informed if there’s higher deposits."
-
-  - id: "off-market-sourcing"
-    title: "Off-Market Property Sourcing"
-    price: "2–5% of purchase price"
-    icon: "🔍"
-    popular: false
-    psychological_appeal: "Avoid Costly Mistakes"
-    description: "We locate off-market opportunities and negotiate deals on your behalf"
-    journey_phase: "settling_up"
-    what_you_get: "Access to properties you won't find on MLS or listing sites"
-    features:
-      - "Bird Dog Fee: sourcing an off-market property opportunity and introducing it to the buyer"
-      - "Wholesaling Fee: sourcing and negotiating a deal on your behalf and assigning the contract"
-      - "Fee determined based on finding method (Bird Dog vs. Wholesaling), typically 2–5% of purchase price"
-    disclaimer: "I am not a licensed Realtor. My fee applies to locating and identifying off-market opportunities (bird dog services) or sourcing and negotiating deals on your behalf (wholesaling). I do not represent buyers or sellers in a licensed real estate brokerage capacity. All services, fees, and expectations will be clearly outlined in a written agreement prior to engagement."
-
-  - id: "housing-assistance"
-    title: "Housing & Relocation Assistance"
-    price: "Finder's/consultation fee"
-    icon: "🗝️"
-    popular: false
-    psychological_appeal: "Navigate the Local Process"
-    description: "Support finding housing and coordinating the moving process"
-    journey_phase: "settling_up"
-    what_you_get: "Consulting assistance navigating listings, leases, and the local process"
-    features:
-      - "Assistance finding a home or apartment (may or may not include working with a Realtor)"
-      - "Short-term rental guidance while you house-hunt"
-      - "Title and property search assistance (especially if purchasing)"
-      - "Finder's/consultation fee applies upon signing a lease or closing on a home"
-    disclaimer: "I am not a licensed Realtor. My consultation fee applies to helping you find housing and navigate the local process. I do not represent buyers or sellers in a licensed real estate brokerage capacity. All services, fees, and expectations will be clearly outlined in a written agreement prior to engagement."
-
-  - id: "government-documentation"
-    title: "Government / Documentation Help"
-    price: "Call for pricing"
-    icon: "🪪"
-    popular: false
-    psychological_appeal: "Skip Bureaucracy"
-    description: "Support navigating common PR documentation steps"
-    journey_phase: "settling_up"
-    what_you_get: "Clear guidance + help preparing for visits and requirements"
-    features:
-      - "Puerto Rico driver’s license transfer"
-      - "Vehicle registration"
-      - "Guidance on what to bring + how to prepare"
-
-
+- id: utilities-setup
+  title: Utilities Setup
+  price: $300 each
+  icon: 🔌
+  popular: true
+  psychological_appeal: Get Set Up Faster
+  description: Help setting up utilities and essential services
+  journey_phase: settling_up
+  what_you_get: A smoother first week with fewer phone calls, forms, and delays
+  features:
+  - Electricity (LUMA)
+  - Water service
+  - Internet/TV/Phone providers
+  - Gas (if needed)
+  - Trash collection and municipal services
+  - Includes utilities deposit of up to $150. Customer will be informed if there’s
+    higher deposits.
+- id: off-market-sourcing
+  title: Off-Market Property Sourcing
+  price: Fee to be determined based on finding method (Bird Dog vs. Wholesaling)
+  icon: 🔍
+  popular: false
+  psychological_appeal: Avoid Costly Mistakes
+  description: Typically ranges from 2–5% of the purchase price. Bird dog fee is usually
+    2%.
+  journey_phase: settling_up
+  what_you_get: Access to properties you won't find on MLS or listing sites
+  features:
+  - 'Bird Dog Fee: Refers to sourcing an off-market property opportunity and introducing
+    the opportunity to the buyer.'
+  - 'Wholesaling Fee: Refers to sourcing and negotiating a deal on your behalf and
+    assigning the contract accordingly.'
+  disclaimer: I am not a licensed Realtor. My consultation fee applies to locating
+    and identifying off-market opportunities (bird dog services) or sourcing and negotiating
+    deals on your behalf (wholesaling). I do not represent buyers or sellers in a
+    licensed real estate brokerage capacity. All services, fees, and expectations
+    will be clearly outlined in a written agreement prior to engagement.
+- id: housing-assistance
+  title: Support Finding Housing & Coordinating the Moving Process
+  price: Finder's/consultation fee
+  icon: 🗝️
+  popular: false
+  psychological_appeal: Navigate the Local Process
+  description: Support finding housing and coordinating the moving process
+  journey_phase: settling_up
+  what_you_get: Consulting assistance navigating listings, leases, and the local process.
+  features:
+  - Consulting assistance navigating listings, leases, and the local process.
+  - Assistance finding a home or apartment (may or may not include working with a
+    Realtor)
+  - Short-term rental guidance while you house-hunt
+  - Title and property search assistance (especially if purchasing)
+  - Finder’s/consultation fee applies upon signing a lease or closing on a home
+  disclaimer: I am not a licensed Realtor. My consultation fee applies to locating
+    and identifying off-market opportunities (bird dog services) or sourcing and negotiating
+    deals on your behalf (wholesaling). I do not represent buyers or sellers in a
+    licensed real estate brokerage capacity. All services, fees, and expectations
+    will be clearly outlined in a written agreement prior to engagement.
+- id: government-documentation
+  title: Government / Documentation Help
+  price: Call for pricing
+  icon: 🪪
+  popular: false
+  psychological_appeal: Skip Bureaucracy
+  description: Support navigating common PR documentation steps
+  journey_phase: settling_up
+  what_you_get: Clear guidance + help preparing for visits and requirements
+  features:
+  - Puerto Rico driver’s license transfer
+  - Vehicle registration
+  - Guidance on what to bring + how to prepare
 support_services:
-  - id: "referrals-info-compilation"
-    title: "Referrals & Information Compilation"
-    price: "$50/hour (1 hour min)"
-    icon: "📇"
-    popular: false
-    psychological_appeal: "Get Trusted Introductions"
-    description: "Bilingual lists, referrals, calling to set appointments, and more"
-    journey_phase: "support"
-    what_you_get: "A reliable local to research, call, and coordinate on your behalf"
-    features:
-      - "Bilingual doctor lists + referrals"
-      - "CPA referrals"
-      - "Calling to set up appointments"
-      - "Calling to clarify a matter (phone or in person)"
-      - "Minimum 1 hour"
-
-  - id: "chat-time-30"
-    title: "Chat Time (Calls/Text) — 30 Minutes"
-    price: "$30"
-    icon: "💬"
-    popular: false
-    psychological_appeal: "Quick Local Insight"
-    description: "Talk through a situation with a local guide"
-    journey_phase: "support"
-    what_you_get: "Up to 30 minutes of live guidance via call/text"
-    features:
-      - "Personal or cultural situations"
-      - "Business questions"
-      - "We can also ask around and research on your behalf"
-      - "Must provide payment through PayPal or Zelle upon texting to schedule or before calling"
-
-  - id: "chat-time-60"
-    title: "Chat Time (Calls/Text) — 60 Minutes"
-    price: "$60"
-    icon: "🗣️"
-    popular: false
-    psychological_appeal: "Deeper Problem-Solving"
-    description: "More time for complex questions or planning"
-    journey_phase: "support"
-    what_you_get: "Up to 60 minutes of live guidance via call/text"
-    features:
-      - "Personal or cultural situations"
-      - "Business questions"
-      - "We can also ask around and research on your behalf"
-      - "Must provide payment through PayPal or Zelle upon texting to schedule or before calling"
+- id: referrals-info-compilation
+  title: Referrals & Information Compilation
+  price: $50/hour (1 hour min)
+  icon: 📇
+  popular: false
+  psychological_appeal: Get Trusted Introductions
+  description: Bilingual lists, referrals, calling to set appointments, and more
+  journey_phase: support
+  what_you_get: A reliable local to research, call, and coordinate on your behalf
+  features:
+  - Bilingual doctor lists + referrals
+  - CPA referrals
+  - Calling to set up appointments
+  - Calling to clarify a matter (phone or in person)
+  - Minimum 1 hour
+- id: chat-time-30
+  title: Chat Time (Calls/Text) — 30 Minutes
+  price: $30
+  icon: 💬
+  popular: false
+  psychological_appeal: Quick Local Insight
+  description: Talk through a situation with a local guide
+  journey_phase: support
+  what_you_get: Up to 30 minutes of live guidance via call/text
+  features:
+  - Personal or cultural situations
+  - Business questions
+  - We can also ask around and research on your behalf
+  - Must provide payment through PayPal or Zelle upon texting to schedule or before
+    calling
+- id: chat-time-60
+  title: Chat Time (Calls/Text) — 60 Minutes
+  price: $60
+  icon: 🗣️
+  popular: false
+  psychological_appeal: Deeper Problem-Solving
+  description: More time for complex questions or planning
+  journey_phase: support
+  what_you_get: Up to 60 minutes of live guidance via call/text
+  features:
+  - Personal or cultural situations
+  - Business questions
+  - We can also ask around and research on your behalf
+  - Must provide payment through PayPal or Zelle upon texting to schedule or before
+    calling
