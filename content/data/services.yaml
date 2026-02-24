@@ -113,7 +113,7 @@ settling_up_services:
       - "Short-term rental guidance while you house-hunt"
       - "Title and property search assistance (especially if purchasing)"
       - "Finder's/consultation fee applies upon signing a lease or closing on a home"
-    disclaimer: "I am not a licensed Realtor. My consultation fee applies to locating and identifying off-market opportunities (bird dog services) or sourcing and negotiating deals on your behalf (wholesaling). I do not represent buyers or sellers in a licensed real estate brokerage capacity. All services, fees, and expectations will be clearly outlined in a written agreement prior to engagement."
+    disclaimer: "I am not a licensed Realtor. My consultation fee applies to helping you find housing and navigate the local process. I do not represent buyers or sellers in a licensed real estate brokerage capacity. All services, fees, and expectations will be clearly outlined in a written agreement prior to engagement."
 
   - id: "government-documentation"
     title: "Government / Documentation Help"

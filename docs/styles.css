@@ -2810,6 +2810,20 @@ section.dark-context .btn-outline:hover,
     font-size: 1rem;
     }
 
+.service-card .service-disclaimer {
+    margin-top: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    border-top: 1px solid var(--gray-200);
+    color: var(--gray-500);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    width: 100%;
+    }
+
+.service-card .service-disclaimer p {
+    margin: 0;
+    }
+
 .service-card .btn {
     align-items: center;
     margin-top: var(--space-sm);
