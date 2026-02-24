@@ -34,6 +34,11 @@
         <li class="flex items-start">{{ feature }}</li>
         {% endfor %}
     </ul>
+    {% if service.disclaimer %}
+    <div class="service-disclaimer">
+        <p><small><em>{{ service.disclaimer }}</em></small></p>
+    </div>
+    {% endif %}
     {{ cta_link(
         '/#contact',
         ('btn btn-primary service-cta' if service.popular else 'btn btn-outline service-cta'),

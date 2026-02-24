@@ -20,7 +20,7 @@ home_scouting_services:
       - "Summary of red flags + next-step recommendations"
 
   - id: "video-tour-first"
-    title: "Video Tour (Edited) — First Home"
+    title: "Professional Property Walkthrough Video"
     price: "$250"
     icon: "🎥"
     popular: false
@@ -30,10 +30,10 @@ home_scouting_services:
     what_you_get: "An edited video tour you can rewatch and share"
     features:
       - "Edited video tour (up to 10 minutes)"
-      - "Includes driving up to the house"
-      - "Interior walkthrough + key condition callouts"
+      - "Driving approach to the property"
+      - "Full interior walkthrough with key condition callouts"
       - "Exterior views + immediate surroundings"
-      - "Delivered remotely"
+      - "Delivered via private Google Drive link (easy to view, download, and share)"
 
   - id: "video-tour-additional"
     title: "Video Tour (Edited) — Additional Homes"
@@ -48,7 +48,7 @@ home_scouting_services:
       - "Edited video tour only (no market analysis)"
       - "Same search + same metro area (see coverage notes below)"
       - "Availability-based scheduling"
-      - "Delivered remotely"
+      - "Delivered via private Google Drive link (easy to view, download, and share)"
 
   - id: "market-analysis"
     title: "Market Analysis (Standalone)"
@@ -84,20 +84,36 @@ settling_up_services:
       - "Trash collection and municipal services"
       - "Includes utilities deposit of up to $150. Customer will be informed if there’s higher deposits."
 
-  - id: "housing-assistance"
-    title: "Real Estate & Housing Assistance"
-    price: "3–5% finder’s fee"
-    icon: "🗝️"
+  - id: "off-market-sourcing"
+    title: "Off-Market Property Sourcing"
+    price: "2–5% of purchase price"
+    icon: "🔍"
     popular: false
     psychological_appeal: "Avoid Costly Mistakes"
-    description: "Support finding housing and coordinating the steps around moving"
+    description: "We locate off-market opportunities and negotiate deals on your behalf"
     journey_phase: "settling_up"
-    what_you_get: "Help navigating listings, leases, and the local process"
+    what_you_get: "Access to properties you won't find on MLS or listing sites"
     features:
-      - "Assistance finding a home or apartment"
+      - "Bird Dog Fee: sourcing an off-market property opportunity and introducing it to the buyer"
+      - "Wholesaling Fee: sourcing and negotiating a deal on your behalf and assigning the contract"
+      - "Fee determined based on finding method (Bird Dog vs. Wholesaling), typically 2–5% of purchase price"
+    disclaimer: "I am not a licensed Realtor. My fee applies to locating and identifying off-market opportunities (bird dog services) or sourcing and negotiating deals on your behalf (wholesaling). I do not represent buyers or sellers in a licensed real estate brokerage capacity. All services, fees, and expectations will be clearly outlined in a written agreement prior to engagement."
+
+  - id: "housing-assistance"
+    title: "Housing & Relocation Assistance"
+    price: "Finder's/consultation fee"
+    icon: "🗝️"
+    popular: false
+    psychological_appeal: "Navigate the Local Process"
+    description: "Support finding housing and coordinating the moving process"
+    journey_phase: "settling_up"
+    what_you_get: "Consulting assistance navigating listings, leases, and the local process"
+    features:
+      - "Assistance finding a home or apartment (may or may not include working with a Realtor)"
       - "Short-term rental guidance while you house-hunt"
-      - "Title and property search assistance (especially if buying)"
-      - "Finder’s fee applies upon signing a lease or closing on a home"
+      - "Title and property search assistance (especially if purchasing)"
+      - "Finder's/consultation fee applies upon signing a lease or closing on a home"
+    disclaimer: "I am not a licensed Realtor. My consultation fee applies to locating and identifying off-market opportunities (bird dog services) or sourcing and negotiating deals on your behalf (wholesaling). I do not represent buyers or sellers in a licensed real estate brokerage capacity. All services, fees, and expectations will be clearly outlined in a written agreement prior to engagement."
 
   - id: "government-documentation"
     title: "Government / Documentation Help"
