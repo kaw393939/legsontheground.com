@@ -4,54 +4,53 @@ faqs:
     icon: fa-calendar-check
     questions:
     - question: How quickly can you visit the property?
-      answer: '<p>It depends on the availability of the realtor or seller.  But we
-        can safely say within 24-48 hours or as soon as they are available.</p>
-
-        '
+      answer: <p>It depends on the availability of the realtor or seller. But we can
+        safely say within 24-48 hours or as soon as they are available.</p>
     - question: What areas of PR do you do?
-      answer: '<p>We cover the San Juan metropolitan area, the East coast and West
+      answer: <p>We cover the San Juan metropolitan area, the East coast and West
         Coast.<br>We can cover the South but additional charges may apply.</p>
-
-        '
     - question: Do I receive video/photos, reports after the house visits?
-      answer: '<p>Yes.  Depending on the services requested, you receive:<br>an edited
-        video of the house exteriors, <br>interiors, <br>video from the road approaching
-        the house, <br>neighbors houses <br>and a market analysis reports including
-        commercial places, hospitals, restaurants, malls nearby, local online news
-        stories about crime or floods. <br>Or, we can provide a LIVE streaming session
-        so you view the house with us instead of providing an edited video.                                                                       *Zoom
-        live streaming participant recording: Participants cannot record by default.
-        The host must grant recording permissions to a participant, or make them a
-        co-host.  Please request permission to allow you to record the live streaming
-        session.</p>
+      answer: '<p>Yes. Depending on the services requested, you receive:</p>
 
-        <p>Drone video available at additional rates.</p>
+        <ul>
 
-        '
+        <li>an edited video of the house exteriors,</li>
+
+        <li>interiors,</li>
+
+        <li>video from the road approaching the house,</li>
+
+        <li>neighbors houses</li>
+
+        <li>and a market analysis reports including commercial places, hospitals,
+        restaurants, malls nearby, local online news stories about crime or floods.</li>
+
+        </ul>
+
+        <p>Or, we can provide a LIVE streaming session so you view the house with
+        us instead of providing an edited video.</p>
+
+        <p>*Zoom live streaming participant recording: Participants cannot record
+        by default. The host must grant recording permissions to a participant, or
+        make them a co-host. Please request permission to allow you to record the
+        live streaming session.</p>
+
+        <p>Drone video available at additional rates.</p>'
     - question: Do you offer same day services?
-      answer: '<p>Normally we ask for a 24-48 hour window advance notice, but if we
+      answer: <p>Normally we ask for a 24-48 hour window advance notice, but if we
         are available the same day, as well as the realtor, we will make it happen.</p>
-
-        '
     - question: Can I cancel services anytime?
-      answer: '<p>We kindly ask for a 24 hour notice for cancellation, otherwise a
-        20% of the total charge will apply.  The fee can be applied to a future re-schedule.</p>
-
-        '
+      answer: <p>We kindly ask for a 24 hour notice for cancellation, otherwise a
+        20% of the total charge will apply. The fee can be applied to a future re-schedule.</p>
     - question: How do I pay for services?
-      answer: '<p>Payment must be received 24 hours prior to the filming.</p>
-
-        <p>We accept Zelle or paypal.</p>
-
-        '
+      answer: <p>Payment must be received 24 hours prior to the filming.</p><p>We
+        accept Zelle or paypal.</p>
     - question: What if the videographer sees or finds a problem during a visit?
-      answer: '<p>The customer will be immediately notified of any situation impeding
-        our labor or any situation they would need to know asap.  The customer will
-        be aware should anything important come up.   There''s a kill fee associated
+      answer: <p>The customer will be immediately notified of any situation impeding
+        our labor or any situation they would need to know asap. The customer will
+        be aware should anything important come up. There's a kill fee associated
         with last minute sudden cancellations caused by circumstances outside of our
-        control of 20% of the total fee.   The fee can be applied to a future re-schedule.</p>
-
-        '
+        control of 20% of the total fee. The fee can be applied to a future re-schedule.</p>
   property_housing:
     category: Property & Housing
     icon: fa-home
@@ -63,17 +62,22 @@ faqs:
 
         <p>Look for:</p>
 
-        <p>Overgrown yards</p>
+        <ul>
 
-        <p>Boarded windows</p>
+        <li>Overgrown yards</li>
 
-        <p>Mail piled up</p>
+        <li>Boarded windows</li>
 
-        <p>Faded paint / structural neglect</p>
+        <li>Mail piled up</li>
+
+        <li>Faded paint / structural neglect</li>
+
+        </ul>
 
         <p>Write down the address. Then research ownership.</p>
 
         <p>Most abandoned properties are not online.</p>
+
 
         <p>2. How to Get Owner Info from CRIM (Critical Step)</p>
 
@@ -90,13 +94,18 @@ faqs:
 
         <p>You can usually see:</p>
 
-        <p>Owner name</p>
+        <ul>
 
-        <p>Assessed value</p>
+        <li>Owner name</li>
 
-        <p>Tax balance / delinquency</p>
+        <li>Assessed value</li>
+
+        <li>Tax balance / delinquency</li>
+
+        </ul>
 
         <p>This works for initial research.</p>
+
 
         <p>Option 2 – Call the Local CRIM Office</p>
 
@@ -104,38 +113,54 @@ faqs:
 
         <p>Ask to confirm:</p>
 
-        <p>Owner name</p>
+        <ul>
 
-        <p>Mailing address</p>
+        <li>Owner name</li>
 
-        <p>Tax status</p>
+        <li>Mailing address</li>
+
+        <li>Tax status</li>
+
+        </ul>
 
         <p>They may give basic info. They won’t give sensitive data, but ownership
         and tax balance are often confirmable.</p>
 
-        <p>Option 3 – In Person (Most Effective for Complex Situations)<br>If:</p>
 
-        <p>Ownership looks outdated</p>
+        <p>Option 3 – In Person (Most Effective for Complex Situations)</p>
 
-        <p>Owner is deceased</p>
+        <p>If:</p>
 
-        <p>Taxes are severely delinquent</p>
+        <ul>
 
-        <p>Records are unclear</p>
+        <li>Ownership looks outdated</li>
+
+        <li>Owner is deceased</li>
+
+        <li>Taxes are severely delinquent</li>
+
+        <li>Records are unclear</li>
+
+        </ul>
 
         <p>Go in person.</p>
 
         <p>Staff are more helpful face-to-face, especially in smaller municipalities.
         Bring:</p>
 
-        <p>Property address</p>
+        <ul>
 
-        <p>Cadastral number if possible</p>
+        <li>Property address</li>
 
-        <p>Photo ID</p>
+        <li>Cadastral number if possible</li>
+
+        <li>Photo ID</li>
+
+        </ul>
 
         <p>In Puerto Rico, in-person relationships matter. If you plan to source regularly,
         build rapport.</p>
+
 
         <p>3. Cross-Check with Registro de la Propiedad</p>
 
@@ -145,13 +170,18 @@ faqs:
 
         <p>If the owner is deceased, look for:</p>
 
-        <p>Estate not settled</p>
+        <ul>
 
-        <p>Multiple heirs</p>
+        <li>Estate not settled</li>
 
-        <p>No updated deed</p>
+        <li>Multiple heirs</li>
+
+        <li>No updated deed</li>
+
+        </ul>
 
         <p>That’s opportunity.</p>
+
 
         <p>4. Heirs / “Herencia” Situations</p>
 
@@ -159,55 +189,75 @@ faqs:
 
         <p>Many properties:</p>
 
-        <p>Have 3–10 heirs</p>
+        <ul>
 
-        <p>Sit vacant</p>
+        <li>Have 3–10 heirs</li>
 
-        <p>Have tax debt</p>
+        <li>Sit vacant</li>
 
-        <p>Were never properly transferred</p>
+        <li>Have tax debt</li>
+
+        <li>Were never properly transferred</li>
+
+        </ul>
 
         <p>Approach respectfully. You’re solving a paperwork and family burden.</p>
+
 
         <p>5. Attorneys & Notaries</p>
 
         <p>Build relationships with:</p>
 
-        <p>Probate attorneys</p>
+        <ul>
 
-        <p>Notaries handling estate divisions</p>
+        <li>Probate attorneys</li>
 
-        <p>Divorce attorneys</p>
+        <li>Notaries handling estate divisions</li>
+
+        <li>Divorce attorneys</li>
+
+        </ul>
 
         <p>They hear about distressed property first.</p>
 
         <p>Bring real buyers, not talk.</p>
 
+
         <p>6. Municipal Code Violation Lists</p>
 
         <p>Request:</p>
 
-        <p>Unsafe structures</p>
+        <ul>
 
-        <p>Abandoned property lists</p>
+        <li>Unsafe structures</li>
 
-        <p>Demolition notices</p>
+        <li>Abandoned property lists</li>
+
+        <li>Demolition notices</li>
+
+        </ul>
 
         <p>Pressure creates motivation.</p>
+
 
         <p>7. Facebook Marketplace & Local Groups</p>
 
         <p>Search:</p>
 
-        <p>“Se vende urgente”</p>
+        <ul>
 
-        <p>“Dueño vende”</p>
+        <li>“Se vende urgente”</li>
 
-        <p>“Propiedad herencia”</p>
+        <li>“Dueño vende”</li>
 
-        <p>“Necesita arreglos”</p>
+        <li>“Propiedad herencia”</li>
+
+        <li>“Necesita arreglos”</li>
+
+        </ul>
 
         <p>Message fast. Speed wins.</p>
+
 
         <p>8. Talk to Neighbors</p>
 
@@ -216,17 +266,23 @@ faqs:
 
         <p>Puerto Rico runs on relationships.</p>
 
+
         <p>9. Contractors & Handymen</p>
 
         <p>They know:</p>
 
-        <p>Who ran out of money</p>
+        <ul>
 
-        <p>Who abandoned a project</p>
+        <li>Who ran out of money</li>
 
-        <p>Who’s frustrated</p>
+        <li>Who abandoned a project</li>
+
+        <li>Who’s frustrated</li>
+
+        </ul>
 
         <p>Stay top of mind.</p>
+
 
         <p>10. Follow Up Relentlessly</p>
 
@@ -234,28 +290,32 @@ faqs:
 
         <p>Puerto Rico sellers move slow.<br>Consistency beats aggression.</p>
 
+
         <p>The Real Edge with CRIM</p>
 
         <p>The best investors in PR don’t just pull ownership.</p>
 
         <p>They look for:</p>
 
-        <p>3+ years tax delinquent</p>
+        <ul>
 
-        <p>Owner mailing address in mainland U.S.</p>
+        <li>3+ years tax delinquent</li>
 
-        <p>Deceased owner</p>
+        <li>Owner mailing address in mainland U.S.</li>
 
-        <p>Mismatch between CRIM and Registry</p>
+        <li>Deceased owner</li>
 
-        <p>That’s where the real leverage is.</p>
+        <li>Mismatch between CRIM and Registry</li>
 
-        '
+        </ul>
+
+        <p>That’s where the real leverage is.</p>'
     - question: Real Costs of buying a property in PR.
       answer: '<p>Here’s a clear look at the real costs of buying residential real
         estate in Puerto Rico — whether it’s a single-family home, a multifamily building,
         or a 4–5 unit property. These are based on typical costs on the island and
         what buyers actually pay at closing and beyond:</p>
+
 
         <p>📌 1. Down Payment</p>
 
@@ -264,17 +324,22 @@ faqs:
 
         <p>Financed purchase:</p>
 
-        <p>Conventional loan: typically 20–30% of purchase price (higher for investment
-        properties like 4–5 units).</p>
+        <ul>
 
-        <p>Some local lenders may allow 15–20% if owner-occupied (subject to lender
-        terms).</p>
+        <li>Conventional loan: typically 20–30% of purchase price (higher for investment
+        properties like 4–5 units).</li>
+
+        <li>Some local lenders may allow 15–20% if owner-occupied (subject to lender
+        terms).</li>
+
+        </ul>
 
         <p>All-cash purchase: zero financing requirement, but you pay all closing
         costs in cash.</p>
 
         <p>Many investors and buyers in PR pay 20–30% down on multifamily or investment
         property deals.</p>
+
 
         <p>📌 2. Closing Costs (Buyer’s Side)</p>
 
@@ -284,94 +349,148 @@ faqs:
 
         <p>Typical Closing Cost Items</p>
 
-        <p>Cost TypeTypical Amount<br>Transfer Tax + Stamp Tax (government transfer
-        fees)~0.5%–1.5% of purchase price<br>Notary + Drafting Fees (required by law)~$3,000–$8,000
-        or ~0.5–1%<br>Attorney Fees0.5–1% of purchase price<br>Title Search & Title
-        Insurance~0.5–1.5%<br>Recording / Registry Fees$500–$2,000+<br>Survey (if
-        required)$500–$3,000<br>Inspections$400–$3,000+<br>Appraisal (if financing)~$500–$1,000+<br>Loan
-        Origination & Lender Fees (if financing)~1–2% of loan amount<br>💡 On a $500,000
-        property, total closing costs can easily be $15,000–$30,000 or more, depending
-        on financing and inspections.</p>
+        <ul>
+
+        <li>Transfer Tax + Stamp Tax (government transfer fees): ~0.5%–1.5% of purchase
+        price</li>
+
+        <li>Notary + Drafting Fees (required by law): ~$3,000–$8,000 or ~0.5–1%</li>
+
+        <li>Attorney Fees: 0.5–1% of purchase price</li>
+
+        <li>Title Search & Title Insurance: ~0.5–1.5%</li>
+
+        <li>Recording / Registry Fees: $500–$2,000+</li>
+
+        <li>Survey (if required): $500–$3,000</li>
+
+        <li>Inspections: $400–$3,000+</li>
+
+        <li>Appraisal (if financing): ~$500–$1,000+</li>
+
+        <li>Loan Origination & Lender Fees (if financing): ~1–2% of loan amount</li>
+
+        </ul>
+
+        <p>💡 On a $500,000 property, total closing costs can easily be $15,000–$30,000
+        or more, depending on financing and inspections.</p>
+
 
         <p>📌 3. Property Transfer Taxes & Government Fees</p>
 
         <p>These are mandatory fees paid as part of the transfer:</p>
 
-        <p>Documentary Stamps / Transfer Tax: ~0.5–1.5% of purchase price (varies
-        by transaction structure).</p>
+        <ul>
 
-        <p>Registry & Recording Fees: ~$500–$2,000 for deed and mortgage recordings.</p>
+        <li>Documentary Stamps / Transfer Tax: ~0.5–1.5% of purchase price (varies
+        by transaction structure).</li>
+
+        <li>Registry & Recording Fees: ~$500–$2,000 for deed and mortgage recordings.</li>
+
+        </ul>
 
         <p>Some transactions — especially larger or complex ones — require additional
         municipal compliance or certification fees.</p>
+
 
         <p>📌 4. Mortgage & Financing Costs (if applicable)</p>
 
         <p>If you finance the property:</p>
 
-        <p>Loan origination / lender fees: ~0.5–1.5% of loan amount.</p>
+        <ul>
 
-        <p>Appraisal & processing fees: $500–$1,500+.</p>
+        <li>Loan origination / lender fees: ~0.5–1.5% of loan amount.</li>
 
-        <p>Mortgage recording fees: ~$300–$800.</p>
+        <li>Appraisal & processing fees: $500–$1,500+.</li>
+
+        <li>Mortgage recording fees: ~$300–$800.</li>
+
+        </ul>
 
         <p>Some lenders charge additional processing fees, points, or underwriting
         fees that add to your total cash-to-close.</p>
+
 
         <p>📌 **5. Annual Property Taxes (CRIM)</p>
 
         <p>Puerto Rico’s annual property tax system is different from most U.S. states:</p>
 
-        <p>Annual property tax (CRIM): Typically low because assessments are based
-        on antiquated valuation schedules — often well below market value.</p>
+        <ul>
 
-        <p>If rented out, the property is taxed like income property (ordinary income
-        tax + occupancy taxes).</p>
+        <li>Annual property tax (CRIM): Typically low because assessments are based
+        on antiquated valuation schedules — often well below market value.</li>
+
+        <li>If rented out, the property is taxed like income property (ordinary income
+        tax + occupancy taxes).</li>
+
+        </ul>
 
         <p>This means tax bills are usually lower than comparable U.S. mainland properties,
         but they still exist and vary by municipality.</p>
+
 
         <p>📌 6. Ongoing & HOA Costs</p>
 
         <p>If the property is part of a condominium or association:</p>
 
-        <p>HOA / Condo fees: Monthly or quarterly dues that can be significant in
-        multifamily buildings with shared amenities.</p>
+        <ul>
 
-        <p>Capital contribution at closing: Some associations require an initial capital
-        contribution that can be several months of dues up front.</p>
+        <li>HOA / Condo fees: Monthly or quarterly dues that can be significant in
+        multifamily buildings with shared amenities.</li>
+
+        <li>Capital contribution at closing: Some associations require an initial
+        capital contribution that can be several months of dues up front.</li>
+
+        </ul>
+
 
         <p>📌 7. Maintenance, Repairs & Reserves</p>
 
         <p>Especially for multifamily or 4–5 unit buildings:</p>
 
-        <p>Budget 1%–3% of property value per year for maintenance, roof, systems,
-        etc.</p>
+        <ul>
+
+        <li>Budget 1%–3% of property value per year for maintenance, roof, systems,
+        etc.</li>
+
+        </ul>
 
         <p>Older PR homes often have deferred maintenance (hurricane repairs, corrosion
         issues), so initial rehab costs can be higher.</p>
+
 
         <p>🔎 Typical Cost Approximation (Illustrative)</p>
 
         <p>Here’s how costs might stack on different price ranges:</p>
 
-        <p>Purchase PriceTotal Closing Costs (Est.)Notes<br>$250,000~$7,500–$15,000+for
-        single-family (cash)<br>$500,000~$15,000–$30,000+financing adds lender costs<br>$1,000,000~$30,000–$70,000+luxury
-        and complex title increases fees<br>💡 These are estimates not guarantees.
-        Actual costs depend on financing, property condition, and transaction complexity.</p>
+        <ul>
+
+        <li>$250,000: ~$7,500–$15,000+ for single-family (cash)</li>
+
+        <li>$500,000: ~$15,000–$30,000+ financing adds lender costs</li>
+
+        <li>$1,000,000: ~$30,000–$70,000+ luxury and complex title increases fees</li>
+
+        </ul>
+
+        <p>💡 These are estimates not guarantees. Actual costs depend on financing,
+        property condition, and transaction complexity.</p>
+
 
         <p>🧠 Key Takeaways</p>
 
-        <p>Closing costs in PR are higher than many U.S. states (often 3–7% of price).</p>
+        <ul>
 
-        <p>Attorney + Notary involvement is required by law, not optional.</p>
+        <li>Closing costs in PR are higher than many U.S. states (often 3–7% of price).</li>
 
-        <p>Transfer taxes, registry costs, and title matters add meaningful cash-to-close.</p>
+        <li>Attorney + Notary involvement is required by law, not optional.</li>
 
-        <p>Annual property tax (CRIM) is usually low, but other ongoing costs must
-        be budgeted.</p>
+        <li>Transfer taxes, registry costs, and title matters add meaningful cash-to-close.</li>
 
-        '
+        <li>Annual property tax (CRIM) is usually low, but other ongoing costs must
+        be budgeted.</li>
+
+        </ul>'
     - question: Is it safe to buy a property in a flood zone in Puerto Rico?
       answer: '<p>Yes — you can buy property in Puerto Rico that lies in a flood zone,
         but it comes with important financial and safety implications you should understand
@@ -380,54 +499,74 @@ faqs:
         you how likely an area is to flood, how flood insurance requirements apply,
         and how difficult it may be to build or get a loan.</p>
 
+
         <p>🧭 FEMA Flood Zone Designations — From Least Risk to Most Risk</p>
 
         <p>FEMA divides land into zones based on the probability of flooding and related
         hazards. Here’s how they generally rank:</p>
 
+
         <p>📉 Lower Flood Risk Areas</p>
 
         <p>These zones might flood, but the risk is lower than in high-risk zones.</p>
 
-        <p>Zone X (Unshaded) – Minimal flood hazard (outside the 500-year flood area).
-        Not federally required to carry flood insurance, though risks still exist
-        (e.g., heavy rain, poor drainage).</p>
+        <ul>
 
-        <p>Zone X (Shaded) / Zone B / Zone C – Moderate flood hazard (between 100-
+        <li>Zone X (Unshaded) – Minimal flood hazard (outside the 500-year flood area).
+        Not federally required to carry flood insurance, though risks still exist
+        (e.g., heavy rain, poor drainage).</li>
+
+        <li>Zone X (Shaded) / Zone B / Zone C – Moderate flood hazard (between 100-
         and 500-year flood level). Flood insurance is not mandatory for federally
-        backed mortgages but still recommended.</p>
+        backed mortgages but still recommended.</li>
+
+        </ul>
+
 
         <p>⚠️ Zones with Uncertain or Partial Analysis</p>
 
-        <p>Zone D – Possible flood hazard but not thoroughly analyzed. Insurance is
-        optional and rates reflect uncertainty.</p>
+        <ul>
+
+        <li>Zone D – Possible flood hazard but not thoroughly analyzed. Insurance
+        is optional and rates reflect uncertainty.</li>
+
+        </ul>
+
 
         <p>🔴 High Flood Risk Areas (Special Flood Hazard Areas — SFHA)</p>
 
         <p>These are the most significant zones in terms of flood risk and insurance
         requirements:</p>
 
-        <p>Zone A / AE – Base floodplain with a 1% chance of flooding in any year
+        <ul>
+
+        <li>Zone A / AE – Base floodplain with a 1% chance of flooding in any year
         (often called the “100-year flood”). Federally backed mortgages typically
-        require flood insurance. AE zones include base flood elevations (BFEs).</p>
+        require flood insurance. AE zones include base flood elevations (BFEs).</li>
 
-        <p>Zone AO / AH – Special high-risk areas with shallow flooding or ponding,
-        with average depths shown on maps.</p>
+        <li>Zone AO / AH – Special high-risk areas with shallow flooding or ponding,
+        with average depths shown on maps.</li>
 
-        <p>Zone A99 – Areas expected to be protected by a federal flood control system;
-        still show flood risk.</p>
+        <li>Zone A99 – Areas expected to be protected by a federal flood control system;
+        still show flood risk.</li>
 
-        <p>Zone V / VE – Coastal high-risk zones subject to storm surge and wave action.
-        These are often the highest risk designations — construction standards are
-        strict and flood insurance is required.</p>
+        <li>Zone V / VE – Coastal high-risk zones subject to storm surge and wave
+        action. These are often the highest risk designations — construction standards
+        are strict and flood insurance is required.</li>
+
+        </ul>
+
 
         <p>In simple terms, from lower to higher risk:</p>
 
         <p>Zone X (Unshaded) → Zone X (Shaded) / B / C → Zone D<br>      → Zone A
-        / AE / AO / AH / A99 → Zone V / VE<br>🏡 Is It Safe to Buy in a Flood Zone
-        Like in Puerto Rico?</p>
+        / AE / AO / AH / A99 → Zone V / VE</p>
+
+
+        <p>🏡 Is It Safe to Buy in a Flood Zone Like in Puerto Rico?</p>
 
         <p>Safety and practicality depend on many factors:</p>
+
 
         <p>✔️ Insurance & Cost</p>
 
@@ -439,15 +578,18 @@ faqs:
         encouraged to carry flood insurance because many flooding events occur outside
         high-risk areas.</p>
 
+
         <p>✔️ Resale and Financing</p>
 
         <p>Properties in high-risk zones may be harder to resell or finance because
         lenders see greater risk and buyers factor in insurance costs.</p>
 
+
         <p>✔️ Actual Flood Risk Isn’t Zero</p>
 
         <p>No area is completely safe from flooding. Even minimal risk zones can flood
         due to severe storms, drainage issues, or infrastructure failure.</p>
+
 
         <p>✔️ Local Conditions Matter</p>
 
@@ -455,46 +597,70 @@ faqs:
         and coastal areas make flood risk especially dynamic — zones can change with
         updated FEMA maps.</p>
 
+
         <p>🧠 Practical Steps Before Buying</p>
 
-        <p>Check the FEMA Flood Map for the exact property address (FEMA Flood Map
-        Service Center).</p>
+        <ul>
 
-        <p>Ask for an Elevation Certificate — this shows how high the building sits
-        relative to predicted flood levels.</p>
+        <li>Check the FEMA Flood Map for the exact property address (FEMA Flood Map
+        Service Center).</li>
 
-        <p>Get a Flood Insurance Quote Early — costs can dramatically affect your
-        budget.</p>
+        <li>Ask for an Elevation Certificate — this shows how high the building sits
+        relative to predicted flood levels.</li>
 
-        <p>Consult Local Planner or Floodplain Manager — Puerto Rico may have additional
-        rules, local flood maps, or plans that affect buildability and permitting.</p>
+        <li>Get a Flood Insurance Quote Early — costs can dramatically affect your
+        budget.</li>
+
+        <li>Consult Local Planner or Floodplain Manager — Puerto Rico may have additional
+        rules, local flood maps, or plans that affect buildability and permitting.</li>
+
+        </ul>
+
 
         <p>🧩 Quick Summary</p>
 
-        <p>ZoneFlood Risk LevelInsurance Required?Key Notes<br>X (Unshaded)MinimalNoRisk
-        still exists<br>X (Shaded) / B / CModerateOften not requiredConsider insurance<br>DUnknownOptionalRisk
-        unclear<br>A / AE / AO / AH / A99HighGenerally required1% annual flood risk<br>V
-        / VEVery High (coastal)RequiredStorm surge & waves<br>📌 Bottom Line</p>
+        <ul>
+
+        <li>Zone X (Unshaded): Minimal Risk, Insurance No, Risk still exists</li>
+
+        <li>Zone X (Shaded) / B / C: Moderate Risk, Insurance Often not required,
+        Consider insurance</li>
+
+        <li>Zone D: Unknown Risk, Insurance Optional, Risk unclear</li>
+
+        <li>Zone A / AE / AO / AH / A99: High Risk, Insurance Generally required,
+        1% annual flood risk</li>
+
+        <li>Zone V / VE: Very High (coastal) Risk, Insurance Required, Storm surge
+        & waves</li>
+
+        </ul>
+
+
+        <p>📌 Bottom Line</p>
 
         <p>Buying in a flood zone in Puerto Rico is possible, but it needs careful
         planning:</p>
 
-        <p>Understand the specific flood zone designation and how it affects risk.</p>
+        <ul>
 
-        <p>Prepare for higher insurance costs (when required).</p>
+        <li>Understand the specific flood zone designation and how it affects risk.</li>
 
-        <p>Evaluate long-term resale and risk tolerance.</p>
+        <li>Prepare for higher insurance costs (when required).</li>
+
+        <li>Evaluate long-term resale and risk tolerance.</li>
+
+        </ul>
 
         <p>If risk and cost are deal breakers for you, properties in lower-risk zones
         (Zone X) are typically easier to own and insure. But even then, factor in
-        climate risks and infrastructure changes over time.</p>
-
-        '
+        climate risks and infrastructure changes over time.</p>'
     - question: Can I buy property in PR as a non resident?
       answer: '<p>Yes — you can get a mortgage as a non-resident to buy property in
         Puerto Rico, but it’s not always as straightforward as getting a conventional
         loan in the mainland U.S. Let’s break down your options and what works best
         in most situations:</p>
+
 
         <p>🏦 1. Mortgages in Puerto Rico as a Non-Resident</p>
 
@@ -503,37 +669,54 @@ faqs:
         Rico. There are no ownership restrictions based on citizenship — anyone can
         buy property there.</p>
 
+
         <p>Here’s what you should know:</p>
 
-        <p>Many Puerto Rico banks offer mortgages to non-residents (U.S. citizens
-        living abroad and foreign nationals alike).</p>
+        <ul>
 
-        <p>Local lenders are more familiar with Puerto Rico’s legal/real-estate system
+        <li>Many Puerto Rico banks offer mortgages to non-residents (U.S. citizens
+        living abroad and foreign nationals alike).</li>
+
+        <li>Local lenders are more familiar with Puerto Rico’s legal/real-estate system
         and typically easier to work with than most U.S. mainland banks when it comes
-        to Puerto Rico properties.</p>
+        to Puerto Rico properties.</li>
 
-        <p>You’ll usually need higher down payments and stronger documentation than
-        a typical U.S. resident loan.</p>
+        <li>You’ll usually need higher down payments and stronger documentation than
+        a typical U.S. resident loan.</li>
+
+        </ul>
+
 
         <p>Typical non-resident mortgage terms in PR:</p>
 
-        <p>Down payment: ~20% to 35% (sometimes more for non-U.S. buyers).</p>
+        <ul>
 
-        <p>Documentation: Income verification, bank statements, credit history (U.S.
-        or foreign).</p>
+        <li>Down payment: ~20% to 35% (sometimes more for non-U.S. buyers).</li>
 
-        <p>Interest rates: Often slightly higher than in mainland U.S.</p>
+        <li>Documentation: Income verification, bank statements, credit history (U.S.
+        or foreign).</li>
 
-        <p>Loan-to-Value (LTV): Usually 65%–80% for non-residents.</p>
+        <li>Interest rates: Often slightly higher than in mainland U.S.</li>
+
+        <li>Loan-to-Value (LTV): Usually 65%–80% for non-residents.</li>
+
+        </ul>
+
 
         <p>Main lenders on the island include:</p>
 
-        <p>Banco Popular de Puerto Rico</p>
+        <ul>
 
-        <p>FirstBank (Puerto Rico)</p>
+        <li>Banco Popular de Puerto Rico</li>
 
-        <p>Oriental Bank<br>…but other local and international banks may also offer
-        financing.</p>
+        <li>FirstBank (Puerto Rico)</li>
+
+        <li>Oriental Bank</li>
+
+        </ul>
+
+        <p>…but other local and international banks may also offer financing.</p>
+
 
         <p>Pros:<br>✅ Banks know the local market and property laws.<br>✅ You’re applying
         directly where the property is located.</p>
@@ -541,22 +724,28 @@ faqs:
         <p>Cons:<br>❌ Potentially slower processing compared with some U.S. mainland
         mortgages.<br>❌ Down payments and rates may be higher.</p>
 
+
         <p>🏦 2. Using a Bank in the U.S. (Mainland)</p>
 
         <p>Technically some U.S. banks might offer “foreign national” or specialty
         home loans that you could use for any U.S. property — including in Puerto
         Rico. But in practice:</p>
 
-        <p>Many large U.S. lenders don’t finance Puerto Rico properties directly because
-        they aren’t licensed or comfortable with local law and market nuances.</p>
+        <ul>
 
-        <p>If they do offer financing, it may be as a foreign-national mortgage program,
+        <li>Many large U.S. lenders don’t finance Puerto Rico properties directly
+        because they aren’t licensed or comfortable with local law and market nuances.</li>
+
+        <li>If they do offer financing, it may be as a foreign-national mortgage program,
         with similar requirements (higher down payment, proof of assets/credit, possibly
-        higher rates) as a Puerto Rico bank but with fewer local specialists.</p>
+        higher rates) as a Puerto Rico bank but with fewer local specialists.</li>
 
-        <p>Some buyers use a loan from a U.S. bank first (e.g., home equity loan /
-        HELOC on existing property) to get cash and close fast, then later refinance
-        locally in Puerto Rico.</p>
+        <li>Some buyers use a loan from a U.S. bank first (e.g., home equity loan
+        / HELOC on existing property) to get cash and close fast, then later refinance
+        locally in Puerto Rico.</li>
+
+        </ul>
+
 
         <p>Pros:<br>✅ You might get better pricing or terms if you have a strong relationship
         with your U.S. bank.<br>✅ Familiar paperwork and process for you.</p>
@@ -564,35 +753,43 @@ faqs:
         <p>Cons:<br>❌ Not many U.S. banks will do this at all for PR properties.<br>❌
         Those that do may still require a local affiliate or special approval.</p>
 
+
         <p>💡 3. Cash Purchase First, Mortgage Later</p>
 
         <p>This is a popular strategy, especially for foreigners or investors:</p>
 
-        <p>Pay cash at closing to move quickly.</p>
+        <ul>
 
-        <p>Later, refinance with a local bank once the title is clear and the property
-        is established — sometimes at better terms.</p>
+        <li>Pay cash at closing to move quickly.</li>
 
-        <p>Cash gives you negotiating power (sellers prefer certainty), and refinancing
-        afterward can be smoother once you’re “on the ground.”</p>
+        <li>Later, refinance with a local bank once the title is clear and the property
+        is established — sometimes at better terms.</li>
+
+        <li>Cash gives you negotiating power (sellers prefer certainty), and refinancing
+        afterward can be smoother once you’re “on the ground.”</li>
+
+        </ul>
+
 
         <p>🧠 Which Path Is Usually Best?</p>
 
         <p>Here’s a practical recommendation based on typical cases:</p>
 
-        <p>✔ If your U.S. bank cannot finance a PR property directly → Line up a mortgage
-        with a Puerto Rico bank before you start seriously shopping. It speeds up
-        closing and shows sellers you’re ready.</p>
+        <ul>
 
-        <p>✔ If your U.S. bank can lend for PR real estate and offers good terms for
-        you → It might be worth using that financing, especially if you already have
-        a relationship, good credit, and favorable rates.</p>
+        <li>✔ If your U.S. bank cannot finance a PR property directly → Line up a
+        mortgage with a Puerto Rico bank before you start seriously shopping. It speeds
+        up closing and shows sellers you’re ready.</li>
 
-        <p>✔ If you want the simplest closing without financing delays → Cash or a
-        combination strategy (cash + future refinance) can be the most competitive
-        approach in the market.</p>
+        <li>✔ If your U.S. bank can lend for PR real estate and offers good terms
+        for you → It might be worth using that financing, especially if you already
+        have a relationship, good credit, and favorable rates.</li>
 
-        '
+        <li>✔ If you want the simplest closing without financing delays → Cash or
+        a combination strategy (cash + future refinance) can be the most competitive
+        approach in the market.</li>
+
+        </ul>'
 page_config:
   title: Frequently Asked Questions
   subtitle: Everything you need to know about buying property in Puerto Rico
