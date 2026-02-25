@@ -3589,7 +3589,8 @@ section.dark-context .btn-outline:hover,
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height var(--transition-smooth);
+    opacity: 0;
+    transition: max-height var(--transition-smooth), opacity var(--transition-smooth);
     background: var(--white);
     }
 .faq-answer p {
@@ -3601,6 +3602,7 @@ section.dark-context .btn-outline:hover,
     }
 .faq-item.active .faq-answer {
     max-height: 800px;
+    opacity: 1;
     }
 
 /* Enhanced FAQ Features */
