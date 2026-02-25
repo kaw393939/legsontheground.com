@@ -8,6 +8,9 @@
     .faq-question, .accordion-header {
         padding: var(--space-lg) var(--space-xl)
         }
+    .card-faq.active .faq-answer, .accordion-item.active .accordion-content {
+        padding: 0 var(--space-xl) var(--space-lg)
+        }
     .faq-nav, .faq-categories-nav {
         padding: var(--space-md)
         }
