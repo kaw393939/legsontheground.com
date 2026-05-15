@@ -1,3 +1,27 @@
+# Legs on the Ground
+
+<!-- portfolio-curation -->
+## Portfolio Overview
+Production bilingual property concierge website for mainland owners with services in Puerto Rico.
+
+**Live site:** https://legsontheground.com/
+
+## What This Demonstrates
+- Client work
+- service design
+- production website delivery
+
+## Stack
+CSS, static web
+
+## Portfolio Status
+This repository is part of Keith Williams' curated public portfolio. The README has been updated to explain the project purpose, technical focus, and why the work is worth reviewing.
+<!-- /portfolio-curation -->
+
+---
+
+## Original Notes
+
 # Legs on the Ground - Property Concierge Services
 
 Professional bilingual property concierge services for mainland owners in Puerto Rico.
@@ -731,3 +755,4 @@ legsontheground.com/
 **Accessibility Level:** WCAG 2.1 Level AA compliant (AAA for body text)
 **Documentation:** ✅ Complete and simplified
 **Next Action:** Deploy to domain and submit to search engines
+
